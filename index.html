@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Té o Café — Tienda Online & Especialidad Chile</title>
+  <meta name="description" content="Café de especialidad artesanal, té en hebras de origen, café soluble y accesorios con despacho a todo Chile.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link id="font-link" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              primary: 'var(--brand-primary)',
+              primaryHover: 'var(--brand-primary-hover)',
+              secondary: 'var(--brand-secondary)',
+              accent: 'var(--brand-accent)',
+              bg: 'var(--brand-bg)',
+              card: 'var(--brand-card)',
+              text: 'var(--brand-text)',
+              muted: 'var(--brand-muted)',
+              border: 'var(--brand-border)',
+            }
+          },
+          fontFamily: {
+            headline: 'var(--font-headline)',
+            body: 'var(--font-body)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    :root {
+      /* Paleta 1: Tostaduría & Ámbar (Default) */
+      --brand-primary: #854D0E;
+      --brand-primary-hover: #713F12;
+      --brand-secondary: #D97706;
+      --brand-accent: #B45309;
+      --brand-bg: #FCFBF7;
+      --brand-card: #FFFFFF;
+      --brand-text: #29180C;
+      --brand-muted: #786C64;
+      --brand-border: #EADBCE;
+      --font-headline: 'Playfair Display', serif;
+      --font-body: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    [data-theme="matcha"] {
+      --brand-primary: #2D5A27;
+      --brand-primary-hover: #1E3F1A;
+      --brand-secondary: #5F8D37;
+      --brand-accent: #B59E5F;
+      --brand-bg: #F8FAF6;
+      --brand-card: #FFFFFF;
+      --brand-text: #192718;
+      --brand-muted: #5F6E5D;
+      --brand-border: #DDE5DA;
+    }
+
+    [data-theme="terracota"] {
+      --brand-primary: #C2410C;
+      --brand-primary-hover: #9A3412;
+      --brand-secondary: #EA580C;
+      --brand-accent: #78350F;
+      --brand-bg: #FAF6F3;
+      --brand-card: #FFFFFF;
+      --brand-text: #261711;
+      --brand-muted: #76635C;
+      --brand-border: #E8DDD7;
+    }
+
+    [data-theme="noir"] {
+      --brand-primary: #18181B;
+      --brand-primary-hover: #09090B;
+      --brand-secondary: #CA8A04;
+      --brand-accent: #EAB308;
+      --brand-bg: #F4F4F5;
+      --brand-card: #FFFFFF;
+      --brand-text: #09090B;
+      --brand-muted: #71717A;
+      --brand-border: #E4E4E7;
+    }
+
+    body {
+      background-color: var(--brand-bg);
+      color: var(--brand-text);
+      font-family: var(--font-body);
+      transition: background-color 0.25s ease, color 0.25s ease;
+    }
+
+    h1, h2, h3, .font-headline {
+      font-family: var(--font-headline);
+    }
+
+    .drawer-backdrop {
+      background: rgba(18, 12, 8, 0.6);
+      backdrop-filter: blur(4px);
+    }
+
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 7px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #c1a88b;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col antialiased">
+
+  <!-- ========================================== -->
+  <!-- 🎛️ BRAND & UI STUDIO: SELECTOR EN VIVO     -->
+  <!-- ========================================== -->
+  <aside id="brand-studio" class="sticky top-0 z-50 bg-[#160E08] text-amber-50 shadow-xl border-b border-amber-900/60 py-2 px-4 text-xs">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3">
+      
+      <!-- Brand Studio Info -->
+      <div class="flex items-center gap-2">
+        <span class="flex h-2.5 w-2.5 relative">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-amber-500"></span>
+        </span>
+        <span class="font-bold tracking-wider uppercase text-amber-300">Live Brand Studio</span>
+        <span class="text-zinc-400 hidden lg:inline">| Prueba variantes de marca en tiempo real:</span>
+      </div>
+
+      <!-- Controls -->
+      <div class="flex flex-wrap items-center gap-2 sm:gap-3">
+        <!-- Variant Buttons -->
+        <div class="flex items-center gap-1 bg-black/50 rounded-lg p-1 border border-amber-900/50">
+          <label class="text-amber-200/80 font-medium px-1 hidden md:inline">Marca:</label>
+          <button onclick="setBrandName('Té o Café', 'El punto de encuentro entre dos mundos')" class="brand-btn px-2.5 py-1 rounded font-semibold text-xs transition bg-amber-600 text-white" data-brand="Té o Café">Té o Café</button>
+          <button onclick="setBrandName('Café o Té', 'La elección perfecta para cada momento')" class="brand-btn px-2.5 py-1 rounded font-medium text-xs text-amber-100 hover:text-white transition" data-brand="Café o Té">Café o Té</button>
+          <button onclick="setBrandName('Mundo Té o Café', 'Especialidad y origen en cada taza')" class="brand-btn px-2.5 py-1 rounded font-medium text-xs text-amber-100 hover:text-white transition" data-brand="Mundo Té o Café">Mundo Té o Café</button>
+          <button onclick="setBrandName('TeoCafé', 'Café de grano & Té de hoja en Chile')" class="brand-btn px-2.5 py-1 rounded font-medium text-xs text-amber-100 hover:text-white transition" data-brand="TeoCafé">TeoCafé</button>
+        </div>
+
+        <!-- Palettes -->
+        <div class="flex items-center gap-1 bg-black/50 rounded-lg p-1 border border-amber-900/50">
+          <label class="text-amber-200/80 font-medium px-1 hidden xl:inline">Paleta:</label>
+          <button onclick="setPalette('amber', 'Tostaduría Ámbar')" title="Tostaduría & Ámbar" class="palette-btn w-5 h-5 rounded-full bg-amber-600 border-2 border-white ring-2 ring-amber-400" data-theme="amber"></button>
+          <button onclick="setPalette('matcha', 'Matcha Botánica')" title="Matcha & Botánica" class="palette-btn w-5 h-5 rounded-full bg-emerald-700 border border-white/60 hover:scale-105 transition" data-theme="matcha"></button>
+          <button onclick="setPalette('terracota', 'Artisan Terracota')" title="Artisan Terracota" class="palette-btn w-5 h-5 rounded-full bg-orange-700 border border-white/60 hover:scale-105 transition" data-theme="terracota"></button>
+          <button onclick="setPalette('noir', 'Minimalist Noir')" title="Minimalist Noir & Gold" class="palette-btn w-5 h-5 rounded-full bg-zinc-900 border border-amber-400/80 hover:scale-105 transition" data-theme="noir"></button>
+        </div>
+
+        <!-- Typography -->
+        <div class="flex items-center gap-1 bg-black/50 rounded-lg p-1 border border-amber-900/50">
+          <select id="typo-select" onchange="setFont(this.value)" class="bg-transparent text-amber-100 text-xs px-2 py-0.5 outline-none cursor-pointer">
+            <option value="playfair" class="bg-zinc-900 text-white">Playfair (Gourmet)</option>
+            <option value="sans" class="bg-zinc-900 text-white">Jakarta (Moderno)</option>
+            <option value="cinzel" class="bg-zinc-900 text-white">Cinzel (Clásico)</option>
+          </select>
+        </div>
+      </div>
+
+    </div>
+  </aside>
+
+  <!-- ========================================== -->
+  <!-- ANUNCIO DE DESPACHO CHILE                  -->
+  <!-- ========================================== -->
+  <div class="bg-brand-primary text-white text-xs py-2 px-4 transition-colors">
+    <div class="max-w-7xl mx-auto flex justify-between items-center text-center sm:text-left">
+      <div class="flex items-center gap-2 mx-auto sm:mx-0 font-medium">
+        <i data-lucide="truck" class="w-4 h-4"></i>
+        <span><strong>Despacho a todo Chile:</strong> Santiago en 24-48 hrs • <strong>Envío GRATIS</strong> en RM sobre $30.000</span>
+      </div>
+      <div class="hidden md:flex items-center gap-4 text-white/90 text-[11px]">
+        <span class="flex items-center gap-1"><i data-lucide="shield-check" class="w-3.5 h-3.5"></i> Webpay Plus & Mercado Pago</span>
+        <span class="flex items-center gap-1"><i data-lucide="sparkles" class="w-3.5 h-3.5"></i> 138 Productos Operativos</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- HEADER & NAVEGACIÓN                        -->
+  <!-- ========================================== -->
+  <header class="bg-brand-card border-b border-brand-border sticky top-10 z-40 shadow-sm transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-3 group">
+          <div class="w-11 h-11 rounded-xl bg-brand-primary/10 border border-brand-primary/20 flex items-center justify-center text-brand-primary group-hover:scale-105 transition-transform">
+            <i data-lucide="coffee" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <span id="brand-logo-text" class="text-2xl font-bold font-headline tracking-tight text-brand-text block leading-none">
+              Té o Café
+            </span>
+            <span id="brand-logo-tagline" class="text-[10px] tracking-wider uppercase text-brand-muted font-medium mt-1 block">
+              Especialidad • Santiago de Chile
+            </span>
+          </div>
+        </a>
+
+        <!-- Buscador Rápido -->
+        <div class="hidden lg:flex items-center flex-1 max-w-md mx-8">
+          <div class="relative w-full">
+            <i data-lucide="search" class="w-4 h-4 text-brand-muted absolute left-3 top-3"></i>
+            <input type="text" id="search-input" onkeyup="handleSearch(this.value)" placeholder="Buscar cafés, tés, orígenes, notas..." class="w-full bg-brand-bg border border-brand-border rounded-full pl-9 pr-4 py-2 text-xs text-brand-text outline-none focus:border-brand-primary transition">
+          </div>
+        </div>
+
+        <!-- Enlaces & Acciones -->
+        <div class="flex items-center gap-4">
+          <nav class="hidden md:flex items-center gap-6 text-xs font-semibold text-brand-text">
+            <a href="#catalogo" onclick="setCategoryFilter('all')" class="hover:text-brand-primary transition">Catálogo</a>
+            <a href="#catalogo" onclick="setCategoryFilter('cafe')" class="hover:text-brand-primary transition">Café</a>
+            <a href="#catalogo" onclick="setCategoryFilter('te')" class="hover:text-brand-primary transition">Té de Hoja</a>
+            <a href="#catalogo" onclick="setCategoryFilter('soluble')" class="hover:text-brand-primary transition">Solubles</a>
+            <a href="#catalogo" onclick="setCategoryFilter('accesorios')" class="hover:text-brand-primary transition">Accesorios</a>
+          </nav>
+
+          <!-- Botón Carrito -->
+          <button onclick="toggleCart()" class="relative flex items-center gap-2 bg-brand-primary text-white px-4 py-2.5 rounded-full font-semibold text-xs hover:bg-brand-primaryHover transition shadow-sm">
+            <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+            <span class="hidden sm:inline">Canasta</span>
+            <span id="cart-badge" class="bg-brand-secondary text-white text-[11px] w-5 h-5 rounded-full flex items-center justify-center font-bold">0</span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================== -->
+  <!-- HERO BANNER                                -->
+  <!-- ========================================== -->
+  <section class="relative overflow-hidden bg-brand-bg py-12 md:py-16 border-b border-brand-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        
+        <div class="lg:col-span-7 space-y-5 text-center lg:text-left">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-primary/10 border border-brand-primary/20 text-brand-primary text-xs font-semibold">
+            <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+            <span>Base Operativa Oficial Integrada • 138 Productos</span>
+          </div>
+
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-headline leading-tight tracking-tight text-brand-text">
+            Bienvenido a <br>
+            <span id="hero-brand-title" class="text-brand-primary underline decoration-brand-secondary decoration-wavy decoration-2">Té o Café</span>
+          </h1>
+
+          <p id="hero-subtitle" class="text-base sm:text-lg text-brand-muted max-w-xl font-light leading-relaxed">
+            El punto de encuentro entre dos mundos: Cafés de especialidad recién tostados, tés de hoja noble, ediciones conmemorativas y accesorios de preparación con despacho a todo Chile.
+          </p>
+
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3 pt-2">
+            <a href="#catalogo" class="px-6 py-3 rounded-xl bg-brand-primary text-white font-semibold text-xs shadow-md hover:bg-brand-primaryHover transition flex items-center gap-2">
+              <i data-lucide="shopping-cart" class="w-4 h-4"></i> Explorar Catálogo (138 ítems)
+            </a>
+            <button onclick="setCategoryFilter('cafe')" class="px-5 py-3 rounded-xl bg-brand-card border border-brand-border text-brand-text font-semibold text-xs hover:border-brand-primary hover:text-brand-primary transition">
+              Cafés Artesanales
+            </button>
+            <button onclick="setCategoryFilter('te')" class="px-5 py-3 rounded-xl bg-brand-card border border-brand-border text-brand-text font-semibold text-xs hover:border-brand-primary hover:text-brand-primary transition">
+              Té Basilur & La Finca
+            </button>
+          </div>
+
+          <!-- Proof points -->
+          <div class="grid grid-cols-3 gap-3 pt-4 border-t border-brand-border text-left">
+            <div>
+              <p class="text-xl font-bold font-headline text-brand-primary">4 Marcas</p>
+              <p class="text-[11px] text-brand-muted">La Finca, Basilur, Colo-Colo</p>
+            </div>
+            <div>
+              <p class="text-xl font-bold font-headline text-brand-primary">Chilexpress</p>
+              <p class="text-[11px] text-brand-muted">Despacho Nacional 24-48h</p>
+            </div>
+            <div>
+              <p class="text-xl font-bold font-headline text-brand-primary">100% Online</p>
+              <p class="text-[11px] text-brand-muted">Webpay Plus & Mercado Pago</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5">
+          <div class="relative mx-auto max-w-md rounded-2xl overflow-hidden shadow-2xl border-4 border-brand-card group">
+            <img src="assets/images/hero.jpg" alt="Café y Té de Especialidad" class="w-full h-auto object-cover aspect-[4/3] group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent flex items-end p-5">
+              <div class="text-white">
+                <span class="text-[10px] uppercase tracking-widest text-amber-300 font-bold">Tostaduría & Botánica</span>
+                <p class="text-base font-headline font-bold">De la tierra a tu taza: la excelencia en cada grano y cada hebra.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- CATÁLOGO PRINCIPAL                         -->
+  <!-- ========================================== -->
+  <main id="catalogo" class="flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 w-full">
+    
+    <!-- Header del Catálogo -->
+    <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-8">
+      <div>
+        <span class="text-xs font-bold uppercase tracking-wider text-brand-secondary">Catálogo Operativo Oficial</span>
+        <h2 class="text-2xl sm:text-3xl font-bold font-headline text-brand-text mt-1">Todos los Productos en Venta</h2>
+        <p class="text-xs text-brand-muted mt-1">
+          Mostrando <span id="showing-count" class="font-bold text-brand-text">0</span> productos de la base operativa.
+        </p>
+      </div>
+
+      <!-- Marcas Origen Pills -->
+      <div class="flex flex-wrap items-center gap-1.5 bg-brand-card p-1.5 rounded-xl border border-brand-border text-xs">
+        <span class="text-brand-muted px-2 font-medium">Línea:</span>
+        <button onclick="setSourceFilter('all')" class="source-pill active-source px-3 py-1 rounded-lg font-semibold bg-brand-primary text-white transition" data-source="all">Todas</button>
+        <button onclick="setSourceFilter('La Finca')" class="source-pill px-3 py-1 rounded-lg text-brand-text hover:bg-black/5 transition" data-source="La Finca">La Finca</button>
+        <button onclick="setSourceFilter('Té Basilur Chile')" class="source-pill px-3 py-1 rounded-lg text-brand-text hover:bg-black/5 transition" data-source="Té Basilur Chile">Té Basilur</button>
+        <button onclick="setSourceFilter('Café de Colo-Colo')" class="source-pill px-3 py-1 rounded-lg text-brand-text hover:bg-black/5 transition" data-source="Café de Colo-Colo">Café Colo-Colo</button>
+      </div>
+    </div>
+
+    <!-- Categorías Tabs -->
+    <div class="flex flex-wrap items-center gap-2 mb-8 pb-3 border-b border-brand-border text-xs">
+      <button onclick="setCategoryFilter('all')" class="cat-pill active-cat px-4 py-2 rounded-full font-bold bg-brand-primary text-white shadow-sm transition" data-cat="all">
+        Todos
+      </button>
+      <button onclick="setCategoryFilter('cafe')" class="cat-pill px-4 py-2 rounded-full font-medium bg-brand-card border border-brand-border text-brand-text hover:border-brand-primary transition" data-cat="cafe">
+        Café de Grano & Molido
+      </button>
+      <button onclick="setCategoryFilter('te')" class="cat-pill px-4 py-2 rounded-full font-medium bg-brand-card border border-brand-border text-brand-text hover:border-brand-primary transition" data-cat="te">
+        Té en Hebras & Pirámides
+      </button>
+      <button onclick="setCategoryFilter('soluble')" class="cat-pill px-4 py-2 rounded-full font-medium bg-brand-card border border-brand-border text-brand-text hover:border-brand-primary transition" data-cat="soluble">
+        Café Soluble & Liofilizado
+      </button>
+      <button onclick="setCategoryFilter('capsulas')" class="cat-pill px-4 py-2 rounded-full font-medium bg-brand-card border border-brand-border text-brand-text hover:border-brand-primary transition" data-cat="capsulas">
+        Cápsulas Compatibles
+      </button>
+      <button onclick="setCategoryFilter('accesorios')" class="cat-pill px-4 py-2 rounded-full font-medium bg-brand-card border border-brand-border text-brand-text hover:border-brand-primary transition" data-cat="accesorios">
+        Prensas, Teteras & Máquinas
+      </button>
+    </div>
+
+    <!-- Grid de Productos -->
+    <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <!-- Se inyecta con JavaScript -->
+    </div>
+
+    <!-- Botón Cargar Más -->
+    <div id="load-more-container" class="text-center pt-12">
+      <button onclick="loadMoreProducts()" class="px-8 py-3.5 rounded-xl bg-brand-card border border-brand-border text-brand-text hover:border-brand-primary hover:text-brand-primary font-bold text-xs shadow-sm transition">
+        Cargar Más Productos
+      </button>
+    </div>
+
+  </main>
+
+  <!-- ========================================== -->
+  <!-- FOOTER                                     -->
+  <!-- ========================================== -->
+  <footer class="bg-[#140D07] text-amber-100/80 pt-16 pb-12 border-t border-amber-950 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-amber-900/40">
+        
+        <div class="lg:col-span-2 space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-amber-600/20 border border-amber-600/40 flex items-center justify-center text-amber-400">
+              <i data-lucide="coffee" class="w-5 h-5"></i>
+            </div>
+            <span id="footer-brand-title" class="text-2xl font-bold font-headline text-white">Té o Café</span>
+          </div>
+          <p class="text-xs text-amber-200/60 leading-relaxed max-w-sm">
+            E-commerce y tostaduría digital en Santiago de Chile. Catálogo de especialidad con despacho expedito a todo el país mediante Starken y Chilexpress.
+          </p>
+          <div class="flex items-center gap-3 pt-2">
+            <a href="#" class="w-8 h-8 rounded-full bg-amber-900/50 flex items-center justify-center hover:bg-amber-600 transition text-white"><i data-lucide="instagram" class="w-4 h-4"></i></a>
+            <a href="#" class="w-8 h-8 rounded-full bg-amber-900/50 flex items-center justify-center hover:bg-amber-600 transition text-white"><i data-lucide="facebook" class="w-4 h-4"></i></a>
+            <a href="#" class="w-8 h-8 rounded-full bg-amber-900/50 flex items-center justify-center hover:bg-amber-600 transition text-white"><i data-lucide="mail" class="w-4 h-4"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-wider text-amber-400 mb-4">Líneas de Producto</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#catalogo" onclick="setCategoryFilter('cafe')" class="hover:text-white transition">Café de Grano Fresco</a></li>
+            <li><a href="#catalogo" onclick="setCategoryFilter('te')" class="hover:text-white transition">Té en Hebras & Latas</a></li>
+            <li><a href="#catalogo" onclick="setCategoryFilter('soluble')" class="hover:text-white transition">Café Soluble Liofilizado</a></li>
+            <li><a href="#catalogo" onclick="setCategoryFilter('capsulas')" class="hover:text-white transition">Cápsulas Nespresso</a></li>
+            <li><a href="#catalogo" onclick="setCategoryFilter('accesorios')" class="hover:text-white transition">Prensas & Cafeteras</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-wider text-amber-400 mb-4">Despacho & Soporte</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#" class="hover:text-white transition">RM: 24-48 hrs ($2.990)</a></li>
+            <li><a href="#" class="hover:text-white transition">Envío Gratis RM sobre $30.000</a></li>
+            <li><a href="#" class="hover:text-white transition">Regiones de Chile ($4.990)</a></li>
+            <li><a href="#" class="hover:text-white transition">Preguntas Frecuentes</a></li>
+            <li><a href="#" class="hover:text-white transition">Contacto & Post-Venta</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-wider text-amber-400 mb-4">Pagos Protegidos</h4>
+          <p class="text-xs text-amber-200/60 mb-3">Integración con pasarelas oficiales de Chile:</p>
+          <div class="flex flex-wrap gap-1.5 text-[11px] font-semibold">
+            <span class="px-2.5 py-1 rounded bg-amber-950 border border-amber-800 text-amber-200">Webpay Plus</span>
+            <span class="px-2.5 py-1 rounded bg-amber-950 border border-amber-800 text-amber-200">Mercado Pago</span>
+            <span class="px-2.5 py-1 rounded bg-amber-950 border border-amber-800 text-amber-200">Redcompra</span>
+            <span class="px-2.5 py-1 rounded bg-amber-950 border border-amber-800 text-amber-200">Transferencia</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-amber-200/50 gap-4">
+        <p>© 2026 <span id="footer-copy-brand">Té o Café</span> SpA. Santiago de Chile.</p>
+        <p>Desarrollado y respaldado en GitHub: MajajiCL.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================== -->
+  <!-- DRAWER: CARRITO DE COMPRAS                 -->
+  <!-- ========================================== -->
+  <div id="cart-drawer" class="fixed inset-0 z-50 overflow-hidden pointer-events-none transition-opacity duration-300 opacity-0">
+    <div id="cart-backdrop" onclick="toggleCart()" class="absolute inset-0 drawer-backdrop transition-opacity pointer-events-auto"></div>
+    
+    <div class="fixed inset-y-0 right-0 max-w-full flex pl-10 pointer-events-auto">
+      <div class="w-screen max-w-md bg-brand-card shadow-2xl flex flex-col border-l border-brand-border">
+        
+        <div class="p-5 border-b border-brand-border flex items-center justify-between bg-brand-bg">
+          <div class="flex items-center gap-2">
+            <i data-lucide="shopping-bag" class="w-5 h-5 text-brand-primary"></i>
+            <h3 class="font-headline font-bold text-lg text-brand-text">Canasta de Compra</h3>
+          </div>
+          <button onclick="toggleCart()" class="text-brand-muted hover:text-brand-text p-1.5 rounded-lg hover:bg-black/5 transition">
+            <i data-lucide="x" class="w-5 h-5"></i>
+          </button>
+        </div>
+
+        <!-- Free shipping bar -->
+        <div class="p-3.5 bg-brand-primary/5 border-b border-brand-border text-xs">
+          <div class="flex justify-between font-semibold mb-1">
+            <span id="shipping-progress-text">Agrega $30.000 para Envío Gratis (RM)</span>
+            <span id="shipping-percent">0%</span>
+          </div>
+          <div class="w-full bg-brand-border rounded-full h-2 overflow-hidden">
+            <div id="shipping-bar" class="bg-brand-primary h-2 rounded-full transition-all duration-300" style="width: 0%"></div>
+          </div>
+        </div>
+
+        <div id="cart-items" class="flex-1 overflow-y-auto p-5 space-y-3">
+          <!-- Inyectado vía JS -->
+        </div>
+
+        <div class="p-5 border-t border-brand-border bg-brand-bg space-y-3 text-xs">
+          <div>
+            <label class="block font-semibold text-brand-text mb-1">Zona de Despacho:</label>
+            <select id="shipping-zone" onchange="updateCartTotals()" class="w-full bg-brand-card border border-brand-border rounded-lg p-2 text-brand-text outline-none">
+              <option value="rm">Santiago RM — $2.990 (Gratis sobre $30.000)</option>
+              <option value="regiones">Regiones de Chile — $4.990 (Starken/Chilexpress)</option>
+              <option value="retiro">Retiro en Tostaduría (Providencia) — GRATIS</option>
+            </select>
+          </div>
+
+          <div class="space-y-1.5 border-t border-brand-border pt-2 text-xs">
+            <div class="flex justify-between text-brand-muted">
+              <span>Subtotal:</span>
+              <span id="cart-subtotal" class="font-semibold text-brand-text">$0</span>
+            </div>
+            <div class="flex justify-between text-brand-muted">
+              <span>Despacho:</span>
+              <span id="cart-shipping" class="font-semibold text-brand-text">$0</span>
+            </div>
+            <div class="flex justify-between text-base font-bold text-brand-text border-t border-brand-border pt-2">
+              <span>Total a Pagar:</span>
+              <span id="cart-total" class="text-brand-primary">$0</span>
+            </div>
+          </div>
+
+          <button onclick="openCheckoutModal()" class="w-full py-3 rounded-xl bg-brand-primary text-white font-bold text-xs hover:bg-brand-primaryHover transition shadow-md flex items-center justify-center gap-2">
+            <i data-lucide="credit-card" class="w-4 h-4"></i> Continuar al Pago Seguro
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- MODAL: CHECKOUT SIMULADO CHILENO           -->
+  <!-- ========================================== -->
+  <div id="checkout-modal" class="fixed inset-0 z-50 overflow-y-auto hidden">
+    <div class="min-h-screen px-4 text-center flex items-center justify-center">
+      <div class="fixed inset-0 drawer-backdrop transition-opacity" onclick="closeCheckoutModal()"></div>
+      
+      <div class="inline-block w-full max-w-lg p-6 sm:p-8 my-8 text-left align-middle transition-all transform bg-brand-card shadow-2xl rounded-2xl border border-brand-border relative z-10">
+        <div class="flex justify-between items-center pb-3 border-b border-brand-border">
+          <div class="flex items-center gap-2">
+            <i data-lucide="shield-check" class="w-6 h-6 text-emerald-600"></i>
+            <h3 class="font-headline font-bold text-xl text-brand-text">Finalizar Compra</h3>
+          </div>
+          <button onclick="closeCheckoutModal()" class="text-brand-muted hover:text-brand-text">
+            <i data-lucide="x" class="w-5 h-5"></i>
+          </button>
+        </div>
+
+        <form onsubmit="handleCheckoutSubmit(event)" class="space-y-3.5 pt-4 text-xs">
+          <div>
+            <label class="block font-semibold text-brand-text mb-1">Nombre Completo</label>
+            <input type="text" required placeholder="Mateo Ávila" class="w-full bg-brand-bg border border-brand-border rounded-lg p-2 text-brand-text outline-none focus:border-brand-primary">
+          </div>
+
+          <div class="grid grid-cols-2 gap-2">
+            <div>
+              <label class="block font-semibold text-brand-text mb-1">Email</label>
+              <input type="email" required placeholder="tu@correo.cl" class="w-full bg-brand-bg border border-brand-border rounded-lg p-2 text-brand-text outline-none focus:border-brand-primary">
+            </div>
+            <div>
+              <label class="block font-semibold text-brand-text mb-1">Teléfono / WhatsApp</label>
+              <input type="tel" required placeholder="+56 9 8765 4321" class="w-full bg-brand-bg border border-brand-border rounded-lg p-2 text-brand-text outline-none focus:border-brand-primary">
+            </div>
+          </div>
+
+          <div>
+            <label class="block font-semibold text-brand-text mb-1">Dirección de Despacho (Calle, Número, Comuna)</label>
+            <input type="text" required placeholder="Av. Providencia 1234, Providencia, Santiago" class="w-full bg-brand-bg border border-brand-border rounded-lg p-2 text-brand-text outline-none focus:border-brand-primary">
+          </div>
+
+          <div>
+            <label class="block font-semibold text-brand-text mb-1.5">Medio de Pago:</label>
+            <div class="grid grid-cols-3 gap-2">
+              <label class="cursor-pointer border border-brand-border rounded-xl p-2.5 text-center hover:border-brand-primary transition flex flex-col items-center gap-1 has-[:checked]:border-brand-primary has-[:checked]:bg-brand-primary/10">
+                <input type="radio" name="payment_method" value="webpay" checked class="hidden">
+                <i data-lucide="credit-card" class="w-4 h-4 text-brand-primary"></i>
+                <span class="font-bold text-brand-text text-[11px]">Webpay Plus</span>
+              </label>
+
+              <label class="cursor-pointer border border-brand-border rounded-xl p-2.5 text-center hover:border-brand-primary transition flex flex-col items-center gap-1 has-[:checked]:border-brand-primary has-[:checked]:bg-brand-primary/10">
+                <input type="radio" name="payment_method" value="mercadopago" class="hidden">
+                <i data-lucide="smartphone" class="w-4 h-4 text-sky-600"></i>
+                <span class="font-bold text-brand-text text-[11px]">Mercado Pago</span>
+              </label>
+
+              <label class="cursor-pointer border border-brand-border rounded-xl p-2.5 text-center hover:border-brand-primary transition flex flex-col items-center gap-1 has-[:checked]:border-brand-primary has-[:checked]:bg-brand-primary/10">
+                <input type="radio" name="payment_method" value="transfer" class="hidden">
+                <i data-lucide="building-2" class="w-4 h-4 text-amber-600"></i>
+                <span class="font-bold text-brand-text text-[11px]">Transferencia</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="bg-brand-bg p-3 rounded-xl border border-brand-border flex justify-between items-center text-sm font-bold">
+            <span>Total Final:</span>
+            <span id="checkout-modal-total" class="text-brand-primary text-base">$0</span>
+          </div>
+
+          <button type="submit" class="w-full py-3 rounded-xl bg-brand-primary text-white font-bold text-xs hover:bg-brand-primaryHover transition shadow-lg">
+            Confirmar y Pagar Orden
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- MODAL: QUICK VIEW / DETALLE PRODUCTO       -->
+  <!-- ========================================== -->
+  <div id="quickview-modal" class="fixed inset-0 z-50 overflow-y-auto hidden">
+    <div class="min-h-screen px-4 text-center flex items-center justify-center">
+      <div class="fixed inset-0 drawer-backdrop transition-opacity" onclick="closeQuickView()"></div>
+      
+      <div class="inline-block w-full max-w-2xl p-6 sm:p-8 my-8 text-left align-middle transition-all transform bg-brand-card shadow-2xl rounded-2xl border border-brand-border relative z-10">
+        <button onclick="closeQuickView()" class="absolute top-4 right-4 text-brand-muted hover:text-brand-text">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 items-start">
+          <div class="rounded-xl overflow-hidden bg-brand-bg border border-brand-border">
+            <img id="qv-img" src="" alt="" class="w-full h-64 object-cover">
+          </div>
+          <div class="space-y-3 text-xs">
+            <span id="qv-badge" class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-brand-primary/10 text-brand-primary inline-block"></span>
+            <h3 id="qv-title" class="font-headline font-bold text-xl text-brand-text"></h3>
+            <p id="qv-source" class="text-[11px] text-brand-secondary font-semibold"></p>
+            <p id="qv-desc" class="text-brand-muted leading-relaxed max-h-36 overflow-y-auto pr-1"></p>
+            
+            <div id="qv-variants-wrap" class="pt-2">
+              <label class="block font-semibold text-brand-text mb-1">Formato / Variante:</label>
+              <select id="qv-variant-select" onchange="handleQuickViewVariantChange(this.value)" class="w-full bg-brand-bg border border-brand-border rounded-lg p-2 text-brand-text outline-none"></select>
+            </div>
+
+            <div class="flex items-center justify-between pt-3 border-t border-brand-border">
+              <span id="qv-price" class="text-2xl font-bold font-headline text-brand-primary"></span>
+              <button id="qv-add-btn" class="px-5 py-2.5 rounded-xl bg-brand-primary text-white font-semibold text-xs hover:bg-brand-primaryHover transition">
+                Añadir al Carrito
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- TOAST FEEDBACK                             -->
+  <!-- ========================================== -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 bg-[#160E08] text-white text-xs px-4 py-3 rounded-xl shadow-2xl border border-amber-800/80 transform translate-y-20 opacity-0 transition-all duration-300 flex items-center gap-2">
+    <i data-lucide="check-circle" class="w-4 h-4 text-amber-400"></i>
+    <span id="toast-message">Producto añadido</span>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- SCRIPT CON DATOS Y LÓGICA COMPLETA        -->
+  <!-- ========================================== -->
+  <script src="products.js"></script>
+  <script>
+    // Variables de Estado
+    let allProducts = typeof operationalCatalog !== 'undefined' ? operationalCatalog : [];
+    let currentCategory = 'all';
+    let currentSource = 'all';
+    let searchQuery = '';
+    let page = 1;
+    const perPage = 16;
+    let currentBrand = "Té o Café";
+    let cart = [];
+
+    function formatCLP(val) {
+      return "$" + Number(val).toLocaleString("es-CL");
+    }
+
+    // Filtrar Productos
+    function getFilteredProducts() {
+      return allProducts.filter(p => {
+        const matchCategory = currentCategory === 'all' || p.category === currentCategory;
+        const matchSource = currentSource === 'all' || p.source.toLowerCase().includes(currentSource.toLowerCase());
+        const matchSearch = searchQuery === '' || 
+          p.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
+          p.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          p.tags.some(t => t.toLowerCase().includes(searchQuery.toLowerCase()));
+        return matchCategory && matchSource && matchSearch;
+      });
+    }
+
+    // Renderizar Productos
+    function renderCatalog(resetPage = false) {
+      if (resetPage) page = 1;
+      
+      const filtered = getFilteredProducts();
+      document.getElementById('showing-count').textContent = filtered.length;
+      
+      const toShow = filtered.slice(0, page * perPage);
+      const container = document.getElementById('product-grid');
+      
+      if (filtered.length === 0) {
+        container.innerHTML = `
+          <div class="col-span-full text-center py-16 space-y-3">
+            <i data-lucide="coffee" class="w-12 h-12 text-brand-muted/30 mx-auto"></i>
+            <h4 class="font-headline font-bold text-lg text-brand-text">No se encontraron productos</h4>
+            <p class="text-xs text-brand-muted">Intenta buscar con otros términos o cambia los filtros de categoría.</p>
+          </div>
+        `;
+        document.getElementById('load-more-container').style.display = 'none';
+        lucide.createIcons();
+        return;
+      }
+
+      container.innerHTML = toShow.map(p => {
+        const hasVariants = p.variants && p.variants.length > 1;
+        const imgUrl = p.image || 'assets/images/coffee-bag.jpg';
+        return `
+          <div class="bg-brand-card rounded-2xl border border-brand-border overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col group">
+            <div class="relative overflow-hidden aspect-square bg-brand-bg">
+              <img src="${imgUrl}" alt="${p.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 loading="lazy" onerror="this.src='assets/images/coffee-bag.jpg'">
+              <span class="absolute top-2.5 left-2.5 bg-brand-primary text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full shadow-sm">
+                ${p.source.split('-')[0].trim()}
+              </span>
+              <button onclick="openQuickView(${p.id})" class="absolute bottom-2.5 right-2.5 bg-brand-card/90 hover:bg-brand-card text-brand-text p-2 rounded-full shadow-md backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity">
+                <i data-lucide="eye" class="w-4 h-4"></i>
+              </button>
+            </div>
+
+            <div class="p-4 flex-1 flex flex-col justify-between space-y-3">
+              <div class="space-y-1">
+                <span class="text-[10px] uppercase tracking-wider text-brand-secondary font-bold">${p.vendor || 'Especialidad'}</span>
+                <h4 class="font-headline font-bold text-sm text-brand-text leading-snug group-hover:text-brand-primary transition line-clamp-2">
+                  ${p.title}
+                </h4>
+                <p class="text-[11px] text-brand-muted line-clamp-2">
+                  ${p.short_description || 'Selección de alta calidad para amantes del café y del té.'}
+                </p>
+              </div>
+
+              ${hasVariants ? `
+                <div>
+                  <select id="var-select-${p.id}" onchange="updateCardVariantPrice(${p.id}, this.value)" class="w-full text-[11px] bg-brand-bg border border-brand-border rounded-lg p-1.5 text-brand-text outline-none">
+                    ${p.variants.map((v, i) => `<option value="${i}">${v.title} - ${formatCLP(v.price)}</option>`).join('')}
+                  </select>
+                </div>
+              ` : ''}
+
+              <div class="pt-2 border-t border-brand-border flex items-center justify-between">
+                <div>
+                  <span class="text-[9px] text-brand-muted block">Precio</span>
+                  <span id="price-tag-${p.id}" class="text-base font-bold font-headline text-brand-primary">
+                    ${formatCLP(p.price)}
+                  </span>
+                </div>
+                <button onclick="addProductToCartFromCard(${p.id})" class="flex items-center gap-1.5 bg-brand-primary text-white px-3 py-1.5 rounded-xl text-xs font-semibold hover:bg-brand-primaryHover transition shadow-sm">
+                  <i data-lucide="plus" class="w-3.5 h-3.5"></i> Agregar
+                </button>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      // Load more visibility
+      document.getElementById('load-more-container').style.display = toShow.length < filtered.length ? 'block' : 'none';
+      lucide.createIcons();
+    }
+
+    function loadMoreProducts() {
+      page += 1;
+      renderCatalog(false);
+    }
+
+    function updateCardVariantPrice(prodId, varIndex) {
+      const prod = allProducts.find(p => p.id === prodId);
+      if (!prod || !prod.variants[varIndex]) return;
+      const v = prod.variants[varIndex];
+      document.getElementById(`price-tag-${prodId}`).textContent = formatCLP(v.price);
+    }
+
+    function addProductToCartFromCard(prodId) {
+      const prod = allProducts.find(p => p.id === prodId);
+      if (!prod) return;
+      
+      const select = document.getElementById(`var-select-${prodId}`);
+      let variantTitle = "Estándar";
+      let price = prod.price;
+      
+      if (select && prod.variants[select.value]) {
+        const v = prod.variants[select.value];
+        variantTitle = v.title;
+        price = v.price;
+      }
+
+      addToCart({
+        id: prod.id,
+        title: prod.title,
+        variantTitle: variantTitle,
+        price: price,
+        image: prod.image || 'assets/images/coffee-bag.jpg'
+      });
+    }
+
+    // Filtros de Categoría y Marca
+    function setCategoryFilter(cat) {
+      currentCategory = cat;
+      document.querySelectorAll('.cat-pill').forEach(btn => {
+        if (btn.dataset.cat === cat) {
+          btn.classList.add('active-cat', 'bg-brand-primary', 'text-white');
+          btn.classList.remove('bg-brand-card', 'text-brand-text');
+        } else {
+          btn.classList.remove('active-cat', 'bg-brand-primary', 'text-white');
+          btn.classList.add('bg-brand-card', 'text-brand-text');
+        }
+      });
+      renderCatalog(true);
+    }
+
+    function setSourceFilter(source) {
+      currentSource = source;
+      document.querySelectorAll('.source-pill').forEach(btn => {
+        if (btn.dataset.source === source) {
+          btn.classList.add('active-source', 'bg-brand-primary', 'text-white');
+          btn.classList.remove('text-brand-text');
+        } else {
+          btn.classList.remove('active-source', 'bg-brand-primary', 'text-white');
+          btn.classList.add('text-brand-text');
+        }
+      });
+      renderCatalog(true);
+    }
+
+    function handleSearch(val) {
+      searchQuery = val.trim();
+      renderCatalog(true);
+    }
+
+    // Carrito de Compras
+    function addToCart(item) {
+      const cartKey = `${item.id}-${item.variantTitle}`;
+      const existing = cart.find(i => i.cartKey === cartKey);
+      if (existing) {
+        existing.qty += 1;
+      } else {
+        cart.push({ ...item, cartKey, qty: 1 });
+      }
+      updateCartUI();
+      showToast(`¡${item.title} agregado a tu canasta!`);
+    }
+
+    function changeCartQty(cartKey, delta) {
+      const item = cart.find(i => i.cartKey === cartKey);
+      if (!item) return;
+      item.qty += delta;
+      if (item.qty <= 0) {
+        cart = cart.filter(i => i.cartKey !== cartKey);
+      }
+      updateCartUI();
+    }
+
+    function removeCartItem(cartKey) {
+      cart = cart.filter(i => i.cartKey !== cartKey);
+      updateCartUI();
+    }
+
+    function updateCartUI() {
+      const totalCount = cart.reduce((sum, i) => sum + i.qty, 0);
+      document.getElementById('cart-badge').textContent = totalCount;
+
+      const container = document.getElementById('cart-items');
+      if (cart.length === 0) {
+        container.innerHTML = `
+          <div class="text-center py-10 space-y-2">
+            <i data-lucide="shopping-bag" class="w-10 h-10 text-brand-muted/30 mx-auto"></i>
+            <p class="text-xs text-brand-muted font-medium">Tu canasta está vacía</p>
+          </div>
+        `;
+      } else {
+        container.innerHTML = cart.map(item => `
+          <div class="flex items-center gap-3 p-2.5 bg-brand-bg rounded-xl border border-brand-border">
+            <img src="${item.image}" alt="${item.title}" class="w-12 h-12 rounded-lg object-cover">
+            <div class="flex-1 min-w-0">
+              <h5 class="text-xs font-bold text-brand-text truncate">${item.title}</h5>
+              <span class="text-[10px] text-brand-muted block">${item.variantTitle}</span>
+              <span class="text-xs font-semibold text-brand-primary">${formatCLP(item.price)}</span>
+              <div class="flex items-center gap-1.5 mt-1">
+                <button onclick="changeCartQty('${item.cartKey}', -1)" class="w-5 h-5 rounded bg-brand-card border border-brand-border flex items-center justify-center text-xs font-bold">-</button>
+                <span class="text-xs font-semibold text-brand-text px-1">${item.qty}</span>
+                <button onclick="changeCartQty('${item.cartKey}', 1)" class="w-5 h-5 rounded bg-brand-card border border-brand-border flex items-center justify-center text-xs font-bold">+</button>
+              </div>
+            </div>
+            <button onclick="removeCartItem('${item.cartKey}')" class="text-brand-muted hover:text-red-500 p-1">
+              <i data-lucide="trash-2" class="w-4 h-4"></i>
+            </button>
+          </div>
+        `).join('');
+      }
+
+      updateCartTotals();
+      lucide.createIcons();
+    }
+
+    function updateCartTotals() {
+      const subtotal = cart.reduce((sum, i) => sum + (i.price * i.qty), 0);
+      const zone = document.getElementById('shipping-zone').value;
+      
+      let shipping = 0;
+      if (zone === 'rm') {
+        shipping = subtotal >= 30000 || subtotal === 0 ? 0 : 2990;
+      } else if (zone === 'regiones') {
+        shipping = subtotal === 0 ? 0 : 4990;
+      }
+
+      const total = subtotal + shipping;
+
+      document.getElementById('cart-subtotal').textContent = formatCLP(subtotal);
+      document.getElementById('cart-shipping').textContent = shipping === 0 ? (subtotal > 0 && zone === 'rm' ? '¡GRATIS!' : '$0') : formatCLP(shipping);
+      document.getElementById('cart-total').textContent = formatCLP(total);
+      document.getElementById('checkout-modal-total').textContent = formatCLP(total);
+
+      // Shipping threshold
+      const threshold = 30000;
+      const progress = Math.min(100, Math.round((subtotal / threshold) * 100));
+      const bar = document.getElementById('shipping-bar');
+      const progressText = document.getElementById('shipping-progress-text');
+      const percentText = document.getElementById('shipping-percent');
+      
+      bar.style.width = `${progress}%`;
+      percentText.textContent = `${progress}%`;
+
+      if (subtotal >= threshold) {
+        progressText.innerHTML = `🎉 <strong>¡Despacho GRATIS aplicado en RM!</strong>`;
+        bar.classList.replace('bg-brand-primary', 'bg-emerald-600');
+      } else {
+        const diff = threshold - subtotal;
+        progressText.innerHTML = `Agrega <strong>${formatCLP(diff)}</strong> más para Envío Gratis (RM)`;
+        bar.classList.replace('bg-emerald-600', 'bg-brand-primary');
+      }
+    }
+
+    function toggleCart() {
+      const drawer = document.getElementById('cart-drawer');
+      const isOpen = !drawer.classList.contains('opacity-0');
+      if (isOpen) {
+        drawer.classList.add('opacity-0', 'pointer-events-none');
+      } else {
+        drawer.classList.remove('opacity-0', 'pointer-events-none');
+      }
+    }
+
+    // Modal Quick View
+    let quickViewCurrentProd = null;
+    function openQuickView(prodId) {
+      const prod = allProducts.find(p => p.id === prodId);
+      if (!prod) return;
+      quickViewCurrentProd = prod;
+
+      document.getElementById('qv-img').src = prod.image || 'assets/images/coffee-bag.jpg';
+      document.getElementById('qv-badge').textContent = prod.source.split('-')[0].trim();
+      document.getElementById('qv-title').textContent = prod.title;
+      document.getElementById('qv-source').textContent = prod.vendor || prod.source;
+      document.getElementById('qv-desc').textContent = prod.description || 'Selección gourmet con despacho a todo Chile.';
+      document.getElementById('qv-price').textContent = formatCLP(prod.price);
+
+      const varWrap = document.getElementById('qv-variants-wrap');
+      const varSelect = document.getElementById('qv-variant-select');
+      if (prod.variants && prod.variants.length > 1) {
+        varWrap.style.display = 'block';
+        varSelect.innerHTML = prod.variants.map((v, i) => `<option value="${i}">${v.title} - ${formatCLP(v.price)}</option>`).join('');
+      } else {
+        varWrap.style.display = 'none';
+      }
+
+      document.getElementById('qv-add-btn').onclick = () => {
+        let vTitle = "Estándar";
+        let vPrice = prod.price;
+        if (prod.variants && prod.variants.length > 1) {
+          const idx = varSelect.value;
+          vTitle = prod.variants[idx].title;
+          vPrice = prod.variants[idx].price;
+        }
+        addToCart({
+          id: prod.id,
+          title: prod.title,
+          variantTitle: vTitle,
+          price: vPrice,
+          image: prod.image || 'assets/images/coffee-bag.jpg'
+        });
+        closeQuickView();
+      };
+
+      document.getElementById('quickview-modal').classList.remove('hidden');
+    }
+
+    function handleQuickViewVariantChange(idx) {
+      if (!quickViewCurrentProd || !quickViewCurrentProd.variants[idx]) return;
+      const v = quickViewCurrentProd.variants[idx];
+      document.getElementById('qv-price').textContent = formatCLP(v.price);
+    }
+
+    function closeQuickView() {
+      document.getElementById('quickview-modal').classList.add('hidden');
+    }
+
+    // Checkout Modal
+    function openCheckoutModal() {
+      if (cart.length === 0) {
+        showToast("Tu canasta está vacía.");
+        return;
+      }
+      toggleCart();
+      document.getElementById('checkout-modal').classList.remove('hidden');
+    }
+
+    function closeCheckoutModal() {
+      document.getElementById('checkout-modal').classList.add('hidden');
+    }
+
+    function handleCheckoutSubmit(e) {
+      e.preventDefault();
+      alert(`🎉 ¡Orden de prueba procesada con éxito!\n\nMarca de la tienda: ${currentBrand}\nTotal: ${document.getElementById('cart-total').textContent}\nDespacho preparado para Santiago / Regiones.\n\nEn producción esto enlaza con Webpay Plus o Mercado Pago.`);
+      cart = [];
+      updateCartUI();
+      closeCheckoutModal();
+    }
+
+    // Toast
+    function showToast(msg) {
+      const t = document.getElementById('toast');
+      document.getElementById('toast-message').textContent = msg;
+      t.classList.remove('translate-y-20', 'opacity-0');
+      t.classList.add('translate-y-0', 'opacity-100');
+      setTimeout(() => {
+        t.classList.remove('translate-y-0', 'opacity-100');
+        t.classList.add('translate-y-20', 'opacity-0');
+      }, 3000);
+    }
+
+    // Brand Switcher
+    function setBrandName(name, tagline) {
+      currentBrand = name;
+      document.getElementById('brand-logo-text').textContent = name;
+      document.getElementById('hero-brand-title').textContent = name;
+      document.getElementById('footer-brand-title').textContent = name;
+      document.getElementById('footer-copy-brand').textContent = name;
+      document.getElementById('brand-logo-tagline').textContent = tagline;
+      document.title = `${name} — Tienda Online & Especialidad Chile`;
+
+      document.querySelectorAll('.brand-btn').forEach(btn => {
+        if (btn.dataset.brand === name) {
+          btn.classList.add('bg-amber-600', 'text-white');
+          btn.classList.remove('text-amber-100');
+        } else {
+          btn.classList.remove('bg-amber-600', 'text-white');
+          btn.classList.add('text-amber-100');
+        }
+      });
+      showToast(`Marca cambiada a: ${name}`);
+    }
+
+    function setPalette(themeName, label) {
+      if (themeName === 'amber') {
+        document.documentElement.removeAttribute('data-theme');
+      } else {
+        document.documentElement.setAttribute('data-theme', themeName);
+      }
+
+      document.querySelectorAll('.palette-btn').forEach(btn => {
+        if (btn.dataset.theme === themeName) {
+          btn.classList.add('border-2', 'border-white', 'ring-2', 'ring-amber-400');
+        } else {
+          btn.classList.remove('border-2', 'border-white', 'ring-2', 'ring-amber-400');
+        }
+      });
+      showToast(`Paleta aplicada: ${label}`);
+    }
+
+    function setFont(fontKey) {
+      let headline = "'Playfair Display', serif";
+      if (fontKey === 'sans') headline = "'Plus Jakarta Sans', sans-serif";
+      if (fontKey === 'cinzel') headline = "'Cinzel', serif";
+      document.documentElement.style.setProperty('--font-headline', headline);
+      showToast(`Tipografía: ${fontKey.toUpperCase()}`);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      renderCatalog(true);
+      updateCartUI();
+    });
+  </script>
+
+</body>
+</html>
