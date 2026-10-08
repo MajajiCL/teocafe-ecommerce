@@ -111,29 +111,27 @@
     .text-brand-muted { color: var(--muted); }
     .border-brand-border { border-color: var(--border); }
     
-    /* EFECTOS VISUALES HERO DE NIVEL EDITORIAL */
-    .hero-mask-desktop {
-      mask-image: radial-gradient(ellipse at center, black 65%, transparent 100%);
-      -webkit-mask-image: radial-gradient(ellipse at center, black 65%, transparent 100%);
+    /* MARQUEE INFINITO */
+    @keyframes marquee {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-50%); }
+    }
+    .animate-marquee {
+      display: flex;
+      width: 200%;
+      animation: marquee 25s linear infinite;
+    }
+    .animate-marquee:hover {
+      animation-play-state: paused;
     }
 
-    .hero-ambient-glow {
-      position: absolute;
-      width: 550px;
-      height: 550px;
-      border-radius: 50%;
-      background: radial-gradient(circle, var(--glow) 0%, transparent 70%);
-      filter: blur(50px);
-      pointer-events: none;
-      z-index: 0;
-    }
-
+    /* GLASSMORPHISM & EFECTOS EDITORIALES */
     .glass-card {
-      background: rgba(255, 255, 255, 0.85);
+      background: rgba(255, 255, 255, 0.88);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
       border: 1px solid rgba(255, 255, 255, 0.7);
-      box-shadow: 0 20px 40px -15px rgba(26, 16, 10, 0.15), 0 0 0 1px var(--border);
+      box-shadow: 0 20px 40px -15px rgba(26, 16, 10, 0.16), 0 0 0 1px var(--border);
     }
 
     .shimmer-badge {
@@ -151,6 +149,11 @@
       backdrop-filter: blur(6px);
     }
 
+    /* Transición de Carrusel */
+    .slide-fade {
+      transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+    }
+
     /* Scrollbar */
     ::-webkit-scrollbar { width: 8px; }
     ::-webkit-scrollbar-track { background: var(--bg); }
@@ -163,7 +166,7 @@
   <!-- ========================================== -->
   <!-- 🎛️ BRAND & UI STUDIO: PANEL SUPERIOR        -->
   <!-- ========================================== -->
-  <aside id="brand-studio" class="bg-[#120B06] text-amber-50 shadow-2xl border-b border-amber-900/60 py-3 px-4 sm:px-6 relative z-30 text-xs">
+  <aside id="brand-studio" class="bg-[#120B06] text-amber-50 shadow-2xl border-b border-amber-900/60 py-2.5 px-4 sm:px-6 relative z-30 text-xs">
     <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-3">
       
       <!-- Studio Header -->
@@ -173,7 +176,7 @@
           <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-amber-500"></span>
         </span>
         <span class="font-extrabold tracking-wider uppercase text-amber-300 text-xs">Brand & Visual Studio</span>
-        <span class="text-zinc-400 text-[11px] hidden sm:inline">| Prueba variantes de marca y paleta en tiempo real:</span>
+        <span class="text-zinc-400 text-[11px] hidden sm:inline">| Prueba marcas y paletas en tiempo real:</span>
       </div>
 
       <!-- Studio Selectors -->
@@ -208,7 +211,7 @@
         <!-- 3. Tipografía -->
         <div class="bg-black/60 rounded-xl px-2.5 py-1.5 border border-amber-800/50 shadow-inner flex items-center">
           <select id="typo-select" onchange="setFont(this.value)" class="bg-transparent text-amber-100 text-[11px] font-semibold outline-none cursor-pointer">
-            <option value="playfair" class="bg-zinc-950 text-white">Playfair Display (Gourmet)</option>
+            <option value="playfair" class="bg-zinc-950 text-white">Playfair (Gourmet)</option>
             <option value="cinzel" class="bg-zinc-950 text-white">Cinzel (Clásico Europeo)</option>
             <option value="sans" class="bg-zinc-950 text-white">Plus Jakarta (Moderno)</option>
           </select>
@@ -226,11 +229,11 @@
     <div class="max-w-7xl mx-auto flex justify-between items-center text-center sm:text-left">
       <div class="flex items-center gap-2 mx-auto sm:mx-0 font-medium">
         <i data-lucide="truck" class="w-4 h-4 text-amber-200"></i>
-        <span><strong>Despacho en 24-48 hrs:</strong> Todo Santiago y Regiones • <strong>Envío GRATIS</strong> en RM sobre $30.000</span>
+        <span><strong>Despacho Express:</strong> RM en 24-48 hrs • <strong>Envío GRATIS</strong> en Santiago sobre $30.000</span>
       </div>
       <div class="hidden md:flex items-center gap-5 text-white/90 text-[11px]">
+        <span class="flex items-center gap-1.5"><i data-lucide="clock" class="w-3.5 h-3.5 text-amber-300"></i> Pide antes de las 14:00 y sale hoy</span>
         <span class="flex items-center gap-1.5"><i data-lucide="shield-check" class="w-3.5 h-3.5 text-emerald-300"></i> Webpay Plus & Mercado Pago</span>
-        <span class="flex items-center gap-1.5"><i data-lucide="award" class="w-3.5 h-3.5 text-amber-300"></i> 138 Productos Operativos Reales</span>
       </div>
     </div>
   </div>
@@ -261,18 +264,18 @@
         <div class="hidden lg:flex items-center flex-1 max-w-md mx-8">
           <div class="relative w-full">
             <i data-lucide="search" class="w-4 h-4 text-brand-muted absolute left-3.5 top-3"></i>
-            <input type="text" id="search-input" onkeyup="handleSearch(this.value)" placeholder="Buscar cafés, tés, marcas y orígenes..." class="w-full bg-brand-bg border border-brand-border rounded-full pl-10 pr-4 py-2.5 text-xs text-brand-text outline-none focus:border-brand-primary transition shadow-inner">
+            <input type="text" id="search-input" onkeyup="handleSearch(this.value)" placeholder="Buscar en los 138 cafés, tés, marcas y orígenes..." class="w-full bg-brand-bg border border-brand-border rounded-full pl-10 pr-4 py-2.5 text-xs text-brand-text outline-none focus:border-brand-primary transition shadow-inner">
           </div>
         </div>
 
         <!-- Enlaces & Acciones -->
         <div class="flex items-center gap-4">
           <nav class="hidden md:flex items-center gap-6 text-xs font-bold text-brand-text">
-            <a href="#catalogo" onclick="setCategoryFilter('all')" class="hover:text-brand-primary transition">Catálogo</a>
+            <a href="#catalogo" onclick="setCategoryFilter('all')" class="hover:text-brand-primary transition">Catálogo (138)</a>
+            <a href="#ofertas" class="hover:text-brand-primary text-amber-600 transition flex items-center gap-1"><i data-lucide="flame" class="w-3.5 h-3.5"></i> Ofertas Flash</a>
             <a href="#catalogo" onclick="setCategoryFilter('cafe')" class="hover:text-brand-primary transition">Café Grano</a>
-            <a href="#catalogo" onclick="setCategoryFilter('te')" class="hover:text-brand-primary transition">Té de Hoja</a>
-            <a href="#catalogo" onclick="setCategoryFilter('soluble')" class="hover:text-brand-primary transition">Liofilizados</a>
-            <a href="#catalogo" onclick="setCategoryFilter('accesorios')" class="hover:text-brand-primary transition">Cafeteras</a>
+            <a href="#catalogo" onclick="setCategoryFilter('te')" class="hover:text-brand-primary transition">Té Basilur</a>
+            <a href="#catalogo" onclick="setSourceFilter('Café de Colo-Colo')" class="hover:text-brand-primary transition">Colo-Colo</a>
           </nav>
 
           <!-- Botón Canasta -->
@@ -288,125 +291,305 @@
   </header>
 
   <!-- ========================================== -->
-  <!-- HERO BANNER CON DIFUMINADOS Y EFECTOS      -->
+  <!-- 🎠 HERO CAROUSEL INTERACTIVO DINÁMICO      -->
   <!-- ========================================== -->
-  <section class="relative overflow-hidden bg-brand-bg py-12 md:py-20 border-b border-brand-border">
-    <div class="hero-ambient-glow -top-32 -left-32"></div>
-    <div class="hero-ambient-glow -bottom-32 -right-32"></div>
-
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-        
-        <!-- Textos & Call To Actions -->
-        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
-          
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-card border border-brand-border shadow-sm text-xs font-bold text-brand-secondary">
-            <span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
-            <span id="hero-pill-text">Base Operativa Oficial • La Finca, Basilur & Colo-Colo</span>
-          </div>
-
-          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold font-headline leading-[1.1] tracking-tight text-brand-text">
-            El arte supremo de <br>
-            <span class="text-brand-primary relative inline-block">
-              <span id="hero-brand-title-text">Té o Café</span>
-              <!-- Línea orgánica dorada inferior -->
-              <svg class="absolute -bottom-2 left-0 w-full text-brand-secondary opacity-70" height="8" viewBox="0 0 200 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 5.5C50 1 150 1 199 5.5" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
-              </svg>
+  <section class="relative overflow-hidden bg-brand-bg border-b border-brand-border">
+    <div id="carousel-container" class="relative w-full min-h-[520px] md:min-h-[580px] flex items-center">
+      
+      <!-- SLIDE 1: LANZAMIENTO & DEGUSTACIÓN -->
+      <div class="hero-slide active-slide absolute inset-0 transition-opacity duration-700 opacity-100 flex items-center" data-slide="0">
+        <div class="absolute inset-0 z-0">
+          <img src="assets/images/hero.jpg" alt="Lanzamiento Té o Café" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-transparent"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full py-12">
+          <div class="max-w-2xl space-y-4 text-white">
+            <span class="shimmer-badge text-white text-[10px] font-extrabold uppercase tracking-widest px-3 py-1 rounded-full inline-block">
+              🇨🇱 GRAN LANZAMIENTO BIENVENIDA
             </span>
-          </h1>
-
-          <p id="hero-subtitle" class="text-base sm:text-lg text-brand-muted max-w-xl font-light leading-relaxed">
-            Donde la nobleza de la hoja de té y la intensidad del grano de café recién tostado convergen. Un catálogo selecto de 138 variedades para transformar cada pausa en una experiencia sublime.
-          </p>
-
-          <!-- CTAs -->
-          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3.5 pt-2">
-            <a href="#catalogo" class="btn-brand-primary px-7 py-3.5 rounded-xl font-bold text-xs shadow-lg flex items-center gap-2">
-              <i data-lucide="shopping-cart" class="w-4 h-4"></i> Explorar Catálogo (138 Ítems)
-            </a>
-            <button onclick="setCategoryFilter('cafe')" class="px-6 py-3.5 rounded-xl bg-brand-card border border-brand-border text-brand-text hover:border-brand-primary hover:text-brand-primary font-bold text-xs shadow-sm transition">
-              Café de Especialidad
-            </button>
-            <button onclick="setCategoryFilter('te')" class="px-6 py-3.5 rounded-xl bg-brand-card border border-brand-border text-brand-text hover:border-brand-primary hover:text-brand-primary font-bold text-xs shadow-sm transition">
-              Té Basilur & La Finca
-            </button>
-          </div>
-
-          <!-- Sellos de Confianza y Atributos -->
-          <div class="grid grid-cols-3 gap-4 pt-6 border-t border-brand-border text-left">
-            <div>
-              <p class="text-2xl font-bold font-headline text-brand-primary">138</p>
-              <p class="text-[11px] text-brand-muted font-medium mt-0.5">Productos en Stock</p>
-            </div>
-            <div>
-              <p class="text-2xl font-bold font-headline text-brand-primary">24-48h</p>
-              <p class="text-[11px] text-brand-muted font-medium mt-0.5">Despacho Todo Chile</p>
-            </div>
-            <div>
-              <p class="text-2xl font-bold font-headline text-brand-primary">100%</p>
-              <p class="text-[11px] text-brand-muted font-medium mt-0.5">Tueste & Origen Noble</p>
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold font-headline leading-tight">
+              Donde el grano de café y la hoja noble se encuentran
+            </h1>
+            <p class="text-sm sm:text-base text-amber-100/90 leading-relaxed font-light">
+              Cafés recién tostados semanalmente en Santiago y tés de altura de Ceilán. Disfruta un <strong>20% de descuento</strong> en tu primer pedido con despacho prioritario en la RM.
+            </p>
+            <div class="flex flex-wrap items-center gap-3 pt-3">
+              <a href="#ofertas" class="btn-brand-primary px-6 py-3.5 rounded-xl font-bold text-xs shadow-xl flex items-center gap-2">
+                <i data-lucide="sparkles" class="w-4 h-4"></i> Ver Packs de Bienvenida
+              </a>
+              <a href="#catalogo" class="px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white font-bold text-xs transition">
+                Explorar los 138 Productos
+              </a>
             </div>
           </div>
-
         </div>
-
-        <!-- Banner Visual Cinematográfico con Difuminado y Glassmorphism -->
-        <div class="lg:col-span-5 relative">
-          
-          <div class="relative mx-auto max-w-lg rounded-3xl overflow-hidden shadow-2xl border border-brand-border/60 group">
-            
-            <!-- Imagen con máscara difuminada -->
-            <div class="relative overflow-hidden aspect-[4/3] bg-[#140D07]">
-              <img src="assets/images/hero.jpg" alt="Café y Té de Especialidad" class="w-full h-full object-cover scale-100 group-hover:scale-105 transition-transform duration-1000 hero-mask-desktop">
-              
-              <!-- Viñeta radial oscura y degradado cinematográfico -->
-              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent"></div>
-              <div class="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-transparent"></div>
-              
-              <div class="absolute top-4 right-4 bg-black/40 backdrop-blur-md border border-white/20 text-white rounded-full p-2 flex items-center justify-center">
-                <i data-lucide="sparkles" class="w-4 h-4 text-amber-300"></i>
-              </div>
-            </div>
-
-            <!-- Tarjeta Flotante Glassmorphism de Cata -->
-            <div class="absolute bottom-4 left-4 right-4 glass-card rounded-2xl p-4.5 border border-white/50 text-xs space-y-1.5 shadow-xl transition-transform duration-300 group-hover:-translate-y-1">
-              <div class="flex items-center justify-between">
-                <span class="shimmer-badge text-white text-[9px] font-extrabold uppercase tracking-widest px-2.5 py-0.5 rounded-full">
-                  Lote de Autor Selección 2026
-                </span>
-                <span class="text-[11px] font-bold text-brand-primary flex items-center gap-1">
-                  <i data-lucide="map-pin" class="w-3 h-3"></i> Valle del Cauca & Kioto
-                </span>
-              </div>
-              <h4 class="font-headline font-bold text-sm text-brand-text">
-                Café Tostado en Chile & Té Ceylán de Altura
-              </h4>
-              <p class="text-[11px] text-brand-muted leading-relaxed line-clamp-1">
-                Notas aromáticas a flor de jazmín, cacao 70%, durazno maduro y miel de ulmo.
-              </p>
-            </div>
-
-          </div>
-
-        </div>
-
       </div>
+
+      <!-- SLIDE 2: COLO-COLO OFICIAL -->
+      <div class="hero-slide absolute inset-0 transition-opacity duration-700 opacity-0 pointer-events-none flex items-center" data-slide="1">
+        <div class="absolute inset-0 z-0">
+          <img src="assets/images/banner-colocolo.jpg" alt="Café de Colo-Colo Oficial" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-transparent"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full py-12">
+          <div class="max-w-2xl space-y-4 text-white">
+            <span class="bg-amber-500 text-black text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full inline-block shadow">
+              🏆 EDICIÓN ESPECIAL CENTENARIO & MORÓN
+            </span>
+            <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold font-headline leading-tight">
+              El Café de los Campeones en tu Casa
+            </h2>
+            <p class="text-sm sm:text-base text-zinc-300 leading-relaxed font-light">
+              Edición oficial conmemorativa de Colo-Colo: café de grano entero, molido, instantáneo y cápsulas compatibles. ¡Lleva el Pack 4x3 o incluye tu Prensa Francesa!
+            </p>
+            <div class="flex flex-wrap items-center gap-3 pt-3">
+              <button onclick="setSourceFilter('Café de Colo-Colo'); location.href='#catalogo';" class="bg-amber-400 hover:bg-amber-300 text-black px-6 py-3.5 rounded-xl font-extrabold text-xs shadow-xl flex items-center gap-2 transition">
+                <i data-lucide="trophy" class="w-4 h-4"></i> Comprar Café de Colo-Colo
+              </button>
+              <a href="#catalogo" class="px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white font-bold text-xs transition">
+                Ver Cápsulas & Prensas
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 3: BASILUR CEYLON TEA -->
+      <div class="hero-slide absolute inset-0 transition-opacity duration-700 opacity-0 pointer-events-none flex items-center" data-slide="2">
+        <div class="absolute inset-0 z-0">
+          <img src="assets/images/banner-basilur.jpg" alt="Té Basilur Chile" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-transparent"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full py-12">
+          <div class="max-w-2xl space-y-4 text-white">
+            <span class="bg-emerald-600 text-white text-[10px] font-extrabold uppercase tracking-widest px-3 py-1 rounded-full inline-block">
+              🍃 BASILUR CEYLON: EL TÉ MÁS PREMIADO
+            </span>
+            <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold font-headline leading-tight">
+              Latas de Colección & Hojas Nobles de Ceilán
+            </h2>
+            <p class="text-sm sm:text-base text-zinc-200 leading-relaxed font-light">
+              Desde las latas musicales Music Festival hasta los libros de colección vintage y pirámides aromatizadas con bergamota y frutas exóticas.
+            </p>
+            <div class="flex flex-wrap items-center gap-3 pt-3">
+              <button onclick="setSourceFilter('Té Basilur Chile'); location.href='#catalogo';" class="bg-emerald-500 hover:bg-emerald-400 text-white px-6 py-3.5 rounded-xl font-bold text-xs shadow-xl flex items-center gap-2 transition">
+                <i data-lucide="leaf" class="w-4 h-4"></i> Ver 103 Variedades Basilur
+              </button>
+              <a href="#catalogo" class="px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white font-bold text-xs transition">
+                Teteras & Regalos
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 4: LA FINCA TOSTADURÍA -->
+      <div class="hero-slide absolute inset-0 transition-opacity duration-700 opacity-0 pointer-events-none flex items-center" data-slide="3">
+        <div class="absolute inset-0 z-0">
+          <img src="assets/images/banner-lafinca.jpg" alt="Café La Finca Tostaduría" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-transparent"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full py-12">
+          <div class="max-w-2xl space-y-4 text-white">
+            <span class="bg-orange-600 text-white text-[10px] font-extrabold uppercase tracking-widest px-3 py-1 rounded-full inline-block">
+              ☕ TOSTADO SEMANAL EN SANTIAGO • 100% ARÁBICA
+            </span>
+            <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold font-headline leading-tight">
+              Café Artesanal Valle del Cauca & Quindío
+            </h2>
+            <p class="text-sm sm:text-base text-zinc-200 leading-relaxed font-light">
+              Granos de altura cosechados bajo sombra y tostados en pequeños lotes en Chile para preservar sus aceites esenciales y notas a cacao y caramelo.
+            </p>
+            <div class="flex flex-wrap items-center gap-3 pt-3">
+              <button onclick="setSourceFilter('La Finca'); location.href='#catalogo';" class="bg-orange-500 hover:bg-orange-400 text-white px-6 py-3.5 rounded-xl font-bold text-xs shadow-xl flex items-center gap-2 transition">
+                <i data-lucide="coffee" class="w-4 h-4"></i> Ver Colección La Finca
+              </button>
+              <a href="#catalogo" class="px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white font-bold text-xs transition">
+                Liofilizados & Packs
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Controles de Flechas -->
+      <button onclick="prevSlide()" class="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-black/40 hover:bg-black/70 text-white flex items-center justify-center backdrop-blur-md border border-white/20 transition">
+        <i data-lucide="chevron-left" class="w-5 h-5"></i>
+      </button>
+      <button onclick="nextSlide()" class="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-black/40 hover:bg-black/70 text-white flex items-center justify-center backdrop-blur-md border border-white/20 transition">
+        <i data-lucide="chevron-right" class="w-5 h-5"></i>
+      </button>
+
+      <!-- Indicadores de Bolitas -->
+      <div class="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2">
+        <button onclick="goToSlide(0)" class="carousel-dot w-3 h-3 rounded-full bg-white transition" data-dot="0"></button>
+        <button onclick="goToSlide(1)" class="carousel-dot w-3 h-3 rounded-full bg-white/40 transition" data-dot="1"></button>
+        <button onclick="goToSlide(2)" class="carousel-dot w-3 h-3 rounded-full bg-white/40 transition" data-dot="2"></button>
+        <button onclick="goToSlide(3)" class="carousel-dot w-3 h-3 rounded-full bg-white/40 transition" data-dot="3"></button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- ⚡ CINTA MARQUEE INFINITA DE BENEFICIOS    -->
+  <!-- ========================================== -->
+  <div class="bg-[#160E08] text-amber-200/90 py-3 overflow-hidden border-y border-amber-950 font-bold text-xs uppercase tracking-wider select-none">
+    <div class="animate-marquee whitespace-nowrap flex items-center gap-8">
+      <span>🇨🇱 DESPACHO A TODO CHILE EN 24-48 HRS</span>
+      <span>•</span>
+      <span>☕ TUESTE FRESCO SEMANAL EN SANTIAGO</span>
+      <span>•</span>
+      <span>🍃 TÉ DE CEILÁN BASILUR & LA FINCA HOJA NOBLE</span>
+      <span>•</span>
+      <span>🏆 CAFÉ OFICIAL DE COLO-COLO EN GRANO Y CÁPSULAS</span>
+      <span>•</span>
+      <span>⚡ ENVÍO GRATIS EN RM SOBRE $30.000</span>
+      <span>•</span>
+      <span>⏰ PIDE ANTES DE LAS 14:00 Y SALE HOY</span>
+      <span>•</span>
+      <span>💳 WEBPAY PLUS & MERCADO PAGO PROTEGIDO</span>
+      <span>•</span>
+      <span>⭐ 138 PRODUCTOS EN STOCK INMEDIATO</span>
+      <span>•</span>
+      <!-- Repetición continua para loop perfecto -->
+      <span>🇨🇱 DESPACHO A TODO CHILE EN 24-48 HRS</span>
+      <span>•</span>
+      <span>☕ TUESTE FRESCO SEMANAL EN SANTIAGO</span>
+      <span>•</span>
+      <span>🍃 TÉ DE CEILÁN BASILUR & LA FINCA HOJA NOBLE</span>
+      <span>•</span>
+      <span>🏆 CAFÉ OFICIAL DE COLO-COLO EN GRANO Y CÁPSULAS</span>
+      <span>•</span>
+      <span>⚡ ENVÍO GRATIS EN RM SOBRE $30.000</span>
+      <span>•</span>
+      <span>⏰ PIDE ANTES DE LAS 14:00 Y SALE HOY</span>
+      <span>•</span>
+      <span>💳 WEBPAY PLUS & MERCADO PAGO PROTEGIDO</span>
+      <span>•</span>
+      <span>⭐ 138 PRODUCTOS EN STOCK INMEDIATO</span>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- 🔥 OFERTAS FLASH & BUNDLES DESTACADOS     -->
+  <!-- ========================================== -->
+  <section id="ofertas" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
+      <div>
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-500/10 text-red-600 text-xs font-bold uppercase tracking-wider mb-2">
+          <i data-lucide="flame" class="w-3.5 h-3.5"></i> Ofertas Flash de Temporada
+        </div>
+        <h2 class="text-3xl font-bold font-headline text-brand-text">Packs con Descuento Exclusivo</h2>
+        <p class="text-xs text-brand-muted mt-1">Lotes combinados con hasta 20% de descuento y despacho gratis en Santiago.</p>
+      </div>
+      <div class="flex items-center gap-2 text-xs font-semibold text-brand-muted bg-brand-card p-2 rounded-xl border border-brand-border">
+        <i data-lucide="clock" class="w-4 h-4 text-red-500"></i>
+        <span>Precios promocionales por tiempo limitado</span>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      
+      <!-- BUNDLE 1: EXPERIENCIA BIENVENIDA -->
+      <div class="bg-brand-card rounded-2xl border-2 border-brand-primary/40 overflow-hidden shadow-lg hover:shadow-2xl transition flex flex-col group relative">
+        <div class="absolute top-3 right-3 bg-red-600 text-white font-extrabold text-[11px] px-2.5 py-1 rounded-full shadow z-10">
+          -20% OFF
+        </div>
+        <div class="aspect-video bg-brand-bg overflow-hidden relative">
+          <img src="assets/images/hero.jpg" alt="Pack Experiencia Bienvenida" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+          <div>
+            <span class="text-[10px] font-bold uppercase tracking-wider text-brand-secondary">Pack Degustación Estrella</span>
+            <h3 class="font-headline font-bold text-lg text-brand-text mt-1">Pack Bienvenida Especialidad</h3>
+            <p class="text-xs text-brand-muted mt-2">
+              Incluye 1 Café Valle del Cauca 250g + 1 Lata Té Basilur 20 Pirámides + 1 Miel de Ulmo Patagonia 500g.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-brand-border flex items-center justify-between">
+            <div>
+              <span class="text-xs text-brand-muted line-through">$29.970</span>
+              <p class="text-xl font-bold font-headline text-brand-primary">$23.990 CLP</p>
+            </div>
+            <button onclick="addBundleToCart('Pack Bienvenida Especialidad', 23990, 'assets/images/hero.jpg')" class="btn-brand-primary px-4 py-2.5 rounded-xl font-bold text-xs shadow-md flex items-center gap-1.5">
+              <i data-lucide="plus" class="w-4 h-4"></i> Llevar Pack
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- BUNDLE 2: PACK ALBO CAMPEÓN -->
+      <div class="bg-brand-card rounded-2xl border-2 border-brand-primary/40 overflow-hidden shadow-lg hover:shadow-2xl transition flex flex-col group relative">
+        <div class="absolute top-3 right-3 bg-red-600 text-white font-extrabold text-[11px] px-2.5 py-1 rounded-full shadow z-10">
+          -18% OFF
+        </div>
+        <div class="aspect-video bg-brand-bg overflow-hidden relative">
+          <img src="assets/images/banner-colocolo.jpg" alt="Pack Albo Campeón" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+          <div>
+            <span class="text-[10px] font-bold uppercase tracking-wider text-amber-600">Edición Oficial Fanáticos</span>
+            <h3 class="font-headline font-bold text-lg text-brand-text mt-1">Pack Campeón Colo-Colo</h3>
+            <p class="text-xs text-brand-muted mt-2">
+              Incluye 1 Café Centenario Colo-Colo 250g + 1 Prensa Francesa de Vidrio Borosilicato 600ml + Sticker Oficial.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-brand-border flex items-center justify-between">
+            <div>
+              <span class="text-xs text-brand-muted line-through">$21.800</span>
+              <p class="text-xl font-bold font-headline text-brand-primary">$17.990 CLP</p>
+            </div>
+            <button onclick="addBundleToCart('Pack Campeón Colo-Colo', 17990, 'assets/images/banner-colocolo.jpg')" class="btn-brand-primary px-4 py-2.5 rounded-xl font-bold text-xs shadow-md flex items-center gap-1.5">
+              <i data-lucide="plus" class="w-4 h-4"></i> Llevar Pack
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- BUNDLE 3: DÚO TOSTADURÍA LA FINCA -->
+      <div class="bg-brand-card rounded-2xl border-2 border-brand-primary/40 overflow-hidden shadow-lg hover:shadow-2xl transition flex flex-col group relative">
+        <div class="absolute top-3 right-3 bg-red-600 text-white font-extrabold text-[11px] px-2.5 py-1 rounded-full shadow z-10">
+          -17% OFF
+        </div>
+        <div class="aspect-video bg-brand-bg overflow-hidden relative">
+          <img src="assets/images/banner-lafinca.jpg" alt="Dúo Tostaduría La Finca" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+          <div>
+            <span class="text-[10px] font-bold uppercase tracking-wider text-emerald-700">100% Arábica Tostado en Chile</span>
+            <h3 class="font-headline font-bold text-lg text-brand-text mt-1">Dúo Tostaduría La Finca</h3>
+            <p class="text-xs text-brand-muted mt-2">
+              Lleva 1 Café Valle del Cauca 250g (Medio) + 1 Café Quindío 250g (Intenso) en grano o molido fresco.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-brand-border flex items-center justify-between">
+            <div>
+              <span class="text-xs text-brand-muted line-through">$27.980</span>
+              <p class="text-xl font-bold font-headline text-brand-primary">$22.990 CLP</p>
+            </div>
+            <button onclick="addBundleToCart('Dúo Tostaduría La Finca', 22990, 'assets/images/banner-lafinca.jpg')" class="btn-brand-primary px-4 py-2.5 rounded-xl font-bold text-xs shadow-md flex items-center gap-1.5">
+              <i data-lucide="plus" class="w-4 h-4"></i> Llevar Pack
+            </button>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
   <!-- ========================================== -->
   <!-- CATÁLOGO PRINCIPAL (138 PRODUCTOS)         -->
   <!-- ========================================== -->
-  <main id="catalogo" class="flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 w-full">
+  <main id="catalogo" class="flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 w-full border-t border-brand-border">
     
-    <!-- Filtros por Línea de Marca -->
+    <!-- Header del Catálogo -->
     <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-8">
       <div>
         <span class="text-xs font-bold uppercase tracking-wider text-brand-secondary">Catálogo Operativo Consolidado</span>
         <h2 class="text-2xl sm:text-3xl font-bold font-headline text-brand-text mt-1">Nuestra Colección Disponible</h2>
         <p class="text-xs text-brand-muted mt-1">
-          Mostrando <span id="showing-count" class="font-bold text-brand-text">0</span> productos oficiales listos para despacho.
+          Mostrando <span id="showing-count" class="font-bold text-brand-text">0</span> productos. <em>(Haz clic en cualquier imagen o título para ver la ficha completa).</em>
         </p>
       </div>
 
@@ -457,7 +640,7 @@
   </main>
 
   <!-- ========================================== -->
-  <!-- FOOTER CON LOGOTIPO VECTORIAL              -->
+  <!-- FOOTER                                     -->
   <!-- ========================================== -->
   <footer class="bg-[#120B06] text-amber-100/80 pt-16 pb-12 border-t border-amber-950 mt-auto">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -523,7 +706,7 @@
   </footer>
 
   <!-- ========================================== -->
-  <!-- DRAWER: CANASTA LATERAL (100% AISLADO)     -->
+  <!-- DRAWER: CANASTA LATERAL                    -->
   <!-- ========================================== -->
   <div id="cart-drawer" class="fixed inset-0 z-[100] overflow-hidden hidden">
     <div id="cart-backdrop" onclick="toggleCart()" class="absolute inset-0 drawer-backdrop"></div>
@@ -588,9 +771,106 @@
   </div>
 
   <!-- ========================================== -->
+  <!-- MODAL: DETALLE DE PRODUCTO (VENTANA MODAL) -->
+  <!-- ========================================== -->
+  <div id="quickview-modal" class="fixed inset-0 z-[110] overflow-y-auto hidden">
+    <div class="min-h-screen px-4 py-8 text-center flex items-center justify-center">
+      <div class="fixed inset-0 drawer-backdrop transition-opacity" onclick="closeQuickView()"></div>
+      
+      <div class="inline-block w-full max-w-3xl p-6 sm:p-8 my-8 text-left align-middle transition-all transform bg-brand-card shadow-2xl rounded-3xl border border-brand-border relative z-10">
+        
+        <!-- Botón Cerrar -->
+        <button onclick="closeQuickView()" class="absolute top-5 right-5 w-9 h-9 rounded-full bg-brand-bg hover:bg-black/10 flex items-center justify-center text-brand-text transition shadow-sm">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+          
+          <!-- Imagen del Producto -->
+          <div class="space-y-3">
+            <div class="rounded-2xl overflow-hidden bg-brand-bg border border-brand-border aspect-square relative shadow-inner">
+              <img id="qv-img" src="" alt="" class="w-full h-full object-cover">
+              <span id="qv-badge" class="absolute top-3 left-3 px-3 py-1 rounded-full text-[10px] font-bold bg-brand-primary text-white shadow"></span>
+            </div>
+            <p class="text-[11px] text-center text-brand-muted flex items-center justify-center gap-1.5">
+              <i data-lucide="shield-check" class="w-3.5 h-3.5 text-emerald-600"></i> Producto 100% Original Sellado
+            </p>
+          </div>
+
+          <!-- Detalles y Acciones -->
+          <div class="space-y-4 text-xs">
+            
+            <div>
+              <span id="qv-source" class="text-xs font-extrabold uppercase tracking-widest text-brand-secondary"></span>
+              <h2 id="qv-title" class="font-headline font-bold text-2xl sm:text-3xl text-brand-text leading-tight mt-1"></h2>
+              
+              <!-- Estrellas de Reseña -->
+              <div class="flex items-center gap-2 mt-2">
+                <div class="flex text-amber-500">
+                  <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                  <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                  <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                  <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                  <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                </div>
+                <span class="text-[11px] font-bold text-brand-text">4.9 / 5.0</span>
+                <span class="text-[11px] text-brand-muted">(28 valoraciones)</span>
+              </div>
+            </div>
+
+            <!-- Precio -->
+            <div class="p-3 bg-brand-bg rounded-xl border border-brand-border flex items-baseline gap-3">
+              <span id="qv-price" class="text-3xl font-bold font-headline text-brand-primary"></span>
+              <span class="text-[10px] text-emerald-700 font-bold bg-emerald-100 px-2 py-0.5 rounded">En Stock Inmediato</span>
+            </div>
+
+            <!-- Descripción -->
+            <div>
+              <h4 class="font-bold text-brand-text uppercase tracking-wider text-[10px] mb-1">Descripción del Producto</h4>
+              <p id="qv-desc" class="text-brand-muted leading-relaxed max-h-36 overflow-y-auto pr-2"></p>
+            </div>
+            
+            <!-- Selector de Variantes (Formato, Molienda, Gramos) -->
+            <div id="qv-variants-wrap">
+              <label class="block font-bold text-brand-text uppercase tracking-wider text-[10px] mb-1.5">Seleccionar Formato / Molienda:</label>
+              <select id="qv-variant-select" onchange="handleQuickViewVariantChange(this.value)" class="w-full bg-brand-bg border border-brand-border rounded-xl p-2.5 text-brand-text font-medium text-xs outline-none focus:border-brand-primary"></select>
+            </div>
+
+            <!-- Botón Añadir con Contador -->
+            <div class="pt-3 border-t border-brand-border flex items-center gap-3">
+              <div class="flex items-center border border-brand-border rounded-xl bg-brand-bg p-1">
+                <button onclick="changeQvQty(-1)" class="w-8 h-8 rounded-lg bg-brand-card flex items-center justify-center font-bold text-xs hover:bg-black/5">-</button>
+                <span id="qv-qty" class="w-8 text-center font-bold text-xs">1</span>
+                <button onclick="changeQvQty(1)" class="w-8 h-8 rounded-lg bg-brand-card flex items-center justify-center font-bold text-xs hover:bg-black/5">+</button>
+              </div>
+
+              <button id="qv-add-btn" class="btn-brand-primary flex-1 py-3.5 rounded-xl font-bold text-xs shadow-lg flex items-center justify-center gap-2">
+                <i data-lucide="shopping-bag" class="w-4 h-4"></i> Añadir a la Canasta
+              </button>
+            </div>
+
+            <!-- Beneficios de Despacho -->
+            <div class="text-[10px] text-brand-muted space-y-1 pt-1">
+              <p class="flex items-center gap-1.5">
+                <i data-lucide="truck" class="w-3.5 h-3.5 text-brand-primary"></i> <strong>Santiago (RM):</strong> Entrega en 24-48 hrs • Envío Gratis sobre $30.000
+              </p>
+              <p class="flex items-center gap-1.5">
+                <i data-lucide="package" class="w-3.5 h-3.5 text-brand-primary"></i> <strong>Regiones:</strong> Envíos diarios vía Starken y Chilexpress
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
   <!-- MODAL: CHECKOUT SIMULADO CHILENO           -->
   <!-- ========================================== -->
-  <div id="checkout-modal" class="fixed inset-0 z-[110] overflow-y-auto hidden">
+  <div id="checkout-modal" class="fixed inset-0 z-[120] overflow-y-auto hidden">
     <div class="min-h-screen px-4 text-center flex items-center justify-center">
       <div class="fixed inset-0 drawer-backdrop transition-opacity" onclick="closeCheckoutModal()"></div>
       
@@ -664,49 +944,9 @@
   </div>
 
   <!-- ========================================== -->
-  <!-- MODAL: QUICK VIEW / DETALLE PRODUCTO       -->
-  <!-- ========================================== -->
-  <div id="quickview-modal" class="fixed inset-0 z-[105] overflow-y-auto hidden">
-    <div class="min-h-screen px-4 text-center flex items-center justify-center">
-      <div class="fixed inset-0 drawer-backdrop transition-opacity" onclick="closeQuickView()"></div>
-      
-      <div class="inline-block w-full max-w-2xl p-6 sm:p-8 my-8 text-left align-middle transition-all transform bg-brand-card shadow-2xl rounded-2xl border border-brand-border relative z-10">
-        <button onclick="closeQuickView()" class="absolute top-4 right-4 text-brand-muted hover:text-brand-text">
-          <i data-lucide="x" class="w-5 h-5"></i>
-        </button>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 items-start">
-          <div class="rounded-xl overflow-hidden bg-brand-bg border border-brand-border">
-            <img id="qv-img" src="" alt="" class="w-full h-64 object-cover">
-          </div>
-          <div class="space-y-3 text-xs">
-            <span id="qv-badge" class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-brand-primary/10 text-brand-primary inline-block"></span>
-            <h3 id="qv-title" class="font-headline font-bold text-xl text-brand-text"></h3>
-            <p id="qv-source" class="text-[11px] text-brand-secondary font-semibold"></p>
-            <p id="qv-desc" class="text-brand-muted leading-relaxed max-h-36 overflow-y-auto pr-1"></p>
-            
-            <div id="qv-variants-wrap" class="pt-2">
-              <label class="block font-semibold text-brand-text mb-1">Formato / Variante:</label>
-              <select id="qv-variant-select" onchange="handleQuickViewVariantChange(this.value)" class="w-full bg-brand-bg border border-brand-border rounded-lg p-2 text-brand-text outline-none"></select>
-            </div>
-
-            <div class="flex items-center justify-between pt-3 border-t border-brand-border">
-              <span id="qv-price" class="text-2xl font-bold font-headline text-brand-primary"></span>
-              <button id="qv-add-btn" class="btn-brand-primary px-5 py-2.5 rounded-xl font-semibold text-xs">
-                Añadir al Carrito
-              </button>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-  <!-- ========================================== -->
   <!-- TOAST FEEDBACK                             -->
   <!-- ========================================== -->
-  <div id="toast" class="fixed bottom-6 right-6 z-[120] bg-[#160E08] text-white text-xs px-4 py-3 rounded-xl shadow-2xl border border-amber-800/80 transform translate-y-20 opacity-0 transition-all duration-300 flex items-center gap-2">
+  <div id="toast" class="fixed bottom-6 right-6 z-[130] bg-[#160E08] text-white text-xs px-4 py-3 rounded-xl shadow-2xl border border-amber-800/80 transform translate-y-20 opacity-0 transition-all duration-300 flex items-center gap-2">
     <i data-lucide="check-circle" class="w-4 h-4 text-amber-400"></i>
     <span id="toast-message">Producto añadido</span>
   </div>
@@ -750,33 +990,85 @@
     const perPage = 16;
     let currentBrand = "Té o Café";
     let cart = [];
+    let currentSlide = 0;
+    let carouselTimer = null;
+    let qvQuantity = 1;
 
     function formatCLP(val) {
       return "$" + Number(val).toLocaleString("es-CL");
     }
 
-    // CONMUTADOR DE MARCA DETERMINISTA
+    // CAROUSEL DINÁMICO
+    function showSlide(idx) {
+      const slides = document.querySelectorAll('.hero-slide');
+      const dots = document.querySelectorAll('.carousel-dot');
+      if (idx >= slides.length) idx = 0;
+      if (idx < 0) idx = slides.length - 1;
+      currentSlide = idx;
+
+      slides.forEach((s, i) => {
+        if (i === idx) {
+          s.classList.remove('opacity-0', 'pointer-events-none');
+          s.classList.add('opacity-100');
+        } else {
+          s.classList.remove('opacity-100');
+          s.classList.add('opacity-0', 'pointer-events-none');
+        }
+      });
+
+      dots.forEach((d, i) => {
+        if (i === idx) {
+          d.className = "carousel-dot w-3 h-3 rounded-full bg-white scale-125 transition";
+        } else {
+          d.className = "carousel-dot w-3 h-3 rounded-full bg-white/40 transition";
+        }
+      });
+    }
+
+    function nextSlide() {
+      showSlide(currentSlide + 1);
+      resetCarouselTimer();
+    }
+
+    function prevSlide() {
+      showSlide(currentSlide - 1);
+      resetCarouselTimer();
+    }
+
+    function goToSlide(idx) {
+      showSlide(idx);
+      resetCarouselTimer();
+    }
+
+    function startCarousel() {
+      carouselTimer = setInterval(() => {
+        showSlide(currentSlide + 1);
+      }, 5500);
+    }
+
+    function resetCarouselTimer() {
+      clearInterval(carouselTimer);
+      startCarousel();
+    }
+
+    // CONMUTADOR DE MARCA
     function switchBrand(brandKey) {
       const profile = brandProfiles[brandKey];
       if (!profile) return;
       currentBrand = profile.name;
 
-      // Actualizar SVG Logo
       const svg = (typeof brandLogos !== 'undefined' && brandLogos[profile.logoKey]) ? brandLogos[profile.logoKey] : '';
       const wrapH = document.getElementById('brand-logo-svg-wrap');
       const wrapF = document.getElementById('footer-logo-svg-wrap');
       if (wrapH) wrapH.innerHTML = svg;
       if (wrapF) wrapF.innerHTML = svg;
 
-      // Textos
       document.getElementById('brand-logo-text').textContent = profile.name;
       document.getElementById('brand-logo-tagline').textContent = profile.tagline;
-      document.getElementById('hero-brand-title-text').textContent = profile.name;
       document.getElementById('footer-brand-title').textContent = profile.name;
       document.getElementById('footer-copy-brand').textContent = profile.name;
       document.title = `${profile.name} — Tienda Online & Especialidad Chile`;
 
-      // Resaltado de botones
       document.querySelectorAll('.brand-btn').forEach(btn => {
         if (btn.dataset.brandkey === brandKey) {
           btn.className = "brand-btn px-3 py-1.5 rounded-lg font-bold text-xs transition bg-amber-600 text-white shadow-md";
@@ -788,7 +1080,7 @@
       showToast(`Marca cambiada a: ${profile.name}`);
     }
 
-    // CONMUTADOR DE PALETA DETERMINISTA
+    // CONMUTADOR DE PALETA
     function switchPalette(themeKey) {
       document.body.classList.remove('theme-amber', 'theme-matcha', 'theme-terracota', 'theme-noir');
       document.body.classList.add('theme-' + themeKey);
@@ -812,17 +1104,15 @@
       showToast(`Paleta aplicada: ${names[themeKey] || themeKey}`);
     }
 
-    // CAMBIO DE TIPOGRAFÍA
     function setFont(fontKey) {
       let fontHeadline = "'Playfair Display', serif";
       if (fontKey === 'sans') fontHeadline = "'Plus Jakarta Sans', sans-serif";
       if (fontKey === 'cinzel') fontHeadline = "'Cinzel', serif";
-      
       document.body.style.setProperty('--font-headline', fontHeadline);
       showToast(`Tipografía: ${fontKey.toUpperCase()}`);
     }
 
-    // FILTRADO DEL CATÁLOGO
+    // FILTROS
     function getFilteredProducts() {
       return allProducts.filter(p => {
         const matchCategory = currentCategory === 'all' || p.category === currentCategory;
@@ -849,7 +1139,7 @@
           <div class="col-span-full text-center py-16 space-y-3">
             <i data-lucide="coffee" class="w-12 h-12 text-brand-muted/30 mx-auto"></i>
             <h4 class="font-headline font-bold text-lg text-brand-text">No se encontraron productos</h4>
-            <p class="text-xs text-brand-muted">Intenta buscar con otros términos o cambia los filtros de categoría.</p>
+            <p class="text-xs text-brand-muted">Intenta buscar con otros términos o cambia los filtros.</p>
           </div>
         `;
         document.getElementById('load-more-container').style.display = 'none';
@@ -862,22 +1152,30 @@
         const imgUrl = p.image || 'assets/images/coffee-bag.jpg';
         return `
           <div class="bg-brand-card rounded-2xl border border-brand-border overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col group">
-            <div class="relative overflow-hidden aspect-square bg-brand-bg">
+            
+            <!-- Imagen Clickeable para abrir Producto -->
+            <div onclick="openQuickView(${p.id})" class="relative overflow-hidden aspect-square bg-brand-bg cursor-pointer">
               <img src="${imgUrl}" alt="${p.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" onerror="this.src='assets/images/coffee-bag.jpg'">
               <span class="absolute top-2.5 left-2.5 bg-brand-primary text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full shadow-sm">
                 ${p.source.split('-')[0].trim()}
               </span>
-              <button onclick="openQuickView(${p.id})" class="absolute bottom-2.5 right-2.5 bg-brand-card/90 hover:bg-brand-card text-brand-text p-2 rounded-full shadow-md backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity">
-                <i data-lucide="eye" class="w-4 h-4"></i>
-              </button>
+              <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                <span class="bg-white text-black text-xs font-bold px-3 py-1.5 rounded-full shadow-lg flex items-center gap-1.5">
+                  <i data-lucide="eye" class="w-3.5 h-3.5"></i> Ver Detalle
+                </span>
+              </div>
             </div>
 
+            <!-- Contenido de la Tarjeta -->
             <div class="p-4 flex-1 flex flex-col justify-between space-y-3">
               <div class="space-y-1">
                 <span class="text-[10px] uppercase tracking-wider text-brand-secondary font-bold">${p.vendor || 'Especialidad'}</span>
-                <h4 class="font-headline font-bold text-sm text-brand-text leading-snug group-hover:text-brand-primary transition line-clamp-2">
+                
+                <!-- Título Clickeable -->
+                <h4 onclick="openQuickView(${p.id})" class="font-headline font-bold text-sm text-brand-text leading-snug group-hover:text-brand-primary transition line-clamp-2 cursor-pointer">
                   ${p.title}
                 </h4>
+                
                 <p class="text-[11px] text-brand-muted line-clamp-2">
                   ${p.short_description || 'Selección de alta calidad para amantes del café y del té.'}
                 </p>
@@ -885,14 +1183,14 @@
 
               ${hasVariants ? `
                 <div>
-                  <select id="var-select-${p.id}" onchange="updateCardVariantPrice(${p.id}, this.value)" class="w-full text-[11px] bg-brand-bg border border-brand-border rounded-lg p-1.5 text-brand-text outline-none">
+                  <select id="var-select-${p.id}" onchange="updateCardVariantPrice(${p.id}, this.value)" class="w-full text-[11px] bg-brand-bg border border-brand-border rounded-lg p-1.5 text-brand-text outline-none cursor-pointer">
                     ${p.variants.map((v, i) => `<option value="${i}">${v.title} - ${formatCLP(v.price)}</option>`).join('')}
                   </select>
                 </div>
               ` : ''}
 
               <div class="pt-2 border-t border-brand-border flex items-center justify-between">
-                <div>
+                <div onclick="openQuickView(${p.id})" class="cursor-pointer">
                   <span class="text-[9px] text-brand-muted block">Precio</span>
                   <span id="price-tag-${p.id}" class="text-base font-bold font-headline text-brand-primary">
                     ${formatCLP(p.price)}
@@ -979,7 +1277,85 @@
       renderCatalog(true);
     }
 
-    // CARRITO DE COMPRAS DETERMINISTA
+    // MODAL DE DETALLE (QUICK VIEW)
+    let quickViewCurrentProd = null;
+    function openQuickView(prodId) {
+      const prod = allProducts.find(p => p.id === prodId);
+      if (!prod) return;
+      quickViewCurrentProd = prod;
+      qvQuantity = 1;
+
+      document.getElementById('qv-img').src = prod.image || 'assets/images/coffee-bag.jpg';
+      document.getElementById('qv-badge').textContent = prod.source.split('-')[0].trim();
+      document.getElementById('qv-title').textContent = prod.title;
+      document.getElementById('qv-source').textContent = prod.vendor || prod.source;
+      document.getElementById('qv-desc').textContent = prod.description || 'Selección gourmet con despacho a todo Chile en 24-48 horas.';
+      document.getElementById('qv-price').textContent = formatCLP(prod.price);
+      document.getElementById('qv-qty').textContent = "1";
+
+      const varWrap = document.getElementById('qv-variants-wrap');
+      const varSelect = document.getElementById('qv-variant-select');
+      if (prod.variants && prod.variants.length > 1) {
+        varWrap.style.display = 'block';
+        varSelect.innerHTML = prod.variants.map((v, i) => `<option value="${i}">${v.title} - ${formatCLP(v.price)}</option>`).join('');
+      } else {
+        varWrap.style.display = 'none';
+      }
+
+      document.getElementById('qv-add-btn').onclick = () => {
+        let vTitle = "Estándar";
+        let vPrice = prod.price;
+        if (prod.variants && prod.variants.length > 1) {
+          const idx = varSelect.value;
+          vTitle = prod.variants[idx].title;
+          vPrice = prod.variants[idx].price;
+        }
+        for (let i = 0; i < qvQuantity; i++) {
+          addToCart({
+            id: prod.id,
+            title: prod.title,
+            variantTitle: vTitle,
+            price: vPrice,
+            image: prod.image || 'assets/images/coffee-bag.jpg'
+          });
+        }
+        closeQuickView();
+      };
+
+      document.getElementById('quickview-modal').classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+      lucide.createIcons();
+    }
+
+    function changeQvQty(delta) {
+      qvQuantity = Math.max(1, qvQuantity + delta);
+      document.getElementById('qv-qty').textContent = qvQuantity;
+    }
+
+    function handleQuickViewVariantChange(idx) {
+      if (!quickViewCurrentProd || !quickViewCurrentProd.variants[idx]) return;
+      const v = quickViewCurrentProd.variants[idx];
+      document.getElementById('qv-price').textContent = formatCLP(v.price);
+    }
+
+    function closeQuickView() {
+      document.getElementById('quickview-modal').classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    }
+
+    // BUNDLES OFERTAS FLASH
+    function addBundleToCart(title, price, image) {
+      addToCart({
+        id: Math.floor(Math.random() * 90000) + 10000,
+        title: title,
+        variantTitle: "Pack Promocional",
+        price: price,
+        image: image
+      });
+      showToast(`¡${title} añadido a la canasta!`);
+    }
+
+    // CARRITO
     function addToCart(item) {
       const cartKey = `${item.id}-${item.variantTitle}`;
       const existing = cart.find(i => i.cartKey === cartKey);
@@ -1090,61 +1466,6 @@
       }
     }
 
-    // MODAL DETALLE
-    let quickViewCurrentProd = null;
-    function openQuickView(prodId) {
-      const prod = allProducts.find(p => p.id === prodId);
-      if (!prod) return;
-      quickViewCurrentProd = prod;
-
-      document.getElementById('qv-img').src = prod.image || 'assets/images/coffee-bag.jpg';
-      document.getElementById('qv-badge').textContent = prod.source.split('-')[0].trim();
-      document.getElementById('qv-title').textContent = prod.title;
-      document.getElementById('qv-source').textContent = prod.vendor || prod.source;
-      document.getElementById('qv-desc').textContent = prod.description || 'Selección gourmet con despacho a todo Chile.';
-      document.getElementById('qv-price').textContent = formatCLP(prod.price);
-
-      const varWrap = document.getElementById('qv-variants-wrap');
-      const varSelect = document.getElementById('qv-variant-select');
-      if (prod.variants && prod.variants.length > 1) {
-        varWrap.style.display = 'block';
-        varSelect.innerHTML = prod.variants.map((v, i) => `<option value="${i}">${v.title} - ${formatCLP(v.price)}</option>`).join('');
-      } else {
-        varWrap.style.display = 'none';
-      }
-
-      document.getElementById('qv-add-btn').onclick = () => {
-        let vTitle = "Estándar";
-        let vPrice = prod.price;
-        if (prod.variants && prod.variants.length > 1) {
-          const idx = varSelect.value;
-          vTitle = prod.variants[idx].title;
-          vPrice = prod.variants[idx].price;
-        }
-        addToCart({
-          id: prod.id,
-          title: prod.title,
-          variantTitle: vTitle,
-          price: vPrice,
-          image: prod.image || 'assets/images/coffee-bag.jpg'
-        });
-        closeQuickView();
-      };
-
-      document.getElementById('quickview-modal').classList.remove('hidden');
-    }
-
-    function handleQuickViewVariantChange(idx) {
-      if (!quickViewCurrentProd || !quickViewCurrentProd.variants[idx]) return;
-      const v = quickViewCurrentProd.variants[idx];
-      document.getElementById('qv-price').textContent = formatCLP(v.price);
-    }
-
-    function closeQuickView() {
-      document.getElementById('quickview-modal').classList.add('hidden');
-    }
-
-    // CHECKOUT
     function openCheckoutModal() {
       if (cart.length === 0) {
         showToast("Tu canasta está vacía.");
@@ -1177,11 +1498,22 @@
       }, 3000);
     }
 
+    // Tecla Escape para cerrar modales
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeQuickView();
+        closeCheckoutModal();
+        const drawer = document.getElementById('cart-drawer');
+        if (drawer && !drawer.classList.contains('hidden')) drawer.classList.add('hidden');
+      }
+    });
+
     // INICIALIZACIÓN
     document.addEventListener('DOMContentLoaded', () => {
       switchBrand('te-o-cafe');
       renderCatalog(true);
       updateCartUI();
+      startCarousel();
     });
   </script>
 
