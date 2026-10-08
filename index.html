@@ -9,232 +9,281 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link id="font-link" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link id="font-link" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
-  
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brand: {
-              primary: 'var(--brand-primary)',
-              primaryHover: 'var(--brand-primary-hover)',
-              secondary: 'var(--brand-secondary)',
-              accent: 'var(--brand-accent)',
-              bg: 'var(--brand-bg)',
-              card: 'var(--brand-card)',
-              text: 'var(--brand-text)',
-              muted: 'var(--brand-muted)',
-              border: 'var(--brand-border)',
-            }
-          },
-          fontFamily: {
-            headline: 'var(--font-headline)',
-            body: 'var(--font-body)',
-          }
-        }
-      }
-    }
-  </script>
 
   <style>
-    :root {
-      /* Paleta 1: Tostaduría & Ámbar (Default) */
-      --brand-primary: #854D0E;
-      --brand-primary-hover: #713F12;
-      --brand-secondary: #D97706;
-      --brand-accent: #B45309;
-      --brand-bg: #FCFBF7;
-      --brand-card: #FFFFFF;
-      --brand-text: #29180C;
-      --brand-muted: #786C64;
-      --brand-border: #EADBCE;
+    /* VARIABLES DINÁMICAS DE TEMA */
+    :root, body.theme-amber {
+      --p: #854D0E;
+      --p-dark: #5F3707;
+      --sec: #D97706;
+      --accent: #B45309;
+      --bg: #FAF7F2;
+      --bg-alt: #F3ECE2;
+      --card: #FFFFFF;
+      --text: #23160D;
+      --muted: #73645A;
+      --border: #E8DED3;
+      --glow: rgba(217, 119, 6, 0.18);
       --font-headline: 'Playfair Display', serif;
-      --font-body: 'Plus Jakarta Sans', sans-serif;
     }
 
-    [data-theme="matcha"] {
-      --brand-primary: #2D5A27;
-      --brand-primary-hover: #1E3F1A;
-      --brand-secondary: #5F8D37;
-      --brand-accent: #B59E5F;
-      --brand-bg: #F8FAF6;
-      --brand-card: #FFFFFF;
-      --brand-text: #192718;
-      --brand-muted: #5F6E5D;
-      --brand-border: #DDE5DA;
+    body.theme-matcha {
+      --p: #2D5827;
+      --p-dark: #1C3B18;
+      --sec: #5C8C36;
+      --accent: #A58442;
+      --bg: #F4F6F1;
+      --bg-alt: #E8EDE3;
+      --card: #FFFFFF;
+      --text: #152414;
+      --muted: #5B6B59;
+      --border: #D7E1D4;
+      --glow: rgba(92, 140, 54, 0.20);
+      --font-headline: 'Playfair Display', serif;
     }
 
-    [data-theme="terracota"] {
-      --brand-primary: #C2410C;
-      --brand-primary-hover: #9A3412;
-      --brand-secondary: #EA580C;
-      --brand-accent: #78350F;
-      --brand-bg: #FAF6F3;
-      --brand-card: #FFFFFF;
-      --brand-text: #261711;
-      --brand-muted: #76635C;
-      --brand-border: #E8DDD7;
+    body.theme-terracota {
+      --p: #B93808;
+      --p-dark: #8C2904;
+      --sec: #E0530A;
+      --accent: #78350F;
+      --bg: #FAF5F0;
+      --bg-alt: #EFE6DD;
+      --card: #FFFFFF;
+      --text: #23140E;
+      --muted: #746057;
+      --border: #E7DAD1;
+      --glow: rgba(224, 83, 10, 0.20);
+      --font-headline: 'Playfair Display', serif;
     }
 
-    [data-theme="noir"] {
-      --brand-primary: #18181B;
-      --brand-primary-hover: #09090B;
-      --brand-secondary: #CA8A04;
-      --brand-accent: #EAB308;
-      --brand-bg: #F4F4F5;
-      --brand-card: #FFFFFF;
-      --brand-text: #09090B;
-      --brand-muted: #71717A;
-      --brand-border: #E4E4E7;
+    body.theme-noir {
+      --p: #141416;
+      --p-dark: #000000;
+      --sec: #C69214;
+      --accent: #E5A91E;
+      --bg: #F1F1F3;
+      --bg-alt: #E3E3E7;
+      --card: #FFFFFF;
+      --text: #0C0C0E;
+      --muted: #575762;
+      --border: #DCDCE2;
+      --glow: rgba(198, 146, 20, 0.22);
+      --font-headline: 'Cinzel', serif;
     }
 
     body {
-      background-color: var(--brand-bg);
-      color: var(--brand-text);
-      font-family: var(--font-body);
-      transition: background-color 0.25s ease, color 0.25s ease;
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      overflow-x: hidden;
     }
 
     h1, h2, h3, .font-headline {
       font-family: var(--font-headline);
     }
 
-    .drawer-backdrop {
-      background: rgba(18, 12, 8, 0.6);
-      backdrop-filter: blur(4px);
+    /* CLASES UTILITARIAS DIRECTAS VINCULADAS AL TEMA */
+    .btn-brand-primary {
+      background-color: var(--p);
+      color: #FFFFFF;
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .btn-brand-primary:hover {
+      background-color: var(--p-dark);
+      transform: translateY(-1px);
+      box-shadow: 0 8px 20px -4px var(--glow);
     }
 
-    /* Custom scrollbar */
-    ::-webkit-scrollbar {
-      width: 7px;
+    .bg-brand-primary { background-color: var(--p); }
+    .bg-brand-card { background-color: var(--card); }
+    .bg-brand-bg { background-color: var(--bg); }
+    .text-brand-primary { color: var(--p); }
+    .text-brand-secondary { color: var(--sec); }
+    .text-brand-text { color: var(--text); }
+    .text-brand-muted { color: var(--muted); }
+    .border-brand-border { border-color: var(--border); }
+    
+    /* EFECTOS VISUALES HERO DE NIVEL EDITORIAL */
+    .hero-mask-desktop {
+      mask-image: linear-gradient(to right, black 65%, transparent 100%), linear-gradient(to bottom, black 85%, transparent 100%);
+      -webkit-mask-image: linear-gradient(to right, black 65%, transparent 100%), linear-gradient(to bottom, black 85%, transparent 100%);
+      mask-composite: intersect;
+      -webkit-mask-composite: source-in;
     }
-    ::-webkit-scrollbar-track {
-      background: #f1f1f1;
+
+    .hero-ambient-glow {
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, var(--glow) 0%, transparent 70%);
+      filter: blur(40px);
+      pointer-events: none;
+      z-index: 0;
     }
-    ::-webkit-scrollbar-thumb {
-      background: #c1a88b;
-      border-radius: 4px;
+
+    .glass-card {
+      background: rgba(255, 255, 255, 0.82);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      box-shadow: 0 20px 40px -15px rgba(26, 16, 10, 0.12), 0 0 0 1px var(--border);
     }
+
+    .shimmer-badge {
+      background: linear-gradient(90deg, var(--p) 0%, var(--sec) 50%, var(--p) 100%);
+      background-size: 200% auto;
+      animation: shimmer 4s linear infinite;
+    }
+
+    @keyframes shimmer {
+      to { background-position: 200% center; }
+    }
+
+    .drawer-backdrop {
+      background: rgba(18, 12, 8, 0.65);
+      backdrop-filter: blur(6px);
+    }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--sec); }
   </style>
 </head>
-<body class="min-h-screen flex flex-col antialiased">
+<body class="theme-amber min-h-screen flex flex-col antialiased">
 
   <!-- ========================================== -->
-  <!-- 🎛️ BRAND & UI STUDIO: SELECTOR EN VIVO     -->
+  <!-- 🎛️ BRAND & UI STUDIO: PANEL SUPERIOR FIJO   -->
   <!-- ========================================== -->
-  <aside id="brand-studio" class="sticky top-0 z-50 bg-[#160E08] text-amber-50 shadow-xl border-b border-amber-900/60 py-2 px-4 text-xs">
-    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3">
+  <aside id="brand-studio" class="bg-[#120B06] text-amber-50 shadow-2xl border-b border-amber-900/60 py-2.5 px-3 sm:px-6 relative z-50 text-xs">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-3">
       
-      <!-- Brand Studio Info -->
-      <div class="flex items-center gap-2">
-        <span class="flex h-2.5 w-2.5 relative">
-          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
-          <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-amber-500"></span>
-        </span>
-        <span class="font-bold tracking-wider uppercase text-amber-300">Live Brand Studio</span>
-        <span class="text-zinc-400 hidden lg:inline">| Prueba variantes de marca en tiempo real:</span>
+      <!-- Studio Header -->
+      <div class="flex items-center gap-2.5 w-full md:w-auto justify-between md:justify-start">
+        <div class="flex items-center gap-2">
+          <span class="flex h-2.5 w-2.5 relative">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-amber-500"></span>
+          </span>
+          <span class="font-extrabold tracking-wider uppercase text-amber-300 text-[11px]">Brand & Visual Studio</span>
+        </div>
+        <span class="text-zinc-400 text-[11px] hidden sm:inline">| Prueba nombres, paletas y logos en vivo:</span>
       </div>
 
-      <!-- Controls -->
-      <div class="flex flex-wrap items-center gap-2 sm:gap-3">
-        <!-- Variant Buttons -->
-        <div class="flex items-center gap-1 bg-black/50 rounded-lg p-1 border border-amber-900/50">
-          <label class="text-amber-200/80 font-medium px-1 hidden md:inline">Marca:</label>
-          <button onclick="setBrandName('Té o Café', 'El punto de encuentro entre dos mundos')" class="brand-btn px-2.5 py-1 rounded font-semibold text-xs transition bg-amber-600 text-white" data-brand="Té o Café">Té o Café</button>
-          <button onclick="setBrandName('Café o Té', 'La elección perfecta para cada momento')" class="brand-btn px-2.5 py-1 rounded font-medium text-xs text-amber-100 hover:text-white transition" data-brand="Café o Té">Café o Té</button>
-          <button onclick="setBrandName('Mundo Té o Café', 'Especialidad y origen en cada taza')" class="brand-btn px-2.5 py-1 rounded font-medium text-xs text-amber-100 hover:text-white transition" data-brand="Mundo Té o Café">Mundo Té o Café</button>
-          <button onclick="setBrandName('TeoCafé', 'Café de grano & Té de hoja en Chile')" class="brand-btn px-2.5 py-1 rounded font-medium text-xs text-amber-100 hover:text-white transition" data-brand="TeoCafé">TeoCafé</button>
+      <!-- Studio Selectors -->
+      <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 w-full md:w-auto">
+        
+        <!-- 1. Variantes de Nombre -->
+        <div class="flex items-center gap-1 bg-black/60 rounded-xl p-1 border border-amber-800/50 shadow-inner">
+          <button onclick="setBrandName('Té o Café')" class="brand-btn px-2.5 py-1 rounded-lg font-bold text-xs transition bg-amber-600 text-white shadow-sm" data-brand="Té o Café">
+            Té o Café
+          </button>
+          <button onclick="setBrandName('Café o Té')" class="brand-btn px-2.5 py-1 rounded-lg font-medium text-xs text-amber-200/90 hover:text-white transition" data-brand="Café o Té">
+            Café o Té
+          </button>
+          <button onclick="setBrandName('Mundo Té o Café')" class="brand-btn px-2.5 py-1 rounded-lg font-medium text-xs text-amber-200/90 hover:text-white transition" data-brand="Mundo Té o Café">
+            Mundo Té o Café
+          </button>
+          <button onclick="setBrandName('TeoCafé')" class="brand-btn px-2.5 py-1 rounded-lg font-medium text-xs text-amber-200/90 hover:text-white transition" data-brand="TeoCafé">
+            TeoCafé
+          </button>
         </div>
 
-        <!-- Palettes -->
-        <div class="flex items-center gap-1 bg-black/50 rounded-lg p-1 border border-amber-900/50">
-          <label class="text-amber-200/80 font-medium px-1 hidden xl:inline">Paleta:</label>
-          <button onclick="setPalette('amber', 'Tostaduría Ámbar')" title="Tostaduría & Ámbar" class="palette-btn w-5 h-5 rounded-full bg-amber-600 border-2 border-white ring-2 ring-amber-400" data-theme="amber"></button>
-          <button onclick="setPalette('matcha', 'Matcha Botánica')" title="Matcha & Botánica" class="palette-btn w-5 h-5 rounded-full bg-emerald-700 border border-white/60 hover:scale-105 transition" data-theme="matcha"></button>
-          <button onclick="setPalette('terracota', 'Artisan Terracota')" title="Artisan Terracota" class="palette-btn w-5 h-5 rounded-full bg-orange-700 border border-white/60 hover:scale-105 transition" data-theme="terracota"></button>
-          <button onclick="setPalette('noir', 'Minimalist Noir')" title="Minimalist Noir & Gold" class="palette-btn w-5 h-5 rounded-full bg-zinc-900 border border-amber-400/80 hover:scale-105 transition" data-theme="noir"></button>
+        <!-- 2. Paletas de Color -->
+        <div class="flex items-center gap-1.5 bg-black/60 rounded-xl px-2 py-1 border border-amber-800/50 shadow-inner">
+          <span class="text-[10px] text-amber-300/80 font-bold hidden lg:inline mr-1">PALETA:</span>
+          
+          <button onclick="setPalette('amber')" title="Tostaduría & Ámbar" class="palette-btn w-6 h-6 rounded-full bg-amber-600 border-2 border-white ring-2 ring-amber-400 transition transform hover:scale-110" data-theme="amber"></button>
+          <button onclick="setPalette('matcha')" title="Matcha & Botánica" class="palette-btn w-6 h-6 rounded-full bg-emerald-700 border border-white/60 transition transform hover:scale-110" data-theme="matcha"></button>
+          <button onclick="setPalette('terracota')" title="Artisan Terracota" class="palette-btn w-6 h-6 rounded-full bg-orange-700 border border-white/60 transition transform hover:scale-110" data-theme="terracota"></button>
+          <button onclick="setPalette('noir')" title="Minimalist Noir & Gold" class="palette-btn w-6 h-6 rounded-full bg-zinc-900 border border-amber-400 transition transform hover:scale-110" data-theme="noir"></button>
         </div>
 
-        <!-- Typography -->
-        <div class="flex items-center gap-1 bg-black/50 rounded-lg p-1 border border-amber-900/50">
-          <select id="typo-select" onchange="setFont(this.value)" class="bg-transparent text-amber-100 text-xs px-2 py-0.5 outline-none cursor-pointer">
-            <option value="playfair" class="bg-zinc-900 text-white">Playfair (Gourmet)</option>
-            <option value="sans" class="bg-zinc-900 text-white">Jakarta (Moderno)</option>
-            <option value="cinzel" class="bg-zinc-900 text-white">Cinzel (Clásico)</option>
+        <!-- 3. Tipografía -->
+        <div class="bg-black/60 rounded-xl px-2 py-1 border border-amber-800/50 shadow-inner flex items-center">
+          <select id="typo-select" onchange="setFont(this.value)" class="bg-transparent text-amber-100 text-[11px] font-semibold outline-none cursor-pointer">
+            <option value="playfair" class="bg-zinc-950 text-white">Playfair Display (Gourmet)</option>
+            <option value="cinzel" class="bg-zinc-950 text-white">Cinzel (Clásico Europeo)</option>
+            <option value="sans" class="bg-zinc-950 text-white">Plus Jakarta (Moderno)</option>
           </select>
         </div>
+
       </div>
 
     </div>
   </aside>
 
   <!-- ========================================== -->
-  <!-- ANUNCIO DE DESPACHO CHILE                  -->
+  <!-- BARRA DE BENEFICIOS CHILE                  -->
   <!-- ========================================== -->
   <div class="bg-brand-primary text-white text-xs py-2 px-4 transition-colors">
     <div class="max-w-7xl mx-auto flex justify-between items-center text-center sm:text-left">
       <div class="flex items-center gap-2 mx-auto sm:mx-0 font-medium">
-        <i data-lucide="truck" class="w-4 h-4"></i>
-        <span><strong>Despacho a todo Chile:</strong> Santiago en 24-48 hrs • <strong>Envío GRATIS</strong> en RM sobre $30.000</span>
+        <i data-lucide="truck" class="w-4 h-4 text-amber-200"></i>
+        <span><strong>Despacho en 24-48 hrs:</strong> Todo Santiago y Regiones • <strong>Envío GRATIS</strong> en RM sobre $30.000</span>
       </div>
-      <div class="hidden md:flex items-center gap-4 text-white/90 text-[11px]">
-        <span class="flex items-center gap-1"><i data-lucide="shield-check" class="w-3.5 h-3.5"></i> Webpay Plus & Mercado Pago</span>
-        <span class="flex items-center gap-1"><i data-lucide="sparkles" class="w-3.5 h-3.5"></i> 138 Productos Operativos</span>
+      <div class="hidden md:flex items-center gap-5 text-white/90 text-[11px]">
+        <span class="flex items-center gap-1.5"><i data-lucide="shield-check" class="w-3.5 h-3.5 text-emerald-300"></i> Webpay Plus & Mercado Pago</span>
+        <span class="flex items-center gap-1.5"><i data-lucide="award" class="w-3.5 h-3.5 text-amber-300"></i> 138 Productos Operativos Reales</span>
       </div>
     </div>
   </div>
 
   <!-- ========================================== -->
-  <!-- HEADER & NAVEGACIÓN                        -->
+  <!-- HEADER PRINCIPAL CON LOGOTIPO VECTORIAL    -->
   <!-- ========================================== -->
-  <header class="bg-brand-card border-b border-brand-border sticky top-10 z-40 shadow-sm transition-colors">
+  <header class="bg-brand-card border-b border-brand-border sticky top-0 z-40 shadow-sm transition-colors backdrop-blur-md">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20">
         
-        <!-- Logo -->
-        <a href="#" class="flex items-center gap-3 group">
-          <div class="w-11 h-11 rounded-xl bg-brand-primary/10 border border-brand-primary/20 flex items-center justify-center text-brand-primary group-hover:scale-105 transition-transform">
-            <i data-lucide="coffee" class="w-6 h-6"></i>
+        <!-- Logo de Marca Vectorial de Autor -->
+        <a href="#" class="flex items-center gap-3.5 group">
+          <div id="brand-logo-svg-wrap" class="w-12 h-12 text-brand-primary transition-transform duration-300 group-hover:scale-105 flex-shrink-0">
+            <!-- El SVG vectorial de lujo se inyecta dinámicamente con JS -->
           </div>
-          <div>
-            <span id="brand-logo-text" class="text-2xl font-bold font-headline tracking-tight text-brand-text block leading-none">
+          <div class="flex flex-col">
+            <span id="brand-logo-text" class="text-2xl sm:text-3xl font-bold font-headline tracking-tight text-brand-text leading-none transition-colors">
               Té o Café
             </span>
-            <span id="brand-logo-tagline" class="text-[10px] tracking-wider uppercase text-brand-muted font-medium mt-1 block">
-              Especialidad • Santiago de Chile
+            <span id="brand-logo-tagline" class="text-[10px] tracking-widest uppercase text-brand-muted font-bold mt-1 block">
+              Tostaduría de Autor & Hoja Noble • Chile
             </span>
           </div>
         </a>
 
-        <!-- Buscador Rápido -->
+        <!-- Buscador Central -->
         <div class="hidden lg:flex items-center flex-1 max-w-md mx-8">
           <div class="relative w-full">
-            <i data-lucide="search" class="w-4 h-4 text-brand-muted absolute left-3 top-3"></i>
-            <input type="text" id="search-input" onkeyup="handleSearch(this.value)" placeholder="Buscar cafés, tés, orígenes, notas..." class="w-full bg-brand-bg border border-brand-border rounded-full pl-9 pr-4 py-2 text-xs text-brand-text outline-none focus:border-brand-primary transition">
+            <i data-lucide="search" class="w-4 h-4 text-brand-muted absolute left-3.5 top-3"></i>
+            <input type="text" id="search-input" onkeyup="handleSearch(this.value)" placeholder="Buscar en los 138 cafés, tés, marcas y orígenes..." class="w-full bg-brand-bg border border-brand-border rounded-full pl-10 pr-4 py-2.5 text-xs text-brand-text outline-none focus:border-brand-primary transition shadow-inner">
           </div>
         </div>
 
-        <!-- Enlaces & Acciones -->
+        <!-- Acciones: Navegación & Canasta -->
         <div class="flex items-center gap-4">
-          <nav class="hidden md:flex items-center gap-6 text-xs font-semibold text-brand-text">
+          <nav class="hidden md:flex items-center gap-6 text-xs font-bold text-brand-text">
             <a href="#catalogo" onclick="setCategoryFilter('all')" class="hover:text-brand-primary transition">Catálogo</a>
-            <a href="#catalogo" onclick="setCategoryFilter('cafe')" class="hover:text-brand-primary transition">Café</a>
+            <a href="#catalogo" onclick="setCategoryFilter('cafe')" class="hover:text-brand-primary transition">Café Grano</a>
             <a href="#catalogo" onclick="setCategoryFilter('te')" class="hover:text-brand-primary transition">Té de Hoja</a>
-            <a href="#catalogo" onclick="setCategoryFilter('soluble')" class="hover:text-brand-primary transition">Solubles</a>
-            <a href="#catalogo" onclick="setCategoryFilter('accesorios')" class="hover:text-brand-primary transition">Accesorios</a>
+            <a href="#catalogo" onclick="setCategoryFilter('soluble')" class="hover:text-brand-primary transition">Liofilizados</a>
+            <a href="#catalogo" onclick="setCategoryFilter('accesorios')" class="hover:text-brand-primary transition">Cafeteras</a>
           </nav>
 
-          <!-- Botón Carrito -->
-          <button onclick="toggleCart()" class="relative flex items-center gap-2 bg-brand-primary text-white px-4 py-2.5 rounded-full font-semibold text-xs hover:bg-brand-primaryHover transition shadow-sm">
+          <!-- Botón Canasta -->
+          <button onclick="toggleCart()" class="btn-brand-primary relative flex items-center gap-2.5 px-4 sm:px-5 py-2.5 rounded-full font-bold text-xs shadow-md">
             <i data-lucide="shopping-bag" class="w-4 h-4"></i>
             <span class="hidden sm:inline">Canasta</span>
-            <span id="cart-badge" class="bg-brand-secondary text-white text-[11px] w-5 h-5 rounded-full flex items-center justify-center font-bold">0</span>
+            <span id="cart-badge" class="bg-white text-black text-[11px] w-5 h-5 rounded-full flex items-center justify-center font-extrabold shadow">0</span>
           </button>
         </div>
 
@@ -243,66 +292,110 @@
   </header>
 
   <!-- ========================================== -->
-  <!-- HERO BANNER                                -->
+  <!-- HERO BANNER CON DIFUMINADOS Y COMPOSICIÓN  -->
   <!-- ========================================== -->
-  <section class="relative overflow-hidden bg-brand-bg py-12 md:py-16 border-b border-brand-border">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+  <section class="relative overflow-hidden bg-brand-bg py-12 md:py-20 border-b border-brand-border">
+    <!-- Resplandor ambiental de fondo -->
+    <div class="hero-ambient-glow -top-32 -left-32"></div>
+    <div class="hero-ambient-glow -bottom-32 -right-32"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         
-        <div class="lg:col-span-7 space-y-5 text-center lg:text-left">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-primary/10 border border-brand-primary/20 text-brand-primary text-xs font-semibold">
-            <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
-            <span>Base Operativa Oficial Integrada • 138 Productos</span>
+        <!-- Textos & Call To Actions -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-card border border-brand-border shadow-sm text-xs font-bold text-brand-secondary">
+            <span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
+            <span id="hero-pill-text">Base Operativa Oficial • La Finca, Basilur & Colo-Colo</span>
           </div>
 
-          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-headline leading-tight tracking-tight text-brand-text">
-            Bienvenido a <br>
-            <span id="hero-brand-title" class="text-brand-primary underline decoration-brand-secondary decoration-wavy decoration-2">Té o Café</span>
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold font-headline leading-[1.1] tracking-tight text-brand-text">
+            El arte supremo de <br>
+            <span id="hero-brand-title" class="text-brand-primary relative inline-block">
+              Té o Café
+              <!-- Línea orgánica dorada inferior -->
+              <svg class="absolute -bottom-2 left-0 w-full text-brand-secondary opacity-70" height="8" viewBox="0 0 200 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 5.5C50 1 150 1 199 5.5" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+              </svg>
+            </span>
           </h1>
 
           <p id="hero-subtitle" class="text-base sm:text-lg text-brand-muted max-w-xl font-light leading-relaxed">
-            El punto de encuentro entre dos mundos: Cafés de especialidad recién tostados, tés de hoja noble, ediciones conmemorativas y accesorios de preparación con despacho a todo Chile.
+            Donde la nobleza de la hoja de té y la intensidad del grano de café recién tostado convergen. Un catálogo selecto de 138 variedades para transformar cada pausa en una experiencia sublime.
           </p>
 
-          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3 pt-2">
-            <a href="#catalogo" class="px-6 py-3 rounded-xl bg-brand-primary text-white font-semibold text-xs shadow-md hover:bg-brand-primaryHover transition flex items-center gap-2">
-              <i data-lucide="shopping-cart" class="w-4 h-4"></i> Explorar Catálogo (138 ítems)
+          <!-- CTAs -->
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3.5 pt-2">
+            <a href="#catalogo" class="btn-brand-primary px-7 py-3.5 rounded-xl font-bold text-xs shadow-lg flex items-center gap-2">
+              <i data-lucide="shopping-cart" class="w-4 h-4"></i> Explorar Catálogo (138 Ítems)
             </a>
-            <button onclick="setCategoryFilter('cafe')" class="px-5 py-3 rounded-xl bg-brand-card border border-brand-border text-brand-text font-semibold text-xs hover:border-brand-primary hover:text-brand-primary transition">
-              Cafés Artesanales
+            <button onclick="setCategoryFilter('cafe')" class="px-6 py-3.5 rounded-xl bg-brand-card border border-brand-border text-brand-text hover:border-brand-primary hover:text-brand-primary font-bold text-xs shadow-sm transition">
+              Café de Especialidad
             </button>
-            <button onclick="setCategoryFilter('te')" class="px-5 py-3 rounded-xl bg-brand-card border border-brand-border text-brand-text font-semibold text-xs hover:border-brand-primary hover:text-brand-primary transition">
+            <button onclick="setCategoryFilter('te')" class="px-6 py-3.5 rounded-xl bg-brand-card border border-brand-border text-brand-text hover:border-brand-primary hover:text-brand-primary font-bold text-xs shadow-sm transition">
               Té Basilur & La Finca
             </button>
           </div>
 
-          <!-- Proof points -->
-          <div class="grid grid-cols-3 gap-3 pt-4 border-t border-brand-border text-left">
+          <!-- Sellos de Confianza y Atributos -->
+          <div class="grid grid-cols-3 gap-4 pt-6 border-t border-brand-border text-left">
             <div>
-              <p class="text-xl font-bold font-headline text-brand-primary">4 Marcas</p>
-              <p class="text-[11px] text-brand-muted">La Finca, Basilur, Colo-Colo</p>
+              <p class="text-2xl font-bold font-headline text-brand-primary">138</p>
+              <p class="text-[11px] text-brand-muted font-medium mt-0.5">Productos en Stock</p>
             </div>
             <div>
-              <p class="text-xl font-bold font-headline text-brand-primary">Chilexpress</p>
-              <p class="text-[11px] text-brand-muted">Despacho Nacional 24-48h</p>
+              <p class="text-2xl font-bold font-headline text-brand-primary">24-48h</p>
+              <p class="text-[11px] text-brand-muted font-medium mt-0.5">Despacho Todo Chile</p>
             </div>
             <div>
-              <p class="text-xl font-bold font-headline text-brand-primary">100% Online</p>
-              <p class="text-[11px] text-brand-muted">Webpay Plus & Mercado Pago</p>
+              <p class="text-2xl font-bold font-headline text-brand-primary">100%</p>
+              <p class="text-[11px] text-brand-muted font-medium mt-0.5">Tueste & Origen Noble</p>
             </div>
           </div>
+
         </div>
 
-        <div class="lg:col-span-5">
-          <div class="relative mx-auto max-w-md rounded-2xl overflow-hidden shadow-2xl border-4 border-brand-card group">
-            <img src="assets/images/hero.jpg" alt="Café y Té de Especialidad" class="w-full h-auto object-cover aspect-[4/3] group-hover:scale-105 transition-transform duration-700">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent flex items-end p-5">
-              <div class="text-white">
-                <span class="text-[10px] uppercase tracking-widest text-amber-300 font-bold">Tostaduría & Botánica</span>
-                <p class="text-base font-headline font-bold">De la tierra a tu taza: la excelencia en cada grano y cada hebra.</p>
+        <!-- Banner Visual Cinematográfico con Difuminado y Glassmorphism -->
+        <div class="lg:col-span-5 relative">
+          
+          <!-- Contenedor con degradado radial y difuminado periférico -->
+          <div class="relative mx-auto max-w-lg rounded-3xl overflow-hidden shadow-2xl border border-brand-border/60 group">
+            
+            <!-- Imagen con máscara suave de difuminado -->
+            <div class="relative overflow-hidden aspect-[4/3] bg-[#140D07]">
+              <img src="assets/images/hero.jpg" alt="Café y Té de Especialidad" class="w-full h-full object-cover scale-100 group-hover:scale-105 transition-transform duration-1000 hero-mask-desktop">
+              
+              <!-- Viñeta radial oscura y degradado atmosférico de lujo -->
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent"></div>
+              <div class="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-transparent"></div>
+              
+              <!-- Sello heráldico en esquina -->
+              <div class="absolute top-4 right-4 bg-black/40 backdrop-blur-md border border-white/20 text-white rounded-full p-2 flex items-center justify-center">
+                <i data-lucide="sparkles" class="w-4 h-4 text-amber-300"></i>
               </div>
             </div>
+
+            <!-- Tarjeta Flotante Glassmorphism de Cata -->
+            <div class="absolute bottom-4 left-4 right-4 glass-card rounded-2xl p-4.5 border border-white/50 text-xs space-y-1.5 shadow-xl transition-transform duration-300 group-hover:-translate-y-1">
+              <div class="flex items-center justify-between">
+                <span class="shimmer-badge text-white text-[9px] font-extrabold uppercase tracking-widest px-2.5 py-0.5 rounded-full">
+                  Lote de Autor Selección 2026
+                </span>
+                <span class="text-[11px] font-bold text-brand-primary flex items-center gap-1">
+                  <i data-lucide="map-pin" class="w-3 h-3"></i> Valle del Cauca & Kioto
+                </span>
+              </div>
+              <h4 class="font-headline font-bold text-sm text-brand-text">
+                Café Tostado en Chile & Té Ceylán de Altura
+              </h4>
+              <p class="text-[11px] text-brand-muted leading-relaxed line-clamp-1">
+                Notas aromáticas a flor de jazmín, cacao 70%, durazno maduro y miel de ulmo.
+              </p>
+            </div>
+
           </div>
+
         </div>
 
       </div>
@@ -310,43 +403,43 @@
   </section>
 
   <!-- ========================================== -->
-  <!-- CATÁLOGO PRINCIPAL                         -->
+  <!-- CATÁLOGO PRINCIPAL (138 PRODUCTOS)         -->
   <!-- ========================================== -->
-  <main id="catalogo" class="flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 w-full">
+  <main id="catalogo" class="flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 w-full">
     
-    <!-- Header del Catálogo -->
+    <!-- Filtros por Línea de Marca -->
     <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-8">
       <div>
-        <span class="text-xs font-bold uppercase tracking-wider text-brand-secondary">Catálogo Operativo Oficial</span>
-        <h2 class="text-2xl sm:text-3xl font-bold font-headline text-brand-text mt-1">Todos los Productos en Venta</h2>
+        <span class="text-xs font-bold uppercase tracking-wider text-brand-secondary">Catálogo Operativo Consolidado</span>
+        <h2 class="text-2xl sm:text-3xl font-bold font-headline text-brand-text mt-1">Nuestra Colección Disponible</h2>
         <p class="text-xs text-brand-muted mt-1">
-          Mostrando <span id="showing-count" class="font-bold text-brand-text">0</span> productos de la base operativa.
+          Mostrando <span id="showing-count" class="font-bold text-brand-text">0</span> productos oficiales listos para despacho.
         </p>
       </div>
 
-      <!-- Marcas Origen Pills -->
-      <div class="flex flex-wrap items-center gap-1.5 bg-brand-card p-1.5 rounded-xl border border-brand-border text-xs">
-        <span class="text-brand-muted px-2 font-medium">Línea:</span>
-        <button onclick="setSourceFilter('all')" class="source-pill active-source px-3 py-1 rounded-lg font-semibold bg-brand-primary text-white transition" data-source="all">Todas</button>
-        <button onclick="setSourceFilter('La Finca')" class="source-pill px-3 py-1 rounded-lg text-brand-text hover:bg-black/5 transition" data-source="La Finca">La Finca</button>
-        <button onclick="setSourceFilter('Té Basilur Chile')" class="source-pill px-3 py-1 rounded-lg text-brand-text hover:bg-black/5 transition" data-source="Té Basilur Chile">Té Basilur</button>
-        <button onclick="setSourceFilter('Café de Colo-Colo')" class="source-pill px-3 py-1 rounded-lg text-brand-text hover:bg-black/5 transition" data-source="Café de Colo-Colo">Café Colo-Colo</button>
+      <!-- Filtro por Marca Origen -->
+      <div class="flex flex-wrap items-center gap-1.5 bg-brand-card p-1.5 rounded-xl border border-brand-border shadow-sm text-xs">
+        <span class="text-brand-muted px-2 font-bold">LÍNEA:</span>
+        <button onclick="setSourceFilter('all')" class="source-pill active-source px-3.5 py-1.5 rounded-lg font-bold bg-brand-primary text-white transition shadow-sm" data-source="all">Todas</button>
+        <button onclick="setSourceFilter('La Finca')" class="source-pill px-3.5 py-1.5 rounded-lg font-medium text-brand-text hover:bg-black/5 transition" data-source="La Finca">La Finca</button>
+        <button onclick="setSourceFilter('Té Basilur Chile')" class="source-pill px-3.5 py-1.5 rounded-lg font-medium text-brand-text hover:bg-black/5 transition" data-source="Té Basilur Chile">Té Basilur</button>
+        <button onclick="setSourceFilter('Café de Colo-Colo')" class="source-pill px-3.5 py-1.5 rounded-lg font-medium text-brand-text hover:bg-black/5 transition" data-source="Café de Colo-Colo">Café Colo-Colo</button>
       </div>
     </div>
 
-    <!-- Categorías Tabs -->
-    <div class="flex flex-wrap items-center gap-2 mb-8 pb-3 border-b border-brand-border text-xs">
+    <!-- Filtros de Categoría -->
+    <div class="flex flex-wrap items-center gap-2 mb-8 pb-4 border-b border-brand-border text-xs">
       <button onclick="setCategoryFilter('all')" class="cat-pill active-cat px-4 py-2 rounded-full font-bold bg-brand-primary text-white shadow-sm transition" data-cat="all">
-        Todos
+        Todos (138)
       </button>
       <button onclick="setCategoryFilter('cafe')" class="cat-pill px-4 py-2 rounded-full font-medium bg-brand-card border border-brand-border text-brand-text hover:border-brand-primary transition" data-cat="cafe">
         Café de Grano & Molido
       </button>
       <button onclick="setCategoryFilter('te')" class="cat-pill px-4 py-2 rounded-full font-medium bg-brand-card border border-brand-border text-brand-text hover:border-brand-primary transition" data-cat="te">
-        Té en Hebras & Pirámides
+        Té de Hoja & Pirámides
       </button>
       <button onclick="setCategoryFilter('soluble')" class="cat-pill px-4 py-2 rounded-full font-medium bg-brand-card border border-brand-border text-brand-text hover:border-brand-primary transition" data-cat="soluble">
-        Café Soluble & Liofilizado
+        Café Soluble Liofilizado
       </button>
       <button onclick="setCategoryFilter('capsulas')" class="cat-pill px-4 py-2 rounded-full font-medium bg-brand-card border border-brand-border text-brand-text hover:border-brand-primary transition" data-cat="capsulas">
         Cápsulas Compatibles
@@ -358,7 +451,7 @@
 
     <!-- Grid de Productos -->
     <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-      <!-- Se inyecta con JavaScript -->
+      <!-- Inyectado vía JavaScript -->
     </div>
 
     <!-- Botón Cargar Más -->
@@ -371,21 +464,21 @@
   </main>
 
   <!-- ========================================== -->
-  <!-- FOOTER                                     -->
+  <!-- FOOTER CON LOGOTIPO VECTORIAL              -->
   <!-- ========================================== -->
-  <footer class="bg-[#140D07] text-amber-100/80 pt-16 pb-12 border-t border-amber-950 mt-auto">
+  <footer class="bg-[#120B06] text-amber-100/80 pt-16 pb-12 border-t border-amber-950 mt-auto">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-amber-900/40">
         
         <div class="lg:col-span-2 space-y-4">
-          <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-xl bg-amber-600/20 border border-amber-600/40 flex items-center justify-center text-amber-400">
-              <i data-lucide="coffee" class="w-5 h-5"></i>
+          <div class="flex items-center gap-3.5">
+            <div id="footer-logo-svg-wrap" class="w-10 h-10 text-amber-400">
+              <!-- SVG vectorial inyectado con JS -->
             </div>
             <span id="footer-brand-title" class="text-2xl font-bold font-headline text-white">Té o Café</span>
           </div>
           <p class="text-xs text-amber-200/60 leading-relaxed max-w-sm">
-            E-commerce y tostaduría digital en Santiago de Chile. Catálogo de especialidad con despacho expedito a todo el país mediante Starken y Chilexpress.
+            E-commerce de café de especialidad y té de origen en Chile. Conectando tostadurías de autor y plantaciones nobles con entrega en 24-48 horas.
           </p>
           <div class="flex items-center gap-3 pt-2">
             <a href="#" class="w-8 h-8 rounded-full bg-amber-900/50 flex items-center justify-center hover:bg-amber-600 transition text-white"><i data-lucide="instagram" class="w-4 h-4"></i></a>
@@ -395,13 +488,13 @@
         </div>
 
         <div>
-          <h4 class="text-xs font-bold uppercase tracking-wider text-amber-400 mb-4">Líneas de Producto</h4>
+          <h4 class="text-xs font-bold uppercase tracking-wider text-amber-400 mb-4">Líneas en Venta</h4>
           <ul class="space-y-2 text-xs">
-            <li><a href="#catalogo" onclick="setCategoryFilter('cafe')" class="hover:text-white transition">Café de Grano Fresco</a></li>
-            <li><a href="#catalogo" onclick="setCategoryFilter('te')" class="hover:text-white transition">Té en Hebras & Latas</a></li>
-            <li><a href="#catalogo" onclick="setCategoryFilter('soluble')" class="hover:text-white transition">Café Soluble Liofilizado</a></li>
-            <li><a href="#catalogo" onclick="setCategoryFilter('capsulas')" class="hover:text-white transition">Cápsulas Nespresso</a></li>
-            <li><a href="#catalogo" onclick="setCategoryFilter('accesorios')" class="hover:text-white transition">Prensas & Cafeteras</a></li>
+            <li><a href="#catalogo" onclick="setCategoryFilter('cafe')" class="hover:text-white transition">Café La Finca Grano</a></li>
+            <li><a href="#catalogo" onclick="setCategoryFilter('te')" class="hover:text-white transition">Té Basilur Pirámides</a></li>
+            <li><a href="#catalogo" onclick="setCategoryFilter('soluble')" class="hover:text-white transition">Café Liofilizado Soluble</a></li>
+            <li><a href="#catalogo" onclick="setCategoryFilter('capsulas')" class="hover:text-white transition">Cápsulas Compatibles</a></li>
+            <li><a href="#catalogo" onclick="setCategoryFilter('accesorios')" class="hover:text-white transition">Prensas Francesas & Teteras</a></li>
           </ul>
         </div>
 
@@ -410,15 +503,15 @@
           <ul class="space-y-2 text-xs">
             <li><a href="#" class="hover:text-white transition">RM: 24-48 hrs ($2.990)</a></li>
             <li><a href="#" class="hover:text-white transition">Envío Gratis RM sobre $30.000</a></li>
-            <li><a href="#" class="hover:text-white transition">Regiones de Chile ($4.990)</a></li>
+            <li><a href="#" class="hover:text-white transition">Regiones (Starken / Chilexpress)</a></li>
             <li><a href="#" class="hover:text-white transition">Preguntas Frecuentes</a></li>
-            <li><a href="#" class="hover:text-white transition">Contacto & Post-Venta</a></li>
+            <li><a href="#" class="hover:text-white transition">Contacto & Soporte</a></li>
           </ul>
         </div>
 
         <div>
-          <h4 class="text-xs font-bold uppercase tracking-wider text-amber-400 mb-4">Pagos Protegidos</h4>
-          <p class="text-xs text-amber-200/60 mb-3">Integración con pasarelas oficiales de Chile:</p>
+          <h4 class="text-xs font-bold uppercase tracking-wider text-amber-400 mb-4">Pasarelas Chile</h4>
+          <p class="text-xs text-amber-200/60 mb-3">Transacciones 100% protegidas:</p>
           <div class="flex flex-wrap gap-1.5 text-[11px] font-semibold">
             <span class="px-2.5 py-1 rounded bg-amber-950 border border-amber-800 text-amber-200">Webpay Plus</span>
             <span class="px-2.5 py-1 rounded bg-amber-950 border border-amber-800 text-amber-200">Mercado Pago</span>
@@ -431,13 +524,13 @@
 
       <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-amber-200/50 gap-4">
         <p>© 2026 <span id="footer-copy-brand">Té o Café</span> SpA. Santiago de Chile.</p>
-        <p>Desarrollado y respaldado en GitHub: MajajiCL.</p>
+        <p>Ecosistema AAC / ClaudioPro — Respaldado en GitHub.</p>
       </div>
     </div>
   </footer>
 
   <!-- ========================================== -->
-  <!-- DRAWER: CARRITO DE COMPRAS                 -->
+  <!-- DRAWER: CANASTA LATERAL                    -->
   <!-- ========================================== -->
   <div id="cart-drawer" class="fixed inset-0 z-50 overflow-hidden pointer-events-none transition-opacity duration-300 opacity-0">
     <div id="cart-backdrop" onclick="toggleCart()" class="absolute inset-0 drawer-backdrop transition-opacity pointer-events-auto"></div>
@@ -455,7 +548,6 @@
           </button>
         </div>
 
-        <!-- Free shipping bar -->
         <div class="p-3.5 bg-brand-primary/5 border-b border-brand-border text-xs">
           <div class="flex justify-between font-semibold mb-1">
             <span id="shipping-progress-text">Agrega $30.000 para Envío Gratis (RM)</span>
@@ -466,9 +558,7 @@
           </div>
         </div>
 
-        <div id="cart-items" class="flex-1 overflow-y-auto p-5 space-y-3">
-          <!-- Inyectado vía JS -->
-        </div>
+        <div id="cart-items" class="flex-1 overflow-y-auto p-5 space-y-3"></div>
 
         <div class="p-5 border-t border-brand-border bg-brand-bg space-y-3 text-xs">
           <div>
@@ -495,7 +585,7 @@
             </div>
           </div>
 
-          <button onclick="openCheckoutModal()" class="w-full py-3 rounded-xl bg-brand-primary text-white font-bold text-xs hover:bg-brand-primaryHover transition shadow-md flex items-center justify-center gap-2">
+          <button onclick="openCheckoutModal()" class="btn-brand-primary w-full py-3 rounded-xl font-bold text-xs shadow-md flex items-center justify-center gap-2">
             <i data-lucide="credit-card" class="w-4 h-4"></i> Continuar al Pago Seguro
           </button>
         </div>
@@ -572,7 +662,7 @@
             <span id="checkout-modal-total" class="text-brand-primary text-base">$0</span>
           </div>
 
-          <button type="submit" class="w-full py-3 rounded-xl bg-brand-primary text-white font-bold text-xs hover:bg-brand-primaryHover transition shadow-lg">
+          <button type="submit" class="btn-brand-primary w-full py-3 rounded-xl font-bold text-xs shadow-lg">
             Confirmar y Pagar Orden
           </button>
         </form>
@@ -609,7 +699,7 @@
 
             <div class="flex items-center justify-between pt-3 border-t border-brand-border">
               <span id="qv-price" class="text-2xl font-bold font-headline text-brand-primary"></span>
-              <button id="qv-add-btn" class="px-5 py-2.5 rounded-xl bg-brand-primary text-white font-semibold text-xs hover:bg-brand-primaryHover transition">
+              <button id="qv-add-btn" class="btn-brand-primary px-5 py-2.5 rounded-xl font-semibold text-xs">
                 Añadir al Carrito
               </button>
             </div>
@@ -629,9 +719,11 @@
   </div>
 
   <!-- ========================================== -->
-  <!-- SCRIPT CON DATOS Y LÓGICA COMPLETA        -->
+  <!-- ARCHIVOS DE DATOS Y LÓGICA                 -->
   <!-- ========================================== -->
+  <script src="brand-logos.js"></script>
   <script src="products.js"></script>
+
   <script>
     // Variables de Estado
     let allProducts = typeof operationalCatalog !== 'undefined' ? operationalCatalog : [];
@@ -647,7 +739,81 @@
       return "$" + Number(val).toLocaleString("es-CL");
     }
 
-    // Filtrar Productos
+    // ACTUALIZAR LOGOTIPO VECTORIAL Y NOMBRE
+    function updateBrandVisuals(brandName) {
+      currentBrand = brandName;
+      
+      // Actualizar SVG del Logo en Header y Footer
+      const svg = brandLogos[brandName] || brandLogos["Té o Café"];
+      document.getElementById('brand-logo-svg-wrap').innerHTML = svg;
+      document.getElementById('footer-logo-svg-wrap').innerHTML = svg;
+
+      // Actualizar Textos
+      document.getElementById('brand-logo-text').textContent = brandName;
+      document.getElementById('hero-brand-title').firstChild.textContent = brandName + " ";
+      document.getElementById('footer-brand-title').textContent = brandName;
+      document.getElementById('footer-copy-brand').textContent = brandName;
+      document.title = `${brandName} — Tienda Online & Especialidad Chile`;
+
+      // Slogans dinámicos por marca
+      const taglines = {
+        "Té o Café": "Tostaduría de Autor & Hoja Noble • Chile",
+        "Café o Té": "La Elección Perfecta en Cada Momento • Chile",
+        "Mundo Té o Café": "Cosechas Selectas & Origen Noble • Chile",
+        "TeoCafé": "Café de Grano & Té de Hoja • Especialidad Chile"
+      };
+      document.getElementById('brand-logo-tagline').textContent = taglines[brandName] || taglines["Té o Café"];
+
+      // Botones activos en el Brand Studio
+      document.querySelectorAll('.brand-btn').forEach(btn => {
+        if (btn.dataset.brand === brandName) {
+          btn.className = "brand-btn px-2.5 py-1 rounded-lg font-bold text-xs transition bg-amber-600 text-white shadow-sm";
+        } else {
+          btn.className = "brand-btn px-2.5 py-1 rounded-lg font-medium text-xs text-amber-200/90 hover:text-white transition";
+        }
+      });
+    }
+
+    function setBrandName(name) {
+      updateBrandVisuals(name);
+      showToast(`Marca cambiada a: ${name}`);
+    }
+
+    // CAMBIO DE PALETA DIRECTO Y CONFIABLE
+    function setPalette(themeName) {
+      // Eliminar todas las clases de tema y aplicar la nueva
+      document.body.classList.remove('theme-amber', 'theme-matcha', 'theme-terracota', 'theme-noir');
+      document.body.classList.add(`theme-${themeName}`);
+
+      // Actualizar botones de paleta
+      document.querySelectorAll('.palette-btn').forEach(btn => {
+        if (btn.dataset.theme === themeName) {
+          btn.classList.add('border-2', 'border-white', 'ring-2', 'ring-amber-400');
+        } else {
+          btn.classList.remove('border-2', 'border-white', 'ring-2', 'ring-amber-400');
+        }
+      });
+
+      const labels = {
+        'amber': 'Tostaduría & Ámbar',
+        'matcha': 'Matcha & Botánica',
+        'terracota': 'Artisan Terracota',
+        'noir': 'Minimalist Noir & Gold'
+      };
+      showToast(`Paleta aplicada: ${labels[themeName] || themeName}`);
+    }
+
+    // CAMBIO DE TIPOGRAFÍA
+    function setFont(fontKey) {
+      let fontHeadline = "'Playfair Display', serif";
+      if (fontKey === 'sans') fontHeadline = "'Plus Jakarta Sans', sans-serif";
+      if (fontKey === 'cinzel') fontHeadline = "'Cinzel', serif";
+      
+      document.body.style.setProperty('--font-headline', fontHeadline);
+      showToast(`Tipografía: ${fontKey.toUpperCase()}`);
+    }
+
+    // FILTRADO DEL CATÁLOGO
     function getFilteredProducts() {
       return allProducts.filter(p => {
         const matchCategory = currentCategory === 'all' || p.category === currentCategory;
@@ -660,7 +826,6 @@
       });
     }
 
-    // Renderizar Productos
     function renderCatalog(resetPage = false) {
       if (resetPage) page = 1;
       
@@ -689,7 +854,7 @@
         return `
           <div class="bg-brand-card rounded-2xl border border-brand-border overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col group">
             <div class="relative overflow-hidden aspect-square bg-brand-bg">
-              <img src="${imgUrl}" alt="${p.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 loading="lazy" onerror="this.src='assets/images/coffee-bag.jpg'">
+              <img src="${imgUrl}" alt="${p.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" onerror="this.src='assets/images/coffee-bag.jpg'">
               <span class="absolute top-2.5 left-2.5 bg-brand-primary text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full shadow-sm">
                 ${p.source.split('-')[0].trim()}
               </span>
@@ -724,7 +889,7 @@
                     ${formatCLP(p.price)}
                   </span>
                 </div>
-                <button onclick="addProductToCartFromCard(${p.id})" class="flex items-center gap-1.5 bg-brand-primary text-white px-3 py-1.5 rounded-xl text-xs font-semibold hover:bg-brand-primaryHover transition shadow-sm">
+                <button onclick="addProductToCartFromCard(${p.id})" class="btn-brand-primary flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold shadow-sm">
                   <i data-lucide="plus" class="w-3.5 h-3.5"></i> Agregar
                 </button>
               </div>
@@ -733,7 +898,6 @@
         `;
       }).join('');
 
-      // Load more visibility
       document.getElementById('load-more-container').style.display = toShow.length < filtered.length ? 'block' : 'none';
       lucide.createIcons();
     }
@@ -773,7 +937,6 @@
       });
     }
 
-    // Filtros de Categoría y Marca
     function setCategoryFilter(cat) {
       currentCategory = cat;
       document.querySelectorAll('.cat-pill').forEach(btn => {
@@ -807,7 +970,7 @@
       renderCatalog(true);
     }
 
-    // Carrito de Compras
+    // CARRITO DE COMPRAS
     function addToCart(item) {
       const cartKey = `${item.id}-${item.variantTitle}`;
       const existing = cart.find(i => i.cartKey === cartKey);
@@ -890,7 +1053,6 @@
       document.getElementById('cart-total').textContent = formatCLP(total);
       document.getElementById('checkout-modal-total').textContent = formatCLP(total);
 
-      // Shipping threshold
       const threshold = 30000;
       const progress = Math.min(100, Math.round((subtotal / threshold) * 100));
       const bar = document.getElementById('shipping-bar');
@@ -902,11 +1064,11 @@
 
       if (subtotal >= threshold) {
         progressText.innerHTML = `🎉 <strong>¡Despacho GRATIS aplicado en RM!</strong>`;
-        bar.classList.replace('bg-brand-primary', 'bg-emerald-600');
+        bar.style.backgroundColor = '#16a34a';
       } else {
         const diff = threshold - subtotal;
         progressText.innerHTML = `Agrega <strong>${formatCLP(diff)}</strong> más para Envío Gratis (RM)`;
-        bar.classList.replace('bg-emerald-600', 'bg-brand-primary');
+        bar.style.backgroundColor = 'var(--p)';
       }
     }
 
@@ -920,7 +1082,7 @@
       }
     }
 
-    // Modal Quick View
+    // MODAL DETALLE
     let quickViewCurrentProd = null;
     function openQuickView(prodId) {
       const prod = allProducts.find(p => p.id === prodId);
@@ -974,7 +1136,7 @@
       document.getElementById('quickview-modal').classList.add('hidden');
     }
 
-    // Checkout Modal
+    // CHECKOUT
     function openCheckoutModal() {
       if (cart.length === 0) {
         showToast("Tu canasta está vacía.");
@@ -996,7 +1158,6 @@
       closeCheckoutModal();
     }
 
-    // Toast
     function showToast(msg) {
       const t = document.getElementById('toast');
       document.getElementById('toast-message').textContent = msg;
@@ -1008,54 +1169,9 @@
       }, 3000);
     }
 
-    // Brand Switcher
-    function setBrandName(name, tagline) {
-      currentBrand = name;
-      document.getElementById('brand-logo-text').textContent = name;
-      document.getElementById('hero-brand-title').textContent = name;
-      document.getElementById('footer-brand-title').textContent = name;
-      document.getElementById('footer-copy-brand').textContent = name;
-      document.getElementById('brand-logo-tagline').textContent = tagline;
-      document.title = `${name} — Tienda Online & Especialidad Chile`;
-
-      document.querySelectorAll('.brand-btn').forEach(btn => {
-        if (btn.dataset.brand === name) {
-          btn.classList.add('bg-amber-600', 'text-white');
-          btn.classList.remove('text-amber-100');
-        } else {
-          btn.classList.remove('bg-amber-600', 'text-white');
-          btn.classList.add('text-amber-100');
-        }
-      });
-      showToast(`Marca cambiada a: ${name}`);
-    }
-
-    function setPalette(themeName, label) {
-      if (themeName === 'amber') {
-        document.documentElement.removeAttribute('data-theme');
-      } else {
-        document.documentElement.setAttribute('data-theme', themeName);
-      }
-
-      document.querySelectorAll('.palette-btn').forEach(btn => {
-        if (btn.dataset.theme === themeName) {
-          btn.classList.add('border-2', 'border-white', 'ring-2', 'ring-amber-400');
-        } else {
-          btn.classList.remove('border-2', 'border-white', 'ring-2', 'ring-amber-400');
-        }
-      });
-      showToast(`Paleta aplicada: ${label}`);
-    }
-
-    function setFont(fontKey) {
-      let headline = "'Playfair Display', serif";
-      if (fontKey === 'sans') headline = "'Plus Jakarta Sans', sans-serif";
-      if (fontKey === 'cinzel') headline = "'Cinzel', serif";
-      document.documentElement.style.setProperty('--font-headline', headline);
-      showToast(`Tipografía: ${fontKey.toUpperCase()}`);
-    }
-
+    // INICIALIZACIÓN
     document.addEventListener('DOMContentLoaded', () => {
+      updateBrandVisuals('Té o Café');
       renderCatalog(true);
       updateCartUI();
     });
