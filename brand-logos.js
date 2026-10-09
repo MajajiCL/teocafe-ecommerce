@@ -2,21 +2,22 @@
 const brandLogos = {
   "Té o Café": `
     <svg viewBox="0 0 100 100" class="w-full h-full text-current" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="50" cy="50" r="46" stroke="currentColor" stroke-width="1.8" stroke-dasharray="3 2" class="opacity-40" />
-      <circle cx="50" cy="50" r="42" stroke="currentColor" stroke-width="2" />
-      <!-- Hoja de té izquierda -->
-      <path d="M50 24C40 32 36 44 40 56C42 60 46 64 50 66C50 56 46 44 48 36C49 32 50 26 50 24Z" fill="currentColor" class="opacity-90" />
-      <path d="M42 46C46 44 49 40 50 36" stroke="var(--brand-bg, #fff)" stroke-width="1.2" stroke-linecap="round" />
-      <!-- Grano de café derecho -->
-      <path d="M50 34C58 34 66 42 66 52C66 62 58 70 50 70C54 62 54 42 50 34Z" fill="currentColor" />
-      <path d="M52 38C58 44 58 60 52 66" stroke="var(--brand-bg, #fff)" stroke-width="1.5" stroke-linecap="round" />
-      <!-- Gotas y acentos de vapor -->
-      <path d="M47 18C47 18 45 20 47 22C49 24 51 22 51 22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" class="opacity-70" />
-      <path d="M53 15C53 15 55 17 53 19C51 21 53 23 53 23" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" class="opacity-70" />
-      <!-- Estrellas / Sello -->
-      <circle cx="24" cy="50" r="1.5" fill="currentColor" />
-      <circle cx="76" cy="50" r="1.5" fill="currentColor" />
-      <path d="M43 80L50 76L57 80" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="opacity-80" />
+      <!-- Aro exterior de la 'O' -->
+      <circle cx="50" cy="50" r="45" stroke="currentColor" stroke-width="2.2" />
+      <circle cx="50" cy="50" r="41" stroke="currentColor" stroke-width="0.8" opacity="0.4" stroke-dasharray="2 1" />
+      
+      <!-- Lado Izquierdo: Hoja Botánica de Té estilizada -->
+      <path d="M 50 14 C 26 22 18 42 18 54 C 18 72 32 84 50 86 C 38 76 34 60 36 46 C 38 34 45 22 50 14 Z" fill="currentColor" opacity="0.9" />
+      <!-- Nervaduras de la hoja de té -->
+      <path d="M 50 18 Q 36 46 50 82" stroke="var(--brand-bg, #080605)" stroke-width="1.2" stroke-linecap="round" fill="none" />
+      <path d="M 45 32 Q 37 35 29 34" stroke="var(--brand-bg, #080605)" stroke-width="0.9" stroke-linecap="round" fill="none" />
+      <path d="M 42 46 Q 33 48 25 46" stroke="var(--brand-bg, #080605)" stroke-width="0.9" stroke-linecap="round" fill="none" />
+      <path d="M 44 60 Q 35 63 28 61" stroke="var(--brand-bg, #080605)" stroke-width="0.9" stroke-linecap="round" fill="none" />
+
+      <!-- Lado Derecho: Grano de Café Arábica de Precisión -->
+      <path d="M 50 14 C 72 20 85 36 85 55 C 85 74 70 85 50 86 C 58 78 64 66 64 52 C 64 38 57 24 50 14 Z" fill="currentColor" />
+      <!-- Fisura sinuosa del grano de café -->
+      <path d="M 50 16 C 59 30 60 42 56 52 C 52 62 57 74 50 84" stroke="var(--brand-bg, #080605)" stroke-width="1.4" stroke-linecap="round" fill="none" />
     </svg>
   `,
   "Café o Té": `
