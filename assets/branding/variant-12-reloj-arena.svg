@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1080" height="1080" viewBox="0 0 1080 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&amp;family=Montserrat:wght@400;500;600;700&amp;display=swap');
+      .v12-title { font-family: 'Playfair Display', serif; font-weight: 700; letter-spacing: 14px; font-size: 64px; fill: url(#goldGrad12); }
+      .v12-sub { font-family: 'Montserrat', sans-serif; font-weight: 600; letter-spacing: 8px; font-size: 16px; fill: #FDE68A; }
+      .v12-foot { font-family: 'Montserrat', sans-serif; font-weight: 500; letter-spacing: 5px; font-size: 14px; fill: #D97706; }
+    </style>
+    <radialGradient id="bgGrad12" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#1A130E" /><stop offset="60%" stop-color="#090705" /><stop offset="100%" stop-color="#020202" />
+    </radialGradient>
+    <linearGradient id="goldGrad12" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFBEB" /><stop offset="30%" stop-color="#FCD34D" /><stop offset="65%" stop-color="#F59E0B" /><stop offset="100%" stop-color="#B45309" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1080" height="1080" fill="url(#bgGrad12)" />
+
+  <!-- Símbolo Reloj de Arena / Ampolleta de Extracción de Precisión -->
+  <g transform="translate(540, 420)">
+    <!-- Marco exterior del reloj -->
+    <path d="M -130, -180 L 130, -180" stroke="url(#goldGrad12)" stroke-width="4" stroke-linecap="round" />
+    <path d="M -130, 180 L 130, 180" stroke="url(#goldGrad12)" stroke-width="4" stroke-linecap="round" />
+    
+    <!-- Columnas laterales de soporte -->
+    <line x1="-120" y1="-180" x2="-120" y2="180" stroke="url(#goldGrad12)" stroke-width="2" stroke-opacity="0.4" />
+    <line x1="120" y1="-180" x2="120" y2="180" stroke="url(#goldGrad12)" stroke-width="2" stroke-opacity="0.4" />
+
+    <!-- Cristal de la ampolleta (Cuerpo estilizado en X) -->
+    <path d="M -90,-165 C -90,-80 -15,-20 -8,0 C -15,20 -90,80 -90,165" stroke="url(#goldGrad12)" stroke-width="3" stroke-linecap="round" fill="none" />
+    <path d="M 90,-165 C 90,-80 15,-20 8,0 C 15,20 90,80 90,165" stroke="url(#goldGrad12)" stroke-width="3" stroke-linecap="round" fill="none" />
+
+    <!-- Cámara Superior: Café (Granos descendiendo en cascada) -->
+    <ellipse cx="0" cy="-110" rx="16" ry="24" fill="url(#goldGrad12)" />
+    <path d="M 0,-130 C 5,-110 -5,-110 0,-90" stroke="#090705" stroke-width="2.5" stroke-linecap="round" fill="none" />
+    <!-- Gotitas de extracción que gotean por el cuello estrecho -->
+    <circle cx="0" cy="-35" r="4" fill="url(#goldGrad12)" />
+    <circle cx="0" cy="-10" r="3" fill="url(#goldGrad12)" />
+    <circle cx="0" cy="15" r="4" fill="url(#goldGrad12)" />
+
+    <!-- Cámara Inferior: Té (Infusión floreciendo en hojas doradas) -->
+    <path d="M 0, 70 C -35, 95 -45, 135 0, 155 C 45, 135 35, 95 0, 70 Z" fill="url(#goldGrad12)" />
+    <path d="M 0, 80 L 0, 145" stroke="#090705" stroke-width="2" stroke-linecap="round" />
+    <path d="M -12, 105 L -26, 120" stroke="#090705" stroke-width="1.8" stroke-linecap="round" />
+    <path d="M 12, 115 L 26, 130" stroke="#090705" stroke-width="1.8" stroke-linecap="round" />
+  </g>
+
+  <!-- Tipografía Editorial -->
+  <text x="540" y="750" text-anchor="middle" class="v12-title">TÉ O CAFÉ</text>
+  <text x="540" y="810" text-anchor="middle" class="v12-sub">EL TIEMPO PERFECTO DE EXTRACCIÓN</text>
+  <text x="540" y="860" text-anchor="middle" class="v12-foot">SLOW COFFEE &amp; PURE LEAF TEA · TEOCAFE.CL</text>
+</svg>

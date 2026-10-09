@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1080" height="1080" viewBox="0 0 1080 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;display=swap');
+      .v13-title { font-family: 'Montserrat', sans-serif; font-weight: 800; letter-spacing: 18px; font-size: 54px; fill: url(#goldGrad13Text); }
+      .v13-sub { font-family: 'Montserrat', sans-serif; font-weight: 500; letter-spacing: 9px; font-size: 16px; fill: #FDE68A; }
+      .v13-foot { font-family: 'Montserrat', sans-serif; font-weight: 600; letter-spacing: 5px; font-size: 14px; fill: #D97706; }
+    </style>
+    <radialGradient id="bgGrad13" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#14100D" /><stop offset="60%" stop-color="#080605" /><stop offset="100%" stop-color="#020101" />
+    </radialGradient>
+    <linearGradient id="ribbon13A" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFBEB" /><stop offset="25%" stop-color="#FCD34D" /><stop offset="70%" stop-color="#D97706" /><stop offset="100%" stop-color="#78350F" />
+    </linearGradient>
+    <linearGradient id="ribbon13B" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FDE68A" /><stop offset="50%" stop-color="#F59E0B" /><stop offset="100%" stop-color="#92400E" />
+    </linearGradient>
+    <linearGradient id="goldGrad13Text" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFBEB" /><stop offset="30%" stop-color="#FDE68A" /><stop offset="70%" stop-color="#F59E0B" /><stop offset="100%" stop-color="#B45309" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1080" height="1080" fill="url(#bgGrad13)" />
+
+  <!-- Símbolo Cinta de Oro Escultural (Fusión infinita T y C) -->
+  <g transform="translate(540, 420)">
+    <!-- Halo exterior -->
+    <circle cx="0" cy="0" r="240" stroke="url(#ribbon13A)" stroke-width="1.2" stroke-opacity="0.25" />
+
+    <!-- Trazo continuo de lazo infinito que dibuja la T (travesaño y tronco) y fluye hacia la C envolvente -->
+    <!-- Bucle Superior Izquierdo (Hoja en bucle) -->
+    <path d="M -160, -90 C -160, -170 -60, -180 0, -180 C 60, -180 160, -170 160, -90 C 160, -20 100, 20 20, 20" stroke="url(#ribbon13A)" stroke-width="26" stroke-linecap="round" fill="none" />
+    
+    <!-- Tronco Central descendente de la T -->
+    <path d="M 0, -175 L 0, 70" stroke="url(#ribbon13B)" stroke-width="24" stroke-linecap="round" fill="none" />
+
+    <!-- Bucle Inferior que abraza como 'C' y culmina en un grano de café -->
+    <path d="M 0, 70 C -70, 70 -150, 110 -150, 180 C -150, 240 -60, 260 30, 230 C 120, 200 160, 130 160, 50" stroke="url(#ribbon13A)" stroke-width="26" stroke-linecap="round" fill="none" />
+
+    <!-- Destellos dorados en las intersecciones clave -->
+    <circle cx="0" cy="-180" r="8" fill="#FFFBEB" />
+    <circle cx="160" cy="50" r="7" fill="#FCD34D" />
+  </g>
+
+  <!-- Tipografía Bold Minimalista -->
+  <text x="540" y="780" text-anchor="middle" class="v13-title">TÉ O CAFÉ</text>
+  
+  <g transform="translate(540, 815)">
+    <circle cx="-50" cy="0" r="2.5" fill="#D97706" />
+    <circle cx="0" cy="0" r="4" fill="url(#ribbon13A)" />
+    <circle cx="50" cy="0" r="2.5" fill="#D97706" />
+  </g>
+
+  <text x="540" y="865" text-anchor="middle" class="v13-sub">ESPECIALIDAD SIN LÍMITES</text>
+  <text x="540" y="910" text-anchor="middle" class="v13-foot">BOUTIQUE &amp; ROASTERY · TEOCAFE.CL</text>
+</svg>

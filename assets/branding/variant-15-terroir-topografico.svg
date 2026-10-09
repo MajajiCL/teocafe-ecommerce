@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1080" height="1080" viewBox="0 0 1080 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800&amp;family=Montserrat:wght@400;500;600;700&amp;display=swap');
+      .v15-title { font-family: 'Montserrat', sans-serif; font-weight: 800; letter-spacing: 14px; font-size: 52px; fill: url(#goldGrad15); }
+      .v15-sub { font-family: 'Cinzel', serif; font-weight: 700; letter-spacing: 9px; font-size: 17px; fill: #FDE68A; }
+      .v15-foot { font-family: 'Montserrat', sans-serif; font-weight: 500; letter-spacing: 5px; font-size: 14px; fill: #D97706; }
+    </style>
+    <radialGradient id="bgGrad15" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#1A140F" /><stop offset="60%" stop-color="#090705" /><stop offset="100%" stop-color="#020202" />
+    </radialGradient>
+    <linearGradient id="goldGrad15" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFBEB" /><stop offset="25%" stop-color="#FCD34D" /><stop offset="65%" stop-color="#F59E0B" /><stop offset="100%" stop-color="#B45309" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1080" height="1080" fill="url(#bgGrad15)" />
+
+  <!-- Símbolo: Curvas de Altitud Topográficas (Terroir > 1800 m.s.n.m.) -->
+  <g transform="translate(540, 420)">
+    <!-- Marco circular exterior -->
+    <circle cx="0" cy="0" r="230" stroke="url(#goldGrad15)" stroke-width="2.5" />
+    <circle cx="0" cy="0" r="215" stroke="url(#goldGrad15)" stroke-width="1" stroke-dasharray="4 4" stroke-opacity="0.4" />
+
+    <!-- Líneas Topográficas de Nivel (Curvas geográficas de origen) -->
+    <path d="M -190, 70 C -130, 110 -60, 40 0, 70 C 60, 100 130, 50 190, 70" stroke="url(#goldGrad15)" stroke-width="1.8" stroke-opacity="0.5" fill="none" />
+    <path d="M -170, 0 C -110, 40 -50, -30 0, 0 C 50, 30 110, -20 170, 0" stroke="url(#goldGrad15)" stroke-width="1.8" stroke-opacity="0.6" fill="none" />
+    <path d="M -140, -60 C -80, -20 -30, -90 0, -60 C 30, -30 80, -80 140, -60" stroke="url(#goldGrad15)" stroke-width="1.8" stroke-opacity="0.75" fill="none" />
+
+    <!-- La Cumbre: Hoja de Té & Grano emergiendo en la cima de la montaña -->
+    <g transform="translate(0, -60)">
+      <!-- Hoja a la izquierda -->
+      <path d="M 0, -85 C -45, -55 -40, -15 0, 0 C -15, -30 -10, -65 0, -85 Z" fill="url(#goldGrad15)" />
+      <!-- Grano a la derecha -->
+      <ellipse cx="28" cy="-35" rx="18" ry="26" fill="url(#goldGrad15)" transform="rotate(15 28 -35)" />
+      <path d="M 28, -55 C 33, -35 23, -35 28, -15" stroke="#090705" stroke-width="2.5" stroke-linecap="round" fill="none" />
+      <!-- Sol / Estrella de altitud -->
+      <circle cx="0" cy="-110" r="6" fill="#FFFBEB" />
+    </g>
+
+    <!-- Indicador de Altura -->
+    <text x="0" y="150" text-anchor="middle" font-family="'Montserrat', sans-serif" font-size="14" font-weight="700" letter-spacing="4" fill="url(#goldGrad15)">1.850 M.S.N.M. · SINGLE ORIGIN</text>
+  </g>
+
+  <!-- Tipografía -->
+  <text x="540" y="760" text-anchor="middle" class="v15-title">TÉ O CAFÉ</text>
+  <text x="540" y="815" text-anchor="middle" class="v15-sub">FINCAS DE ALTURA &amp; JARDINES DE CEILÁN</text>
+  <text x="540" y="865" text-anchor="middle" class="v15-foot">SANTIAGO · CHILE · TEOCAFE.CL</text>
+</svg>
