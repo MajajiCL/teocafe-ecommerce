@@ -5,7 +5,7 @@ const operationalCatalog = [
     "handle": "te-kunal",
     "source": "La Finca - Té e Infusiones",
     "vendor": "lafinca.io",
-    "category": "te",
+    "category": "te_hoja",
     "price": 6080,
     "variants": [
       {
@@ -43,7 +43,8 @@ const operationalCatalog = [
       "Sistema nervioso",
       "Té de Hoja",
       "Té Rojo"
-    ]
+    ],
+    "category_label": "Té de Hoja & Latas"
   },
   {
     "id": 102,
@@ -51,7 +52,7 @@ const operationalCatalog = [
     "handle": "te-chai",
     "source": "La Finca - Té e Infusiones",
     "vendor": "lafinca.io",
-    "category": "te",
+    "category": "te_hoja",
     "price": 6290,
     "variants": [
       {
@@ -88,7 +89,8 @@ const operationalCatalog = [
       "Premium",
       "Té de Hoja",
       "Té Negro"
-    ]
+    ],
+    "category_label": "Té de Hoja & Latas"
   },
   {
     "id": 103,
@@ -96,7 +98,7 @@ const operationalCatalog = [
     "handle": "te-alyssa",
     "source": "La Finca - Té e Infusiones",
     "vendor": "lafinca.io",
-    "category": "te",
+    "category": "te_hoja",
     "price": 6080,
     "variants": [
       {
@@ -132,7 +134,8 @@ const operationalCatalog = [
       "Reducción colesterol",
       "Té de Hoja",
       "Té verde"
-    ]
+    ],
+    "category_label": "Té de Hoja & Latas"
   },
   {
     "id": 104,
@@ -140,7 +143,7 @@ const operationalCatalog = [
     "handle": "te-ivy",
     "source": "La Finca - Té e Infusiones",
     "vendor": "lafinca.io",
-    "category": "te",
+    "category": "te_hoja",
     "price": 7550,
     "variants": [
       {
@@ -178,7 +181,8 @@ const operationalCatalog = [
       "Sistema Nervioso",
       "Té de Hoja",
       "Té Rojo"
-    ]
+    ],
+    "category_label": "Té de Hoja & Latas"
   },
   {
     "id": 105,
@@ -186,7 +190,7 @@ const operationalCatalog = [
     "handle": "te-early-grey",
     "source": "La Finca - Té e Infusiones",
     "vendor": "lafinca.io",
-    "category": "te",
+    "category": "te_hoja",
     "price": 6080,
     "variants": [
       {
@@ -224,7 +228,8 @@ const operationalCatalog = [
       "Reconfortante",
       "Té de Hoja",
       "Té Negro"
-    ]
+    ],
+    "category_label": "Té de Hoja & Latas"
   },
   {
     "id": 106,
@@ -232,7 +237,7 @@ const operationalCatalog = [
     "handle": "te-begonia",
     "source": "La Finca - Té e Infusiones",
     "vendor": "lafinca.io",
-    "category": "te",
+    "category": "te_hoja",
     "price": 6080,
     "variants": [
       {
@@ -268,7 +273,8 @@ const operationalCatalog = [
       "Premium",
       "Té de Hoja",
       "Té Negro"
-    ]
+    ],
+    "category_label": "Té de Hoja & Latas"
   },
   {
     "id": 107,
@@ -276,7 +282,7 @@ const operationalCatalog = [
     "handle": "te-azalea",
     "source": "La Finca - Té e Infusiones",
     "vendor": "lafinca.io",
-    "category": "te",
+    "category": "te_hoja",
     "price": 6290,
     "variants": [
       {
@@ -312,7 +318,8 @@ const operationalCatalog = [
       "Reducción colesterol",
       "Té de Hoja",
       "Té verde"
-    ]
+    ],
+    "category_label": "Té de Hoja & Latas"
   },
   {
     "id": 108,
@@ -320,7 +327,7 @@ const operationalCatalog = [
     "handle": "cafe-valle-del-cauca",
     "source": "La Finca - Café Artesanal",
     "vendor": "lafinca.io",
-    "category": "te",
+    "category": "cafe",
     "price": 13990,
     "variants": [
       {
@@ -392,7 +399,8 @@ const operationalCatalog = [
       "Molido",
       "Recién tostado",
       "Tostado en Chile"
-    ]
+    ],
+    "category_label": "Café de Grano & Molido"
   },
   {
     "id": 109,
@@ -400,7 +408,7 @@ const operationalCatalog = [
     "handle": "cafe-quindio-intenso-frances",
     "source": "La Finca - Café Artesanal",
     "vendor": "lafinca.io",
-    "category": "te",
+    "category": "cafe",
     "price": 13990,
     "variants": [
       {
@@ -471,7 +479,8 @@ const operationalCatalog = [
       "Intenso Frances",
       "Molido",
       "Recién tostado"
-    ]
+    ],
+    "category_label": "Café de Grano & Molido"
   },
   {
     "id": 110,
@@ -479,7 +488,7 @@ const operationalCatalog = [
     "handle": "cafe-dual-dark-blend",
     "source": "La Finca - Café Artesanal",
     "vendor": "lafinca.io",
-    "category": "te",
+    "category": "cafe",
     "price": 13290,
     "variants": [
       {
@@ -551,7 +560,8 @@ const operationalCatalog = [
       "Molido",
       "Recién tostado",
       "Tostado en Chile"
-    ]
+    ],
+    "category_label": "Café de Grano & Molido"
   },
   {
     "id": 111,
@@ -593,7 +603,8 @@ const operationalCatalog = [
       "Instantáneo",
       "Liofilizado",
       "soluble"
-    ]
+    ],
+    "category_label": "Café Soluble & Instantáneo"
   },
   {
     "id": 112,
@@ -621,7 +632,8 @@ const operationalCatalog = [
     "short_description": "Disfruta del Especial Liofilizado, el doble de sabor a un precio único. Incluye: – 2 Frascos de Café Instantáneo Liofilizado de origen Colombiano. Para disfrutar en tu casa o donde prefieras, práctico y fácil de preparar. Formato de 50 gr, equivalente a 25 tazas aproximadamente.",
     "tags": [
       "Pack La Finca"
-    ]
+    ],
+    "category_label": "Café Soluble & Instantáneo"
   },
   {
     "id": 113,
@@ -629,7 +641,7 @@ const operationalCatalog = [
     "handle": "cafe-amazonas",
     "source": "La Finca - Café Artesanal",
     "vendor": "lafinca.io",
-    "category": "te",
+    "category": "cafe",
     "price": 13290,
     "variants": [
       {
@@ -701,7 +713,8 @@ const operationalCatalog = [
       "Perú",
       "Recién tostado",
       "Tostado en Chile"
-    ]
+    ],
+    "category_label": "Café de Grano & Molido"
   },
   {
     "id": 114,
@@ -709,7 +722,7 @@ const operationalCatalog = [
     "handle": "cafe-santa-catalina",
     "source": "La Finca - Café Artesanal",
     "vendor": "lafinca.io",
-    "category": "te",
+    "category": "cafe",
     "price": 13290,
     "variants": [
       {
@@ -781,7 +794,8 @@ const operationalCatalog = [
       "Molido",
       "Recién tostado",
       "Tostado en Chile"
-    ]
+    ],
+    "category_label": "Café de Grano & Molido"
   },
   {
     "id": 115,
@@ -789,7 +803,7 @@ const operationalCatalog = [
     "handle": "cafe-san-martin",
     "source": "La Finca - Café Artesanal",
     "vendor": "lafinca.io",
-    "category": "te",
+    "category": "cafe",
     "price": 13290,
     "variants": [
       {
@@ -861,7 +875,8 @@ const operationalCatalog = [
       "Perú",
       "Recién tostado",
       "Tostado en Chile"
-    ]
+    ],
+    "category_label": "Café de Grano & Molido"
   },
   {
     "id": 116,
@@ -869,7 +884,7 @@ const operationalCatalog = [
     "handle": "capsulas-quindio",
     "source": "La Finca - Café Artesanal",
     "vendor": "lafinca.io",
-    "category": "cafe",
+    "category": "capsulas",
     "price": 7890,
     "variants": [
       {
@@ -896,7 +911,8 @@ const operationalCatalog = [
     "image": "https://cdn.shopify.com/s/files/1/0589/8023/7371/products/Cap-Quindio10unds.png?v=1672886539",
     "description": "Un Café Colombiano de especialidad, tostado en Chile lo que garantiza su frescura y la mayor calidad del mercado. ➤ Café Colombiano, Tostado en Chile ➤ 10 o 20 cápsulas La Finca Tradición (Nespresso Compatibles) ➤ Sabor Intenso ➤ Es un Café de alta calidad, producido a 1.300 mts. sobre el nivel del mar en la Vereda del Caimo Armenia, Departamento del Quindío en pleno Eje Cafetero Colombiano. ➤ Caracterizado por un dulce sabor a panela y frutos rojos, sabor residual de chocolate dulce y nueces. ➤ Zona de producción: A 1.900 metros de altura ➤ Proceso de Producción: Selección 100% manual",
     "short_description": "Un Café Colombiano de especialidad, tostado en Chile lo que garantiza su frescura y la mayor calidad del mercado. ➤ Café Colombiano, Tostado en Chile ➤ 10 o 20 cápsulas La Finca Tradición (Nespresso Compatibles) ➤ Sabor Intenso ➤ Es un Café de alta calidad, producido a 1.300 mts. sobre el nivel d...",
-    "tags": []
+    "tags": [],
+    "category_label": "Cápsulas Compatibles"
   },
   {
     "id": 117,
@@ -904,7 +920,7 @@ const operationalCatalog = [
     "handle": "capsulas-valle-del-cauca",
     "source": "La Finca - Café Artesanal",
     "vendor": "lafinca.io",
-    "category": "cafe",
+    "category": "capsulas",
     "price": 7890,
     "variants": [
       {
@@ -931,7 +947,8 @@ const operationalCatalog = [
     "image": "https://cdn.shopify.com/s/files/1/0589/8023/7371/products/Cap-Valledelcauca20unds.png?v=1672886590",
     "description": "Un Café Colombiano de especialidad, tostado en Chile lo que garantiza su frescura y la mayor calidad del mercado ➤ Café Colombiano, Tostado en Chile ➤ 10 o 20 cápsulas La Finca Tradición (Nespresso Compatibles) ➤ En Perfil de taza cuenta con un Aroma Intenso, baja acidez y cuerpo medio ➤ Desde El Valle del Cauca conseguimos unos de los mejores cafés del mundo. ➤ Se caracteriza por un rico dulzor de caramelo proveniente de la caña, acidez cítrica, notas de frutos rojos y cuerpo medio y cremoso.",
     "short_description": "Un Café Colombiano de especialidad, tostado en Chile lo que garantiza su frescura y la mayor calidad del mercado ➤ Café Colombiano, Tostado en Chile ➤ 10 o 20 cápsulas La Finca Tradición (Nespresso Compatibles) ➤ En Perfil de taza cuenta con un Aroma Intenso, baja acidez y cuerpo medio ➤ Desde El...",
-    "tags": []
+    "tags": [],
+    "category_label": "Cápsulas Compatibles"
   },
   {
     "id": 118,
@@ -939,7 +956,7 @@ const operationalCatalog = [
     "handle": "pack-capsulas",
     "source": "La Finca - Café Artesanal",
     "vendor": "lafinca.io",
-    "category": "cafe",
+    "category": "capsulas",
     "price": 18590,
     "variants": [
       {
@@ -959,7 +976,8 @@ const operationalCatalog = [
     "short_description": "30 Cápsulas de intenso sabor colombiano, tostado en Chile al mejor precio. ¡Disfrútalas en tu casa, oficina o donde prefieras! COMPATIBLES CON NESPRESSO | 100% COMPOSTABLES.",
     "tags": [
       "Pack La Finca"
-    ]
+    ],
+    "category_label": "Cápsulas Compatibles"
   },
   {
     "id": 119,
@@ -993,7 +1011,8 @@ const operationalCatalog = [
     "image": "https://cdn.shopify.com/s/files/1/0589/8023/7371/files/1_14.png?v=1770218084",
     "description": "Tres orígenes, tres intensidades y una sola experiencia. Este pack reúne la elegancia aromática del Valle del Cauca (Medio Full City) , la fuerza profunda del Dual Dark (Italiano) y el carácter intenso del Quindío (Francés) , con notas dulces, chocolateadas y frutales. Ideal para quienes disfrutan explorar contrastes, cuerpo y personalidad en cada taza, desde preparaciones suaves hasta espressos potentes.",
     "short_description": "Tres orígenes, tres intensidades y una sola experiencia. Este pack reúne la elegancia aromática del Valle del Cauca (Medio Full City) , la fuerza profunda del Dual Dark (Italiano) y el carácter intenso del Quindío (Francés) , con notas dulces, chocolateadas y frutales. Ideal para quienes disfruta...",
-    "tags": []
+    "tags": [],
+    "category_label": "Café de Grano & Molido"
   },
   {
     "id": 120,
@@ -1044,7 +1063,8 @@ const operationalCatalog = [
     "image": "https://cdn.shopify.com/s/files/1/0589/8023/7371/files/5_8.png?v=1770218223",
     "description": "Tradición y practicidad en un solo pack. Disfruta la intensidad y profundidad del Café Quindío (Francés) , con notas dulces a panela, frutos rojos y chocolate, junto al Café Liofilizado , práctico y rápido, sin perder calidad ni aroma. Ideal para quienes buscan un café intenso para espresso y una opción instantánea premium para cualquier momento del día.",
     "short_description": "Tradición y practicidad en un solo pack. Disfruta la intensidad y profundidad del Café Quindío (Francés) , con notas dulces a panela, frutos rojos y chocolate, junto al Café Liofilizado , práctico y rápido, sin perder calidad ni aroma. Ideal para quienes buscan un café intenso para espresso y una...",
-    "tags": []
+    "tags": [],
+    "category_label": "Café de Grano & Molido"
   },
   {
     "id": 121,
@@ -1052,7 +1072,7 @@ const operationalCatalog = [
     "handle": "coffee-roasters-blend-1",
     "source": "La Finca - Café Artesanal",
     "vendor": "lafinca.io",
-    "category": "te",
+    "category": "cafe",
     "price": 47590,
     "variants": [
       {
@@ -1088,7 +1108,8 @@ const operationalCatalog = [
     "image": "https://cdn.shopify.com/s/files/1/0589/8023/7371/files/2_1f679ce8-1129-4f47-aca0-a269fc677fc9.png?v=1727181274",
     "description": "Elaborado con granos de café de alta calidad, ofrece una experiencia de sabor excepcional en cada taza.",
     "short_description": "Elaborado con granos de café de alta calidad, ofrece una experiencia de sabor excepcional en cada taza.",
-    "tags": []
+    "tags": [],
+    "category_label": "Café de Grano & Molido"
   },
   {
     "id": 122,
@@ -1124,7 +1145,8 @@ const operationalCatalog = [
     "short_description": "Descubre el delicioso café soluble en polvo de la finca en formato de 300g y 50g. Elaborado con granos de café de alta calidad, ofrece una experiencia de sabor excepcional en cada taza. Disfruta de un café premium en segundos, en casa, en la oficina o en tus viajes.",
     "tags": [
       "Café"
-    ]
+    ],
+    "category_label": "Café Soluble & Instantáneo"
   },
   {
     "id": 123,
@@ -1132,7 +1154,7 @@ const operationalCatalog = [
     "handle": "lata-te-verde-winter-avenue-3-te-verde-limon-y-menta-20-piramides-basilur",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_piramide",
     "price": 9900,
     "variants": [
       {
@@ -1164,7 +1186,8 @@ const operationalCatalog = [
       "Piramides",
       "Reductivo",
       "Te Verde"
-    ]
+    ],
+    "category_label": "Té en Pirámides de Seda"
   },
   {
     "id": 124,
@@ -1172,7 +1195,7 @@ const operationalCatalog = [
     "handle": "lata-te-negro-con-almendras-house-navidad-20-piramides-basilur",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_piramide",
     "price": 9900,
     "variants": [
       {
@@ -1198,7 +1221,8 @@ const operationalCatalog = [
       "Navidad",
       "Piramides",
       "Te Negro"
-    ]
+    ],
+    "category_label": "Té en Pirámides de Seda"
   },
   {
     "id": 125,
@@ -1206,7 +1230,7 @@ const operationalCatalog = [
     "handle": "te-negro-con-arandano-chocolate-caramelo-festival-delight-hoja-75-gr-basilur",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_hoja",
     "price": 15900,
     "variants": [
       {
@@ -1238,7 +1262,8 @@ const operationalCatalog = [
       "regalo",
       "Te en Hojas",
       "Te Negro"
-    ]
+    ],
+    "category_label": "Té de Hoja & Latas"
   },
   {
     "id": 126,
@@ -1246,7 +1271,7 @@ const operationalCatalog = [
     "handle": "basilur-te-con-manzana-y-mazapan-warmth-of-winte-wonder-tea-40g",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_hoja",
     "price": 9900,
     "variants": [
       {
@@ -1279,7 +1304,8 @@ const operationalCatalog = [
       "Navidad",
       "Te Negro",
       "Vintage"
-    ]
+    ],
+    "category_label": "Té de Hoja & Latas"
   },
   {
     "id": 127,
@@ -1287,7 +1313,7 @@ const operationalCatalog = [
     "handle": "basilur-t-con-especias-warmth-of-winter-holiday-story-40",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_hoja",
     "price": 9900,
     "variants": [
       {
@@ -1319,7 +1345,8 @@ const operationalCatalog = [
       "Navidad",
       "Te Negro",
       "Vintage"
-    ]
+    ],
+    "category_label": "Té de Hoja & Latas"
   },
   {
     "id": 128,
@@ -1327,7 +1354,7 @@ const operationalCatalog = [
     "handle": "te-negro-vintage-mini-book-5-piramides",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_piramide",
     "price": 7900,
     "variants": [
       {
@@ -1358,7 +1385,8 @@ const operationalCatalog = [
       "Piramides",
       "Te Negro",
       "Vintage"
-    ]
+    ],
+    "category_label": "Té en Pirámides de Seda"
   },
   {
     "id": 129,
@@ -1366,7 +1394,7 @@ const operationalCatalog = [
     "handle": "te-negro-vainilla-calendula-golden-hour-30-piramides-basilur",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_piramide",
     "price": 8900,
     "variants": [
       {
@@ -1395,7 +1423,8 @@ const operationalCatalog = [
       "Piramides",
       "Te Negro",
       "Vintage"
-    ]
+    ],
+    "category_label": "Té en Pirámides de Seda"
   },
   {
     "id": 130,
@@ -1403,7 +1432,7 @@ const operationalCatalog = [
     "handle": "basilur-te-con-chocolate-y-menta-warmth-of-winter-merry-tea-lata-libro-40g",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_hoja",
     "price": 9900,
     "variants": [
       {
@@ -1437,7 +1466,8 @@ const operationalCatalog = [
       "Navidad",
       "Te Negro",
       "Vintage"
-    ]
+    ],
+    "category_label": "Té de Hoja & Latas"
   },
   {
     "id": 131,
@@ -1468,7 +1498,8 @@ const operationalCatalog = [
       "Accesorios",
       "Regalos",
       "Teteras"
-    ]
+    ],
+    "category_label": "Accesorios & Preparación"
   },
   {
     "id": 132,
@@ -1476,7 +1507,7 @@ const operationalCatalog = [
     "handle": "set-pasaporte-premium-tea-basilur-1",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_bolsitas",
     "price": 27000,
     "variants": [
       {
@@ -1506,7 +1537,8 @@ const operationalCatalog = [
       "PACKS",
       "Regalo",
       "Te Azul"
-    ]
+    ],
+    "category_label": "Té en Bolsitas & Sobres"
   },
   {
     "id": 133,
@@ -1514,7 +1546,7 @@ const operationalCatalog = [
     "handle": "te-azul-surtido-40-bolsas",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_bolsitas",
     "price": 9900,
     "variants": [
       {
@@ -1544,7 +1576,8 @@ const operationalCatalog = [
       "Surtidos",
       "Te Azul",
       "Te Verde"
-    ]
+    ],
+    "category_label": "Té en Bolsitas & Sobres"
   },
   {
     "id": 134,
@@ -1552,7 +1585,7 @@ const operationalCatalog = [
     "handle": "magic-nights-100gr",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_hoja",
     "price": 6900,
     "variants": [
       {
@@ -1579,7 +1612,8 @@ const operationalCatalog = [
       "Oriental",
       "Taste",
       "Te Negro"
-    ]
+    ],
+    "category_label": "Té de Hoja & Latas"
   },
   {
     "id": 135,
@@ -1587,7 +1621,7 @@ const operationalCatalog = [
     "handle": "te-wild-rose-20-bolsas-basilur",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_bolsitas",
     "price": 4400,
     "variants": [
       {
@@ -1613,7 +1647,8 @@ const operationalCatalog = [
       "Reductivo",
       "Sin Cafeina",
       "Taste"
-    ]
+    ],
+    "category_label": "Té en Bolsitas & Sobres"
   },
   {
     "id": 136,
@@ -1621,7 +1656,7 @@ const operationalCatalog = [
     "handle": "te-blanco-surtido-20-bolsitas-basilur",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_bolsitas",
     "price": 4200,
     "variants": [
       {
@@ -1649,7 +1684,8 @@ const operationalCatalog = [
       "Surtidos",
       "Te Blanco",
       "White Collections"
-    ]
+    ],
+    "category_label": "Té en Bolsitas & Sobres"
   },
   {
     "id": 137,
@@ -1657,7 +1693,7 @@ const operationalCatalog = [
     "handle": "horeca-earl-grey-500-sobres",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_bolsitas",
     "price": 49900,
     "variants": [
       {
@@ -1680,7 +1716,8 @@ const operationalCatalog = [
       "Con Cafeina",
       "Estimulante",
       "HORECA"
-    ]
+    ],
+    "category_label": "Té en Bolsitas & Sobres"
   },
   {
     "id": 138,
@@ -1688,7 +1725,7 @@ const operationalCatalog = [
     "handle": "horeca-english-breakfast-500-sobres",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_bolsitas",
     "price": 49900,
     "variants": [
       {
@@ -1712,7 +1749,8 @@ const operationalCatalog = [
       "Con Cafeina",
       "Estimulante",
       "HORECA"
-    ]
+    ],
+    "category_label": "Té en Bolsitas & Sobres"
   },
   {
     "id": 139,
@@ -1720,7 +1758,7 @@ const operationalCatalog = [
     "handle": "horeca-masala-chai-500-sobres",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_bolsitas",
     "price": 49900,
     "variants": [
       {
@@ -1744,7 +1782,8 @@ const operationalCatalog = [
       "Con Cafeina",
       "Estimulante",
       "HORECA"
-    ]
+    ],
+    "category_label": "Té en Bolsitas & Sobres"
   },
   {
     "id": 140,
@@ -1775,7 +1814,8 @@ const operationalCatalog = [
     "tags": [
       "Accesorios",
       "regalo"
-    ]
+    ],
+    "category_label": "Accesorios & Preparación"
   },
   {
     "id": 141,
@@ -1783,7 +1823,7 @@ const operationalCatalog = [
     "handle": "te-en-hoja-present-ceylon-te-negro-100-gr-basilur",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_hoja",
     "price": 10900,
     "variants": [
       {
@@ -1812,7 +1852,8 @@ const operationalCatalog = [
       "Present",
       "Te en Hojas",
       "Te Negro"
-    ]
+    ],
+    "category_label": "Té de Hoja & Latas"
   },
   {
     "id": 142,
@@ -1820,7 +1861,7 @@ const operationalCatalog = [
     "handle": "captains-tea-gampola-lata-100-g-basilur",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_hoja",
     "price": 11900,
     "variants": [
       {
@@ -1854,7 +1895,8 @@ const operationalCatalog = [
       "Estimulante",
       "Lata",
       "Te Negro"
-    ]
+    ],
+    "category_label": "Té de Hoja & Latas"
   },
   {
     "id": 143,
@@ -1862,7 +1904,7 @@ const operationalCatalog = [
     "handle": "chamomile-20-bolsitas",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_bolsitas",
     "price": 4600,
     "variants": [
       {
@@ -1891,7 +1933,8 @@ const operationalCatalog = [
       "Infusiones",
       "Relajante",
       "Sin Cafeina"
-    ]
+    ],
+    "category_label": "Té en Bolsitas & Sobres"
   },
   {
     "id": 144,
@@ -1899,7 +1942,7 @@ const operationalCatalog = [
     "handle": "te-jasmin-te-verde-100-gr-basilur",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_hoja",
     "price": 8900,
     "variants": [
       {
@@ -1929,7 +1972,8 @@ const operationalCatalog = [
       "Lata",
       "Reductivo",
       "Te Verde"
-    ]
+    ],
+    "category_label": "Té de Hoja & Latas"
   },
   {
     "id": 145,
@@ -1937,7 +1981,7 @@ const operationalCatalog = [
     "handle": "te-frutas-y-flores-english-roses-y-dimbula",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_hoja",
     "price": 9900,
     "variants": [
       {
@@ -1969,7 +2013,8 @@ const operationalCatalog = [
       "Estimulante",
       "Lata",
       "Te Negro"
-    ]
+    ],
+    "category_label": "Té de Hoja & Latas"
   },
   {
     "id": 146,
@@ -1977,7 +2022,7 @@ const operationalCatalog = [
     "handle": "organic-rooibos-20-bolsas",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_bolsitas",
     "price": 3990,
     "variants": [
       {
@@ -2006,7 +2051,8 @@ const operationalCatalog = [
       "Relajante",
       "Rooibos",
       "Sin Cafeina"
-    ]
+    ],
+    "category_label": "Té en Bolsitas & Sobres"
   },
   {
     "id": 147,
@@ -2014,7 +2060,7 @@ const operationalCatalog = [
     "handle": "te-frutas-frutilla-y-kiwy-te-ruhunu-100-g",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_bolsitas",
     "price": 8900,
     "variants": [
       {
@@ -2045,7 +2091,8 @@ const operationalCatalog = [
       "Lata",
       "Leaf Of Ceylan",
       "Te Negro"
-    ]
+    ],
+    "category_label": "Té en Bolsitas & Sobres"
   },
   {
     "id": 148,
@@ -2053,7 +2100,7 @@ const operationalCatalog = [
     "handle": "pack-libro-de-te-en-bolsitas-x-2-basilur-2",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_bolsitas",
     "price": 29800,
     "variants": [
       {
@@ -2082,7 +2129,8 @@ const operationalCatalog = [
       "Magic Fruit",
       "PACKS",
       "Te Negro"
-    ]
+    ],
+    "category_label": "Té en Bolsitas & Sobres"
   },
   {
     "id": 149,
@@ -2090,7 +2138,7 @@ const operationalCatalog = [
     "handle": "book-gin-tonic-assorted-black-edition-32-bolsitas",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_bolsitas",
     "price": 15900,
     "variants": [
       {
@@ -2125,7 +2173,8 @@ const operationalCatalog = [
       "nuevo",
       "Reductivo",
       "Te Verde"
-    ]
+    ],
+    "category_label": "Té en Bolsitas & Sobres"
   },
   {
     "id": 150,
@@ -2133,7 +2182,7 @@ const operationalCatalog = [
     "handle": "te-blanco-surtido-40-bolsitas-basilur",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_bolsitas",
     "price": 11900,
     "variants": [
       {
@@ -2164,7 +2213,8 @@ const operationalCatalog = [
       "Te Blanco",
       "White Collection",
       "White Collections"
-    ]
+    ],
+    "category_label": "Té en Bolsitas & Sobres"
   },
   {
     "id": 151,
@@ -2172,7 +2222,7 @@ const operationalCatalog = [
     "handle": "te-earl-grey-surtidos-earl-grey-collection-40-bolsas-basilur",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_bolsitas",
     "price": 8990,
     "variants": [
       {
@@ -2202,7 +2252,8 @@ const operationalCatalog = [
       "Estimulante",
       "Surtidos",
       "Te Negro"
-    ]
+    ],
+    "category_label": "Té en Bolsitas & Sobres"
   },
   {
     "id": 152,
@@ -2210,7 +2261,7 @@ const operationalCatalog = [
     "handle": "surtido-brisa-botanica-40-bolsas-botanical-breeze-basilur",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_bolsitas",
     "price": 8990,
     "variants": [
       {
@@ -2244,7 +2295,8 @@ const operationalCatalog = [
       "Te Blanco",
       "Te Negro",
       "Te verde"
-    ]
+    ],
+    "category_label": "Té en Bolsitas & Sobres"
   },
   {
     "id": 153,
@@ -2252,7 +2304,7 @@ const operationalCatalog = [
     "handle": "milk-oolong-100g",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_hoja",
     "price": 6900,
     "variants": [
       {
@@ -2280,7 +2332,8 @@ const operationalCatalog = [
       "En Hojas",
       "Estimulante",
       "HORECA"
-    ]
+    ],
+    "category_label": "Té de Hoja & Latas"
   },
   {
     "id": 154,
@@ -2288,7 +2341,7 @@ const operationalCatalog = [
     "handle": "tipson-moringa-y-mango-en-sobres-25-x-1-5-g",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_bolsitas",
     "price": 4400,
     "variants": [
       {
@@ -2316,7 +2369,8 @@ const operationalCatalog = [
       "Moringa",
       "Sin Cafeina",
       "tipson"
-    ]
+    ],
+    "category_label": "Té en Bolsitas & Sobres"
   },
   {
     "id": 155,
@@ -2324,7 +2378,7 @@ const operationalCatalog = [
     "handle": "te-seasson-negro-arandano-100-gr-1",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_hoja",
     "price": 10900,
     "variants": [
       {
@@ -2352,7 +2406,8 @@ const operationalCatalog = [
       "Estimulante",
       "Four Season",
       "Te Negro"
-    ]
+    ],
+    "category_label": "Té de Hoja & Latas"
   },
   {
     "id": 156,
@@ -2360,7 +2415,7 @@ const operationalCatalog = [
     "handle": "te-frutas-mango-pina-100-gr",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_hoja",
     "price": 6900,
     "variants": [
       {
@@ -2389,7 +2444,8 @@ const operationalCatalog = [
       "Estimulante",
       "Magic Fruit",
       "Te Negro"
-    ]
+    ],
+    "category_label": "Té de Hoja & Latas"
   },
   {
     "id": 157,
@@ -2397,7 +2453,7 @@ const operationalCatalog = [
     "handle": "moroccan-mint-100g",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_hoja",
     "price": 6900,
     "variants": [
       {
@@ -2425,7 +2481,8 @@ const operationalCatalog = [
       "Oriental",
       "Reductivo",
       "Te Verde"
-    ]
+    ],
+    "category_label": "Té de Hoja & Latas"
   },
   {
     "id": 158,
@@ -2433,7 +2490,7 @@ const operationalCatalog = [
     "handle": "te-verde-moroccan-mint-20-bolsas",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_bolsitas",
     "price": 3990,
     "variants": [
       {
@@ -2461,7 +2518,8 @@ const operationalCatalog = [
       "Oriental",
       "Reductivo",
       "Te Verde"
-    ]
+    ],
+    "category_label": "Té en Bolsitas & Sobres"
   },
   {
     "id": 159,
@@ -2469,7 +2527,7 @@ const operationalCatalog = [
     "handle": "te-oriental-verde-con-menta-moroccon-mint-lata",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_hoja",
     "price": 11900,
     "variants": [
       {
@@ -2498,7 +2556,8 @@ const operationalCatalog = [
       "Oriental",
       "Reductivo",
       "Te Verde"
-    ]
+    ],
+    "category_label": "Té de Hoja & Latas"
   },
   {
     "id": 160,
@@ -2506,7 +2565,7 @@ const operationalCatalog = [
     "handle": "te-book-libro-negro-con-jasmin-y-almendras-vol-1",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_hoja",
     "price": 14900,
     "variants": [
       {
@@ -2534,7 +2593,8 @@ const operationalCatalog = [
       "Libros de Te",
       "Navidad",
       "Te Negro"
-    ]
+    ],
+    "category_label": "Té de Hoja & Latas"
   },
   {
     "id": 161,
@@ -2542,7 +2602,7 @@ const operationalCatalog = [
     "handle": "ceylon-premium-20-bolsas",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_bolsitas",
     "price": 3990,
     "variants": [
       {
@@ -2569,7 +2629,8 @@ const operationalCatalog = [
       "Estimulante",
       "HORECA",
       "Te Negro"
-    ]
+    ],
+    "category_label": "Té en Bolsitas & Sobres"
   },
   {
     "id": 162,
@@ -2577,7 +2638,7 @@ const operationalCatalog = [
     "handle": "present-green-100gr",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_hoja",
     "price": 9900,
     "variants": [
       {
@@ -2607,7 +2668,8 @@ const operationalCatalog = [
       "Present",
       "Reductivo",
       "Te Verde"
-    ]
+    ],
+    "category_label": "Té de Hoja & Latas"
   },
   {
     "id": 163,
@@ -2615,7 +2677,7 @@ const operationalCatalog = [
     "handle": "te-en-hoja-present-gold-te-negro-navidad",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_hoja",
     "price": 11900,
     "variants": [
       {
@@ -2645,7 +2707,8 @@ const operationalCatalog = [
       "Present",
       "Te en Hojas",
       "Te Negro"
-    ]
+    ],
+    "category_label": "Té de Hoja & Latas"
   },
   {
     "id": 164,
@@ -2653,7 +2716,7 @@ const operationalCatalog = [
     "handle": "festive-magic-moments-te-negro-malva-basilur",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_hoja",
     "price": 12900,
     "variants": [
       {
@@ -2683,7 +2746,8 @@ const operationalCatalog = [
       "Surtidos",
       "Te Negro",
       "Vintage"
-    ]
+    ],
+    "category_label": "Té de Hoja & Latas"
   },
   {
     "id": 165,
@@ -2691,7 +2755,7 @@ const operationalCatalog = [
     "handle": "festive-magic-moments-25-piramides-te-negro-malva-basilur-copia",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_hoja",
     "price": 11900,
     "variants": [
       {
@@ -2719,7 +2783,8 @@ const operationalCatalog = [
       "Te en Hojas",
       "Te Negro",
       "Vintage"
-    ]
+    ],
+    "category_label": "Té de Hoja & Latas"
   },
   {
     "id": 166,
@@ -2727,7 +2792,7 @@ const operationalCatalog = [
     "handle": "lima-y-limon-20-bolsas",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_bolsitas",
     "price": 4400,
     "variants": [
       {
@@ -2756,7 +2821,8 @@ const operationalCatalog = [
       "Estimulante",
       "Magic Fruit",
       "Te Negro"
-    ]
+    ],
+    "category_label": "Té en Bolsitas & Sobres"
   },
   {
     "id": 167,
@@ -2764,7 +2830,7 @@ const operationalCatalog = [
     "handle": "fruit-infusion-hot-apple-20-bolsas-basilur",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_bolsitas",
     "price": 4400,
     "variants": [
       {
@@ -2793,7 +2859,8 @@ const operationalCatalog = [
       "Navidad",
       "Sin Cafeina",
       "Vintage"
-    ]
+    ],
+    "category_label": "Té en Bolsitas & Sobres"
   },
   {
     "id": 168,
@@ -2801,7 +2868,7 @@ const operationalCatalog = [
     "handle": "basilur-winter-avenue-4-lata-edicion-limitada-te-negro-caramelo-vainilla-100gr",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_hoja",
     "price": 13900,
     "variants": [
       {
@@ -2832,7 +2899,8 @@ const operationalCatalog = [
       "Navidad",
       "Te Negro",
       "Vintage"
-    ]
+    ],
+    "category_label": "Té de Hoja & Latas"
   },
   {
     "id": 169,
@@ -2840,7 +2908,7 @@ const operationalCatalog = [
     "handle": "set-momento-de-amor-y-te-verde-copia",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_bolsitas",
     "price": 29700,
     "variants": [
       {
@@ -2869,7 +2937,8 @@ const operationalCatalog = [
       "Oriental",
       "PACKS",
       "Regalo"
-    ]
+    ],
+    "category_label": "Té en Bolsitas & Sobres"
   },
   {
     "id": 170,
@@ -2877,7 +2946,7 @@ const operationalCatalog = [
     "handle": "frutilla-kiwi-100gr",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_hoja",
     "price": 6900,
     "variants": [
       {
@@ -2903,7 +2972,8 @@ const operationalCatalog = [
       "Estimulante",
       "Magic Fruit",
       "Te Negro"
-    ]
+    ],
+    "category_label": "Té de Hoja & Latas"
   },
   {
     "id": 171,
@@ -2911,7 +2981,7 @@ const operationalCatalog = [
     "handle": "te-hoja-verde-jasmin-pina-cofre-present-100gr",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_hoja",
     "price": 11900,
     "variants": [
       {
@@ -2946,7 +3016,8 @@ const operationalCatalog = [
       "Present",
       "Reductivo",
       "Te Verde"
-    ]
+    ],
+    "category_label": "Té de Hoja & Latas"
   },
   {
     "id": 172,
@@ -2978,7 +3049,8 @@ const operationalCatalog = [
       "HORECA",
       "Regalos",
       "Teteras"
-    ]
+    ],
+    "category_label": "Accesorios & Preparación"
   },
   {
     "id": 173,
@@ -2986,7 +3058,7 @@ const operationalCatalog = [
     "handle": "libro-spice-chai-surtido-32-bolsitas-basilur",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_bolsitas",
     "price": 16900,
     "variants": [
       {
@@ -3019,7 +3091,8 @@ const operationalCatalog = [
       "Navidad",
       "spice Chai",
       "Te Negro"
-    ]
+    ],
+    "category_label": "Té en Bolsitas & Sobres"
   },
   {
     "id": 174,
@@ -3027,7 +3100,7 @@ const operationalCatalog = [
     "handle": "te-house-navidad-hoja-100gr",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_hoja",
     "price": 13600,
     "variants": [
       {
@@ -3058,7 +3131,8 @@ const operationalCatalog = [
       "Lata",
       "Navidad",
       "Te Negro"
-    ]
+    ],
+    "category_label": "Té de Hoja & Latas"
   },
   {
     "id": 175,
@@ -3066,7 +3140,7 @@ const operationalCatalog = [
     "handle": "specialty-classics-60-bolsas-lata",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_bolsitas",
     "price": 14900,
     "variants": [
       {
@@ -3095,7 +3169,8 @@ const operationalCatalog = [
       "Lata",
       "regalo",
       "Te Negro"
-    ]
+    ],
+    "category_label": "Té en Bolsitas & Sobres"
   },
   {
     "id": 176,
@@ -3103,7 +3178,7 @@ const operationalCatalog = [
     "handle": "festival-winter-music-hoja-75-gr-basilur",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_hoja",
     "price": 15900,
     "variants": [
       {
@@ -3137,7 +3212,8 @@ const operationalCatalog = [
       "regalo",
       "Te en Hojas",
       "Te Negro"
-    ]
+    ],
+    "category_label": "Té de Hoja & Latas"
   },
   {
     "id": 177,
@@ -3145,7 +3221,7 @@ const operationalCatalog = [
     "handle": "golden-moments-ruby-glow-hoja-100-gr-basilur",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_hoja",
     "price": 9900,
     "variants": [
       {
@@ -3179,7 +3255,8 @@ const operationalCatalog = [
       "regalo",
       "Te en Hojas",
       "Te Negro"
-    ]
+    ],
+    "category_label": "Té de Hoja & Latas"
   },
   {
     "id": 178,
@@ -3187,7 +3264,7 @@ const operationalCatalog = [
     "handle": "oriental-collection-60-bolsas",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_bolsitas",
     "price": 11900,
     "variants": [
       {
@@ -3219,7 +3296,8 @@ const operationalCatalog = [
       "Surtidos",
       "Te Negro",
       "Te Verde"
-    ]
+    ],
+    "category_label": "Té en Bolsitas & Sobres"
   },
   {
     "id": 179,
@@ -3227,7 +3305,7 @@ const operationalCatalog = [
     "handle": "specialty-classics-60-bolsas",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_bolsitas",
     "price": 11900,
     "variants": [
       {
@@ -3257,7 +3335,8 @@ const operationalCatalog = [
       "Surtidos",
       "Te Negro",
       "Te Verde"
-    ]
+    ],
+    "category_label": "Té en Bolsitas & Sobres"
   },
   {
     "id": 180,
@@ -3265,7 +3344,7 @@ const operationalCatalog = [
     "handle": "magic-fruits",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_bolsitas",
     "price": 14900,
     "variants": [
       {
@@ -3298,7 +3377,8 @@ const operationalCatalog = [
       "Navidad",
       "Surtidos",
       "Te Negro"
-    ]
+    ],
+    "category_label": "Té en Bolsitas & Sobres"
   },
   {
     "id": 181,
@@ -3306,7 +3386,7 @@ const operationalCatalog = [
     "handle": "peppermint-20-bolsas",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_bolsitas",
     "price": 4400,
     "variants": [
       {
@@ -3332,7 +3412,8 @@ const operationalCatalog = [
       "Infusion",
       "Infusiones",
       "Sin Cafeina"
-    ]
+    ],
+    "category_label": "Té en Bolsitas & Sobres"
   },
   {
     "id": 182,
@@ -3340,7 +3421,7 @@ const operationalCatalog = [
     "handle": "strawberry-kiwi-20-bolsas",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_bolsitas",
     "price": 4400,
     "variants": [
       {
@@ -3370,7 +3451,8 @@ const operationalCatalog = [
       "Estimulante",
       "Magic Fruit",
       "Te Negro"
-    ]
+    ],
+    "category_label": "Té en Bolsitas & Sobres"
   },
   {
     "id": 183,
@@ -3378,7 +3460,7 @@ const operationalCatalog = [
     "handle": "forest-fruit-20-bolsas",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_bolsitas",
     "price": 4400,
     "variants": [
       {
@@ -3406,7 +3488,8 @@ const operationalCatalog = [
       "Infusiones",
       "Reductivo",
       "Sin Cafeina"
-    ]
+    ],
+    "category_label": "Té en Bolsitas & Sobres"
   },
   {
     "id": 184,
@@ -3414,7 +3497,7 @@ const operationalCatalog = [
     "handle": "tea-book-assorted-bouquet-32-bolsas",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_bolsitas",
     "price": 15900,
     "variants": [
       {
@@ -3446,7 +3529,8 @@ const operationalCatalog = [
       "Reductivo",
       "Surtidos",
       "Te Verde"
-    ]
+    ],
+    "category_label": "Té en Bolsitas & Sobres"
   },
   {
     "id": 185,
@@ -3454,7 +3538,7 @@ const operationalCatalog = [
     "handle": "assorted-magic-fruit-20-bolsas",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_bolsitas",
     "price": 3990,
     "variants": [
       {
@@ -3485,7 +3569,8 @@ const operationalCatalog = [
       "Magic Fruit",
       "Surtidos",
       "Te Negro"
-    ]
+    ],
+    "category_label": "Té en Bolsitas & Sobres"
   },
   {
     "id": 186,
@@ -3493,7 +3578,7 @@ const operationalCatalog = [
     "handle": "infusiones-60-bolsas",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_bolsitas",
     "price": 11900,
     "variants": [
       {
@@ -3522,7 +3607,8 @@ const operationalCatalog = [
       "Reductivo",
       "Sin Cafeina",
       "Surtidos"
-    ]
+    ],
+    "category_label": "Té en Bolsitas & Sobres"
   },
   {
     "id": 187,
@@ -3530,7 +3616,7 @@ const operationalCatalog = [
     "handle": "libro-de-te-coleccion-clasicos-32-bolsas",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_bolsitas",
     "price": 15900,
     "variants": [
       {
@@ -3563,7 +3649,8 @@ const operationalCatalog = [
       "Reductivo",
       "Te negro",
       "Te Verde"
-    ]
+    ],
+    "category_label": "Té en Bolsitas & Sobres"
   },
   {
     "id": 188,
@@ -3571,7 +3658,7 @@ const operationalCatalog = [
     "handle": "caramel-dream-100gr-lata-regalo",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_hoja",
     "price": 11900,
     "variants": [
       {
@@ -3601,7 +3688,8 @@ const operationalCatalog = [
       "Oriental",
       "Taste",
       "Te Negro"
-    ]
+    ],
+    "category_label": "Té de Hoja & Latas"
   },
   {
     "id": 189,
@@ -3609,7 +3697,7 @@ const operationalCatalog = [
     "handle": "winter-20-bolsas-te-negro-arandanos",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_bolsitas",
     "price": 4400,
     "variants": [
       {
@@ -3635,7 +3723,8 @@ const operationalCatalog = [
       "Estimulante",
       "Four Seasson",
       "Te Negro"
-    ]
+    ],
+    "category_label": "Té en Bolsitas & Sobres"
   },
   {
     "id": 190,
@@ -3643,7 +3732,7 @@ const operationalCatalog = [
     "handle": "te-otono-25-bolsas-te-negro-miel-de-maple",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_bolsitas",
     "price": 4400,
     "variants": [
       {
@@ -3673,7 +3762,8 @@ const operationalCatalog = [
       "Four Seasson",
       "Taste",
       "Te Negro"
-    ]
+    ],
+    "category_label": "Té en Bolsitas & Sobres"
   },
   {
     "id": 191,
@@ -3681,7 +3771,7 @@ const operationalCatalog = [
     "handle": "assorted-classics-25-bolsas",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_bolsitas",
     "price": 4400,
     "variants": [
       {
@@ -3714,7 +3804,8 @@ const operationalCatalog = [
       "Surtidos",
       "Te Negro",
       "Te verde"
-    ]
+    ],
+    "category_label": "Té en Bolsitas & Sobres"
   },
   {
     "id": 192,
@@ -3722,7 +3813,7 @@ const operationalCatalog = [
     "handle": "assorted-4-estaciones-40-bolsas",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_bolsitas",
     "price": 9900,
     "variants": [
       {
@@ -3751,7 +3842,8 @@ const operationalCatalog = [
       "Surtidos",
       "Te Negro",
       "Te verde"
-    ]
+    ],
+    "category_label": "Té en Bolsitas & Sobres"
   },
   {
     "id": 193,
@@ -3759,7 +3851,7 @@ const operationalCatalog = [
     "handle": "te-oriental-masala-chai-hoja-lata",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_hoja",
     "price": 11900,
     "variants": [
       {
@@ -3789,7 +3881,8 @@ const operationalCatalog = [
       "Lata",
       "Oriental",
       "Te Negro"
-    ]
+    ],
+    "category_label": "Té de Hoja & Latas"
   },
   {
     "id": 194,
@@ -3797,7 +3890,7 @@ const operationalCatalog = [
     "handle": "te-masala-chai-10-bolsas",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_bolsitas",
     "price": 1990,
     "variants": [
       {
@@ -3824,7 +3917,8 @@ const operationalCatalog = [
       "Masala",
       "Oriental",
       "Te Negro"
-    ]
+    ],
+    "category_label": "Té en Bolsitas & Sobres"
   },
   {
     "id": 195,
@@ -3832,7 +3926,7 @@ const operationalCatalog = [
     "handle": "te-frutas-frambuesas-rosa-mosqueta-bolsitas",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_bolsitas",
     "price": 4400,
     "variants": [
       {
@@ -3858,7 +3952,8 @@ const operationalCatalog = [
       "Estimulante",
       "Magic Fruit",
       "Te Negro"
-    ]
+    ],
+    "category_label": "Té en Bolsitas & Sobres"
   },
   {
     "id": 196,
@@ -3866,7 +3961,7 @@ const operationalCatalog = [
     "handle": "te-english-breakfast-10-bolsitas",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_bolsitas",
     "price": 1900,
     "variants": [
       {
@@ -3892,7 +3987,8 @@ const operationalCatalog = [
       "Estimulante",
       "taste",
       "Te Negro"
-    ]
+    ],
+    "category_label": "Té en Bolsitas & Sobres"
   },
   {
     "id": 197,
@@ -3900,7 +3996,7 @@ const operationalCatalog = [
     "handle": "te-classic-earl-gray-10-bolsitas",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_bolsitas",
     "price": 1900,
     "variants": [
       {
@@ -3927,7 +4023,8 @@ const operationalCatalog = [
       "Estimulante",
       "Taste",
       "Te Negro"
-    ]
+    ],
+    "category_label": "Té en Bolsitas & Sobres"
   },
   {
     "id": 198,
@@ -3935,7 +4032,7 @@ const operationalCatalog = [
     "handle": "cold-brew-pomegranate-blueberry",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_bolsitas",
     "price": 4400,
     "variants": [
       {
@@ -3961,7 +4058,8 @@ const operationalCatalog = [
       "Cold Brew",
       "Infusion",
       "Sin Cafeina"
-    ]
+    ],
+    "category_label": "Té en Bolsitas & Sobres"
   },
   {
     "id": 199,
@@ -3969,7 +4067,7 @@ const operationalCatalog = [
     "handle": "copia-de-lata-te-masala-chai-100gr",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_hoja",
     "price": 11900,
     "variants": [
       {
@@ -3997,7 +4095,8 @@ const operationalCatalog = [
       "Oriental",
       "Taste",
       "Te Negro"
-    ]
+    ],
+    "category_label": "Té de Hoja & Latas"
   },
   {
     "id": 200,
@@ -4005,7 +4104,7 @@ const operationalCatalog = [
     "handle": "winter-berries-surtido-te-con-berries-60-bolsas",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_bolsitas",
     "price": 11900,
     "variants": [
       {
@@ -4037,7 +4136,8 @@ const operationalCatalog = [
       "Surtidos",
       "Te Negro",
       "Winter Berries"
-    ]
+    ],
+    "category_label": "Té en Bolsitas & Sobres"
   },
   {
     "id": 201,
@@ -4045,7 +4145,7 @@ const operationalCatalog = [
     "handle": "te-oriental-persian-grey-100-gr-basilur",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_hoja",
     "price": 11900,
     "variants": [
       {
@@ -4075,7 +4175,8 @@ const operationalCatalog = [
       "Oriental",
       "Taste",
       "Te Negro"
-    ]
+    ],
+    "category_label": "Té de Hoja & Latas"
   },
   {
     "id": 202,
@@ -4083,7 +4184,7 @@ const operationalCatalog = [
     "handle": "lechero-individual-basilur",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "accesorios",
     "price": 6400,
     "variants": [
       {
@@ -4104,7 +4205,8 @@ const operationalCatalog = [
     "tags": [
       "Accesorios",
       "Teteras"
-    ]
+    ],
+    "category_label": "Accesorios & Preparación"
   },
   {
     "id": 203,
@@ -4112,7 +4214,7 @@ const operationalCatalog = [
     "handle": "infusiones-de-fruta-noni-flores-y-hierbas-20-bolsitas",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_bolsitas",
     "price": 4400,
     "variants": [
       {
@@ -4140,7 +4242,8 @@ const operationalCatalog = [
       "Infusion",
       "Infusiones",
       "sin cafeina"
-    ]
+    ],
+    "category_label": "Té en Bolsitas & Sobres"
   },
   {
     "id": 204,
@@ -4148,7 +4251,7 @@ const operationalCatalog = [
     "handle": "infusiones-de-fruta-limonada-con-hierbas-y-manzana-20-bolsitas",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_bolsitas",
     "price": 4400,
     "variants": [
       {
@@ -4176,7 +4279,8 @@ const operationalCatalog = [
       "Infusion",
       "Infusiones",
       "sin cafeina"
-    ]
+    ],
+    "category_label": "Té en Bolsitas & Sobres"
   },
   {
     "id": 205,
@@ -4184,7 +4288,7 @@ const operationalCatalog = [
     "handle": "infusiones-de-fruta-maracuja-con-naranja-20-bolsitas",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_bolsitas",
     "price": 4400,
     "variants": [
       {
@@ -4210,7 +4314,8 @@ const operationalCatalog = [
       "Infusion",
       "Infusiones",
       "sin cafeina"
-    ]
+    ],
+    "category_label": "Té en Bolsitas & Sobres"
   },
   {
     "id": 206,
@@ -4218,7 +4323,7 @@ const operationalCatalog = [
     "handle": "tipson-matcha-arandano-en-sobres-25-x-1-5-g",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_bolsitas",
     "price": 4400,
     "variants": [
       {
@@ -4249,7 +4354,8 @@ const operationalCatalog = [
       "Matcha",
       "Reductivo",
       "tipson"
-    ]
+    ],
+    "category_label": "Té en Bolsitas & Sobres"
   },
   {
     "id": 207,
@@ -4257,7 +4363,7 @@ const operationalCatalog = [
     "handle": "tipson-moringa-y-limon-en-sobres-25-x-1-5-g",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_bolsitas",
     "price": 3990,
     "variants": [
       {
@@ -4288,7 +4394,8 @@ const operationalCatalog = [
       "Moringa",
       "Sin Cafeina",
       "tipson"
-    ]
+    ],
+    "category_label": "Té en Bolsitas & Sobres"
   },
   {
     "id": 208,
@@ -4296,7 +4403,7 @@ const operationalCatalog = [
     "handle": "gin-menta-refrescante-tea-25-piramides-basilur-copia",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_piramide",
     "price": 7900,
     "variants": [
       {
@@ -4329,7 +4436,8 @@ const operationalCatalog = [
       "Piramides",
       "Reductivo",
       "Te Verde"
-    ]
+    ],
+    "category_label": "Té en Pirámides de Seda"
   },
   {
     "id": 209,
@@ -4337,7 +4445,7 @@ const operationalCatalog = [
     "handle": "curcuma-con-durazno-25-bolsas-tipson",
     "source": "Té Basilur Chile",
     "vendor": "Tipson Tea Chile",
-    "category": "te",
+    "category": "te_bolsitas",
     "price": 3990,
     "variants": [
       {
@@ -4368,7 +4476,8 @@ const operationalCatalog = [
       "Reductivo",
       "Sin Cafeina",
       "tipson"
-    ]
+    ],
+    "category_label": "Té en Bolsitas & Sobres"
   },
   {
     "id": 210,
@@ -4376,7 +4485,7 @@ const operationalCatalog = [
     "handle": "organic-matcha-mint",
     "source": "Té Basilur Chile",
     "vendor": "Tipson Tea Chile",
-    "category": "te",
+    "category": "te_bolsitas",
     "price": 4400,
     "variants": [
       {
@@ -4411,7 +4520,8 @@ const operationalCatalog = [
       "Matcha",
       "Reductivo",
       "tipson"
-    ]
+    ],
+    "category_label": "Té en Bolsitas & Sobres"
   },
   {
     "id": 211,
@@ -4419,7 +4529,7 @@ const operationalCatalog = [
     "handle": "gin-tonic-forest-pink-25-piramides-basilur",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_piramide",
     "price": 8900,
     "variants": [
       {
@@ -4454,7 +4564,8 @@ const operationalCatalog = [
       "Piramides",
       "Reductivo",
       "Te Verde"
-    ]
+    ],
+    "category_label": "Té en Pirámides de Seda"
   },
   {
     "id": 212,
@@ -4462,7 +4573,7 @@ const operationalCatalog = [
     "handle": "infusiones-de-fruta-surtido-vol-4-20-bolsitas",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_bolsitas",
     "price": 4400,
     "variants": [
       {
@@ -4492,7 +4603,8 @@ const operationalCatalog = [
       "Infusiones",
       "sin cafeina",
       "Surtidos"
-    ]
+    ],
+    "category_label": "Té en Bolsitas & Sobres"
   },
   {
     "id": 213,
@@ -4523,7 +4635,8 @@ const operationalCatalog = [
       "Accesorios",
       "Regalos",
       "Teteras"
-    ]
+    ],
+    "category_label": "Accesorios & Preparación"
   },
   {
     "id": 214,
@@ -4531,7 +4644,7 @@ const operationalCatalog = [
     "handle": "necesito-envio-para-regalo",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "accesorios",
     "price": 200,
     "variants": [
       {
@@ -4551,7 +4664,8 @@ const operationalCatalog = [
     "short_description": "Bolsa para envolver tus regalos de Té",
     "tags": [
       "normalize"
-    ]
+    ],
+    "category_label": "Accesorios & Preparación"
   },
   {
     "id": 215,
@@ -4559,7 +4673,7 @@ const operationalCatalog = [
     "handle": "envio-santiago",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "accesorios",
     "price": 3990,
     "variants": [
       {
@@ -4575,7 +4689,8 @@ const operationalCatalog = [
     "image": "",
     "description": "Envio Normal en Santiago",
     "short_description": "Envio Normal en Santiago",
-    "tags": []
+    "tags": [],
+    "category_label": "Accesorios & Preparación"
   },
   {
     "id": 216,
@@ -4583,7 +4698,7 @@ const operationalCatalog = [
     "handle": "fruit-infusion-infusion-de-cereza-y-almendras-20-bolsas-basilur",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_bolsitas",
     "price": 4400,
     "variants": [
       {
@@ -4612,7 +4727,8 @@ const operationalCatalog = [
       "Navidad",
       "Sin Cafeina",
       "Vintage"
-    ]
+    ],
+    "category_label": "Té en Bolsitas & Sobres"
   },
   {
     "id": 217,
@@ -4620,7 +4736,7 @@ const operationalCatalog = [
     "handle": "fruit-infusion-navidad-assorted-20-bolsas-copia",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_bolsitas",
     "price": 9900,
     "variants": [
       {
@@ -4650,7 +4766,8 @@ const operationalCatalog = [
       "Navidad",
       "Sin Cafeina",
       "Vintage"
-    ]
+    ],
+    "category_label": "Té en Bolsitas & Sobres"
   },
   {
     "id": 218,
@@ -4658,7 +4775,7 @@ const operationalCatalog = [
     "handle": "surtido-brisa-botanica-botanical-breeze-100-basilur",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_bolsitas",
     "price": 14900,
     "variants": [
       {
@@ -4693,7 +4810,8 @@ const operationalCatalog = [
       "Te Blanco",
       "Te Negro",
       "Te verde"
-    ]
+    ],
+    "category_label": "Té en Bolsitas & Sobres"
   },
   {
     "id": 219,
@@ -4701,7 +4819,7 @@ const operationalCatalog = [
     "handle": "te-negro-ceylan-assorted-magic-fruits-40-bolsas-copia",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_bolsitas",
     "price": 7900,
     "variants": [
       {
@@ -4733,7 +4851,8 @@ const operationalCatalog = [
       "NOVEDADES",
       "Surtidos",
       "Te Negro"
-    ]
+    ],
+    "category_label": "Té en Bolsitas & Sobres"
   },
   {
     "id": 220,
@@ -4741,7 +4860,7 @@ const operationalCatalog = [
     "handle": "azucarero-ceramica-basilur",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "accesorios",
     "price": 9900,
     "variants": [
       {
@@ -4762,7 +4881,8 @@ const operationalCatalog = [
     "tags": [
       "Accesorios",
       "regalo"
-    ]
+    ],
+    "category_label": "Accesorios & Preparación"
   },
   {
     "id": 221,
@@ -4770,7 +4890,7 @@ const operationalCatalog = [
     "handle": "bandeja-gourmet-basilur-en-madera-de-acacia",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "accesorios",
     "price": 14900,
     "variants": [
       {
@@ -4792,7 +4912,8 @@ const operationalCatalog = [
     "tags": [
       "Accesorios",
       "regalo"
-    ]
+    ],
+    "category_label": "Accesorios & Preparación"
   },
   {
     "id": 222,
@@ -4800,7 +4921,7 @@ const operationalCatalog = [
     "handle": "te-negro-con-manzana-roja-y-yuzu-75-gr-sweet-orchard-basilur",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_hoja",
     "price": 8900,
     "variants": [
       {
@@ -4831,7 +4952,8 @@ const operationalCatalog = [
       "NOVEDADES",
       "orchard",
       "Te Negro"
-    ]
+    ],
+    "category_label": "Té de Hoja & Latas"
   },
   {
     "id": 223,
@@ -4839,7 +4961,7 @@ const operationalCatalog = [
     "handle": "caja-exhibidora-de-madera-para-10-bolsas-basilur",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "accesorios",
     "price": 5900,
     "variants": [
       {
@@ -4864,7 +4986,8 @@ const operationalCatalog = [
       "Con Cafeina",
       "Estimulante",
       "regalo"
-    ]
+    ],
+    "category_label": "Accesorios & Preparación"
   },
   {
     "id": 224,
@@ -4872,7 +4995,7 @@ const operationalCatalog = [
     "handle": "cranberries-seleccionados-con-chocolate-de-leche-100-gr-sweet-gourmet",
     "source": "Té Basilur Chile",
     "vendor": "Sweet Gourmet",
-    "category": "te",
+    "category": "te_hoja",
     "price": 3900,
     "variants": [
       {
@@ -4892,7 +5015,8 @@ const operationalCatalog = [
     "short_description": "Un equilibrio sublime entre acidez y dulzor. Seleccionamos cranberries (arándanos rojos) de calidad superior , conocidos por su toque cítrico y refrescante, y los bañamos en chocolate de leche cremoso . Esta combinación es una de las favoritas por el contraste vibrante que ofrecen las notas fruta...",
     "tags": [
       "chocolates"
-    ]
+    ],
+    "category_label": "Té de Hoja & Latas"
   },
   {
     "id": 225,
@@ -4900,7 +5024,7 @@ const operationalCatalog = [
     "handle": "te-verde-con-frutillas-y-rosas-75-gr-basilur",
     "source": "Té Basilur Chile",
     "vendor": "Basilur Tea Chile",
-    "category": "te",
+    "category": "te_hoja",
     "price": 7900,
     "variants": [
       {
@@ -4935,7 +5059,8 @@ const operationalCatalog = [
       "regalo",
       "Regalos",
       "Te Verde"
-    ]
+    ],
+    "category_label": "Té de Hoja & Latas"
   },
   {
     "id": 226,
@@ -4943,7 +5068,7 @@ const operationalCatalog = [
     "handle": "cafe-instantaneo-colo-colo-edicion-a-morir-por-el-colo",
     "source": "Café de Colo-Colo",
     "vendor": "Café de Colo Colo ",
-    "category": "te",
+    "category": "soluble",
     "price": 7900,
     "variants": [
       {
@@ -4963,7 +5088,8 @@ const operationalCatalog = [
     "image": "https://cdn.shopify.com/s/files/1/0951/1580/4965/files/Campanajulio.jpg?v=1784556713",
     "description": "",
     "short_description": "",
-    "tags": []
+    "tags": [],
+    "category_label": "Café Soluble & Instantáneo"
   },
   {
     "id": 227,
@@ -4999,7 +5125,8 @@ const operationalCatalog = [
     "image": "https://cdn.shopify.com/s/files/1/0951/1580/4965/files/Campanajulio.jpg?v=1784556713",
     "description": "Trabajamos los mejores granos seleccionados de Brasil, Colombia y Honduras, elegimos cafés con los mejores procesos, un cafés tostado en Chile, por manos albas y que siempre será un café fresco, que te entregará sabor, energía.",
     "short_description": "Trabajamos los mejores granos seleccionados de Brasil, Colombia y Honduras, elegimos cafés con los mejores procesos, un cafés tostado en Chile, por manos albas y que siempre será un café fresco, que te entregará sabor, energía.",
-    "tags": []
+    "tags": [],
+    "category_label": "Café de Grano & Molido"
   },
   {
     "id": 228,
@@ -5025,7 +5152,8 @@ const operationalCatalog = [
     "image": "https://cdn.shopify.com/s/files/1/0951/1580/4965/files/Prensafrancesa.webp?v=1780952729",
     "description": "Prensa Francesa para Café Trabajamos los mejores granos seleccionados de Brasil, Colombia y Honduras, elegimos cafés con los mejores procesos, un cafés tostado en Chile, por manos albas y que siempre será un café fresco, que te entregará sabor, energía.",
     "short_description": "Prensa Francesa para Café Trabajamos los mejores granos seleccionados de Brasil, Colombia y Honduras, elegimos cafés con los mejores procesos, un cafés tostado en Chile, por manos albas y que siempre será un café fresco, que te entregará sabor, energía.",
-    "tags": []
+    "tags": [],
+    "category_label": "Accesorios & Preparación"
   },
   {
     "id": 229,
@@ -5033,7 +5161,7 @@ const operationalCatalog = [
     "handle": "cafe-instantaneo-colo-colo-50gr-envase-moron",
     "source": "Café de Colo-Colo",
     "vendor": "Café de Colo Colo ",
-    "category": "te",
+    "category": "soluble",
     "price": 7900,
     "variants": [
       {
@@ -5052,7 +5180,8 @@ const operationalCatalog = [
     "image": "https://cdn.shopify.com/s/files/1/0951/1580/4965/files/mockupcafe.jpg?v=1780951220",
     "description": "Trabajamos los mejores granos seleccionados de Brasil, Colombia y Honduras, elegimos cafés con los mejores procesos, un cafés tostado en Chile, por manos albas y que siempre será un café fresco, que te entregará sabor, energía.",
     "short_description": "Trabajamos los mejores granos seleccionados de Brasil, Colombia y Honduras, elegimos cafés con los mejores procesos, un cafés tostado en Chile, por manos albas y que siempre será un café fresco, que te entregará sabor, energía.",
-    "tags": []
+    "tags": [],
+    "category_label": "Café Soluble & Instantáneo"
   },
   {
     "id": 230,
@@ -5060,7 +5189,7 @@ const operationalCatalog = [
     "handle": "cafe-centenario-colo-colo-250g-envase-moron",
     "source": "Café de Colo-Colo",
     "vendor": "Café de Colo Colo ",
-    "category": "te",
+    "category": "cafe",
     "price": 11900,
     "variants": [
       {
@@ -5088,7 +5217,8 @@ const operationalCatalog = [
     "image": "https://cdn.shopify.com/s/files/1/0951/1580/4965/files/mockupcafe.jpg?v=1780951220",
     "description": "Trabajamos los mejores granos seleccionados de Brasil, Colombia y Honduras, elegimos cafés con los mejores procesos, un cafés tostado en Chile, por manos albas y que siempre será un café fresco, que te entregará sabor, energía.",
     "short_description": "Trabajamos los mejores granos seleccionados de Brasil, Colombia y Honduras, elegimos cafés con los mejores procesos, un cafés tostado en Chile, por manos albas y que siempre será un café fresco, que te entregará sabor, energía.",
-    "tags": []
+    "tags": [],
+    "category_label": "Café de Grano & Molido"
   },
   {
     "id": 231,
@@ -5135,7 +5265,8 @@ const operationalCatalog = [
     "short_description": "Trabajamos los mejores granos seleccionados de Brasil, Colombia y Honduras, elegimos cafés con los mejores procesos, un cafés tostado en Chile, por manos albas y que siempre será un café fresco, que te entregará sabor, energía.",
     "tags": [
       "Colombia"
-    ]
+    ],
+    "category_label": "Café de Grano & Molido"
   },
   {
     "id": 232,
@@ -5143,7 +5274,7 @@ const operationalCatalog = [
     "handle": "4x3-cafe-centenario-colo-colo-250g-1",
     "source": "Café de Colo-Colo",
     "vendor": "Café de Colo Colo ",
-    "category": "te",
+    "category": "cafe",
     "price": 35700,
     "variants": [
       {
@@ -5180,7 +5311,8 @@ const operationalCatalog = [
     "image": "https://cdn.shopify.com/s/files/1/0951/1580/4965/files/CAFEENBOLSAGRANDE_DESCAFEINADO_162dec9f-6717-4598-a586-24b2657656f6.png?v=1754445204",
     "description": "LLEVA 4 Y PAGA 3 Trabajamos los mejores granos seleccionados de Brasil, Colombia y Honduras, elegimos cafés con los mejores procesos, un cafés tostado en Chile, por manos albas y que siempre será un café fresco, que te entregará sabor, energía.",
     "short_description": "LLEVA 4 Y PAGA 3 Trabajamos los mejores granos seleccionados de Brasil, Colombia y Honduras, elegimos cafés con los mejores procesos, un cafés tostado en Chile, por manos albas y que siempre será un café fresco, que te entregará sabor, energía.",
-    "tags": []
+    "tags": [],
+    "category_label": "Café de Grano & Molido"
   },
   {
     "id": 233,
@@ -5225,7 +5357,8 @@ const operationalCatalog = [
     "image": "https://cdn.shopify.com/s/files/1/0951/1580/4965/files/BOLSA_GRANDE_GRANO.png?v=1759867162",
     "description": "LLEVA 4 Y PAGA 3 Trabajamos los mejores granos seleccionados de Brasil, Colombia y Honduras, elegimos cafés con los mejores procesos, un cafés tostado en Chile, por manos albas y que siempre será un café fresco, que te entregará sabor, energía.",
     "short_description": "LLEVA 4 Y PAGA 3 Trabajamos los mejores granos seleccionados de Brasil, Colombia y Honduras, elegimos cafés con los mejores procesos, un cafés tostado en Chile, por manos albas y que siempre será un café fresco, que te entregará sabor, energía.",
-    "tags": []
+    "tags": [],
+    "category_label": "Café de Grano & Molido"
   },
   {
     "id": 234,
@@ -5233,7 +5366,7 @@ const operationalCatalog = [
     "handle": "cafe-centenario-colo-colo-250g-base",
     "source": "Café de Colo-Colo",
     "vendor": "Café de Colo Colo",
-    "category": "te",
+    "category": "cafe",
     "price": 11900,
     "variants": [
       {
@@ -5272,7 +5405,8 @@ const operationalCatalog = [
     "short_description": "Trabajamos los mejores granos seleccionados de Brasil, Colombia y Honduras, elegimos cafés con los mejores procesos, un cafés tostado en Chile, por manos albas y que siempre será un café fresco, que te entregará sabor, energía.",
     "tags": [
       "Brasil"
-    ]
+    ],
+    "category_label": "Café de Grano & Molido"
   },
   {
     "id": 235,
@@ -5280,7 +5414,7 @@ const operationalCatalog = [
     "handle": "pack-30-capsulas-del-cafe-de-colo-colo",
     "source": "Café de Colo-Colo",
     "vendor": "Café de Colo Colo ",
-    "category": "te",
+    "category": "capsulas",
     "price": 21900,
     "variants": [
       {
@@ -5300,7 +5434,8 @@ const operationalCatalog = [
     "image": "https://cdn.shopify.com/s/files/1/0951/1580/4965/files/IMG_1613.png?v=1773860667",
     "description": "Promoción de 30 cápsulas de café de Colo-Colo, origen Honduras y llévate el adhesivo oficial con el logo del club. * Cápsulas compatibles con la máquina de Nespresso. * Cápsulas de café van en el packaging especial de la camiseta de Colo-Colo",
     "short_description": "Promoción de 30 cápsulas de café de Colo-Colo, origen Honduras y llévate el adhesivo oficial con el logo del club. * Cápsulas compatibles con la máquina de Nespresso. * Cápsulas de café van en el packaging especial de la camiseta de Colo-Colo",
-    "tags": []
+    "tags": [],
+    "category_label": "Cápsulas Compatibles"
   },
   {
     "id": 236,
@@ -5308,7 +5443,7 @@ const operationalCatalog = [
     "handle": "maquina-de-cafe-automatica-krups-cafe-de-colo-colo-stocker-de-colo-colo",
     "source": "Café de Colo-Colo",
     "vendor": "Café de Colo Colo ",
-    "category": "te",
+    "category": "accesorios",
     "price": 460000,
     "variants": [
       {
@@ -5329,7 +5464,8 @@ const operationalCatalog = [
     "image": "https://cdn.shopify.com/s/files/1/0951/1580/4965/files/download-1.jpg?v=1760790097",
     "description": "Con la Máquina de café KRUPS Essential, disfruta de todo el sabor de un café y un espresso perfectamente equilibrados. obten un Café en grano de la línea Centenario de Brasil o de la línea de café de Colo-Colo de Colombia y un sticker de Colo-Colo para poner en tu máquina y hacerla única. 15 bares de presión que reproducen las mismas características de un barista, con boquilla de vapor para obtener la espuma perfecta. Con un contenedor de granos de café de 260 gr y un depósito de agua de 1,7 Lt. El diseño compacto de esta cafetera espresso totalmente automática no compromete la capacidad. Pantalla LCD intuitiva extra grande. Obtén un control perfecto, puedes ajustar la intensidad y el tamaño del café. Envíos a todo Chile en 5 días hábiles.",
     "short_description": "Con la Máquina de café KRUPS Essential, disfruta de todo el sabor de un café y un espresso perfectamente equilibrados. obten un Café en grano de la línea Centenario de Brasil o de la línea de café de Colo-Colo de Colombia y un sticker de Colo-Colo para poner en tu máquina y hacerla única. 15 bare...",
-    "tags": []
+    "tags": [],
+    "category_label": "Accesorios & Preparación"
   },
   {
     "id": 237,
@@ -5337,7 +5473,7 @@ const operationalCatalog = [
     "handle": "capsulas-cafe-de-colo-colo-nespresso",
     "source": "Café de Colo-Colo",
     "vendor": "Café Colo Colo",
-    "category": "te",
+    "category": "capsulas",
     "price": 7900,
     "variants": [
       {
@@ -5356,7 +5492,8 @@ const operationalCatalog = [
     "image": "https://cdn.shopify.com/s/files/1/0951/1580/4965/files/caja.jpg?v=1755192106",
     "description": "Descubre nuestras cápsulas Café de Colo-Colo para máquina Nespresso, con un packaging especial con la caja de la camiseta de Colo-Colo. Trabajamos los mejores granos seleccionados de Brasil, Colombia y Honduras, elegimos cafés con los mejores procesos, un cafés tostado en Chile, por manos albas y que siempre será un café fresco, que te entregará sabor, energía. * Imagen referencial, por el momento las cápsulas se venden en el envase de la camiseta de Colo-Colo, creada especialmente y así se hará hasta agotar stock .",
     "short_description": "Descubre nuestras cápsulas Café de Colo-Colo para máquina Nespresso, con un packaging especial con la caja de la camiseta de Colo-Colo. Trabajamos los mejores granos seleccionados de Brasil, Colombia y Honduras, elegimos cafés con los mejores procesos, un cafés tostado en Chile, por manos albas y...",
-    "tags": []
+    "tags": [],
+    "category_label": "Cápsulas Compatibles"
   },
   {
     "id": 238,
@@ -5364,7 +5501,7 @@ const operationalCatalog = [
     "handle": "cafe-instantaneo-colo-colo-centenario-50gr",
     "source": "Café de Colo-Colo",
     "vendor": "Café Colo Colo",
-    "category": "te",
+    "category": "soluble",
     "price": 6900,
     "variants": [
       {
@@ -5386,6 +5523,8 @@ const operationalCatalog = [
       "50gr",
       "Café Instantáneo",
       "Tueste Medio"
-    ]
+    ],
+    "category_label": "Café Soluble & Instantáneo"
   }
 ];
+if (typeof module !== 'undefined') module.exports = operationalCatalog;

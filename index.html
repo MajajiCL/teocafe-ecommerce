@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Té o Café — Tienda Online de Especialidad Chile</title>
   <meta name="description" content="Café de especialidad artesanal recién tostado y té de hoja noble en hebras y pirámides. Despacho en 24-48 hrs a todo Chile.">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
   
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -734,25 +737,31 @@
         </div>
       </div>
 
-      <!-- Filtros de Categoría -->
+      <!-- Filtros de Categoría y Colecciones Especializadas -->
       <div class="flex flex-wrap items-center gap-2 mb-8 pb-4 border-b border-brand-border text-xs">
-        <button onclick="setCategoryFilter('all')" class="cat-pill active-cat px-4 py-2 rounded-full font-bold bg-brand-primary text-white shadow-sm transition" data-cat="all">
-          Todos (138)
+        <button onclick="setCategoryFilter('all')" class="cat-pill active-cat px-4 py-2 rounded-full font-bold bg-brand-primary text-white shadow-sm transition flex items-center gap-1.5" data-cat="all">
+          Todos <span class="bg-white/20 px-1.5 py-0.5 rounded-full text-[10px] font-mono">138</span>
         </button>
-        <button onclick="setCategoryFilter('cafe')" class="cat-pill px-4 py-2 rounded-full font-medium bg-brand-card border border-brand-border text-brand-text hover:border-brand-primary transition" data-cat="cafe">
-          Café de Grano & Molido
+        <button onclick="setCategoryFilter('cafe')" class="cat-pill px-4 py-2 rounded-full font-medium bg-brand-card border border-brand-border text-brand-text hover:border-brand-primary transition flex items-center gap-1.5" data-cat="cafe">
+          ☕ Café de Grano & Molido <span class="bg-black/5 px-1.5 py-0.5 rounded-full text-[10px] font-mono font-bold">15</span>
         </button>
-        <button onclick="setCategoryFilter('te')" class="cat-pill px-4 py-2 rounded-full font-medium bg-brand-card border border-brand-border text-brand-text hover:border-brand-primary transition" data-cat="te">
-          Té de Hoja & Pirámides
+        <button onclick="setCategoryFilter('te_hoja')" class="cat-pill px-4 py-2 rounded-full font-medium bg-brand-card border border-brand-border text-brand-text hover:border-brand-primary transition flex items-center gap-1.5" data-cat="te_hoja">
+          🍃 Té de Hoja & Latas <span class="bg-black/5 px-1.5 py-0.5 rounded-full text-[10px] font-mono font-bold">39</span>
         </button>
-        <button onclick="setCategoryFilter('soluble')" class="cat-pill px-4 py-2 rounded-full font-medium bg-brand-card border border-brand-border text-brand-text hover:border-brand-primary transition" data-cat="soluble">
-          Café Soluble Liofilizado
+        <button onclick="setCategoryFilter('te_piramide')" class="cat-pill px-4 py-2 rounded-full font-medium bg-brand-card border border-brand-border text-brand-text hover:border-brand-primary transition flex items-center gap-1.5" data-cat="te_piramide">
+          🔺 Colección Pirámides <span class="bg-black/5 px-1.5 py-0.5 rounded-full text-[10px] font-mono font-bold">6</span>
         </button>
-        <button onclick="setCategoryFilter('capsulas')" class="cat-pill px-4 py-2 rounded-full font-medium bg-brand-card border border-brand-border text-brand-text hover:border-brand-primary transition" data-cat="capsulas">
-          Cápsulas Compatibles
+        <button onclick="setCategoryFilter('te_bolsitas')" class="cat-pill px-4 py-2 rounded-full font-medium bg-brand-card border border-brand-border text-brand-text hover:border-brand-primary transition flex items-center gap-1.5" data-cat="te_bolsitas">
+          🫖 Té en Bolsitas & Sobres <span class="bg-black/5 px-1.5 py-0.5 rounded-full text-[10px] font-mono font-bold">55</span>
         </button>
-        <button onclick="setCategoryFilter('accesorios')" class="cat-pill px-4 py-2 rounded-full font-medium bg-brand-card border border-brand-border text-brand-text hover:border-brand-primary transition" data-cat="accesorios">
-          Prensas, Teteras & Máquinas
+        <button onclick="setCategoryFilter('capsulas')" class="cat-pill px-4 py-2 rounded-full font-medium bg-brand-card border border-brand-border text-brand-text hover:border-brand-primary transition flex items-center gap-1.5" data-cat="capsulas">
+          💊 Cápsulas Nespresso® <span class="bg-black/5 px-1.5 py-0.5 rounded-full text-[10px] font-mono font-bold">5</span>
+        </button>
+        <button onclick="setCategoryFilter('soluble')" class="cat-pill px-4 py-2 rounded-full font-medium bg-brand-card border border-brand-border text-brand-text hover:border-brand-primary transition flex items-center gap-1.5" data-cat="soluble">
+          ⚡ Soluble & Liofilizado <span class="bg-black/5 px-1.5 py-0.5 rounded-full text-[10px] font-mono font-bold">6</span>
+        </button>
+        <button onclick="setCategoryFilter('accesorios')" class="cat-pill px-4 py-2 rounded-full font-medium bg-brand-card border border-brand-border text-brand-text hover:border-brand-primary transition flex items-center gap-1.5" data-cat="accesorios">
+          ✨ Teteras, Prensas & Accesorios <span class="bg-black/5 px-1.5 py-0.5 rounded-full text-[10px] font-mono font-bold">12</span>
         </button>
       </div>
 
@@ -925,7 +934,7 @@
           </div>
 
           <!-- Receta recomendada -->
-          <div class="p-3.5 rounded-xl bg-brand-bg border border-brand-border text-xs space-y-1">
+          <div id="pdp-barista-recipe" class="p-3.5 rounded-xl bg-brand-bg border border-brand-border text-xs space-y-1">
             <p class="font-bold text-brand-text">☕ Receta Recomendada para Cafetera / Tetera:</p>
             <p class="text-brand-muted text-[11px] leading-relaxed">
               Ratio 1:16 (18g de molienda fresca por 280ml de agua purificada). Tiempo total de extracción: 3 minutos y 15 segundos.
@@ -1163,8 +1172,8 @@
   <!-- ========================================== -->
   <!-- SCRIPTS Y LÓGICA DE CONTROL                -->
   <!-- ========================================== -->
-  <script src="brand-logos.js"></script>
-  <script src="products.js"></script>
+  <script src="brand-logos.js?v=3.0"></script>
+  <script src="products.js?v=3.0"></script>
 
   <script>
     const brandProfiles = {
@@ -1266,8 +1275,8 @@
       document.getElementById('view-mobile-app').classList.add('hidden');
       document.getElementById('view-pdp').classList.remove('hidden');
 
-      // Scroll arriba suave
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      // Scroll arriba inmediato
+      window.scrollTo({ top: 0, behavior: 'instant' });
 
       // Llenar datos de la ficha
       document.getElementById('pdp-main-img').src = prod.image || 'assets/images/coffee-bag.jpg';
@@ -1275,9 +1284,67 @@
       document.getElementById('pdp-vendor').textContent = prod.vendor || prod.source;
       document.getElementById('pdp-title').textContent = prod.title;
       document.getElementById('pdp-crumb-title').textContent = prod.title;
-      document.getElementById('pdp-crumb-category').textContent = prod.category.toUpperCase();
+
+      const categoryLabels = {
+        'cafe': 'Café de Grano & Molido',
+        'te_hoja': 'Té de Hoja & Latas',
+        'te_piramide': 'Colección Pirámides de Seda',
+        'te_bolsitas': 'Té en Bolsitas & Sobres',
+        'capsulas': 'Cápsulas Compatibles Nespresso®',
+        'soluble': 'Café Soluble Liofilizado',
+        'accesorios': 'Accesorios & Preparación'
+      };
+      document.getElementById('pdp-crumb-category').textContent = categoryLabels[prod.category] || prod.category.toUpperCase();
       document.getElementById('pdp-description').textContent = prod.description || 'Café y té de selección artesanal con tueste e importación directa.';
       document.getElementById('pdp-qty-display').textContent = '1';
+
+      // Dinamizar receta sensorial según categoría
+      const recipeBox = document.getElementById('pdp-barista-recipe');
+      if (recipeBox) {
+        if (prod.category === 'cafe') {
+          recipeBox.innerHTML = `
+            <p class="font-bold text-brand-text">☕ Receta Recomendada para Cafetera / Filtrado:</p>
+            <p class="text-brand-muted text-[11px] leading-relaxed">
+              Ratio 1:16 (18g de molienda media-fina por 280ml de agua a 92°C-94°C). Tiempo de extracción recomendado: 3 minutos y 15 segundos en V60, Prensa Francesa o Cafetera Italiana.
+            </p>
+          `;
+        } else if (prod.category === 'te_piramide') {
+          recipeBox.innerHTML = `
+            <p class="font-bold text-brand-text">🔺 Infusión en Pirámide de Seda Biodegradable:</p>
+            <p class="text-brand-muted text-[11px] leading-relaxed">
+              1 pirámide en 220ml de agua a 85°C (verde) o 95°C (negro). Tiempo de infusión: 3 minutos. La malla piramidal permite la expansión tridimensional de las hojas enteras.
+            </p>
+          `;
+        } else if (prod.category === 'te_hoja') {
+          recipeBox.innerHTML = `
+            <p class="font-bold text-brand-text">🍃 Infusión Tradicional de Hoja Entera:</p>
+            <p class="text-brand-muted text-[11px] leading-relaxed">
+              2 a 3 gramos de hebras por taza (200ml) en tetera o infusor. Temperatura de agua: 80°C - 90°C. Infusionar durante 3 a 4 minutos antes de servir para preservar flavonoides y aceites esenciales.
+            </p>
+          `;
+        } else if (prod.category === 'capsulas') {
+          recipeBox.innerHTML = `
+            <p class="font-bold text-brand-text">💊 Extracción en Máquina de Cápsulas:</p>
+            <p class="text-brand-muted text-[11px] leading-relaxed">
+              Compatible 100% con sistema Nespresso® OriginalLine. Extracción recomendada: botón Espresso (40ml) para máxima crema o Lungo (110ml) para taza larga.
+            </p>
+          `;
+        } else if (prod.category === 'soluble') {
+          recipeBox.innerHTML = `
+            <p class="font-bold text-brand-text">⚡ Preparación de Café Liofilizado:</p>
+            <p class="text-brand-muted text-[11px] leading-relaxed">
+              1 a 2 cucharaditas (3g - 5g) en taza con 180ml de agua o leche caliente a 85°C. Revolver suavemente. Disolución inmediata y aroma intacto.
+            </p>
+          `;
+        } else {
+          recipeBox.innerHTML = `
+            <p class="font-bold text-brand-text">✨ Uso & Mantención:</p>
+            <p class="text-brand-muted text-[11px] leading-relaxed">
+              Vidrio borosilicato de alta resistencia térmica o porcelana esmaltada. Apto para lavado manual suave para prolongar la vida útil de los sellos y acabados.
+            </p>
+          `;
+        }
+      }
 
       // Variante inicial
       pdpSelectedVariant = prod.variants && prod.variants.length > 0 ? prod.variants[0] : { title: 'Estándar', price: prod.price };
@@ -1452,12 +1519,34 @@
     // CATÁLOGO RENDER
     function getFilteredProducts() {
       return allProducts.filter(p => {
-        const matchCategory = currentCategory === 'all' || p.category === currentCategory;
+        let matchCategory = false;
+        if (currentCategory === 'all') {
+          matchCategory = true;
+        } else if (currentCategory === 'cafe') {
+          matchCategory = (p.category === 'cafe');
+        } else if (currentCategory === 'te_hoja') {
+          matchCategory = (p.category === 'te_hoja');
+        } else if (currentCategory === 'te_piramide') {
+          matchCategory = (p.category === 'te_piramide');
+        } else if (currentCategory === 'te_bolsitas') {
+          matchCategory = (p.category === 'te_bolsitas');
+        } else if (currentCategory === 'capsulas') {
+          matchCategory = (p.category === 'capsulas');
+        } else if (currentCategory === 'soluble') {
+          matchCategory = (p.category === 'soluble');
+        } else if (currentCategory === 'accesorios') {
+          matchCategory = (p.category === 'accesorios');
+        } else if (currentCategory === 'te') {
+          matchCategory = (p.category && p.category.startsWith('te'));
+        } else {
+          matchCategory = (p.category === currentCategory);
+        }
+
         const matchSource = currentSource === 'all' || p.source.toLowerCase().includes(currentSource.toLowerCase());
         const matchSearch = searchQuery === '' || 
           p.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
-          p.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-          p.tags.some(t => t.toLowerCase().includes(searchQuery.toLowerCase()));
+          (p.description && p.description.toLowerCase().includes(searchQuery.toLowerCase())) ||
+          (p.tags && p.tags.some(t => t.toLowerCase().includes(searchQuery.toLowerCase())));
         return matchCategory && matchSource && matchSearch;
       });
     }
@@ -1584,12 +1673,13 @@
     function setCategoryFilter(cat) {
       currentCategory = cat;
       document.querySelectorAll('.cat-pill').forEach(btn => {
+        const badge = btn.querySelector('span');
         if (btn.dataset.cat === cat) {
-          btn.classList.add('active-cat', 'bg-brand-primary', 'text-white');
-          btn.classList.remove('bg-brand-card', 'text-brand-text');
+          btn.className = "cat-pill active-cat px-4 py-2 rounded-full font-bold bg-brand-primary text-white shadow-sm transition flex items-center gap-1.5";
+          if (badge) badge.className = "bg-white/20 px-1.5 py-0.5 rounded-full text-[10px] font-mono";
         } else {
-          btn.classList.remove('active-cat', 'bg-brand-primary', 'text-white');
-          btn.classList.add('bg-brand-card', 'text-brand-text');
+          btn.className = "cat-pill px-4 py-2 rounded-full font-medium bg-brand-card border border-brand-border text-brand-text hover:border-brand-primary transition flex items-center gap-1.5";
+          if (badge) badge.className = "bg-black/5 px-1.5 py-0.5 rounded-full text-[10px] font-mono font-bold";
         }
       });
       renderCatalog(true);
