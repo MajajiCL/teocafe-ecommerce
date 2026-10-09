@@ -179,78 +179,23 @@
     ::-webkit-scrollbar-thumb:hover { background: var(--sec); }
   </style>
 </head>
-<body class="theme-amber min-h-screen flex flex-col antialiased">
+<body class="theme-noir min-h-screen flex flex-col antialiased">
 
   <!-- ========================================== -->
-  <!-- 🎛️ BRAND & UI STUDIO: PANEL SUPERIOR        -->
+  <!-- BARRA SUPERIOR BENEFICIOS TEOCAFE.CL       -->
   <!-- ========================================== -->
-  <aside id="brand-studio" class="bg-[#100905] text-amber-50 shadow-2xl border-b border-amber-900/60 py-2.5 px-4 sm:px-6 relative z-30 text-xs">
-    <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-3">
-      
-      <!-- Studio Header -->
-      <div class="flex items-center gap-2.5">
-        <span class="flex h-2.5 w-2.5 relative">
-          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
-          <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-amber-500"></span>
-        </span>
-        <span class="font-extrabold tracking-wider uppercase text-amber-300 text-xs">E-Commerce & App Studio</span>
-        <span class="text-zinc-400 text-[11px] hidden sm:inline">| Prueba variantes de marca, paletas y cambia a la App Móvil:</span>
-      </div>
-
-      <!-- Studio Selectors -->
-      <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3">
-        
-        <!-- Toggle Modo Vista: Tienda Web vs App Móvil -->
-        <div class="flex items-center gap-1 bg-amber-950/80 rounded-xl p-1 border border-amber-600/60">
-          <button id="view-mode-web-btn" onclick="setViewMode('web')" class="px-2.5 py-1 rounded-lg font-bold text-xs bg-amber-600 text-white shadow-sm flex items-center gap-1.5 transition">
-            <i data-lucide="monitor" class="w-3.5 h-3.5"></i> Tienda Web
-          </button>
-          <button id="view-mode-app-btn" onclick="setViewMode('app')" class="px-2.5 py-1 rounded-lg font-medium text-xs text-amber-200/90 hover:text-white flex items-center gap-1.5 transition">
-            <i data-lucide="smartphone" class="w-3.5 h-3.5"></i> App Móvil
-          </button>
-        </div>
-
-        <!-- 1. Variantes de Nombre -->
-        <div class="flex items-center gap-1 bg-black/60 rounded-xl p-1 border border-amber-800/50 shadow-inner">
-          <button onclick="switchBrand('te-o-cafe')" class="brand-btn px-2.5 py-1 rounded-lg font-bold text-xs transition bg-amber-600 text-white shadow-md" data-brandKey="te-o-cafe">
-            Té o Café
-          </button>
-          <button onclick="switchBrand('cafe-o-te')" class="brand-btn px-2.5 py-1 rounded-lg font-medium text-xs text-amber-200/80 hover:text-white transition" data-brandKey="cafe-o-te">
-            Café o Té
-          </button>
-          <button onclick="switchBrand('mundo-te-o-cafe')" class="brand-btn px-2.5 py-1 rounded-lg font-medium text-xs text-amber-200/80 hover:text-white transition" data-brandKey="mundo-te-o-cafe">
-            Mundo Té o Café
-          </button>
-          <button onclick="switchBrand('teocafe')" class="brand-btn px-2.5 py-1 rounded-lg font-medium text-xs text-amber-200/80 hover:text-white transition" data-brandKey="teocafe">
-            TeoCafé
-          </button>
-        </div>
-
-        <!-- 2. Paletas de Color -->
-        <div class="flex items-center gap-2 bg-black/60 rounded-xl px-2 py-1 border border-amber-800/50 shadow-inner">
-          <button onclick="switchPalette('amber')" title="Tostaduría & Ámbar" class="palette-btn w-5 h-5 rounded-full bg-amber-600 border-2 border-white ring-2 ring-white scale-110 transition transform hover:scale-125" data-theme="amber"></button>
-          <button onclick="switchPalette('matcha')" title="Matcha & Botánica" class="palette-btn w-5 h-5 rounded-full bg-emerald-700 border border-white/60 opacity-60 transition transform hover:scale-125 hover:opacity-100" data-theme="matcha"></button>
-          <button onclick="switchPalette('terracota')" title="Artisan Terracota" class="palette-btn w-5 h-5 rounded-full bg-orange-700 border border-white/60 opacity-60 transition transform hover:scale-125 hover:opacity-100" data-theme="terracota"></button>
-          <button onclick="switchPalette('noir')" title="Minimalist Noir & Gold" class="palette-btn w-5 h-5 rounded-full bg-zinc-900 border border-amber-400 opacity-60 transition transform hover:scale-125 hover:opacity-100" data-theme="noir"></button>
-        </div>
-
-      </div>
-
-    </div>
-  </aside>
-
-  <!-- ========================================== -->
-  <!-- BARRA DE BENEFICIOS CHILE                  -->
-  <!-- ========================================== -->
-  <div class="bg-brand-primary text-white text-xs py-2 px-4 transition-colors relative z-20">
+  <div class="bg-black text-amber-300 text-xs py-2 px-4 border-b border-amber-900/40 relative z-20">
     <div class="max-w-7xl mx-auto flex justify-between items-center text-center sm:text-left">
       <div class="flex items-center gap-2 mx-auto sm:mx-0 font-medium">
-        <i data-lucide="truck" class="w-4 h-4 text-amber-200"></i>
-        <span><strong>Despacho Express:</strong> RM en 24-48 hrs • <strong>Envío GRATIS</strong> en Santiago sobre $30.000</span>
+        <i data-lucide="truck" class="w-4 h-4 text-amber-400"></i>
+        <span><strong>teocafe.cl:</strong> Despacho RM 24-48 hrs • <strong>Envío GRATIS</strong> en Santiago sobre $30.000</span>
       </div>
-      <div class="hidden md:flex items-center gap-5 text-white/90 text-[11px]">
-        <span class="flex items-center gap-1.5"><i data-lucide="clock" class="w-3.5 h-3.5 text-amber-300"></i> Pide antes de las 14:00 y sale hoy</span>
-        <span class="flex items-center gap-1.5"><i data-lucide="shield-check" class="w-3.5 h-3.5 text-emerald-300"></i> Webpay Plus & Mercado Pago</span>
+      <div class="hidden md:flex items-center gap-5 text-amber-200/90 text-[11px]">
+        <button onclick="setViewMode(currentViewMode === 'app' ? 'web' : 'app')" class="hover:text-white flex items-center gap-1.5 transition font-bold text-amber-300">
+          <i data-lucide="smartphone" class="w-3.5 h-3.5 text-amber-400"></i> Ver Prototipo App Móvil
+        </button>
+        <span class="flex items-center gap-1.5"><i data-lucide="clock" class="w-3.5 h-3.5 text-amber-400"></i> Pide antes de las 14:00 y sale hoy</span>
+        <span class="flex items-center gap-1.5"><i data-lucide="shield-check" class="w-3.5 h-3.5 text-emerald-400"></i> Webpay Plus &amp; Mercado Pago</span>
       </div>
     </div>
   </div>
@@ -264,15 +209,20 @@
         
         <!-- Logo de Marca Vectorial de Autor -->
         <a href="javascript:goToCatalogView()" class="flex items-center gap-3.5 group">
-          <div id="brand-logo-svg-wrap" class="w-12 h-12 text-brand-primary transition-transform duration-300 group-hover:scale-105 flex-shrink-0">
+          <div id="brand-logo-svg-wrap" class="w-12 h-12 text-amber-500 transition-transform duration-300 group-hover:scale-105 flex-shrink-0">
             <!-- El SVG vectorial se inyecta dinámicamente con JS -->
           </div>
           <div class="flex flex-col">
-            <span id="brand-logo-text" class="text-2xl sm:text-3xl font-bold font-headline tracking-tight text-brand-text leading-none transition-colors">
-              Té o Café
-            </span>
+            <div class="flex items-center gap-2">
+              <span id="brand-logo-text" class="text-2xl sm:text-3xl font-bold font-headline tracking-tight text-brand-text leading-none transition-colors">
+                Té o Café
+              </span>
+              <span class="text-[10px] bg-amber-500/10 text-amber-700 dark:text-amber-400 border border-amber-500/30 px-1.5 py-0.5 rounded font-mono font-bold">
+                teocafe.cl
+              </span>
+            </div>
             <span id="brand-logo-tagline" class="text-[10px] tracking-widest uppercase text-brand-muted font-bold mt-1 block">
-              Tostaduría de Autor & Hoja Noble • Chile
+              Café de Especialidad, Té Basilur &amp; Miel Pura • Chile
             </span>
           </div>
         </a>
@@ -281,25 +231,27 @@
         <div class="hidden lg:flex items-center flex-1 max-w-md mx-8">
           <div class="relative w-full">
             <i data-lucide="search" class="w-4 h-4 text-brand-muted absolute left-3.5 top-3"></i>
-            <input type="text" id="search-input" onkeyup="handleSearch(this.value)" placeholder="Buscar en los 146 cafés, tés, mieles y orígenes..." class="w-full bg-brand-bg border border-brand-border rounded-full pl-10 pr-4 py-2.5 text-xs text-brand-text outline-none focus:border-brand-primary transition shadow-inner">
+            <input type="text" id="search-input" onkeyup="handleSearch(this.value)" placeholder="Buscar café en grano, té Basilur, miel, prensas..." class="w-full bg-brand-bg border border-brand-border rounded-full pl-10 pr-4 py-2.5 text-xs text-brand-text outline-none focus:border-amber-500 transition shadow-inner">
           </div>
         </div>
 
         <!-- Enlaces & Acciones -->
         <div class="flex items-center gap-4">
-          <nav class="hidden md:flex items-center gap-6 text-xs font-bold text-brand-text">
-            <a href="javascript:goToCatalogView()" class="hover:text-brand-primary transition">Catálogo (146)</a>
-            <a href="#ofertas" onclick="goToCatalogView();" class="hover:text-brand-primary text-amber-600 transition flex items-center gap-1"><i data-lucide="flame" class="w-3.5 h-3.5"></i> Ofertas Flash</a>
-            <a href="#catalogo" onclick="goToCatalogView(); setCategoryFilter('cafe');" class="hover:text-brand-primary transition">Café Grano</a>
-            <a href="#catalogo" onclick="goToCatalogView(); setCategoryFilter('te');" class="hover:text-brand-primary transition">Té Basilur</a>
-            <a href="#catalogo" onclick="goToCatalogView(); setSourceFilter('Café de Colo-Colo');" class="hover:text-brand-primary transition">Colo-Colo</a>
+          <nav class="hidden xl:flex items-center gap-5 text-xs font-bold text-brand-text">
+            <a href="javascript:goToCatalogView(); setMainCollection('all');" class="hover:text-amber-600 transition">Catálogo (146)</a>
+            <a href="javascript:goToCatalogView(); setMainCollection('cafe');" class="hover:text-amber-600 transition">☕ Café Grano</a>
+            <a href="javascript:goToCatalogView(); setMainCollection('te_basilur');" class="hover:text-amber-600 transition">🍃 Té Basilur</a>
+            <a href="javascript:goToCatalogView(); setMainCollection('colocolo');" class="hover:text-amber-600 transition">🏆 Colo-Colo</a>
+            <a href="javascript:goToCatalogView(); setMainCollection('miel');" class="hover:text-amber-600 transition">🍯 Miel de Campo</a>
+            <a href="javascript:goToCatalogView(); setMainCollection('packs');" class="text-amber-600 hover:text-amber-500 transition flex items-center gap-1 font-extrabold">🎁 Packs -20%</a>
+            <a href="javascript:setViewMode('app');" class="hover:text-amber-600 transition flex items-center gap-1 text-zinc-500"><i data-lucide="smartphone" class="w-3.5 h-3.5"></i> App</a>
           </nav>
 
           <!-- Botón Canasta -->
           <button onclick="toggleCart()" class="btn-brand-primary relative flex items-center gap-2.5 px-4 sm:px-5 py-2.5 rounded-full font-bold text-xs shadow-md">
-            <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+            <i data-lucide="shopping-bag" class="w-4 h-4 text-amber-300"></i>
             <span class="hidden sm:inline">Canasta</span>
-            <span id="cart-badge" class="bg-white text-black text-[11px] w-5 h-5 rounded-full flex items-center justify-center font-extrabold shadow">0</span>
+            <span id="cart-badge" class="bg-amber-400 text-black text-[11px] w-5 h-5 rounded-full flex items-center justify-center font-extrabold shadow">0</span>
           </button>
         </div>
 
@@ -434,173 +386,306 @@
   <!-- ======================================================= -->
   <div id="view-home">
 
-    <!-- 🎠 HERO CAROUSEL INTERACTIVO DINÁMICO -->
-    <section class="relative overflow-hidden bg-brand-bg border-b border-brand-border">
-      <div id="carousel-container" class="relative w-full min-h-[520px] md:min-h-[580px] flex items-center">
+    <!-- 🎠 HERO CAROUSEL INTERACTIVO CON FOTOS 100% REALES -->
+    <section class="relative overflow-hidden bg-[#0A0A0D] border-b border-amber-900/30">
+      <div id="carousel-container" class="relative w-full min-h-[500px] lg:min-h-[560px] flex items-center">
         
-        <!-- SLIDE 1: LANZAMIENTO -->
+        <!-- SLIDE 0: LANZAMIENTO TEOCAFE.CL (PACK BIENVENIDA REAL) -->
         <div class="hero-slide active-slide absolute inset-0 transition-opacity duration-700 opacity-100 flex items-center" data-slide="0">
-          <div class="absolute inset-0 z-0">
-            <img src="assets/images/hero.jpg" alt="Lanzamiento Té o Café" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-transparent"></div>
-          </div>
-          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full py-12">
-            <div class="max-w-2xl space-y-4 text-white">
-              <span class="shimmer-badge text-white text-[10px] font-extrabold uppercase tracking-widest px-3 py-1 rounded-full inline-block">
-                🇨🇱 GRAN LANZAMIENTO BIENVENIDA
-              </span>
-              <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold font-headline leading-tight">
-                Donde el grano de café y la hoja noble se encuentran
-              </h1>
-              <p class="text-sm sm:text-base text-amber-100/90 leading-relaxed font-light">
-                Cafés recién tostados semanalmente en Santiago y tés de altura de Ceilán. Disfruta un <strong>20% de descuento</strong> en tu primer pedido con despacho prioritario en la RM.
-              </p>
-              <div class="flex flex-wrap items-center gap-3 pt-3">
-                <a href="#ofertas" class="btn-brand-primary px-6 py-3.5 rounded-xl font-bold text-xs shadow-xl flex items-center gap-2">
-                  <i data-lucide="sparkles" class="w-4 h-4"></i> Ver Packs de Bienvenida
-                </a>
-                <a href="#catalogo" class="px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white font-bold text-xs transition">
-                  Explorar los 146 Productos
-                </a>
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-10 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+              
+              <!-- Texto Editorial -->
+              <div class="lg:col-span-7 space-y-4 text-white">
+                <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/40 text-[10px] font-black uppercase tracking-widest">
+                  🇨🇱 TEOCAFE.CL • TOSTADURÍA &amp; HOJA NOBLE
+                </span>
+                <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-headline leading-tight text-white">
+                  Donde el Café de Especialidad, el Té de Ceilán y la Miel Pura se Encuentran
+                </h1>
+                <p class="text-sm sm:text-base text-zinc-300 leading-relaxed font-light">
+                  146 productos originales en stock directo en Chile. Tueste semanal en Santiago, latas de colección de Sri Lanka y miel de la precordillera de Linares.
+                </p>
+                
+                <div class="flex flex-wrap items-center gap-4 text-xs text-amber-200/90 pt-1 font-medium">
+                  <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-amber-400"></i> Despacho en 24-48 hrs</span>
+                  <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-amber-400"></i> Envío gratis sobre $30.000</span>
+                  <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-amber-400"></i> Fotos 100% de productos reales</span>
+                </div>
+
+                <div class="flex flex-wrap items-center gap-3 pt-3">
+                  <a href="#catalogo" onclick="setMainCollection('all')" class="bg-amber-500 hover:bg-amber-400 text-black px-6 py-3.5 rounded-xl font-bold text-xs shadow-xl flex items-center gap-2 transition">
+                    <i data-lucide="sparkles" class="w-4 h-4"></i> Explorar Catálogo (146)
+                  </a>
+                  <button onclick="openProductDetail(901)" class="px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-white font-bold text-xs transition flex items-center gap-2">
+                    <i data-lucide="package" class="w-4 h-4"></i> Ver Pack Bienvenida (19% OFF)
+                  </button>
+                </div>
               </div>
+
+              <!-- Foto Real de Estudio -->
+              <div class="lg:col-span-5 flex justify-center">
+                <div onclick="openProductDetail(901)" class="relative group cursor-pointer max-w-sm sm:max-w-md w-full">
+                  <div class="absolute -inset-1 bg-gradient-to-r from-amber-500/30 to-amber-700/30 rounded-3xl blur-xl opacity-70 group-hover:opacity-100 transition duration-500"></div>
+                  <div class="relative bg-zinc-900/90 rounded-2xl border border-amber-500/30 overflow-hidden shadow-2xl p-3">
+                    <img src="assets/images/packs/pack-901.jpg" alt="Foto Real Pack Bienvenida Especialidad" class="w-full aspect-[4/3] object-cover rounded-xl group-hover:scale-105 transition duration-500">
+                    <div class="mt-2.5 px-2 flex items-center justify-between text-xs">
+                      <div>
+                        <span class="text-[10px] uppercase font-bold text-amber-400">Foto Real de Estudio</span>
+                        <p class="font-bold text-white text-sm">Pack Bienvenida Especialidad</p>
+                      </div>
+                      <div class="text-right">
+                        <span class="text-[10px] text-zinc-400 line-through">$29.970</span>
+                        <p class="font-bold text-amber-400 text-sm">$23.990 CLP</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
 
-        <!-- SLIDE 2: COLO-COLO OFICIAL -->
+        <!-- SLIDE 1: COLO-COLO OFICIAL (FOTO REAL DE CAMPAÑA Y PACK) -->
         <div class="hero-slide absolute inset-0 transition-opacity duration-700 opacity-0 pointer-events-none flex items-center" data-slide="1">
-          <div class="absolute inset-0 z-0">
-            <img src="assets/images/banner-colocolo.jpg" alt="Café de Colo-Colo Oficial" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-transparent"></div>
-          </div>
-          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full py-12">
-            <div class="max-w-2xl space-y-4 text-white">
-              <span class="bg-amber-500 text-black text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full inline-block shadow">
-                🏆 EDICIÓN ESPECIAL CENTENARIO & MORÓN
-              </span>
-              <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold font-headline leading-tight">
-                El Café de los Campeones en tu Casa
-              </h2>
-              <p class="text-sm sm:text-base text-zinc-300 leading-relaxed font-light">
-                Edición oficial conmemorativa de Colo-Colo: café de grano entero, molido, instantáneo y cápsulas compatibles. ¡Lleva el Pack 4x3 o incluye tu Prensa Francesa!
-              </p>
-              <div class="flex flex-wrap items-center gap-3 pt-3">
-                <button onclick="setSourceFilter('Café de Colo-Colo'); location.href='#catalogo';" class="bg-amber-400 hover:bg-amber-300 text-black px-6 py-3.5 rounded-xl font-extrabold text-xs shadow-xl flex items-center gap-2 transition">
-                  <i data-lucide="trophy" class="w-4 h-4"></i> Comprar Café de Colo-Colo
-                </button>
-                <button onclick="openProductDetail(902)" class="px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white font-bold text-xs transition flex items-center gap-1.5">
-                  <i data-lucide="package" class="w-4 h-4"></i> Ver Pack Campeón (17% OFF)
-                </button>
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-10 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+              
+              <div class="lg:col-span-7 space-y-4 text-white">
+                <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500 text-black text-[10px] font-black uppercase tracking-widest shadow">
+                  🏆 EDICIÓN OFICIAL DEL CLUB • 100% ARÁBICA
+                </span>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-headline leading-tight text-white">
+                  El Café de los Campeones en tu Casa
+                </h2>
+                <p class="text-sm sm:text-base text-zinc-300 leading-relaxed font-light">
+                  Línea oficial de Colo-Colo: café en grano entero, molido, instantáneo liofilizado y cápsulas compatibles. ¡Lleva el Pack Campeón con Prensa Francesa y sticker del club!
+                </p>
+
+                <div class="flex flex-wrap items-center gap-4 text-xs text-amber-200/90 pt-1 font-medium">
+                  <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-amber-400"></i> Café Centenario 250g</span>
+                  <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-amber-400"></i> Prensa francesa borosilicato</span>
+                  <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-amber-400"></i> Sticker conmemorativo oficial</span>
+                </div>
+
+                <div class="flex flex-wrap items-center gap-3 pt-3">
+                  <button onclick="setMainCollection('colocolo'); location.href='#catalogo';" class="bg-amber-400 hover:bg-amber-300 text-black px-6 py-3.5 rounded-xl font-extrabold text-xs shadow-xl flex items-center gap-2 transition">
+                    <i data-lucide="trophy" class="w-4 h-4"></i> Comprar Café de Colo-Colo
+                  </button>
+                  <button onclick="openProductDetail(902)" class="px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-white font-bold text-xs transition flex items-center gap-2">
+                    <i data-lucide="package" class="w-4 h-4"></i> Ver Pack Campeón (17% OFF)
+                  </button>
+                </div>
               </div>
+
+              <div class="lg:col-span-5 flex justify-center">
+                <div onclick="openProductDetail(902)" class="relative group cursor-pointer max-w-sm sm:max-w-md w-full">
+                  <div class="absolute -inset-1 bg-gradient-to-r from-amber-500/30 to-yellow-600/30 rounded-3xl blur-xl opacity-70 group-hover:opacity-100 transition duration-500"></div>
+                  <div class="relative bg-zinc-900/90 rounded-2xl border border-amber-500/30 overflow-hidden shadow-2xl p-3">
+                    <img src="assets/images/packs/pack-902.jpg" alt="Foto Real Pack Campeón Colo-Colo" class="w-full aspect-[4/3] object-cover rounded-xl group-hover:scale-105 transition duration-500">
+                    <div class="mt-2.5 px-2 flex items-center justify-between text-xs">
+                      <div>
+                        <span class="text-[10px] uppercase font-bold text-amber-400">Campaña Oficial Daniel Morón</span>
+                        <p class="font-bold text-white text-sm">Pack Campeón Colo-Colo 250g</p>
+                      </div>
+                      <div class="text-right">
+                        <span class="text-[10px] text-zinc-400 line-through">$21.800</span>
+                        <p class="font-bold text-amber-400 text-sm">$17.990 CLP</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
 
-        <!-- SLIDE 3: BASILUR CEYLON TEA -->
+        <!-- SLIDE 2: BASILUR CEYLON TEA (FOTOS REALES DE PRODUCTO BASILUR) -->
         <div class="hero-slide absolute inset-0 transition-opacity duration-700 opacity-0 pointer-events-none flex items-center" data-slide="2">
-          <div class="absolute inset-0 z-0">
-            <img src="assets/images/banner-basilur.jpg" alt="Té Basilur Chile" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-transparent"></div>
-          </div>
-          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full py-12">
-            <div class="max-w-2xl space-y-4 text-white">
-              <span class="bg-emerald-600 text-white text-[10px] font-extrabold uppercase tracking-widest px-3 py-1 rounded-full inline-block">
-                🍃 BASILUR CEYLON: EL TÉ MÁS PREMIADO
-              </span>
-              <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold font-headline leading-tight">
-                Latas de Colección & Hojas Nobles de Ceilán
-              </h2>
-              <p class="text-sm sm:text-base text-zinc-200 leading-relaxed font-light">
-                Desde las latas musicales Music Festival hasta los libros de colección vintage y pirámides aromatizadas con bergamota y frutas exóticas.
-              </p>
-              <div class="flex flex-wrap items-center gap-3 pt-3">
-                <button onclick="setSourceFilter('Té Basilur Chile'); location.href='#catalogo';" class="bg-emerald-500 hover:bg-emerald-400 text-white px-6 py-3.5 rounded-xl font-bold text-xs shadow-xl flex items-center gap-2 transition">
-                  <i data-lucide="leaf" class="w-4 h-4"></i> Ver 103 Variedades Basilur
-                </button>
-                <a href="#catalogo" class="px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white font-bold text-xs transition">
-                  Teteras & Regalos
-                </a>
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-10 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+              
+              <div class="lg:col-span-7 space-y-4 text-white">
+                <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-600 text-white text-[10px] font-black uppercase tracking-widest">
+                  🍃 BASILUR CEYLON TEA • DIRECTO DE SRI LANKA
+                </span>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-headline leading-tight text-white">
+                  103 Variedades en Latas de Colección &amp; Hojas Nobles
+                </h2>
+                <p class="text-sm sm:text-base text-zinc-300 leading-relaxed font-light">
+                  Desde las latas musicales Music Festival hasta los libros de colección vintage y pirámides aromatizadas con bergamota y frutas exóticas. Hojas enteras sin triturar.
+                </p>
+
+                <div class="flex flex-wrap items-center gap-4 text-xs text-emerald-200/90 pt-1 font-medium">
+                  <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i> Latas metálicas de colección</span>
+                  <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i> Pirámides de seda biodegradables</span>
+                  <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i> Té negro, verde y blanco de Ceilán</span>
+                </div>
+
+                <div class="flex flex-wrap items-center gap-3 pt-3">
+                  <button onclick="setMainCollection('te_basilur'); location.href='#catalogo';" class="bg-emerald-500 hover:bg-emerald-400 text-white px-6 py-3.5 rounded-xl font-bold text-xs shadow-xl flex items-center gap-2 transition">
+                    <i data-lucide="leaf" class="w-4 h-4"></i> Ver las 103 Variedades Basilur
+                  </button>
+                  <button onclick="setMainCollection('accesorios'); location.href='#catalogo';" class="px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-white font-bold text-xs transition flex items-center gap-2">
+                    <i data-lucide="coffee" class="w-4 h-4"></i> Teteras &amp; Infusores
+                  </button>
+                </div>
               </div>
+
+              <div class="lg:col-span-5 flex justify-center">
+                <div onclick="setMainCollection('te_basilur'); location.href='#catalogo';" class="relative group cursor-pointer max-w-sm sm:max-w-md w-full">
+                  <div class="absolute -inset-1 bg-gradient-to-r from-emerald-500/30 to-teal-600/30 rounded-3xl blur-xl opacity-70 group-hover:opacity-100 transition duration-500"></div>
+                  <div class="relative bg-zinc-900/90 rounded-2xl border border-emerald-500/30 overflow-hidden shadow-2xl p-3">
+                    <img src="https://cdn.shopify.com/s/files/1/0375/8617/4088/files/SET_BASILUR_02_0bab869c-1f21-4151-8852-5457a0d9aee7.webp?v=1748471182" alt="Foto Real Libros de Colección Basilur" class="w-full aspect-[4/3] object-contain bg-white/5 rounded-xl p-2 group-hover:scale-105 transition duration-500">
+                    <div class="mt-2.5 px-2 flex items-center justify-between text-xs">
+                      <div>
+                        <span class="text-[10px] uppercase font-bold text-emerald-400">Colección Vintage &amp; Libros</span>
+                        <p class="font-bold text-white text-sm">Libros de Té &amp; Latas Musicales</p>
+                      </div>
+                      <div class="text-right">
+                        <span class="text-[10px] text-zinc-400">Desde</span>
+                        <p class="font-bold text-emerald-400 text-sm">$4.990 CLP</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
 
-        <!-- SLIDE 4: MIEL DE CAMPO · APIARIO LOS HUALLES -->
+        <!-- SLIDE 3: MIEL DE CAMPO CHILE (FOTO REAL PANAL Y FRASCO) -->
         <div class="hero-slide absolute inset-0 transition-opacity duration-700 opacity-0 pointer-events-none flex items-center" data-slide="3">
-          <div class="absolute inset-0 z-0">
-            <img src="assets/images/banner-mieldecampo.jpg" alt="Miel de Campo Chile · Apiario Los Hualles" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-transparent"></div>
-          </div>
-          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full py-12">
-            <div class="max-w-2xl space-y-4 text-white">
-              <span class="bg-yellow-500 text-black text-[10px] font-extrabold uppercase tracking-widest px-3 py-1 rounded-full inline-block">
-                🍯 NUEVO • APIARIO LOS HUALLES, REGIÓN DEL MAULE
-              </span>
-              <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold font-headline leading-tight">
-                Un kilo de miel por $4.000
-              </h2>
-              <p class="text-sm sm:text-base text-zinc-200 leading-relaxed font-light">
-                Del apiario Los Hualles, en la precordillera de Linares. Multifloral, crema de miel, panal natural y propóleo — todo del mismo lugar, y el lugar viene impreso en la etiqueta de cada frasco.
-              </p>
-              <div class="flex flex-wrap items-center gap-3 pt-3">
-                <button onclick="setCategoryFilter('miel'); setSourceFilter('Miel de Campo'); goToCatalogView(); location.hash='catalogo';" class="bg-yellow-500 hover:bg-yellow-400 text-black px-6 py-3.5 rounded-xl font-bold text-xs shadow-xl flex items-center gap-2 transition">
-                  <i data-lucide="shopping-bag" class="w-4 h-4"></i> Comprar miel · desde $4.000
-                </button>
-                <button onclick="openProductDetail(303);" class="px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white font-bold text-xs transition flex items-center gap-2">
-                  <i data-lucide="hexagon" class="w-4 h-4"></i> Ver el panal entero
-                </button>
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-10 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+              
+              <div class="lg:col-span-7 space-y-4 text-white">
+                <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-yellow-500 text-black text-[10px] font-black uppercase tracking-widest shadow">
+                  🍯 NUEVO EN TEOCAFE.CL • APIARIO LOS HUALLES, MAULE
+                </span>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-headline leading-tight text-white">
+                  Miel Pura de Campo y Panal Natural desde $4.000
+                </h2>
+                <p class="text-sm sm:text-base text-zinc-300 leading-relaxed font-light">
+                  Del apiario Los Hualles, en la precordillera de Linares. Multifloral, crema de miel, panal natural en trozo y propóleo — todo del mismo apicultor con trazabilidad total.
+                </p>
+
+                <div class="flex flex-wrap items-center gap-4 text-xs text-yellow-200/90 pt-1 font-medium">
+                  <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-yellow-400"></i> Cosecha cruda sin pasteurizar</span>
+                  <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-yellow-400"></i> Envasada en el apiario de origen</span>
+                  <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-yellow-400"></i> Panal 100% natural comestible</span>
+                </div>
+
+                <div class="flex flex-wrap items-center gap-3 pt-3">
+                  <button onclick="setMainCollection('miel'); location.href='#catalogo';" class="bg-yellow-500 hover:bg-yellow-400 text-black px-6 py-3.5 rounded-xl font-bold text-xs shadow-xl flex items-center gap-2 transition">
+                    <i data-lucide="shopping-bag" class="w-4 h-4"></i> Comprar Miel · desde $4.000
+                  </button>
+                  <button onclick="openProductDetail(303)" class="px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-white font-bold text-xs transition flex items-center gap-2">
+                    <i data-lucide="hexagon" class="w-4 h-4"></i> Ver Panal Entero $6.000
+                  </button>
+                </div>
               </div>
+
+              <div class="lg:col-span-5 flex justify-center">
+                <div onclick="openProductDetail(303)" class="relative group cursor-pointer max-w-sm sm:max-w-md w-full">
+                  <div class="absolute -inset-1 bg-gradient-to-r from-yellow-500/30 to-amber-600/30 rounded-3xl blur-xl opacity-70 group-hover:opacity-100 transition duration-500"></div>
+                  <div class="relative bg-zinc-900/90 rounded-2xl border border-yellow-500/30 overflow-hidden shadow-2xl p-3">
+                    <img src="assets/images/productos/mieldecampo/panal-natural.jpg" alt="Foto Real Panal Natural Los Hualles" class="w-full aspect-[4/3] object-cover rounded-xl group-hover:scale-105 transition duration-500">
+                    <div class="mt-2.5 px-2 flex items-center justify-between text-xs">
+                      <div>
+                        <span class="text-[10px] uppercase font-bold text-yellow-400">Foto Real Apiario Los Hualles</span>
+                        <p class="font-bold text-white text-sm">Panal de Miel 100% Natural</p>
+                      </div>
+                      <div class="text-right">
+                        <span class="text-[10px] text-zinc-400">Trozo 500g</span>
+                        <p class="font-bold text-yellow-400 text-sm">$6.000 CLP</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
 
-        <!-- SLIDE 5: LA FINCA TOSTADURÍA -->
+        <!-- SLIDE 4: LA FINCA TOSTADURÍA (FOTO REAL DÚO Y GRANOS RECIÉN TOSTADOS) -->
         <div class="hero-slide absolute inset-0 transition-opacity duration-700 opacity-0 pointer-events-none flex items-center" data-slide="4">
-          <div class="absolute inset-0 z-0">
-            <img src="assets/images/banner-lafinca.jpg" alt="Café La Finca Tostaduría" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-transparent"></div>
-          </div>
-          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full py-12">
-            <div class="max-w-2xl space-y-4 text-white">
-              <span class="bg-orange-600 text-white text-[10px] font-extrabold uppercase tracking-widest px-3 py-1 rounded-full inline-block">
-                ☕ TOSTADO SEMANAL EN SANTIAGO • 100% ARÁBICA
-              </span>
-              <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold font-headline leading-tight">
-                Café Artesanal Valle del Cauca & Quindío
-              </h2>
-              <p class="text-sm sm:text-base text-zinc-200 leading-relaxed font-light">
-                Granos de altura cosechados bajo sombra y tostados en pequeños lotes en Chile para preservar sus aceites esenciales y notas a cacao y caramelo.
-              </p>
-              <div class="flex flex-wrap items-center gap-3 pt-3">
-                <button onclick="setSourceFilter('La Finca'); location.href='#catalogo';" class="bg-orange-500 hover:bg-orange-400 text-white px-6 py-3.5 rounded-xl font-bold text-xs shadow-xl flex items-center gap-2 transition">
-                  <i data-lucide="coffee" class="w-4 h-4"></i> Ver Colección La Finca
-                </button>
-                <button onclick="openProductDetail(903)" class="px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white font-bold text-xs transition flex items-center gap-1.5">
-                  <i data-lucide="package" class="w-4 h-4"></i> Ver Dúo Tostaduría (17% OFF)
-                </button>
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-10 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+              
+              <div class="lg:col-span-7 space-y-4 text-white">
+                <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-600 text-white text-[10px] font-black uppercase tracking-widest shadow">
+                  ☕ CAFÉ EN GRANO &amp; MOLIDO • TUESTE SEMANAL EN SANTIAGO
+                </span>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-headline leading-tight text-white">
+                  Café Artesanal Valle del Cauca &amp; Quindío
+                </h2>
+                <p class="text-sm sm:text-base text-zinc-300 leading-relaxed font-light">
+                  Granos de altura 100% arábica cosechados bajo sombra y tostados en pequeños lotes en Chile para preservar aceites esenciales, baja acidez y notas a cacao y caramelo.
+                </p>
+
+                <div class="flex flex-wrap items-center gap-4 text-xs text-orange-200/90 pt-1 font-medium">
+                  <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-orange-400"></i> Tostado fresco en Santiago</span>
+                  <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-orange-400"></i> Grano entero o molido a tu gusto</span>
+                  <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-orange-400"></i> Empaque con válvula desgasificadora</span>
+                </div>
+
+                <div class="flex flex-wrap items-center gap-3 pt-3">
+                  <button onclick="setMainCollection('cafe'); location.href='#catalogo';" class="bg-orange-500 hover:bg-orange-400 text-white px-6 py-3.5 rounded-xl font-bold text-xs shadow-xl flex items-center gap-2 transition">
+                    <i data-lucide="coffee" class="w-4 h-4"></i> Ver Café en Grano
+                  </button>
+                  <button onclick="openProductDetail(903)" class="px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-white font-bold text-xs transition flex items-center gap-2">
+                    <i data-lucide="package" class="w-4 h-4"></i> Ver Dúo Tostaduría (17% OFF)
+                  </button>
+                </div>
               </div>
+
+              <div class="lg:col-span-5 flex justify-center">
+                <div onclick="openProductDetail(903)" class="relative group cursor-pointer max-w-sm sm:max-w-md w-full">
+                  <div class="absolute -inset-1 bg-gradient-to-r from-orange-500/30 to-amber-700/30 rounded-3xl blur-xl opacity-70 group-hover:opacity-100 transition duration-500"></div>
+                  <div class="relative bg-zinc-900/90 rounded-2xl border border-orange-500/30 overflow-hidden shadow-2xl p-3">
+                    <img src="assets/images/packs/pack-903.jpg" alt="Foto Real Dúo Tostaduría La Finca" class="w-full aspect-[4/3] object-cover rounded-xl group-hover:scale-105 transition duration-500">
+                    <div class="mt-2.5 px-2 flex items-center justify-between text-xs">
+                      <div>
+                        <span class="text-[10px] uppercase font-bold text-orange-400">Dúo 500g Recién Tostado</span>
+                        <p class="font-bold text-white text-sm">Valle del Cauca + Quindío</p>
+                      </div>
+                      <div class="text-right">
+                        <span class="text-[10px] text-zinc-400 line-through">$27.980</span>
+                        <p class="font-bold text-orange-400 text-sm">$22.990 CLP</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
-        </div>
-
-        <!-- Controles Flechas -->
-        <button onclick="prevSlide()" class="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-black/40 hover:bg-black/70 text-white flex items-center justify-center backdrop-blur-md border border-white/20 transition">
-          <i data-lucide="chevron-left" class="w-5 h-5"></i>
-        </button>
-        <button onclick="nextSlide()" class="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-black/40 hover:bg-black/70 text-white flex items-center justify-center backdrop-blur-md border border-white/20 transition">
-          <i data-lucide="chevron-right" class="w-5 h-5"></i>
-        </button>
-
-        <!-- Indicadores Bolitas -->
-        <div class="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2">
-          <button onclick="goToSlide(0)" class="carousel-dot w-3 h-3 rounded-full bg-white transition" data-dot="0"></button>
-          <button onclick="goToSlide(1)" class="carousel-dot w-3 h-3 rounded-full bg-white/40 transition" data-dot="1"></button>
-          <button onclick="goToSlide(2)" class="carousel-dot w-3 h-3 rounded-full bg-white/40 transition" data-dot="2"></button>
-          <button onclick="goToSlide(3)" class="carousel-dot w-3 h-3 rounded-full bg-white/40 transition" data-dot="3"></button>
-          <button onclick="goToSlide(4)" class="carousel-dot w-3 h-3 rounded-full bg-white/40 transition" data-dot="4"></button>
         </div>
 
       </div>
+
+      <!-- Controles Flechas -->
+      <button onclick="prevSlide()" class="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-black/50 hover:bg-black/80 text-white flex items-center justify-center backdrop-blur-md border border-white/20 transition">
+        <i data-lucide="chevron-left" class="w-5 h-5"></i>
+      </button>
+      <button onclick="nextSlide()" class="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-black/50 hover:bg-black/80 text-white flex items-center justify-center backdrop-blur-md border border-white/20 transition">
+        <i data-lucide="chevron-right" class="w-5 h-5"></i>
+      </button>
+
+      <!-- Indicadores Bolitas -->
+      <div class="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2">
+        <button onclick="goToSlide(0)" class="carousel-dot w-3 h-3 rounded-full bg-white transition" data-dot="0"></button>
+        <button onclick="goToSlide(1)" class="carousel-dot w-3 h-3 rounded-full bg-white/40 transition" data-dot="1"></button>
+        <button onclick="goToSlide(2)" class="carousel-dot w-3 h-3 rounded-full bg-white/40 transition" data-dot="2"></button>
+        <button onclick="goToSlide(3)" class="carousel-dot w-3 h-3 rounded-full bg-white/40 transition" data-dot="3"></button>
+        <button onclick="goToSlide(4)" class="carousel-dot w-3 h-3 rounded-full bg-white/40 transition" data-dot="4"></button>
+      </div>
+
     </section>
 
     <!-- ⚡ CINTA MARQUEE INFINITA -->
@@ -778,57 +863,89 @@
     <!-- CATÁLOGO PRINCIPAL (146 PRODUCTOS) -->
     <main id="catalogo" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 w-full border-t border-brand-border">
       
-      <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-8">
+      <!-- Encabezado del Catálogo -->
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-4 mb-6">
         <div>
-          <span class="text-xs font-bold uppercase tracking-wider text-brand-secondary">Catálogo Operativo Consolidado</span>
-          <h2 class="text-2xl sm:text-3xl font-bold font-headline text-brand-text mt-1">Nuestra Colección Disponible</h2>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 text-amber-600 text-xs font-bold uppercase tracking-wider mb-2">
+            <i data-lucide="layers" class="w-3.5 h-3.5"></i> Catálogo de Especialidad • teocafe.cl
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-bold font-headline text-brand-text">Nuestra Colección Disponible</h2>
           <p class="text-xs text-brand-muted mt-1">
-            Mostrando <span id="showing-count" class="font-bold text-brand-text">0</span> productos oficiales listos para despacho.
+            Café de grano recién tostado, té noble de Ceilán Basilur, miel pura del Maule y accesorios en stock inmediato.
           </p>
         </div>
 
-        <!-- Filtro por Línea -->
-        <div class="flex flex-wrap items-center gap-1.5 bg-brand-card p-1.5 rounded-xl border border-brand-border shadow-sm text-xs">
-          <span class="text-brand-muted px-2 font-bold">LÍNEA:</span>
-          <button onclick="setSourceFilter('all')" class="source-pill active-source px-3.5 py-1.5 rounded-lg font-bold bg-brand-primary text-white transition shadow-sm" data-source="all">Todas</button>
-          <button onclick="setSourceFilter('La Finca')" class="source-pill px-3.5 py-1.5 rounded-lg font-medium text-brand-text hover:bg-black/5 transition" data-source="La Finca">La Finca</button>
-          <button onclick="setSourceFilter('Té Basilur Chile')" class="source-pill px-3.5 py-1.5 rounded-lg font-medium text-brand-text hover:bg-black/5 transition" data-source="Té Basilur Chile">Té Basilur</button>
-          <button onclick="setSourceFilter('Café de Colo-Colo')" class="source-pill px-3.5 py-1.5 rounded-lg font-medium text-brand-text hover:bg-black/5 transition" data-source="Café de Colo-Colo">Café Colo-Colo</button>
-          <button onclick="setSourceFilter('Miel de Campo')" class="source-pill px-3.5 py-1.5 rounded-lg font-medium text-brand-text hover:bg-black/5 transition" data-source="Miel de Campo">Miel de Campo</button>
+        <!-- Barra de Utilidades: Buscador y Ordenamiento -->
+        <div class="flex flex-wrap items-center gap-3">
+          <div class="relative w-full sm:w-64">
+            <i data-lucide="search" class="w-4 h-4 text-brand-muted absolute left-3 top-2.5"></i>
+            <input type="text" id="catalog-search" onkeyup="handleSearch(this.value)" placeholder="Buscar en 146 productos..." class="w-full bg-brand-bg border border-brand-border rounded-xl pl-9 pr-8 py-2 text-xs text-brand-text outline-none focus:border-amber-500 transition shadow-inner">
+            <button id="clear-search-btn" onclick="clearSearch()" class="hidden absolute right-2.5 top-2 text-brand-muted hover:text-brand-text text-xs p-1" title="Limpiar búsqueda">✕</button>
+          </div>
+
+          <div class="flex items-center gap-1.5 bg-brand-card px-3 py-1.5 rounded-xl border border-brand-border text-xs shadow-sm">
+            <span class="text-brand-muted text-[11px] font-semibold">Ordenar:</span>
+            <select id="sort-select" onchange="handleSort(this.value)" class="bg-transparent text-brand-text font-bold text-xs outline-none cursor-pointer">
+              <option value="default">Más Populares</option>
+              <option value="price-asc">Precio: Menor a Mayor</option>
+              <option value="price-desc">Precio: Mayor a Menor</option>
+              <option value="name-asc">Nombre: A - Z</option>
+            </select>
+          </div>
         </div>
       </div>
 
-      <!-- Filtros de Categoría y Colecciones Especializadas -->
-      <div class="flex flex-wrap items-center gap-2 mb-8 pb-4 border-b border-brand-border text-xs">
-        <button onclick="setCategoryFilter('all')" class="cat-pill active-cat px-4 py-2 rounded-full font-bold bg-brand-primary text-white shadow-sm transition flex items-center gap-1.5" data-cat="all">
-          Todos <span class="bg-white/20 px-1.5 py-0.5 rounded-full text-[10px] font-mono">146</span>
+      <!-- PESTAÑAS MAESTRAS DE COLECCIÓN (Las 7 Colecciones Principales) -->
+      <div class="flex items-center gap-2 overflow-x-auto pb-3 mb-3 scrollbar-none text-xs select-none">
+        <button onclick="setMainCollection('all')" class="col-tab active-tab px-4 py-2.5 rounded-xl font-bold bg-amber-500 text-black shadow-md transition flex items-center gap-2 flex-shrink-0" data-col="all">
+          <span>⭐ Todos</span>
+          <span class="tab-badge bg-black/20 text-black text-[10px] px-2 py-0.5 rounded-full font-mono font-bold">146</span>
         </button>
-        <button onclick="setCategoryFilter('packs')" class="cat-pill px-4 py-2 rounded-full font-medium bg-brand-card border border-brand-border text-brand-text hover:border-brand-primary transition flex items-center gap-1.5" data-cat="packs">
-          🎁 Packs &amp; Ofertas <span class="bg-black/5 px-1.5 py-0.5 rounded-full text-[10px] font-mono font-bold">3</span>
+
+        <button onclick="setMainCollection('cafe')" class="col-tab px-4 py-2.5 rounded-xl font-medium bg-brand-card border border-brand-border text-brand-text hover:border-amber-500/50 transition flex items-center gap-2 flex-shrink-0" data-col="cafe">
+          <span>☕ Café de Especialidad</span>
+          <span class="tab-badge bg-black/5 text-brand-muted text-[10px] px-2 py-0.5 rounded-full font-mono font-bold">26</span>
         </button>
-        <button onclick="setCategoryFilter('miel')" class="cat-pill px-4 py-2 rounded-full font-medium bg-brand-card border border-brand-border text-brand-text hover:border-brand-primary transition flex items-center gap-1.5" data-cat="miel">
-          🍯 Miel &amp; Colmena <span class="bg-black/5 px-1.5 py-0.5 rounded-full text-[10px] font-mono font-bold">5</span>
+
+        <button onclick="setMainCollection('te_basilur')" class="col-tab px-4 py-2.5 rounded-xl font-medium bg-brand-card border border-brand-border text-brand-text hover:border-amber-500/50 transition flex items-center gap-2 flex-shrink-0" data-col="te_basilur">
+          <span>🍃 Té Basilur Ceilán</span>
+          <span class="tab-badge bg-black/5 text-brand-muted text-[10px] px-2 py-0.5 rounded-full font-mono font-bold">103</span>
         </button>
-        <button onclick="setCategoryFilter('cafe')" class="cat-pill px-4 py-2 rounded-full font-medium bg-brand-card border border-brand-border text-brand-text hover:border-brand-primary transition flex items-center gap-1.5" data-cat="cafe">
-          ☕ Café de Grano & Molido <span class="bg-black/5 px-1.5 py-0.5 rounded-full text-[10px] font-mono font-bold">15</span>
+
+        <button onclick="setMainCollection('colocolo')" class="col-tab px-4 py-2.5 rounded-xl font-medium bg-brand-card border border-brand-border text-brand-text hover:border-amber-500/50 transition flex items-center gap-2 flex-shrink-0" data-col="colocolo">
+          <span>🏆 Café Colo-Colo</span>
+          <span class="tab-badge bg-black/5 text-brand-muted text-[10px] px-2 py-0.5 rounded-full font-mono font-bold">14</span>
         </button>
-        <button onclick="setCategoryFilter('te_hoja')" class="cat-pill px-4 py-2 rounded-full font-medium bg-brand-card border border-brand-border text-brand-text hover:border-brand-primary transition flex items-center gap-1.5" data-cat="te_hoja">
-          🍃 Té de Hoja & Latas <span class="bg-black/5 px-1.5 py-0.5 rounded-full text-[10px] font-mono font-bold">39</span>
+
+        <button onclick="setMainCollection('miel')" class="col-tab px-4 py-2.5 rounded-xl font-medium bg-brand-card border border-brand-border text-brand-text hover:border-amber-500/50 transition flex items-center gap-2 flex-shrink-0" data-col="miel">
+          <span>🍯 Miel Los Hualles</span>
+          <span class="tab-badge bg-black/5 text-brand-muted text-[10px] px-2 py-0.5 rounded-full font-mono font-bold">5</span>
         </button>
-        <button onclick="setCategoryFilter('te_piramide')" class="cat-pill px-4 py-2 rounded-full font-medium bg-brand-card border border-brand-border text-brand-text hover:border-brand-primary transition flex items-center gap-1.5" data-cat="te_piramide">
-          🔺 Colección Pirámides <span class="bg-black/5 px-1.5 py-0.5 rounded-full text-[10px] font-mono font-bold">6</span>
+
+        <button onclick="setMainCollection('packs')" class="col-tab px-4 py-2.5 rounded-xl font-medium bg-brand-card border border-brand-border text-brand-text hover:border-amber-500/50 transition flex items-center gap-2 flex-shrink-0" data-col="packs">
+          <span>🎁 Packs &amp; Descuentos</span>
+          <span class="tab-badge bg-black/5 text-brand-muted text-[10px] px-2 py-0.5 rounded-full font-mono font-bold">3</span>
         </button>
-        <button onclick="setCategoryFilter('te_bolsitas')" class="cat-pill px-4 py-2 rounded-full font-medium bg-brand-card border border-brand-border text-brand-text hover:border-brand-primary transition flex items-center gap-1.5" data-cat="te_bolsitas">
-          🫖 Té en Bolsitas & Sobres <span class="bg-black/5 px-1.5 py-0.5 rounded-full text-[10px] font-mono font-bold">55</span>
+
+        <button onclick="setMainCollection('accesorios')" class="col-tab px-4 py-2.5 rounded-xl font-medium bg-brand-card border border-brand-border text-brand-text hover:border-amber-500/50 transition flex items-center gap-2 flex-shrink-0" data-col="accesorios">
+          <span>✨ Cafeteras &amp; Accesorios</span>
+          <span class="tab-badge bg-black/5 text-brand-muted text-[10px] px-2 py-0.5 rounded-full font-mono font-bold">12</span>
         </button>
-        <button onclick="setCategoryFilter('capsulas')" class="cat-pill px-4 py-2 rounded-full font-medium bg-brand-card border border-brand-border text-brand-text hover:border-brand-primary transition flex items-center gap-1.5" data-cat="capsulas">
-          💊 Cápsulas Nespresso® <span class="bg-black/5 px-1.5 py-0.5 rounded-full text-[10px] font-mono font-bold">5</span>
-        </button>
-        <button onclick="setCategoryFilter('soluble')" class="cat-pill px-4 py-2 rounded-full font-medium bg-brand-card border border-brand-border text-brand-text hover:border-brand-primary transition flex items-center gap-1.5" data-cat="soluble">
-          ⚡ Soluble & Liofilizado <span class="bg-black/5 px-1.5 py-0.5 rounded-full text-[10px] font-mono font-bold">6</span>
-        </button>
-        <button onclick="setCategoryFilter('accesorios')" class="cat-pill px-4 py-2 rounded-full font-medium bg-brand-card border border-brand-border text-brand-text hover:border-brand-primary transition flex items-center gap-1.5" data-cat="accesorios">
-          ✨ Teteras, Prensas & Accesorios <span class="bg-black/5 px-1.5 py-0.5 rounded-full text-[10px] font-mono font-bold">12</span>
+      </div>
+
+      <!-- SUB-FILTROS CONTEXTUALES (Aparecen según la colección seleccionada) -->
+      <div id="subfilters-container" class="flex flex-wrap items-center gap-2 mb-6 pb-3 border-b border-brand-border text-xs">
+        <!-- Inyectado dinámicamente según colección activa -->
+      </div>
+
+      <!-- Barra de Estado / Contador de Productos -->
+      <div class="flex items-center justify-between text-xs text-brand-muted mb-6">
+        <div>
+          Mostrando <span id="showing-count" class="font-bold text-brand-text text-sm">146</span> productos
+          <span id="active-filter-label" class="text-amber-600 font-bold ml-1"></span>
+        </div>
+        <button id="reset-filters-btn" onclick="resetAllFilters()" class="hidden items-center gap-1.5 text-xs text-amber-600 hover:text-amber-500 font-bold bg-amber-500/10 px-3 py-1.5 rounded-lg transition">
+          <i data-lucide="rotate-ccw" class="w-3.5 h-3.5"></i> Restablecer filtros
         </button>
       </div>
 
@@ -837,10 +954,16 @@
         <!-- Inyectado vía JavaScript -->
       </div>
 
-      <div id="load-more-container" class="text-center pt-12">
-        <button onclick="loadMoreProducts()" class="px-8 py-3.5 rounded-xl bg-brand-card border border-brand-border text-brand-text hover:border-brand-primary hover:text-brand-primary font-bold text-xs shadow-sm transition">
+      <!-- Paginación / Cargar Más -->
+      <div id="load-more-container" class="text-center pt-12 space-y-3">
+        <button onclick="loadMoreProducts()" id="load-more-btn" class="px-8 py-3.5 rounded-xl bg-brand-card border border-brand-border text-brand-text hover:border-amber-500 hover:text-amber-600 font-bold text-xs shadow-sm transition">
           Cargar Más Productos
         </button>
+        <div>
+          <button onclick="showAllProducts()" class="text-xs text-brand-muted hover:text-brand-text underline transition">
+            Ver los 146 productos en una sola página
+          </button>
+        </div>
       </div>
 
     </main>
@@ -1310,11 +1433,60 @@
     };
 
     let allProducts = typeof operationalCatalog !== 'undefined' ? operationalCatalog : [];
-    let currentCategory = 'all';
-    let currentSource = 'all';
+    let currentMainCol = 'all';
+    let currentSubFilter = 'all';
+    let currentSort = 'default';
     let searchQuery = '';
     let page = 1;
-    const perPage = 16;
+    const perPage = 24;
+
+    const subFilterConfigs = {
+      'all': [
+        { id: 'all', label: 'Todas las Marcas (146)' },
+        { id: 'lafinca', label: 'La Finca Tostaduría' },
+        { id: 'basilur', label: 'Té Basilur Chile' },
+        { id: 'colocolo', label: 'Café de Colo-Colo' },
+        { id: 'miel', label: 'Miel de Campo' },
+        { id: 'packs', label: 'Packs de Selección' }
+      ],
+      'cafe': [
+        { id: 'all', label: 'Todos los Cafés (26)' },
+        { id: 'grano_molido', label: 'En Grano & Molido (15)' },
+        { id: 'capsulas', label: 'Cápsulas Nespresso® (5)' },
+        { id: 'soluble', label: 'Soluble Liofilizado (6)' },
+        { id: 'lafinca', label: 'La Finca (12)' },
+        { id: 'colocolo', label: 'Colo-Colo (14)' }
+      ],
+      'te_basilur': [
+        { id: 'all', label: 'Todo Basilur (103)' },
+        { id: 'te_hoja', label: 'Latas & Hoja Entera (39)' },
+        { id: 'te_bolsitas', label: 'Bolsitas & Sobres (55)' },
+        { id: 'te_piramide', label: 'Pirámides de Seda (6)' },
+        { id: 'latas', label: 'Latas Musicales & Libros' }
+      ],
+      'colocolo': [
+        { id: 'all', label: 'Todo Colo-Colo (14)' },
+        { id: 'grano', label: 'Café Centenario & Grano (5)' },
+        { id: 'soluble', label: 'Instantáneo & Liofilizado (4)' },
+        { id: 'capsulas', label: 'Cápsulas Compatibles (3)' },
+        { id: 'prensa', label: 'Prensa & Pack (2)' }
+      ],
+      'miel': [
+        { id: 'all', label: 'Toda la Colmena (5)' },
+        { id: 'frasco', label: 'Frascos de Vidrio' },
+        { id: 'panal', label: 'Panal Natural en Trozo' },
+        { id: 'crema', label: 'Crema de Miel' },
+        { id: 'propoleo', label: 'Propóleo Concentrado' }
+      ],
+      'packs': [
+        { id: 'all', label: 'Todos los Packs Promocionales (3)' }
+      ],
+      'accesorios': [
+        { id: 'all', label: 'Todos los Accesorios (12)' },
+        { id: 'prensa', label: 'Prensas Francesas' },
+        { id: 'tetera', label: 'Teteras de Vidrio' }
+      ]
+    };
     let currentBrand = "Té o Café";
     let cart = [];
     let currentSlide = 0;
@@ -1581,7 +1753,7 @@
     function resetCarouselTimer() { clearInterval(carouselTimer); startCarousel(); }
 
     // BRAND & PALETTE
-    function switchBrand(brandKey) {
+    function switchBrand(brandKey, silent = false) {
       const profile = brandProfiles[brandKey];
       if (!profile) return;
       currentBrand = profile.name;
@@ -1598,7 +1770,7 @@
       document.getElementById('footer-copy-brand').textContent = profile.name;
       const appBrand = document.getElementById('app-brand-name');
       if (appBrand) appBrand.textContent = profile.name;
-      document.title = `${profile.name} — Tienda Online de Especialidad Chile`;
+      document.title = `${profile.name} (teocafe.cl) — Especialidad & Origen Chile`;
 
       document.querySelectorAll('.brand-btn').forEach(btn => {
         if (btn.dataset.brandkey === brandKey) {
@@ -1608,7 +1780,9 @@
         }
       });
 
-      showToast(`Marca cambiada a: ${profile.name}`);
+      if (!silent) {
+        showToast(`Marca cambiada a: ${profile.name}`);
+      }
     }
 
     function switchPalette(themeKey) {
@@ -1642,66 +1816,131 @@
       showToast(`Tipografía: ${fontKey.toUpperCase()}`);
     }
 
-    // CATÁLOGO RENDER
+    // CATÁLOGO RENDER & FILTROS UNIFICADOS
     function getFilteredProducts() {
-      return allProducts.filter(p => {
-        let matchCategory = false;
-        if (currentCategory === 'all') {
-          matchCategory = true;
-        } else if (currentCategory === 'packs') {
-          matchCategory = (p.category === 'packs');
-        } else if (currentCategory === 'miel') {
-          matchCategory = (p.category === 'miel');
-        } else if (currentCategory === 'cafe') {
-          matchCategory = (p.category === 'cafe');
-        } else if (currentCategory === 'te_hoja') {
-          matchCategory = (p.category === 'te_hoja');
-        } else if (currentCategory === 'te_piramide') {
-          matchCategory = (p.category === 'te_piramide');
-        } else if (currentCategory === 'te_bolsitas') {
-          matchCategory = (p.category === 'te_bolsitas');
-        } else if (currentCategory === 'capsulas') {
-          matchCategory = (p.category === 'capsulas');
-        } else if (currentCategory === 'soluble') {
-          matchCategory = (p.category === 'soluble');
-        } else if (currentCategory === 'accesorios') {
-          matchCategory = (p.category === 'accesorios');
-        } else if (currentCategory === 'te') {
-          matchCategory = (p.category && p.category.startsWith('te'));
+      let list = allProducts.filter(prod => {
+        // 1. Filtrado por Gran Colección
+        let matchCol = true;
+        if (currentMainCol === 'cafe') {
+          const isCafe = prod.category === 'cafe' || prod.category === 'capsulas' || prod.category === 'soluble' || (prod.tags && prod.tags.includes('Café'));
+          if (!isCafe || prod.category === 'packs') return false;
+          if (currentSubFilter === 'grano_molido') return prod.category === 'cafe';
+          if (currentSubFilter === 'capsulas') return prod.category === 'capsulas';
+          if (currentSubFilter === 'soluble') return prod.category === 'soluble';
+          if (currentSubFilter === 'lafinca') return prod.source.includes('La Finca');
+          if (currentSubFilter === 'colocolo') return prod.source.includes('Colo');
+          return true;
+        } else if (currentMainCol === 'te_basilur') {
+          const isBasilur = prod.source.includes('Basilur') || prod.category.startsWith('te');
+          if (!isBasilur) return false;
+          if (currentSubFilter === 'te_hoja') return prod.category === 'te_hoja';
+          if (currentSubFilter === 'te_bolsitas') return prod.category === 'te_bolsitas';
+          if (currentSubFilter === 'te_piramide') return prod.category === 'te_piramide';
+          if (currentSubFilter === 'latas') return prod.title.toLowerCase().includes('lata') || prod.title.toLowerCase().includes('libro');
+          return true;
+        } else if (currentMainCol === 'colocolo') {
+          const isColo = prod.source.includes('Colo') || (prod.tags && prod.tags.includes('Colo-Colo'));
+          if (!isColo) return false;
+          if (currentSubFilter === 'grano') return prod.category === 'cafe';
+          if (currentSubFilter === 'soluble') return prod.category === 'soluble';
+          if (currentSubFilter === 'capsulas') return prod.category === 'capsulas';
+          if (currentSubFilter === 'prensa') return prod.category === 'accesorios' || prod.category === 'packs';
+          return true;
+        } else if (currentMainCol === 'miel') {
+          if (prod.category !== 'miel') return false;
+          if (currentSubFilter === 'frasco') return prod.handle.includes('vidrio') || prod.handle.includes('pote');
+          if (currentSubFilter === 'panal') return prod.handle.includes('panal');
+          if (currentSubFilter === 'crema') return prod.handle.includes('crema');
+          if (currentSubFilter === 'propoleo') return prod.handle.includes('propoleo');
+          return true;
+        } else if (currentMainCol === 'packs') {
+          return prod.category === 'packs' || prod.id >= 900;
+        } else if (currentMainCol === 'accesorios') {
+          return prod.category === 'accesorios';
         } else {
-          matchCategory = (p.category === currentCategory);
+          // 'all'
+          if (currentSubFilter === 'lafinca') return prod.source.includes('La Finca');
+          if (currentSubFilter === 'basilur') return prod.source.includes('Basilur');
+          if (currentSubFilter === 'colocolo') return prod.source.includes('Colo');
+          if (currentSubFilter === 'miel') return prod.category === 'miel';
+          if (currentSubFilter === 'packs') return prod.category === 'packs' || prod.id >= 900;
+          return true;
         }
-
-        const matchSource = currentSource === 'all' || p.source.toLowerCase().includes(currentSource.toLowerCase());
-        const matchSearch = searchQuery === '' || 
-          p.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
-          (p.description && p.description.toLowerCase().includes(searchQuery.toLowerCase())) ||
-          (p.tags && p.tags.some(t => t.toLowerCase().includes(searchQuery.toLowerCase())));
-        return matchCategory && matchSource && matchSearch;
       });
+
+      // 2. Búsqueda por texto (Search Query)
+      if (searchQuery !== '') {
+        const q = searchQuery.toLowerCase();
+        list = list.filter(p => {
+          return p.title.toLowerCase().includes(q) ||
+            (p.short_description && p.short_description.toLowerCase().includes(q)) ||
+            (p.description && p.description.toLowerCase().includes(q)) ||
+            (p.vendor && p.vendor.toLowerCase().includes(q)) ||
+            (p.source && p.source.toLowerCase().includes(q)) ||
+            (p.tags && p.tags.some(t => t.toLowerCase().includes(q)));
+        });
+      }
+
+      // 3. Ordenamiento (Sort)
+      if (currentSort === 'price-asc') {
+        list.sort((a, b) => a.price - b.price);
+      } else if (currentSort === 'price-desc') {
+        list.sort((a, b) => b.price - a.price);
+      } else if (currentSort === 'name-asc') {
+        list.sort((a, b) => a.title.localeCompare(b.title));
+      }
+
+      return list;
     }
 
     function renderCatalog(resetPage = false) {
       if (resetPage) page = 1;
       
       const filtered = getFilteredProducts();
-      document.getElementById('showing-count').textContent = filtered.length;
+      const countEl = document.getElementById('showing-count');
+      if (countEl) countEl.textContent = filtered.length;
+
+      // Actualizar label de filtro activo
+      const labelEl = document.getElementById('active-filter-label');
+      const resetBtn = document.getElementById('reset-filters-btn');
+      if (labelEl) {
+        let label = '';
+        if (currentMainCol !== 'all' || currentSubFilter !== 'all' || searchQuery !== '') {
+          const colNames = {
+            cafe: 'en Café de Especialidad',
+            te_basilur: 'en Té Basilur Ceilán',
+            colocolo: 'en Edición Colo-Colo',
+            miel: 'en Miel Los Hualles',
+            packs: 'en Packs & Ofertas',
+            accesorios: 'en Accesorios'
+          };
+          label = colNames[currentMainCol] || '';
+          if (searchQuery !== '') label += ` para "${searchQuery}"`;
+          if (resetBtn) resetBtn.classList.remove('hidden');
+          if (resetBtn) resetBtn.classList.add('inline-flex');
+        } else {
+          if (resetBtn) resetBtn.classList.add('hidden');
+          if (resetBtn) resetBtn.classList.remove('inline-flex');
+        }
+        labelEl.textContent = label;
+      }
       
       const toShow = filtered.slice(0, page * perPage);
       const container = document.getElementById('product-grid');
       
       if (filtered.length === 0) {
         container.innerHTML = `
-          <div class="col-span-full text-center py-16 space-y-3">
-            <i data-lucide="coffee" class="w-12 h-12 text-brand-muted/30 mx-auto"></i>
+          <div class="col-span-full text-center py-16 space-y-3 bg-brand-card rounded-2xl border border-brand-border p-8">
+            <i data-lucide="coffee" class="w-12 h-12 text-amber-500/40 mx-auto"></i>
             <h4 class="font-headline font-bold text-lg text-brand-text">No se encontraron productos</h4>
-            <p class="text-xs text-brand-muted">Intenta buscar con otros términos o cambia los filtros seleccionados.</p>
-            <button onclick="resetAllFilters()" class="mt-3 inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-brand-primary text-white text-xs font-bold shadow-md hover:opacity-90 transition">
+            <p class="text-xs text-brand-muted">Prueba buscando con otros términos o cambia la categoría seleccionada.</p>
+            <button onclick="resetAllFilters()" class="mt-3 inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-black text-xs font-bold shadow-md transition">
               <i data-lucide="rotate-ccw" class="w-3.5 h-3.5"></i> Restablecer todos los filtros
             </button>
           </div>
         `;
-        document.getElementById('load-more-container').style.display = 'none';
+        const loadMore = document.getElementById('load-more-container');
+        if (loadMore) loadMore.style.display = 'none';
         lucide.createIcons();
         return;
       }
@@ -1710,17 +1949,17 @@
         const hasVariants = p.variants && p.variants.length > 1;
         const imgUrl = p.image || 'assets/images/coffee-bag.jpg';
         return `
-          <div class="bg-brand-card rounded-2xl border border-brand-border overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col group">
+          <div class="bg-brand-card rounded-2xl border border-brand-border overflow-hidden hover:border-amber-500/50 hover:shadow-xl transition-all duration-300 flex flex-col group">
             
             <!-- Imagen Clickeable para abrir Producto -->
             <div onclick="openProductDetail(${p.id})" class="relative overflow-hidden aspect-square bg-brand-bg cursor-pointer">
               <img src="${imgUrl}" alt="${p.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" onerror="this.src='assets/images/coffee-bag.jpg'">
-              <span class="absolute top-2.5 left-2.5 bg-brand-primary text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full shadow-sm">
+              <span class="absolute top-2.5 left-2.5 bg-black/80 text-amber-300 border border-amber-500/30 text-[10px] font-bold px-2.5 py-0.5 rounded-full shadow-sm backdrop-blur-sm">
                 ${p.source.split('-')[0].trim()}
               </span>
               <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                 <span class="bg-white text-black text-xs font-bold px-3.5 py-2 rounded-full shadow-lg flex items-center gap-1.5">
-                  <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i> Ver Ficha Completa
+                  <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i> Ver Ficha
                 </span>
               </div>
             </div>
@@ -1728,10 +1967,10 @@
             <!-- Contenido de la Tarjeta -->
             <div class="p-4 flex-1 flex flex-col justify-between space-y-3">
               <div class="space-y-1">
-                <span class="text-[10px] uppercase tracking-wider text-brand-secondary font-bold">${p.vendor || 'Especialidad'}</span>
+                <span class="text-[10px] uppercase tracking-wider text-amber-600 font-bold">${p.vendor || 'Especialidad'}</span>
                 
                 <!-- Título Clickeable -->
-                <h4 onclick="openProductDetail(${p.id})" class="font-headline font-bold text-sm text-brand-text leading-snug group-hover:text-brand-primary transition line-clamp-2 cursor-pointer">
+                <h4 onclick="openProductDetail(${p.id})" class="font-headline font-bold text-sm text-brand-text leading-snug group-hover:text-amber-600 transition line-clamp-2 cursor-pointer">
                   ${p.title}
                 </h4>
                 
@@ -1751,12 +1990,12 @@
               <div class="pt-2 border-t border-brand-border flex items-center justify-between">
                 <div onclick="openProductDetail(${p.id})" class="cursor-pointer">
                   <span class="text-[9px] text-brand-muted block">Precio</span>
-                  <span id="price-tag-${p.id}" class="text-base font-bold font-headline text-brand-primary">
+                  <span id="price-tag-${p.id}" class="text-base font-bold font-headline text-amber-600">
                     ${formatCLP(p.price)}
                   </span>
                 </div>
-                <button onclick="addProductToCartFromCard(${p.id})" class="btn-brand-primary flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold shadow-sm">
-                  <i data-lucide="plus" class="w-3.5 h-3.5"></i> Agregar
+                <button onclick="addProductToCartFromCard(${p.id})" class="btn-brand-primary flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold shadow-sm hover:border-amber-400">
+                  <i data-lucide="plus" class="w-3.5 h-3.5 text-amber-300"></i> Agregar
                 </button>
               </div>
             </div>
@@ -1764,8 +2003,130 @@
         `;
       }).join('');
 
-      document.getElementById('load-more-container').style.display = toShow.length < filtered.length ? 'block' : 'none';
+      const loadMoreContainer = document.getElementById('load-more-container');
+      const loadMoreBtn = document.getElementById('load-more-btn');
+      if (loadMoreContainer) {
+        if (toShow.length < filtered.length) {
+          loadMoreContainer.style.display = 'block';
+          if (loadMoreBtn) {
+            loadMoreBtn.textContent = `Cargar Más Productos • Viendo ${toShow.length} de ${filtered.length}`;
+          }
+        } else {
+          loadMoreContainer.style.display = 'none';
+        }
+      }
       lucide.createIcons();
+    }
+
+    function renderSubFilters() {
+      const container = document.getElementById('subfilters-container');
+      if (!container) return;
+      const config = subFilterConfigs[currentMainCol] || [];
+      if (config.length <= 1) {
+        container.innerHTML = '';
+        container.classList.add('hidden');
+        return;
+      }
+      container.classList.remove('hidden');
+      container.innerHTML = config.map(sub => {
+        const isActive = currentSubFilter === sub.id;
+        return `
+          <button onclick="setSubFilter('${sub.id}')" class="sub-pill px-3.5 py-1.5 rounded-lg text-xs font-semibold transition ${isActive ? 'bg-amber-500 text-black shadow-sm font-bold' : 'bg-brand-card border border-brand-border text-brand-text hover:border-amber-500/60'}">
+            ${sub.label}
+          </button>
+        `;
+      }).join('');
+    }
+
+    function setMainCollection(col) {
+      currentMainCol = col;
+      currentSubFilter = 'all';
+      document.querySelectorAll('.col-tab').forEach(tab => {
+        const badge = tab.querySelector('.tab-badge');
+        if (tab.dataset.col === col) {
+          tab.className = "col-tab active-tab px-4 py-2.5 rounded-xl font-bold bg-amber-500 text-black shadow-md transition flex items-center gap-2 flex-shrink-0";
+          if (badge) badge.className = "tab-badge bg-black/20 text-black text-[10px] px-2 py-0.5 rounded-full font-mono font-bold";
+        } else {
+          tab.className = "col-tab px-4 py-2.5 rounded-xl font-medium bg-brand-card border border-brand-border text-brand-text hover:border-amber-500/50 transition flex items-center gap-2 flex-shrink-0";
+          if (badge) badge.className = "tab-badge bg-black/5 text-brand-muted text-[10px] px-2 py-0.5 rounded-full font-mono font-bold";
+        }
+      });
+      renderSubFilters();
+      renderCatalog(true);
+    }
+
+    function setSubFilter(subId) {
+      currentSubFilter = subId;
+      renderSubFilters();
+      renderCatalog(true);
+    }
+
+    function handleSort(val) {
+      currentSort = val;
+      renderCatalog(true);
+    }
+
+    function handleSearch(val) {
+      searchQuery = val.trim();
+      const clearBtn = document.getElementById('clear-search-btn');
+      if (clearBtn) {
+        if (searchQuery.length > 0) clearBtn.classList.remove('hidden');
+        else clearBtn.classList.add('hidden');
+      }
+      const syncInputs = [document.getElementById('search-input'), document.getElementById('catalog-search')];
+      syncInputs.forEach(input => {
+        if (input && input.value !== val) input.value = val;
+      });
+
+      if (currentPdpProduct || currentViewMode === 'app') {
+        goToCatalogView();
+      }
+      renderCatalog(true);
+      if (searchQuery.length > 0) {
+        const catEl = document.getElementById('catalogo');
+        if (catEl) catEl.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    function clearSearch() {
+      handleSearch('');
+    }
+
+    function resetAllFilters() {
+      currentMainCol = 'all';
+      currentSubFilter = 'all';
+      searchQuery = '';
+      currentSort = 'default';
+      const searchInputs = [document.getElementById('search-input'), document.getElementById('catalog-search')];
+      searchInputs.forEach(i => { if (i) i.value = ''; });
+      const sortSelect = document.getElementById('sort-select');
+      if (sortSelect) sortSelect.value = 'default';
+      const clearBtn = document.getElementById('clear-search-btn');
+      if (clearBtn) clearBtn.classList.add('hidden');
+      setMainCollection('all');
+    }
+
+    function showAllProducts() {
+      page = 999;
+      renderCatalog(false);
+    }
+
+    // Alias retrocompatibles
+    function setCategoryFilter(cat) {
+      if (cat === 'cafe') setMainCollection('cafe');
+      else if (cat === 'miel') setMainCollection('miel');
+      else if (cat === 'packs') setMainCollection('packs');
+      else if (cat.startsWith('te')) setMainCollection('te_basilur');
+      else if (cat === 'accesorios') setMainCollection('accesorios');
+      else setMainCollection('all');
+    }
+
+    function setSourceFilter(src) {
+      if (src.includes('Colo')) setMainCollection('colocolo');
+      else if (src.includes('Basilur')) setMainCollection('te_basilur');
+      else if (src.includes('Finca')) { setMainCollection('cafe'); setSubFilter('lafinca'); }
+      else if (src.includes('Miel')) setMainCollection('miel');
+      else setMainCollection('all');
     }
 
     function loadMoreProducts() {
@@ -1803,84 +2164,16 @@
       });
     }
 
-    function resetAllFilters() {
-      currentCategory = 'all';
-      currentSource = 'all';
-      searchQuery = '';
-      const searchInput = document.getElementById('search-input');
-      if (searchInput) searchInput.value = '';
-      document.querySelectorAll('.cat-pill').forEach(btn => {
-        const badge = btn.querySelector('span');
-        if (btn.dataset.cat === 'all') {
-          btn.className = "cat-pill active-cat px-4 py-2 rounded-full font-bold bg-brand-primary text-white shadow-sm transition flex items-center gap-1.5";
-          if (badge) badge.className = "bg-white/20 px-1.5 py-0.5 rounded-full text-[10px] font-mono";
-        } else {
-          btn.className = "cat-pill px-4 py-2 rounded-full font-medium bg-brand-card border border-brand-border text-brand-text hover:border-brand-primary transition flex items-center gap-1.5";
-          if (badge) badge.className = "bg-black/5 px-1.5 py-0.5 rounded-full text-[10px] font-mono font-bold";
-        }
-      });
-      document.querySelectorAll('.source-pill').forEach(btn => {
-        if (btn.dataset.source === 'all') {
-          btn.classList.add('active-source', 'bg-brand-primary', 'text-white');
-          btn.classList.remove('text-brand-text');
-        } else {
-          btn.classList.remove('active-source', 'bg-brand-primary', 'text-white');
-          btn.classList.add('text-brand-text');
-        }
-      });
-      renderCatalog(true);
-    }
-
-    function setCategoryFilter(cat) {
-      currentCategory = cat;
-      document.querySelectorAll('.cat-pill').forEach(btn => {
-        const badge = btn.querySelector('span');
-        if (btn.dataset.cat === cat) {
-          btn.className = "cat-pill active-cat px-4 py-2 rounded-full font-bold bg-brand-primary text-white shadow-sm transition flex items-center gap-1.5";
-          if (badge) badge.className = "bg-white/20 px-1.5 py-0.5 rounded-full text-[10px] font-mono";
-        } else {
-          btn.className = "cat-pill px-4 py-2 rounded-full font-medium bg-brand-card border border-brand-border text-brand-text hover:border-brand-primary transition flex items-center gap-1.5";
-          if (badge) badge.className = "bg-black/5 px-1.5 py-0.5 rounded-full text-[10px] font-mono font-bold";
-        }
-      });
-      renderCatalog(true);
-    }
-
-    function setSourceFilter(source) {
-      currentSource = source;
-      document.querySelectorAll('.source-pill').forEach(btn => {
-        if (btn.dataset.source === source) {
-          btn.classList.add('active-source', 'bg-brand-primary', 'text-white');
-          btn.classList.remove('text-brand-text');
-        } else {
-          btn.classList.remove('active-source', 'bg-brand-primary', 'text-white');
-          btn.classList.add('text-brand-text');
-        }
-      });
-      renderCatalog(true);
-    }
-
-    function handleSearch(val) {
-      searchQuery = val.trim();
-      if (currentPdpProduct || currentViewMode === 'app') {
-        goToCatalogView();
-      }
-      renderCatalog(true);
-      if (searchQuery.length > 0) {
-        const catEl = document.getElementById('catalogo');
-        if (catEl) catEl.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-
     function goToCategoryFromPdp() {
+      goToCatalogView();
       if (currentPdpProduct) {
-        const cat = currentPdpProduct.category;
-        goToCatalogView();
-        setCategoryFilter(cat);
-        const catEl = document.getElementById('catalogo');
-        if (catEl) catEl.scrollIntoView({ behavior: 'smooth' });
-      } else {
-        goToCatalogView();
+        if (currentPdpProduct.category === 'miel') setMainCollection('miel');
+        else if (currentPdpProduct.category === 'packs') setMainCollection('packs');
+        else if (currentPdpProduct.source.includes('Colo')) setMainCollection('colocolo');
+        else if (currentPdpProduct.source.includes('Basilur')) setMainCollection('te_basilur');
+        else if (currentPdpProduct.category === 'cafe') setMainCollection('cafe');
+        else if (currentPdpProduct.category === 'accesorios') setMainCollection('accesorios');
+        else setMainCollection('all');
       }
     }
 
@@ -2118,8 +2411,8 @@
 
     // INICIALIZACIÓN
     document.addEventListener('DOMContentLoaded', () => {
-      switchBrand('te-o-cafe');
-      renderCatalog(true);
+      switchBrand('te-o-cafe', true);
+      setMainCollection('all');
       updateCartUI();
       startCarousel();
 
