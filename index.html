@@ -386,283 +386,186 @@
   <!-- ======================================================= -->
   <div id="view-home">
 
-    <!-- 🎠 HERO CAROUSEL INTERACTIVO CON FOTOS 100% REALES -->
+    <!-- 🎠 HERO CAROUSEL CINEMÁTICO CON FOTOGRAFÍA 100% REAL -->
     <section class="relative overflow-hidden bg-[#0A0A0D] border-b border-amber-900/30">
-      <div id="carousel-container" class="relative w-full min-h-[500px] lg:min-h-[560px] flex items-center">
+      <div id="carousel-container" class="relative w-full h-[520px] sm:h-[580px] lg:h-[620px] overflow-hidden">
         
-        <!-- SLIDE 0: LANZAMIENTO TEOCAFE.CL (PACK BIENVENIDA REAL) -->
+        <!-- SLIDE 0: LANZAMIENTO TEOCAFE.CL (FOTO REAL CAFÉ TOSTADO DE AUTOR) -->
         <div class="hero-slide active-slide absolute inset-0 transition-opacity duration-700 opacity-100 flex items-center" data-slide="0">
-          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-10 relative z-10">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="absolute inset-0 z-0">
+            <img src="assets/images/banner-hero-real.jpg" alt="Café de Especialidad Té o Café" class="w-full h-full object-cover object-center filter brightness-[0.85]">
+            <div class="absolute inset-0 bg-gradient-to-r from-black/95 via-black/80 sm:via-black/70 to-transparent"></div>
+          </div>
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full py-10">
+            <div class="max-w-2xl space-y-4 text-white">
+              <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/40 text-[11px] font-black uppercase tracking-widest backdrop-blur-md">
+                🇨🇱 BIENVENIDO A TEOCAFE.CL • TOSTADURÍA &amp; HOJA NOBLE
+              </span>
+              <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-headline leading-tight text-white drop-shadow-lg">
+                Donde el Café de Especialidad, el Té de Ceilán y la Miel Pura se Encuentran
+              </h1>
+              <p class="text-sm sm:text-base text-zinc-200 leading-relaxed font-light">
+                Tostaduría de autor en Santiago, 103 variedades de té importado directamente de Sri Lanka y miel cruda de la precordillera de Linares. 146 productos en stock con despacho prioritario en 24-48 hrs.
+              </p>
               
-              <!-- Texto Editorial -->
-              <div class="lg:col-span-7 space-y-4 text-white">
-                <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/40 text-[10px] font-black uppercase tracking-widest">
-                  🇨🇱 TEOCAFE.CL • TOSTADURÍA &amp; HOJA NOBLE
-                </span>
-                <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-headline leading-tight text-white">
-                  Donde el Café de Especialidad, el Té de Ceilán y la Miel Pura se Encuentran
-                </h1>
-                <p class="text-sm sm:text-base text-zinc-300 leading-relaxed font-light">
-                  146 productos originales en stock directo en Chile. Tueste semanal en Santiago, latas de colección de Sri Lanka y miel de la precordillera de Linares.
-                </p>
-                
-                <div class="flex flex-wrap items-center gap-4 text-xs text-amber-200/90 pt-1 font-medium">
-                  <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-amber-400"></i> Despacho en 24-48 hrs</span>
-                  <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-amber-400"></i> Envío gratis sobre $30.000</span>
-                  <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-amber-400"></i> Fotos 100% de productos reales</span>
-                </div>
-
-                <div class="flex flex-wrap items-center gap-3 pt-3">
-                  <a href="#catalogo" onclick="setMainCollection('all')" class="bg-amber-500 hover:bg-amber-400 text-black px-6 py-3.5 rounded-xl font-bold text-xs shadow-xl flex items-center gap-2 transition">
-                    <i data-lucide="sparkles" class="w-4 h-4"></i> Explorar Catálogo (146)
-                  </a>
-                  <button onclick="openProductDetail(901)" class="px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-white font-bold text-xs transition flex items-center gap-2">
-                    <i data-lucide="package" class="w-4 h-4"></i> Ver Pack Bienvenida (19% OFF)
-                  </button>
-                </div>
+              <div class="flex flex-wrap items-center gap-4 text-xs text-amber-200/90 pt-1 font-medium">
+                <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-amber-400"></i> Despacho en 24-48 hrs</span>
+                <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-amber-400"></i> Envío gratis sobre $30.000</span>
+                <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-amber-400"></i> Tueste fresco semanal</span>
               </div>
 
-              <!-- Foto Real de Estudio -->
-              <div class="lg:col-span-5 flex justify-center">
-                <div onclick="openProductDetail(901)" class="relative group cursor-pointer max-w-sm sm:max-w-md w-full">
-                  <div class="absolute -inset-1 bg-gradient-to-r from-amber-500/30 to-amber-700/30 rounded-3xl blur-xl opacity-70 group-hover:opacity-100 transition duration-500"></div>
-                  <div class="relative bg-zinc-900/90 rounded-2xl border border-amber-500/30 overflow-hidden shadow-2xl p-3">
-                    <img src="assets/images/packs/pack-901.jpg" alt="Foto Real Pack Bienvenida Especialidad" class="w-full aspect-[4/3] object-cover rounded-xl group-hover:scale-105 transition duration-500">
-                    <div class="mt-2.5 px-2 flex items-center justify-between text-xs">
-                      <div>
-                        <span class="text-[10px] uppercase font-bold text-amber-400">Foto Real de Estudio</span>
-                        <p class="font-bold text-white text-sm">Pack Bienvenida Especialidad</p>
-                      </div>
-                      <div class="text-right">
-                        <span class="text-[10px] text-zinc-400 line-through">$29.970</span>
-                        <p class="font-bold text-amber-400 text-sm">$23.990 CLP</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              <div class="flex flex-wrap items-center gap-3 pt-3">
+                <a href="#catalogo" onclick="setMainCollection('all')" class="bg-amber-500 hover:bg-amber-400 text-black px-6 py-3.5 rounded-xl font-bold text-xs shadow-xl flex items-center gap-2 transition transform hover:-translate-y-0.5">
+                  <i data-lucide="sparkles" class="w-4 h-4"></i> Explorar Catálogo (146)
+                </a>
+                <button onclick="openProductDetail(901)" class="px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-white font-bold text-xs transition flex items-center gap-2 transform hover:-translate-y-0.5">
+                  <i data-lucide="package" class="w-4 h-4"></i> Ver Pack Bienvenida (19% OFF)
+                </button>
               </div>
-
             </div>
           </div>
         </div>
 
-        <!-- SLIDE 1: COLO-COLO OFICIAL (FOTO REAL DE CAMPAÑA Y PACK) -->
+        <!-- SLIDE 1: COLO-COLO OFICIAL (FOTO REAL CAMPAÑA CAMPEÓN) -->
         <div class="hero-slide absolute inset-0 transition-opacity duration-700 opacity-0 pointer-events-none flex items-center" data-slide="1">
-          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-10 relative z-10">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-              
-              <div class="lg:col-span-7 space-y-4 text-white">
-                <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500 text-black text-[10px] font-black uppercase tracking-widest shadow">
-                  🏆 EDICIÓN OFICIAL DEL CLUB • 100% ARÁBICA
-                </span>
-                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-headline leading-tight text-white">
-                  El Café de los Campeones en tu Casa
-                </h2>
-                <p class="text-sm sm:text-base text-zinc-300 leading-relaxed font-light">
-                  Línea oficial de Colo-Colo: café en grano entero, molido, instantáneo liofilizado y cápsulas compatibles. ¡Lleva el Pack Campeón con Prensa Francesa y sticker del club!
-                </p>
+          <div class="absolute inset-0 z-0">
+            <img src="assets/images/banner-colocolo-real.jpg" alt="Café Colo-Colo Oficial Daniel Morón" class="w-full h-full object-cover object-right sm:object-center filter brightness-[0.9]">
+            <div class="absolute inset-0 bg-gradient-to-r from-black/95 via-black/80 sm:via-black/70 to-transparent"></div>
+          </div>
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full py-10">
+            <div class="max-w-2xl space-y-4 text-white">
+              <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500 text-black text-[11px] font-black uppercase tracking-widest shadow-md">
+                🏆 EDICIÓN OFICIAL DEL CLUB • 100% ARÁBICA
+              </span>
+              <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-headline leading-tight text-white drop-shadow-lg">
+                El Café de los Campeones en tu Casa
+              </h2>
+              <p class="text-sm sm:text-base text-zinc-200 leading-relaxed font-light">
+                Línea oficial de Colo-Colo: café de grano entero, molido artesanal, instantáneo liofilizado y cápsulas compatibles. Conmemorando la gloria del '91 y la edición exclusiva Daniel Morón.
+              </p>
 
-                <div class="flex flex-wrap items-center gap-4 text-xs text-amber-200/90 pt-1 font-medium">
-                  <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-amber-400"></i> Café Centenario 250g</span>
-                  <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-amber-400"></i> Prensa francesa borosilicato</span>
-                  <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-amber-400"></i> Sticker conmemorativo oficial</span>
-                </div>
-
-                <div class="flex flex-wrap items-center gap-3 pt-3">
-                  <button onclick="setMainCollection('colocolo'); location.href='#catalogo';" class="bg-amber-400 hover:bg-amber-300 text-black px-6 py-3.5 rounded-xl font-extrabold text-xs shadow-xl flex items-center gap-2 transition">
-                    <i data-lucide="trophy" class="w-4 h-4"></i> Comprar Café de Colo-Colo
-                  </button>
-                  <button onclick="openProductDetail(902)" class="px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-white font-bold text-xs transition flex items-center gap-2">
-                    <i data-lucide="package" class="w-4 h-4"></i> Ver Pack Campeón (17% OFF)
-                  </button>
-                </div>
+              <div class="flex flex-wrap items-center gap-4 text-xs text-amber-200/90 pt-1 font-medium">
+                <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-amber-400"></i> Café Centenario 250g</span>
+                <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-amber-400"></i> Prensa francesa oficial</span>
+                <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-amber-400"></i> Edición arquero Daniel Morón</span>
               </div>
 
-              <div class="lg:col-span-5 flex justify-center">
-                <div onclick="openProductDetail(902)" class="relative group cursor-pointer max-w-sm sm:max-w-md w-full">
-                  <div class="absolute -inset-1 bg-gradient-to-r from-amber-500/30 to-yellow-600/30 rounded-3xl blur-xl opacity-70 group-hover:opacity-100 transition duration-500"></div>
-                  <div class="relative bg-zinc-900/90 rounded-2xl border border-amber-500/30 overflow-hidden shadow-2xl p-3">
-                    <img src="assets/images/packs/pack-902.jpg" alt="Foto Real Pack Campeón Colo-Colo" class="w-full aspect-[4/3] object-cover rounded-xl group-hover:scale-105 transition duration-500">
-                    <div class="mt-2.5 px-2 flex items-center justify-between text-xs">
-                      <div>
-                        <span class="text-[10px] uppercase font-bold text-amber-400">Campaña Oficial Daniel Morón</span>
-                        <p class="font-bold text-white text-sm">Pack Campeón Colo-Colo 250g</p>
-                      </div>
-                      <div class="text-right">
-                        <span class="text-[10px] text-zinc-400 line-through">$21.800</span>
-                        <p class="font-bold text-amber-400 text-sm">$17.990 CLP</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              <div class="flex flex-wrap items-center gap-3 pt-3">
+                <button onclick="setMainCollection('colocolo'); location.href='#catalogo';" class="bg-amber-400 hover:bg-amber-300 text-black px-6 py-3.5 rounded-xl font-extrabold text-xs shadow-xl flex items-center gap-2 transition transform hover:-translate-y-0.5">
+                  <i data-lucide="trophy" class="w-4 h-4"></i> Comprar Café de Colo-Colo
+                </button>
+                <button onclick="openProductDetail(902)" class="px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-white font-bold text-xs transition flex items-center gap-2 transform hover:-translate-y-0.5">
+                  <i data-lucide="package" class="w-4 h-4"></i> Ver Pack Campeón (17% OFF)
+                </button>
               </div>
-
             </div>
           </div>
         </div>
 
-        <!-- SLIDE 2: BASILUR CEYLON TEA (FOTOS REALES DE PRODUCTO BASILUR) -->
+        <!-- SLIDE 2: BASILUR CEYLON TEA (FOTO REAL OFICIAL LATAS & COLECCIÓN) -->
         <div class="hero-slide absolute inset-0 transition-opacity duration-700 opacity-0 pointer-events-none flex items-center" data-slide="2">
-          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-10 relative z-10">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-              
-              <div class="lg:col-span-7 space-y-4 text-white">
-                <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-600 text-white text-[10px] font-black uppercase tracking-widest">
-                  🍃 BASILUR CEYLON TEA • DIRECTO DE SRI LANKA
-                </span>
-                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-headline leading-tight text-white">
-                  103 Variedades en Latas de Colección &amp; Hojas Nobles
-                </h2>
-                <p class="text-sm sm:text-base text-zinc-300 leading-relaxed font-light">
-                  Desde las latas musicales Music Festival hasta los libros de colección vintage y pirámides aromatizadas con bergamota y frutas exóticas. Hojas enteras sin triturar.
-                </p>
+          <div class="absolute inset-0 z-0">
+            <img src="assets/images/banner-basilur-real.png" alt="Té Basilur Colección Oficial Great Taste" class="w-full h-full object-cover object-right filter brightness-[0.9]">
+            <div class="absolute inset-0 bg-gradient-to-r from-black/95 via-black/80 sm:via-black/65 to-black/20"></div>
+          </div>
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full py-10">
+            <div class="max-w-2xl space-y-4 text-white">
+              <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-600 text-white text-[11px] font-black uppercase tracking-widest shadow-md">
+                🍃 BASILUR CEYLON TEA • DIRECTO DE SRI LANKA
+              </span>
+              <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-headline leading-tight text-white drop-shadow-lg">
+                103 Variedades en Latas de Colección &amp; Hojas Nobles
+              </h2>
+              <p class="text-sm sm:text-base text-zinc-200 leading-relaxed font-light">
+                Latas musicales Music Festival, libros de colección vintage y pirámides aromatizadas con bergamota y frutas exóticas. Cosecha noble premiada mundialmente con Great Taste Awards.
+              </p>
 
-                <div class="flex flex-wrap items-center gap-4 text-xs text-emerald-200/90 pt-1 font-medium">
-                  <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i> Latas metálicas de colección</span>
-                  <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i> Pirámides de seda biodegradables</span>
-                  <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i> Té negro, verde y blanco de Ceilán</span>
-                </div>
-
-                <div class="flex flex-wrap items-center gap-3 pt-3">
-                  <button onclick="setMainCollection('te_basilur'); location.href='#catalogo';" class="bg-emerald-500 hover:bg-emerald-400 text-white px-6 py-3.5 rounded-xl font-bold text-xs shadow-xl flex items-center gap-2 transition">
-                    <i data-lucide="leaf" class="w-4 h-4"></i> Ver las 103 Variedades Basilur
-                  </button>
-                  <button onclick="setMainCollection('accesorios'); location.href='#catalogo';" class="px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-white font-bold text-xs transition flex items-center gap-2">
-                    <i data-lucide="coffee" class="w-4 h-4"></i> Teteras &amp; Infusores
-                  </button>
-                </div>
+              <div class="flex flex-wrap items-center gap-4 text-xs text-emerald-200/90 pt-1 font-medium">
+                <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i> Latas metálicas de colección</span>
+                <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i> Pirámides de seda biodegradables</span>
+                <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i> Té negro, verde y blanco de Ceilán</span>
               </div>
 
-              <div class="lg:col-span-5 flex justify-center">
-                <div onclick="setMainCollection('te_basilur'); location.href='#catalogo';" class="relative group cursor-pointer max-w-sm sm:max-w-md w-full">
-                  <div class="absolute -inset-1 bg-gradient-to-r from-emerald-500/30 to-teal-600/30 rounded-3xl blur-xl opacity-70 group-hover:opacity-100 transition duration-500"></div>
-                  <div class="relative bg-zinc-900/90 rounded-2xl border border-emerald-500/30 overflow-hidden shadow-2xl p-3">
-                    <img src="https://cdn.shopify.com/s/files/1/0375/8617/4088/files/SET_BASILUR_02_0bab869c-1f21-4151-8852-5457a0d9aee7.webp?v=1748471182" alt="Foto Real Libros de Colección Basilur" class="w-full aspect-[4/3] object-contain bg-white/5 rounded-xl p-2 group-hover:scale-105 transition duration-500">
-                    <div class="mt-2.5 px-2 flex items-center justify-between text-xs">
-                      <div>
-                        <span class="text-[10px] uppercase font-bold text-emerald-400">Colección Vintage &amp; Libros</span>
-                        <p class="font-bold text-white text-sm">Libros de Té &amp; Latas Musicales</p>
-                      </div>
-                      <div class="text-right">
-                        <span class="text-[10px] text-zinc-400">Desde</span>
-                        <p class="font-bold text-emerald-400 text-sm">$4.990 CLP</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              <div class="flex flex-wrap items-center gap-3 pt-3">
+                <button onclick="setMainCollection('te_basilur'); location.href='#catalogo';" class="bg-emerald-500 hover:bg-emerald-400 text-white px-6 py-3.5 rounded-xl font-bold text-xs shadow-xl flex items-center gap-2 transition transform hover:-translate-y-0.5">
+                  <i data-lucide="leaf" class="w-4 h-4"></i> Ver las 103 Variedades Basilur
+                </button>
+                <button onclick="setMainCollection('accesorios'); location.href='#catalogo';" class="px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-white font-bold text-xs transition flex items-center gap-2 transform hover:-translate-y-0.5">
+                  <i data-lucide="coffee" class="w-4 h-4"></i> Teteras &amp; Infusores
+                </button>
               </div>
-
             </div>
           </div>
         </div>
 
-        <!-- SLIDE 3: MIEL DE CAMPO CHILE (FOTO REAL PANAL Y FRASCO) -->
+        <!-- SLIDE 3: MIEL DE CAMPO CHILE (FOTO REAL PANAL Y COSECHA) -->
         <div class="hero-slide absolute inset-0 transition-opacity duration-700 opacity-0 pointer-events-none flex items-center" data-slide="3">
-          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-10 relative z-10">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-              
-              <div class="lg:col-span-7 space-y-4 text-white">
-                <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-yellow-500 text-black text-[10px] font-black uppercase tracking-widest shadow">
-                  🍯 NUEVO EN TEOCAFE.CL • APIARIO LOS HUALLES, MAULE
-                </span>
-                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-headline leading-tight text-white">
-                  Miel Pura de Campo y Panal Natural desde $4.000
-                </h2>
-                <p class="text-sm sm:text-base text-zinc-300 leading-relaxed font-light">
-                  Del apiario Los Hualles, en la precordillera de Linares. Multifloral, crema de miel, panal natural en trozo y propóleo — todo del mismo apicultor con trazabilidad total.
-                </p>
+          <div class="absolute inset-0 z-0">
+            <img src="assets/images/banner-mieldecampo.jpg" alt="Miel de Campo Apiario Los Hualles" class="w-full h-full object-cover object-right sm:object-center filter brightness-[0.85]">
+            <div class="absolute inset-0 bg-gradient-to-r from-black/95 via-black/80 sm:via-black/70 to-transparent"></div>
+          </div>
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full py-10">
+            <div class="max-w-2xl space-y-4 text-white">
+              <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-yellow-500 text-black text-[11px] font-black uppercase tracking-widest shadow-md">
+                🍯 NUEVO EN TEOCAFE.CL • APIARIO LOS HUALLES, MAULE
+              </span>
+              <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-headline leading-tight text-white drop-shadow-lg">
+                Esta Miel Tiene Dirección: Precordillera de Linares
+              </h2>
+              <p class="text-sm sm:text-base text-zinc-200 leading-relaxed font-light">
+                Del apiario Los Hualles en la precordillera de Linares. Miel multifloral cruda, crema de miel batida en frío, trozo de panal natural comestible y propóleo del mismo apicultor con origen en cada etiqueta.
+              </p>
 
-                <div class="flex flex-wrap items-center gap-4 text-xs text-yellow-200/90 pt-1 font-medium">
-                  <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-yellow-400"></i> Cosecha cruda sin pasteurizar</span>
-                  <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-yellow-400"></i> Envasada en el apiario de origen</span>
-                  <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-yellow-400"></i> Panal 100% natural comestible</span>
-                </div>
-
-                <div class="flex flex-wrap items-center gap-3 pt-3">
-                  <button onclick="setMainCollection('miel'); location.href='#catalogo';" class="bg-yellow-500 hover:bg-yellow-400 text-black px-6 py-3.5 rounded-xl font-bold text-xs shadow-xl flex items-center gap-2 transition">
-                    <i data-lucide="shopping-bag" class="w-4 h-4"></i> Comprar Miel · desde $4.000
-                  </button>
-                  <button onclick="openProductDetail(303)" class="px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-white font-bold text-xs transition flex items-center gap-2">
-                    <i data-lucide="hexagon" class="w-4 h-4"></i> Ver Panal Entero $6.000
-                  </button>
-                </div>
+              <div class="flex flex-wrap items-center gap-4 text-xs text-yellow-200/90 pt-1 font-medium">
+                <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-yellow-400"></i> Cosecha cruda sin pasteurizar</span>
+                <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-yellow-400"></i> Panal 100% natural comestible</span>
+                <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-yellow-400"></i> 1 Kilo de miel desde $4.000</span>
               </div>
 
-              <div class="lg:col-span-5 flex justify-center">
-                <div onclick="openProductDetail(303)" class="relative group cursor-pointer max-w-sm sm:max-w-md w-full">
-                  <div class="absolute -inset-1 bg-gradient-to-r from-yellow-500/30 to-amber-600/30 rounded-3xl blur-xl opacity-70 group-hover:opacity-100 transition duration-500"></div>
-                  <div class="relative bg-zinc-900/90 rounded-2xl border border-yellow-500/30 overflow-hidden shadow-2xl p-3">
-                    <img src="assets/images/productos/mieldecampo/panal-natural.jpg" alt="Foto Real Panal Natural Los Hualles" class="w-full aspect-[4/3] object-cover rounded-xl group-hover:scale-105 transition duration-500">
-                    <div class="mt-2.5 px-2 flex items-center justify-between text-xs">
-                      <div>
-                        <span class="text-[10px] uppercase font-bold text-yellow-400">Foto Real Apiario Los Hualles</span>
-                        <p class="font-bold text-white text-sm">Panal de Miel 100% Natural</p>
-                      </div>
-                      <div class="text-right">
-                        <span class="text-[10px] text-zinc-400">Trozo 500g</span>
-                        <p class="font-bold text-yellow-400 text-sm">$6.000 CLP</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              <div class="flex flex-wrap items-center gap-3 pt-3">
+                <button onclick="setMainCollection('miel'); location.href='#catalogo';" class="bg-yellow-500 hover:bg-yellow-400 text-black px-6 py-3.5 rounded-xl font-bold text-xs shadow-xl flex items-center gap-2 transition transform hover:-translate-y-0.5">
+                  <i data-lucide="shopping-bag" class="w-4 h-4"></i> Comprar Miel de Campo
+                </button>
+                <button onclick="openProductDetail(303)" class="px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-white font-bold text-xs transition flex items-center gap-2 transform hover:-translate-y-0.5">
+                  <i data-lucide="hexagon" class="w-4 h-4"></i> Ver Panal Entero $6.000
+                </button>
               </div>
-
             </div>
           </div>
         </div>
 
-        <!-- SLIDE 4: LA FINCA TOSTADURÍA (FOTO REAL DÚO Y GRANOS RECIÉN TOSTADOS) -->
+        <!-- SLIDE 4: LA FINCA TOSTADURÍA (FOTO REAL CAFÉ EN GRANO TOSTADO) -->
         <div class="hero-slide absolute inset-0 transition-opacity duration-700 opacity-0 pointer-events-none flex items-center" data-slide="4">
-          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-10 relative z-10">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-              
-              <div class="lg:col-span-7 space-y-4 text-white">
-                <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-600 text-white text-[10px] font-black uppercase tracking-widest shadow">
-                  ☕ CAFÉ EN GRANO &amp; MOLIDO • TUESTE SEMANAL EN SANTIAGO
-                </span>
-                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-headline leading-tight text-white">
-                  Café Artesanal Valle del Cauca &amp; Quindío
-                </h2>
-                <p class="text-sm sm:text-base text-zinc-300 leading-relaxed font-light">
-                  Granos de altura 100% arábica cosechados bajo sombra y tostados en pequeños lotes en Chile para preservar aceites esenciales, baja acidez y notas a cacao y caramelo.
-                </p>
+          <div class="absolute inset-0 z-0">
+            <img src="assets/images/banner-lafinca-real.jpg" alt="Café de Especialidad La Finca Tostado" class="w-full h-full object-cover object-right sm:object-center filter brightness-[0.85]">
+            <div class="absolute inset-0 bg-gradient-to-r from-black/95 via-black/80 sm:via-black/70 to-transparent"></div>
+          </div>
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full py-10">
+            <div class="max-w-2xl space-y-4 text-white">
+              <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-600 text-white text-[11px] font-black uppercase tracking-widest shadow-md">
+                ☕ CAFÉ EN GRANO &amp; MOLIDO • TUESTE SEMANAL EN SANTIAGO
+              </span>
+              <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold font-headline leading-tight text-white drop-shadow-lg">
+                Café Artesanal Valle del Cauca &amp; Quindío
+              </h2>
+              <p class="text-sm sm:text-base text-zinc-200 leading-relaxed font-light">
+                Granos de altura 100% arábica cosechados bajo sombra y tostados en pequeños lotes en Chile para preservar aceites esenciales, baja acidez y notas a cacao, frutos secos y caramelo.
+              </p>
 
-                <div class="flex flex-wrap items-center gap-4 text-xs text-orange-200/90 pt-1 font-medium">
-                  <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-orange-400"></i> Tostado fresco en Santiago</span>
-                  <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-orange-400"></i> Grano entero o molido a tu gusto</span>
-                  <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-orange-400"></i> Empaque con válvula desgasificadora</span>
-                </div>
-
-                <div class="flex flex-wrap items-center gap-3 pt-3">
-                  <button onclick="setMainCollection('cafe'); location.href='#catalogo';" class="bg-orange-500 hover:bg-orange-400 text-white px-6 py-3.5 rounded-xl font-bold text-xs shadow-xl flex items-center gap-2 transition">
-                    <i data-lucide="coffee" class="w-4 h-4"></i> Ver Café en Grano
-                  </button>
-                  <button onclick="openProductDetail(903)" class="px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-white font-bold text-xs transition flex items-center gap-2">
-                    <i data-lucide="package" class="w-4 h-4"></i> Ver Dúo Tostaduría (17% OFF)
-                  </button>
-                </div>
+              <div class="flex flex-wrap items-center gap-4 text-xs text-orange-200/90 pt-1 font-medium">
+                <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-orange-400"></i> Tostado fresco en Santiago</span>
+                <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-orange-400"></i> Grano entero o molido a tu gusto</span>
+                <span class="flex items-center gap-1.5"><i data-lucide="check-circle-2" class="w-4 h-4 text-orange-400"></i> Válvula desgasificadora aroma-lock</span>
               </div>
 
-              <div class="lg:col-span-5 flex justify-center">
-                <div onclick="openProductDetail(903)" class="relative group cursor-pointer max-w-sm sm:max-w-md w-full">
-                  <div class="absolute -inset-1 bg-gradient-to-r from-orange-500/30 to-amber-700/30 rounded-3xl blur-xl opacity-70 group-hover:opacity-100 transition duration-500"></div>
-                  <div class="relative bg-zinc-900/90 rounded-2xl border border-orange-500/30 overflow-hidden shadow-2xl p-3">
-                    <img src="assets/images/packs/pack-903.jpg" alt="Foto Real Dúo Tostaduría La Finca" class="w-full aspect-[4/3] object-cover rounded-xl group-hover:scale-105 transition duration-500">
-                    <div class="mt-2.5 px-2 flex items-center justify-between text-xs">
-                      <div>
-                        <span class="text-[10px] uppercase font-bold text-orange-400">Dúo 500g Recién Tostado</span>
-                        <p class="font-bold text-white text-sm">Valle del Cauca + Quindío</p>
-                      </div>
-                      <div class="text-right">
-                        <span class="text-[10px] text-zinc-400 line-through">$27.980</span>
-                        <p class="font-bold text-orange-400 text-sm">$22.990 CLP</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              <div class="flex flex-wrap items-center gap-3 pt-3">
+                <button onclick="setMainCollection('cafe'); location.href='#catalogo';" class="bg-orange-500 hover:bg-orange-400 text-white px-6 py-3.5 rounded-xl font-bold text-xs shadow-xl flex items-center gap-2 transition transform hover:-translate-y-0.5">
+                  <i data-lucide="coffee" class="w-4 h-4"></i> Ver Café en Grano (26)
+                </button>
+                <button onclick="openProductDetail(903)" class="px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-white font-bold text-xs transition flex items-center gap-2 transform hover:-translate-y-0.5">
+                  <i data-lucide="package" class="w-4 h-4"></i> Ver Dúo Tostaduría (17% OFF)
+                </button>
               </div>
-
             </div>
           </div>
         </div>
@@ -670,20 +573,20 @@
       </div>
 
       <!-- Controles Flechas -->
-      <button onclick="prevSlide()" class="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-black/50 hover:bg-black/80 text-white flex items-center justify-center backdrop-blur-md border border-white/20 transition">
+      <button onclick="prevSlide()" aria-label="Slide anterior" class="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-black/60 hover:bg-amber-600 text-white flex items-center justify-center backdrop-blur-md border border-white/20 transition shadow-xl">
         <i data-lucide="chevron-left" class="w-5 h-5"></i>
       </button>
-      <button onclick="nextSlide()" class="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-black/50 hover:bg-black/80 text-white flex items-center justify-center backdrop-blur-md border border-white/20 transition">
+      <button onclick="nextSlide()" aria-label="Slide siguiente" class="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-black/60 hover:bg-amber-600 text-white flex items-center justify-center backdrop-blur-md border border-white/20 transition shadow-xl">
         <i data-lucide="chevron-right" class="w-5 h-5"></i>
       </button>
 
       <!-- Indicadores Bolitas -->
-      <div class="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2">
-        <button onclick="goToSlide(0)" class="carousel-dot w-3 h-3 rounded-full bg-white transition" data-dot="0"></button>
-        <button onclick="goToSlide(1)" class="carousel-dot w-3 h-3 rounded-full bg-white/40 transition" data-dot="1"></button>
-        <button onclick="goToSlide(2)" class="carousel-dot w-3 h-3 rounded-full bg-white/40 transition" data-dot="2"></button>
-        <button onclick="goToSlide(3)" class="carousel-dot w-3 h-3 rounded-full bg-white/40 transition" data-dot="3"></button>
-        <button onclick="goToSlide(4)" class="carousel-dot w-3 h-3 rounded-full bg-white/40 transition" data-dot="4"></button>
+      <div class="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2.5 bg-black/40 px-3.5 py-1.5 rounded-full backdrop-blur-md border border-white/10">
+        <button onclick="goToSlide(0)" aria-label="Ir a slide 1" class="carousel-dot w-2.5 h-2.5 rounded-full bg-white transition scale-125" data-dot="0"></button>
+        <button onclick="goToSlide(1)" aria-label="Ir a slide 2" class="carousel-dot w-2.5 h-2.5 rounded-full bg-white/40 hover:bg-white/70 transition" data-dot="1"></button>
+        <button onclick="goToSlide(2)" aria-label="Ir a slide 3" class="carousel-dot w-2.5 h-2.5 rounded-full bg-white/40 hover:bg-white/70 transition" data-dot="2"></button>
+        <button onclick="goToSlide(3)" aria-label="Ir a slide 4" class="carousel-dot w-2.5 h-2.5 rounded-full bg-white/40 hover:bg-white/70 transition" data-dot="3"></button>
+        <button onclick="goToSlide(4)" aria-label="Ir a slide 5" class="carousel-dot w-2.5 h-2.5 rounded-full bg-white/40 hover:bg-white/70 transition" data-dot="4"></button>
       </div>
 
     </section>
