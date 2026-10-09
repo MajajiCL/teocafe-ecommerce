@@ -5525,5 +5525,136 @@
       "Tueste Medio"
     ],
     "category_label": "Café Soluble & Instantáneo"
+  },
+  {
+    "id": 901,
+    "title": "Pack Bienvenida Especialidad: Café + Té + Miel",
+    "handle": "pack-bienvenida-especialidad",
+    "source": "Selección Té o Café",
+    "vendor": "teocafe.cl",
+    "category": "cafe",
+    "category_label": "Ofertas Flash & Packs",
+    "price": 23990,
+    "compare_at_price": 29970,
+    "image": "assets/images/hero.jpg",
+    "description": "El pack degustación definitivo para sumergirse en la experiencia de alta gama. Incluye 1 Café Valle del Cauca 250g (Tueste medio artesanal 100% Arábica), 1 Lata de Té Basilur con 20 Pirámides de seda Ceylán aromatizadas, y 1 frasco de Miel de Ulmo Patagonia 500g de recolección silvestre. Despacho prioritario en 24-48 hrs en Santiago y a todo Chile.",
+    "short_description": "Café Valle del Cauca 250g + Lata Té Basilur 20 Pirámides + Miel de Ulmo 500g.",
+    "variants": [
+      {
+        "id": 9011,
+        "title": "Café en Grano Entero",
+        "price": 23990,
+        "compare_at_price": 29970,
+        "available": true
+      },
+      {
+        "id": 9012,
+        "title": "Café Molido para Filtrado / Prensa",
+        "price": 23990,
+        "compare_at_price": 29970,
+        "available": true
+      },
+      {
+        "id": 9013,
+        "title": "Café Molido para Espresso / Moka",
+        "price": 23990,
+        "compare_at_price": 29970,
+        "available": true
+      }
+    ],
+    "tags": [
+      "Pack",
+      "Oferta",
+      "Bienvenida",
+      "Café",
+      "Té",
+      "Miel",
+      "Descuento",
+      "Flash"
+    ]
+  },
+  {
+    "id": 902,
+    "title": "Pack Campeón Colo-Colo: Café Centenario + Prensa Francesa",
+    "handle": "pack-campeon-colo-colo",
+    "source": "Café de Colo-Colo",
+    "vendor": "cafedecolocolo.cl",
+    "category": "cafe",
+    "category_label": "Ofertas Flash & Packs",
+    "price": 17990,
+    "compare_at_price": 21800,
+    "image": "assets/images/banner-colocolo.jpg",
+    "description": "Edición oficial conmemorativa para los hinchas del Cacique. Incluye 1 bolsa de Café Centenario Colo-Colo 250g (100% Arábica de altura con tueste medio balanceado), 1 Prensa Francesa de vidrio borosilicato resistente a choques térmicos (600ml) y un Sticker Oficial del Club. Ideal para extraer un café con cuerpo sedoso, sin acidez punzante y aroma envolvente.",
+    "short_description": "Café Centenario Colo-Colo 250g + Prensa Francesa 600ml + Sticker Oficial.",
+    "variants": [
+      {
+        "id": 9021,
+        "title": "Café en Grano 250g",
+        "price": 17990,
+        "compare_at_price": 21800,
+        "available": true
+      },
+      {
+        "id": 9022,
+        "title": "Café Molido Grueso (Prensa) 250g",
+        "price": 17990,
+        "compare_at_price": 21800,
+        "available": true
+      }
+    ],
+    "tags": [
+      "Colo-Colo",
+      "Pack",
+      "Prensa Francesa",
+      "Café Centenario",
+      "Oferta",
+      "Flash"
+    ]
+  },
+  {
+    "id": 903,
+    "title": "Dúo Tostaduría La Finca: Valle del Cauca + Quindío",
+    "handle": "duo-tostaduria-la-finca",
+    "source": "La Finca - Café Artesanal",
+    "vendor": "lafinca.io",
+    "category": "cafe",
+    "category_label": "Ofertas Flash & Packs",
+    "price": 22990,
+    "compare_at_price": 27980,
+    "image": "assets/images/banner-lafinca.jpg",
+    "description": "El pack perfecto para comparar los dos grandes perfiles de Colombia tostados en pequeños lotes en Santiago. Incluye 1 bolsa de Café Valle del Cauca 250g (Tueste Medio Full City con notas florales, panela y chocolate) + 1 bolsa de Café Quindío 250g (Tueste Intenso Francés con cuerpo pronunciado, notas a nuez y cacao oscuro). Total 500g de café recién tostado.",
+    "short_description": "Café Valle del Cauca 250g (Medio) + Café Quindío 250g (Intenso) recién tostados.",
+    "variants": [
+      {
+        "id": 9031,
+        "title": "2x Café en Grano Entero (500g)",
+        "price": 22990,
+        "compare_at_price": 27980,
+        "available": true
+      },
+      {
+        "id": 9032,
+        "title": "2x Café Molido Medio (500g)",
+        "price": 22990,
+        "compare_at_price": 27980,
+        "available": true
+      },
+      {
+        "id": 9033,
+        "title": "1 Grano + 1 Molido",
+        "price": 22990,
+        "compare_at_price": 27980,
+        "available": true
+      }
+    ],
+    "tags": [
+      "La Finca",
+      "Colombia",
+      "Dúo",
+      "Arábica",
+      "Pack",
+      "Oferta",
+      "Flash"
+    ]
   }
 ]

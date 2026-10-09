@@ -488,9 +488,9 @@
                 <button onclick="setSourceFilter('Café de Colo-Colo'); location.href='#catalogo';" class="bg-amber-400 hover:bg-amber-300 text-black px-6 py-3.5 rounded-xl font-extrabold text-xs shadow-xl flex items-center gap-2 transition">
                   <i data-lucide="trophy" class="w-4 h-4"></i> Comprar Café de Colo-Colo
                 </button>
-                <a href="#catalogo" class="px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white font-bold text-xs transition">
-                  Ver Cápsulas & Prensas
-                </a>
+                <button onclick="openProductDetail(902)" class="px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white font-bold text-xs transition flex items-center gap-1.5">
+                  <i data-lucide="package" class="w-4 h-4"></i> Ver Pack Campeón (18% OFF)
+                </button>
               </div>
             </div>
           </div>
@@ -546,9 +546,9 @@
                 <button onclick="setSourceFilter('La Finca'); location.href='#catalogo';" class="bg-orange-500 hover:bg-orange-400 text-white px-6 py-3.5 rounded-xl font-bold text-xs shadow-xl flex items-center gap-2 transition">
                   <i data-lucide="coffee" class="w-4 h-4"></i> Ver Colección La Finca
                 </button>
-                <a href="#catalogo" class="px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white font-bold text-xs transition">
-                  Liofilizados & Packs
-                </a>
+                <button onclick="openProductDetail(903)" class="px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white font-bold text-xs transition flex items-center gap-1.5">
+                  <i data-lucide="package" class="w-4 h-4"></i> Ver Dúo Tostaduría (17% OFF)
+                </button>
               </div>
             </div>
           </div>
@@ -633,25 +633,35 @@
           <div class="absolute top-3 right-3 bg-red-600 text-white font-extrabold text-[11px] px-2.5 py-1 rounded-full shadow z-10">
             -20% OFF
           </div>
-          <div class="aspect-video bg-brand-bg overflow-hidden relative">
+          <div onclick="openProductDetail(901)" class="aspect-video bg-brand-bg overflow-hidden relative cursor-pointer">
             <img src="assets/images/hero.jpg" alt="Pack Experiencia Bienvenida" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+              <span class="bg-white text-black text-xs font-bold px-4 py-2 rounded-full shadow-lg flex items-center gap-1.5">
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i> Ver Ficha del Pack
+              </span>
+            </div>
           </div>
           <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
             <div>
               <span class="text-[10px] font-bold uppercase tracking-wider text-brand-secondary">Pack Degustación Estrella</span>
-              <h3 class="font-headline font-bold text-lg text-brand-text mt-1">Pack Bienvenida Especialidad</h3>
+              <h3 onclick="openProductDetail(901)" class="font-headline font-bold text-lg text-brand-text mt-1 cursor-pointer hover:text-brand-primary transition">Pack Bienvenida Especialidad</h3>
               <p class="text-xs text-brand-muted mt-2">
                 Incluye 1 Café Valle del Cauca 250g + 1 Lata Té Basilur 20 Pirámides + 1 Miel de Ulmo Patagonia 500g.
               </p>
             </div>
             <div class="pt-4 border-t border-brand-border flex items-center justify-between">
-              <div>
+              <div onclick="openProductDetail(901)" class="cursor-pointer">
                 <span class="text-xs text-brand-muted line-through">$29.970</span>
                 <p class="text-xl font-bold font-headline text-brand-primary">$23.990 CLP</p>
               </div>
-              <button onclick="addBundleToCart('Pack Bienvenida Especialidad', 23990, 'assets/images/hero.jpg')" class="btn-brand-primary px-4 py-2.5 rounded-xl font-bold text-xs shadow-md flex items-center gap-1.5">
-                <i data-lucide="plus" class="w-4 h-4"></i> Llevar Pack
-              </button>
+              <div class="flex items-center gap-2">
+                <button onclick="openProductDetail(901)" class="px-3 py-2.5 rounded-xl border border-brand-border bg-brand-bg hover:border-brand-primary text-brand-text font-bold text-xs transition" title="Ver detalles y variantes">
+                  Ficha
+                </button>
+                <button onclick="addBundleToCart(901)" class="btn-brand-primary px-4 py-2.5 rounded-xl font-bold text-xs shadow-md flex items-center gap-1.5">
+                  <i data-lucide="plus" class="w-4 h-4"></i> Llevar Pack
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -661,25 +671,35 @@
           <div class="absolute top-3 right-3 bg-red-600 text-white font-extrabold text-[11px] px-2.5 py-1 rounded-full shadow z-10">
             -18% OFF
           </div>
-          <div class="aspect-video bg-brand-bg overflow-hidden relative">
+          <div onclick="openProductDetail(902)" class="aspect-video bg-brand-bg overflow-hidden relative cursor-pointer">
             <img src="assets/images/banner-colocolo.jpg" alt="Pack Albo Campeón" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+              <span class="bg-white text-black text-xs font-bold px-4 py-2 rounded-full shadow-lg flex items-center gap-1.5">
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i> Ver Ficha del Pack
+              </span>
+            </div>
           </div>
           <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
             <div>
               <span class="text-[10px] font-bold uppercase tracking-wider text-amber-600">Edición Oficial Fanáticos</span>
-              <h3 class="font-headline font-bold text-lg text-brand-text mt-1">Pack Campeón Colo-Colo</h3>
+              <h3 onclick="openProductDetail(902)" class="font-headline font-bold text-lg text-brand-text mt-1 cursor-pointer hover:text-brand-primary transition">Pack Campeón Colo-Colo</h3>
               <p class="text-xs text-brand-muted mt-2">
                 Incluye 1 Café Centenario Colo-Colo 250g + 1 Prensa Francesa Borosilicato 600ml + Sticker Oficial.
               </p>
             </div>
             <div class="pt-4 border-t border-brand-border flex items-center justify-between">
-              <div>
+              <div onclick="openProductDetail(902)" class="cursor-pointer">
                 <span class="text-xs text-brand-muted line-through">$21.800</span>
                 <p class="text-xl font-bold font-headline text-brand-primary">$17.990 CLP</p>
               </div>
-              <button onclick="addBundleToCart('Pack Campeón Colo-Colo', 17990, 'assets/images/banner-colocolo.jpg')" class="btn-brand-primary px-4 py-2.5 rounded-xl font-bold text-xs shadow-md flex items-center gap-1.5">
-                <i data-lucide="plus" class="w-4 h-4"></i> Llevar Pack
-              </button>
+              <div class="flex items-center gap-2">
+                <button onclick="openProductDetail(902)" class="px-3 py-2.5 rounded-xl border border-brand-border bg-brand-bg hover:border-brand-primary text-brand-text font-bold text-xs transition" title="Ver detalles y variantes">
+                  Ficha
+                </button>
+                <button onclick="addBundleToCart(902)" class="btn-brand-primary px-4 py-2.5 rounded-xl font-bold text-xs shadow-md flex items-center gap-1.5">
+                  <i data-lucide="plus" class="w-4 h-4"></i> Llevar Pack
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -689,25 +709,35 @@
           <div class="absolute top-3 right-3 bg-red-600 text-white font-extrabold text-[11px] px-2.5 py-1 rounded-full shadow z-10">
             -17% OFF
           </div>
-          <div class="aspect-video bg-brand-bg overflow-hidden relative">
+          <div onclick="openProductDetail(903)" class="aspect-video bg-brand-bg overflow-hidden relative cursor-pointer">
             <img src="assets/images/banner-lafinca.jpg" alt="Dúo Tostaduría La Finca" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+              <span class="bg-white text-black text-xs font-bold px-4 py-2 rounded-full shadow-lg flex items-center gap-1.5">
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i> Ver Ficha del Pack
+              </span>
+            </div>
           </div>
           <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
             <div>
               <span class="text-[10px] font-bold uppercase tracking-wider text-emerald-700">100% Arábica Tostado en Chile</span>
-              <h3 class="font-headline font-bold text-lg text-brand-text mt-1">Dúo Tostaduría La Finca</h3>
+              <h3 onclick="openProductDetail(903)" class="font-headline font-bold text-lg text-brand-text mt-1 cursor-pointer hover:text-brand-primary transition">Dúo Tostaduría La Finca</h3>
               <p class="text-xs text-brand-muted mt-2">
                 Lleva 1 Café Valle del Cauca 250g (Medio) + 1 Café Quindío 250g (Intenso) en grano o molido fresco.
               </p>
             </div>
             <div class="pt-4 border-t border-brand-border flex items-center justify-between">
-              <div>
+              <div onclick="openProductDetail(903)" class="cursor-pointer">
                 <span class="text-xs text-brand-muted line-through">$27.980</span>
                 <p class="text-xl font-bold font-headline text-brand-primary">$22.990 CLP</p>
               </div>
-              <button onclick="addBundleToCart('Dúo Tostaduría La Finca', 22990, 'assets/images/banner-lafinca.jpg')" class="btn-brand-primary px-4 py-2.5 rounded-xl font-bold text-xs shadow-md flex items-center gap-1.5">
-                <i data-lucide="plus" class="w-4 h-4"></i> Llevar Pack
-              </button>
+              <div class="flex items-center gap-2">
+                <button onclick="openProductDetail(903)" class="px-3 py-2.5 rounded-xl border border-brand-border bg-brand-bg hover:border-brand-primary text-brand-text font-bold text-xs transition" title="Ver detalles y variantes">
+                  Ficha
+                </button>
+                <button onclick="addBundleToCart(903)" class="btn-brand-primary px-4 py-2.5 rounded-xl font-bold text-xs shadow-md flex items-center gap-1.5">
+                  <i data-lucide="plus" class="w-4 h-4"></i> Llevar Pack
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -795,7 +825,7 @@
       <div class="hidden sm:flex items-center gap-2 text-xs text-brand-muted">
         <a href="javascript:goToCatalogView()" class="hover:underline">Inicio</a>
         <span>/</span>
-        <span id="pdp-crumb-category" class="text-brand-secondary font-medium">Categoría</span>
+        <span onclick="goToCategoryFromPdp()" id="pdp-crumb-category" class="text-brand-secondary font-medium hover:underline cursor-pointer">Categoría</span>
         <span>/</span>
         <span id="pdp-crumb-title" class="font-bold text-brand-text truncate max-w-xs">Producto</span>
       </div>
@@ -1172,8 +1202,8 @@
   <!-- ========================================== -->
   <!-- SCRIPTS Y LÓGICA DE CONTROL                -->
   <!-- ========================================== -->
-  <script src="brand-logos.js?v=3.0"></script>
-  <script src="products.js?v=3.0"></script>
+  <script src="brand-logos.js?v=3.2"></script>
+  <script src="products.js?v=3.2"></script>
 
   <script>
     const brandProfiles = {
@@ -1294,14 +1324,21 @@
         'soluble': 'Café Soluble Liofilizado',
         'accesorios': 'Accesorios & Preparación'
       };
-      document.getElementById('pdp-crumb-category').textContent = categoryLabels[prod.category] || prod.category.toUpperCase();
+      document.getElementById('pdp-crumb-category').textContent = (prod.id >= 900) ? 'Ofertas Flash & Packs' : (categoryLabels[prod.category] || prod.category.toUpperCase());
       document.getElementById('pdp-description').textContent = prod.description || 'Café y té de selección artesanal con tueste e importación directa.';
       document.getElementById('pdp-qty-display').textContent = '1';
 
       // Dinamizar receta sensorial según categoría
       const recipeBox = document.getElementById('pdp-barista-recipe');
       if (recipeBox) {
-        if (prod.category === 'cafe') {
+        if (prod.id >= 900) {
+          recipeBox.innerHTML = `
+            <p class="font-bold text-brand-text">🎁 Contenido del Pack Promocional & Degustación:</p>
+            <p class="text-brand-muted text-[11px] leading-relaxed">
+              Lote combinado con descuento exclusivo. Incluye empaque de regalo y sellos herméticos independientes para cada producto. Sigue las instrucciones de cada elemento para disfrutar del maridaje perfecto.
+            </p>
+          `;
+        } else if (prod.category === 'cafe') {
           recipeBox.innerHTML = `
             <p class="font-bold text-brand-text">☕ Receta Recomendada para Cafetera / Filtrado:</p>
             <p class="text-brand-muted text-[11px] leading-relaxed">
@@ -1701,7 +1738,26 @@
 
     function handleSearch(val) {
       searchQuery = val.trim();
+      if (currentPdpProduct || currentViewMode === 'app') {
+        goToCatalogView();
+      }
       renderCatalog(true);
+      if (searchQuery.length > 0) {
+        const catEl = document.getElementById('catalogo');
+        if (catEl) catEl.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    function goToCategoryFromPdp() {
+      if (currentPdpProduct) {
+        const cat = currentPdpProduct.category;
+        goToCatalogView();
+        setCategoryFilter(cat);
+        const catEl = document.getElementById('catalogo');
+        if (catEl) catEl.scrollIntoView({ behavior: 'smooth' });
+      } else {
+        goToCatalogView();
+      }
     }
 
     // CRONÓMETRO DE BARISTA (APP MÓVIL)
@@ -1758,15 +1814,28 @@
     }
 
     // BUNDLES OFERTAS FLASH
-    function addBundleToCart(title, price, image) {
+    function addBundleToCart(prodIdOrTitle, price, image) {
+      if (typeof prodIdOrTitle === 'number') {
+        const p = allProducts.find(x => x.id === prodIdOrTitle);
+        if (p) {
+          addToCart({
+            id: p.id,
+            title: p.title,
+            variantTitle: p.variants && p.variants.length > 0 ? p.variants[0].title : 'Pack Promocional',
+            price: p.price,
+            image: p.image || image
+          });
+          return;
+        }
+      }
       addToCart({
         id: Math.floor(Math.random() * 90000) + 10000,
-        title: title,
+        title: prodIdOrTitle,
         variantTitle: "Pack Promocional",
         price: price,
         image: image
       });
-      showToast(`¡${title} añadido a la canasta!`);
+      showToast(`¡${prodIdOrTitle} añadido a la canasta!`);
     }
 
     // CARRITO
