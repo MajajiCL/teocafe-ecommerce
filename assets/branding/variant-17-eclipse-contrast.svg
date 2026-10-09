@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1080" height="1080" viewBox="0 0 1080 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800&amp;family=Montserrat:wght@400;500;600&amp;display=swap');
+      .v17-title { font-family: 'Cinzel', serif; font-weight: 700; letter-spacing: 16px; font-size: 54px; fill: url(#goldGrad17Text); }
+      .v17-sub { font-family: 'Montserrat', sans-serif; font-weight: 600; letter-spacing: 8px; font-size: 15px; fill: #FDE68A; }
+    </style>
+    <radialGradient id="bgGrad17" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#1B120B" /><stop offset="60%" stop-color="#080605" /><stop offset="100%" stop-color="#000000" />
+    </radialGradient>
+    <linearGradient id="goldGrad17" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFBEB" /><stop offset="35%" stop-color="#F59E0B" /><stop offset="100%" stop-color="#78350F" />
+    </linearGradient>
+    <linearGradient id="goldGrad17Text" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFBEB" /><stop offset="50%" stop-color="#FCD34D" /><stop offset="100%" stop-color="#D97706" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1080" height="1080" fill="url(#bgGrad17)" />
+
+  <!-- Eclipse Corona Glow -->
+  <circle cx="540" cy="425" r="240" fill="none" stroke="url(#goldGrad17)" stroke-width="1" opacity="0.3" />
+  
+  <g transform="translate(540, 425)">
+    <!-- Aro exterior con borde cortado estilo eclipse -->
+    <path d="M 0,-210 C 120,-210 210,-120 210,0 C 210,120 120,210 0,210 C -120,210 -210,120 -210,0 C -210,-120 -120,-210 0,-210" stroke="url(#goldGrad17)" stroke-width="6" fill="none" />
+    
+    <!-- Lado Iluminado (Oro puro): La hoja de té que recibe el rayo de sol -->
+    <path d="M 0,-180 C -110,-130 -160,-40 -160,20 C -160,110 -90,170 0,180 C -50,130 -60,50 -50,-20 C -45,-80 -20,-140 0,-180 Z" fill="url(#goldGrad17)" />
+    
+    <!-- Lado Sombra (Negro Obsidiana con contorno dorado): El Grano de Café Tostado Oscuro -->
+    <path d="M 0,-180 C 110,-150 160,-70 160,25 C 160,120 90,175 0,180 Z" fill="#0E0A07" stroke="url(#goldGrad17)" stroke-width="3" />
+    <path d="M 0,-165 C 40,-95 45,-30 25,15 C 8,55 30,110 0,165" stroke="url(#goldGrad17)" stroke-width="3" stroke-linecap="round" fill="none" />
+  </g>
+
+  <text x="540" y="765" text-anchor="middle" class="v17-title">TÉ O CAFÉ</text>
+  <text x="540" y="825" text-anchor="middle" class="v17-sub">ECLIPSE NOIR EDITION · TEOCAFE.CL</text>
+</svg>

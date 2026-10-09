@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1080" height="1080" viewBox="0 0 1080 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&amp;family=Montserrat:wght@400;500;600&amp;display=swap');
+      .v23-title { font-family: 'Playfair Display', serif; font-weight: 700; letter-spacing: 14px; font-size: 58px; fill: url(#goldGrad23); }
+      .v23-sub { font-family: 'Montserrat', sans-serif; font-weight: 600; letter-spacing: 8px; font-size: 15px; fill: #FDE68A; }
+    </style>
+    <radialGradient id="bgGrad23" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#18130E" /><stop offset="60%" stop-color="#080605" /><stop offset="100%" stop-color="#020202" />
+    </radialGradient>
+    <linearGradient id="goldGrad23" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFBEB" /><stop offset="30%" stop-color="#FCD34D" /><stop offset="65%" stop-color="#F59E0B" /><stop offset="100%" stop-color="#B45309" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1080" height="1080" fill="url(#bgGrad23)" />
+
+  <!-- Marco Ovalado de Herbolario Antiguo -->
+  <ellipse cx="540" cy="420" rx="220" ry="250" stroke="url(#goldGrad23)" stroke-width="2" fill="none" />
+  <ellipse cx="540" cy="420" rx="205" ry="235" stroke="url(#goldGrad23)" stroke-width="0.8" stroke-dasharray="3 3" opacity="0.4" fill="none" />
+
+  <!-- Grabado de Rama Entrelazada (Camellia Sinensis & Coffea Arabica) -->
+  <g transform="translate(540, 420)">
+    <!-- Tallo principal curvado -->
+    <path d="M 0, 160 C -30, 80 30, -40 0, -150" stroke="url(#goldGrad23)" stroke-width="3" stroke-linecap="round" fill="none" />
+    
+    <!-- Hojas de Té grabadas a los costados -->
+    <path d="M -15, 30 C -65, 20 -85, -20 -70, -60 C -35, -45 -20, 0 -15, 30 Z" fill="url(#goldGrad23)" />
+    <path d="M -45, -15 L -65, -35" stroke="#080605" stroke-width="1.5" stroke-linecap="round" />
+    
+    <path d="M 15, -40 C 65, -50 85, -90 70, -130 C 35, -115 20, -70 15, -40 Z" fill="url(#goldGrad23)" />
+    <path d="M 45, -85 L 65, -105" stroke="#080605" stroke-width="1.5" stroke-linecap="round" />
+
+    <!-- Cerezas / Granos de Café en racimo -->
+    <circle cx="20" cy="60" r="16" fill="url(#goldGrad23)" />
+    <circle cx="45" cy="80" r="14" fill="url(#goldGrad23)" />
+    <circle cx="25" cy="100" r="15" fill="url(#goldGrad23)" />
+    <!-- Brote superior -->
+    <path d="M 0, -150 C -15, -170 0, -190 0, -190 C 0, -190 15, -170 0, -150 Z" fill="url(#goldGrad23)" />
+  </g>
+
+  <text x="540" y="760" text-anchor="middle" class="v23-title">TÉ O CAFÉ</text>
+  <text x="540" y="818" text-anchor="middle" class="v23-sub">GRABADO BOTÁNICO DE AUTOR · MAISON DE THÉ</text>
+</svg>

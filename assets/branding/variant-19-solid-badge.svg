@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1080" height="1080" viewBox="0 0 1080 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&amp;display=swap');
+      .v19-title { font-family: 'Montserrat', sans-serif; font-weight: 900; letter-spacing: 14px; font-size: 58px; fill: url(#goldGrad19); }
+      .v19-sub { font-family: 'Montserrat', sans-serif; font-weight: 700; letter-spacing: 7px; font-size: 15px; fill: #D97706; }
+    </style>
+    <linearGradient id="bgGrad19" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#14100D" /><stop offset="60%" stop-color="#080605" /><stop offset="100%" stop-color="#000000" />
+    </linearGradient>
+    <linearGradient id="goldGrad19" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFBEB" /><stop offset="25%" stop-color="#FCD34D" /><stop offset="65%" stop-color="#F59E0B" /><stop offset="100%" stop-color="#92400E" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1080" height="1080" fill="url(#bgGrad19)" />
+
+  <g transform="translate(540, 420)">
+    <!-- Medallón Sólido Grueso de Alto Impacto Visual -->
+    <circle cx="0" cy="0" r="230" fill="url(#goldGrad19)" />
+    <!-- Círculo interior recortado -->
+    <circle cx="0" cy="0" r="200" fill="#080605" />
+
+    <!-- Núcleo de Alto Contraste -->
+    <path d="M 0,-160 C -95,-120 -130,-35 -130,20 C -130,95 -70,145 0,160 Z" fill="url(#goldGrad19)" />
+    <path d="M 0,-160 C 95,-120 130,-35 130,20 C 130,95 70,145 0,160 Z" fill="url(#goldGrad19)" />
+    
+    <!-- Hendidura negra recortada -->
+    <circle cx="0" cy="0" r="30" fill="#080605" />
+    <path d="M 0,-150 C 30,-90 35,-30 15,10 C 0,45 20,95 0,140" stroke="#080605" stroke-width="8" stroke-linecap="round" fill="none" />
+  </g>
+
+  <text x="540" y="770" text-anchor="middle" class="v19-title">TÉ O CAFÉ</text>
+  <text x="540" y="825" text-anchor="middle" class="v19-sub">SOLID BADGE EDITION · FAVICON &amp; PACKAGING</text>
+</svg>

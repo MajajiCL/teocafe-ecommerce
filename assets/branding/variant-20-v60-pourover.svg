@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1080" height="1080" viewBox="0 0 1080 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800&amp;family=Montserrat:wght@500;600;700&amp;display=swap');
+      .v20-title { font-family: 'Cinzel', serif; font-weight: 700; letter-spacing: 14px; font-size: 54px; fill: url(#goldGrad20); }
+      .v20-sub { font-family: 'Montserrat', sans-serif; font-weight: 600; letter-spacing: 8px; font-size: 16px; fill: #FDE68A; }
+    </style>
+    <radialGradient id="bgGrad20" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#19130E" /><stop offset="60%" stop-color="#080605" /><stop offset="100%" stop-color="#020202" />
+    </radialGradient>
+    <linearGradient id="goldGrad20" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFBEB" /><stop offset="30%" stop-color="#FCD34D" /><stop offset="65%" stop-color="#F59E0B" /><stop offset="100%" stop-color="#B45309" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1080" height="1080" fill="url(#bgGrad20)" />
+
+  <g transform="translate(540, 410)">
+    <!-- Cono V60 de Porcelana (Trazo estilizado) -->
+    <path d="M -150,-140 L 150,-140 L 50,40 L -50,40 Z" stroke="url(#goldGrad20)" stroke-width="3.5" stroke-linejoin="round" fill="none" />
+    <!-- Nervaduras cónicas espirales interiores -->
+    <path d="M -110,-120 L -35,20" stroke="url(#goldGrad20)" stroke-width="1.8" opacity="0.6" />
+    <path d="M -60,-120 L -15,20" stroke="url(#goldGrad20)" stroke-width="1.8" opacity="0.6" />
+    <path d="M 0,-120 L 0,20" stroke="url(#goldGrad20)" stroke-width="1.8" opacity="0.6" />
+    <path d="M 60,-120 L 15,20" stroke="url(#goldGrad20)" stroke-width="1.8" opacity="0.6" />
+    <path d="M 110,-120 L 35,20" stroke="url(#goldGrad20)" stroke-width="1.8" opacity="0.6" />
+
+    <!-- Base y servidor inferior -->
+    <path d="M -70,50 L 70,50" stroke="url(#goldGrad20)" stroke-width="3" stroke-linecap="round" />
+    
+    <!-- Gotita dorada cayendo en el centro -->
+    <circle cx="0" cy="85" r="7" fill="url(#goldGrad20)" />
+    <circle cx="0" cy="120" r="5" fill="url(#goldGrad20)" />
+
+    <!-- Hoja de té flotando sobre el lecho del cono -->
+    <path d="M -40,-180 C -60,-160 -50,-130 -30,-125 C -10,-130 0,-160 -40,-180 Z" fill="url(#goldGrad20)" />
+    <!-- Grano de café tostado al costado -->
+    <ellipse cx="40" cy="-155" rx="16" ry="22" fill="url(#goldGrad20)" transform="rotate(20 40 -155)" />
+    <path d="M 40,-170 C 45,-155 35,-155 40,-140" stroke="#080605" stroke-width="2.5" stroke-linecap="round" fill="none" />
+  </g>
+
+  <text x="540" y="755" text-anchor="middle" class="v20-title">TÉ O CAFÉ</text>
+  <text x="540" y="815" text-anchor="middle" class="v20-sub">MÉTODOS DE FILTRADO &amp; EXTRACCIÓN MANUAL</text>
+</svg>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1080" height="1080" viewBox="0 0 1080 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&amp;display=swap');
+      .v24-title { font-family: 'Montserrat', sans-serif; font-weight: 800; letter-spacing: 14px; font-size: 52px; fill: url(#goldGrad24); }
+      .v24-sub { font-family: 'Montserrat', sans-serif; font-weight: 700; letter-spacing: 7px; font-size: 15px; fill: #FDE68A; }
+    </style>
+    <radialGradient id="bgGrad24" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#19130E" /><stop offset="60%" stop-color="#080605" /><stop offset="100%" stop-color="#020202" />
+    </radialGradient>
+    <linearGradient id="goldGrad24" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFBEB" /><stop offset="30%" stop-color="#FCD34D" /><stop offset="65%" stop-color="#F59E0B" /><stop offset="100%" stop-color="#B45309" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1080" height="1080" fill="url(#bgGrad24)" />
+
+  <g transform="translate(540, 410)">
+    <!-- Hexágono Suizo de Precisión -->
+    <polygon points="0,-220 190,-110 190,110 0,220 -190,110 -190,-110" stroke="url(#goldGrad24)" stroke-width="3" fill="none" />
+    <polygon points="0,-200 170,-100 170,100 0,200 -170,100 -170,-100" stroke="url(#goldGrad24)" stroke-width="1" stroke-dasharray="4 4" opacity="0.4" fill="none" />
+
+    <!-- Cruz Suiza Minimalista & Monograma TC integrado -->
+    <line x1="0" y1="-120" x2="0" y2="120" stroke="url(#goldGrad24)" stroke-width="4" stroke-linecap="round" />
+    <line x1="-120" y1="0" x2="120" y2="0" stroke="url(#goldGrad24)" stroke-width="4" stroke-linecap="round" />
+
+    <!-- Cuadrantes: Hoja arriba izq, Grano arriba der, 20 abajo izq, 26 abajo der -->
+    <path d="M -50,-80 C -80,-60 -70,-30 -45,-35 C -35,-45 -35,-70 -50,-80 Z" fill="url(#goldGrad24)" />
+    <ellipse cx="50" cy="-55" rx="14" ry="20" fill="url(#goldGrad24)" transform="rotate(25 50 -55)" />
+    
+    <text x="-50" y="75" text-anchor="middle" font-family="'Montserrat', sans-serif" font-size="22" font-weight="800" fill="url(#goldGrad24)">20</text>
+    <text x="50" y="75" text-anchor="middle" font-family="'Montserrat', sans-serif" font-size="22" font-weight="800" fill="url(#goldGrad24)">26</text>
+  </g>
+
+  <text x="540" y="755" text-anchor="middle" class="v24-title">TÉ O CAFÉ</text>
+  <text x="540" y="815" text-anchor="middle" class="v24-sub">SWISS PRECISION ROASTING · TEOCAFE.CL</text>
+</svg>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1080" height="1080" viewBox="0 0 1080 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;display=swap');
+      .v16-title { font-family: 'Montserrat', sans-serif; font-weight: 300; letter-spacing: 22px; font-size: 46px; fill: #FFFBEB; }
+      .v16-sub { font-family: 'Montserrat', sans-serif; font-weight: 500; letter-spacing: 10px; font-size: 14px; fill: #F59E0B; }
+    </style>
+    <radialGradient id="bgGrad16" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#120E0A" /><stop offset="60%" stop-color="#070504" /><stop offset="100%" stop-color="#020101" />
+    </radialGradient>
+    <linearGradient id="goldGrad16" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFBEB" /><stop offset="40%" stop-color="#FCD34D" /><stop offset="80%" stop-color="#F59E0B" /><stop offset="100%" stop-color="#B45309" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1080" height="1080" fill="url(#bgGrad16)" />
+
+  <g transform="translate(540, 430)">
+    <circle cx="0" cy="0" r="230" stroke="url(#goldGrad16)" stroke-width="1.5" />
+    <circle cx="0" cy="0" r="218" stroke="url(#goldGrad16)" stroke-width="0.8" stroke-dasharray="3 3" opacity="0.4" />
+    
+    <!-- Hoja Hairline Izquierda -->
+    <path d="M 0,-180 C -110,-130 -150,-40 -150,20 C -150,100 -80,160 0,180" stroke="url(#goldGrad16)" stroke-width="2" fill="none" />
+    <path d="M 0,-150 Q -60,-20 0,150" stroke="url(#goldGrad16)" stroke-width="1.2" fill="none" opacity="0.7" />
+    <path d="M -25,-80 L -80,-70" stroke="url(#goldGrad16)" stroke-width="1" opacity="0.5" />
+    <path d="M -35,-15 L -105,-15" stroke="url(#goldGrad16)" stroke-width="1" opacity="0.5" />
+    <path d="M -25,50 L -85,55" stroke="url(#goldGrad16)" stroke-width="1" opacity="0.5" />
+
+    <!-- Grano Hairline Derecho -->
+    <path d="M 0,-180 C 110,-130 150,-40 150,20 C 150,100 80,160 0,180" stroke="url(#goldGrad16)" stroke-width="2" fill="none" />
+    <path d="M 0,-165 C 40,-95 45,-30 25,15 C 8,55 30,110 0,165" stroke="url(#goldGrad16)" stroke-width="1.8" fill="none" />
+
+    <!-- Puntos cardinales de agrimensura -->
+    <circle cx="0" cy="-245" r="2" fill="url(#goldGrad16)" />
+    <circle cx="0" cy="245" r="2" fill="url(#goldGrad16)" />
+    <circle cx="-245" cy="0" r="2" fill="url(#goldGrad16)" />
+    <circle cx="245" cy="0" r="2" fill="url(#goldGrad16)" />
+  </g>
+
+  <text x="540" y="775" text-anchor="middle" class="v16-title">TÉ O CAFÉ</text>
+  <text x="540" y="830" text-anchor="middle" class="v16-sub">HAIRLINE EDITION · SANTIAGO · TEOCAFE.CL</text>
+</svg>
