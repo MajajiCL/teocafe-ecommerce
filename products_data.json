@@ -5528,37 +5528,37 @@
   },
   {
     "id": 901,
-    "title": "Pack Bienvenida Especialidad: Café + Té + Miel",
+    "title": "Pack Bienvenida Especialidad: Café + Té",
     "handle": "pack-bienvenida-especialidad",
     "source": "Selección Té o Café",
     "vendor": "teocafe.cl",
     "category": "packs",
     "category_label": "Packs & Ofertas Flash",
-    "price": 23990,
-    "compare_at_price": 29970,
+    "price": 19990,
+    "compare_at_price": 24980,
     "image": "assets/images/packs/pack-901.jpg",
-    "description": "El pack degustación para entrar a la casa por los tres lados: café, té y miel. Incluye 1 Café Valle del Cauca 250g (tueste medio artesanal, 100% arábica), 1 Lata de Té Basilur Ceylon Present en hoja 100g, y 1 Miel Multifloral del apiario Los Hualles, de la precordillera de Linares. Tres productores distintos, un solo despacho.",
-    "short_description": "Café Valle del Cauca 250g + Lata Basilur Ceylon en hoja 100g + Miel Multifloral Los Hualles.",
+    "description": "El pack degustación para entrar a la casa con dos especialidades nobles: café y té. Incluye 1 Café Valle del Cauca 250g (tueste medio artesanal en Santiago, 100% arábica) y 1 Lata de Té Basilur Ceylon Present en hoja 100g importado directamente de Sri Lanka. Dos grandes clásicos en un solo despacho con 20% de descuento.",
+    "short_description": "Café Valle del Cauca 250g + Lata Basilur Ceylon en hoja 100g.",
     "variants": [
       {
         "id": 9011,
         "title": "Café en Grano Entero",
-        "price": 23990,
-        "compare_at_price": 29970,
+        "price": 19990,
+        "compare_at_price": 24980,
         "available": true
       },
       {
         "id": 9012,
         "title": "Café Molido para Filtrado / Prensa",
-        "price": 23990,
-        "compare_at_price": 29970,
+        "price": 19990,
+        "compare_at_price": 24980,
         "available": true
       },
       {
         "id": 9013,
         "title": "Café Molido para Espresso / Moka",
-        "price": 23990,
-        "compare_at_price": 29970,
+        "price": 19990,
+        "compare_at_price": 24980,
         "available": true
       }
     ],
@@ -5568,11 +5568,10 @@
       "Bienvenida",
       "Café",
       "Té",
-      "Miel",
       "Descuento",
       "Flash"
     ],
-    "nota_revisar": "09-10-2026: la descripción anterior prometía «20 pirámides de seda» y «miel de Ulmo Patagonia 500 g». Ninguna de las dos existía en el catálogo: no hay lata de pirámides y no había miel. Ahora apunta a productos reales. Confirmar que el pack se arma así.",
+    "nota_revisar": "Actualizado: Pack Bienvenida contiene Café Valle del Cauca 250g + Lata Basilur Ceylon 100g (sin miel).",
     "images": [
       "assets/images/packs/pack-901.jpg"
     ]
