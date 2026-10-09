@@ -5532,11 +5532,11 @@ const operationalCatalog = [
     "handle": "pack-bienvenida-especialidad",
     "source": "Selección Té o Café",
     "vendor": "teocafe.cl",
-    "category": "cafe",
-    "category_label": "Ofertas Flash & Packs",
+    "category": "packs",
+    "category_label": "Packs & Ofertas Flash",
     "price": 23990,
     "compare_at_price": 29970,
-    "image": "https://cdn.shopify.com/s/files/1/0589/8023/7371/files/3_9eb431c7-a168-4a4c-9603-0870d5b5ae15.jpg?v=1770996495",
+    "image": "assets/images/packs/pack-901.jpg",
     "description": "El pack degustación para entrar a la casa por los tres lados: café, té y miel. Incluye 1 Café Valle del Cauca 250g (tueste medio artesanal, 100% arábica), 1 Lata de Té Basilur Ceylon Present en hoja 100g, y 1 Miel Multifloral del apiario Los Hualles, de la precordillera de Linares. Tres productores distintos, un solo despacho.",
     "short_description": "Café Valle del Cauca 250g + Lata Basilur Ceylon en hoja 100g + Miel Multifloral Los Hualles.",
     "variants": [
@@ -5572,7 +5572,10 @@ const operationalCatalog = [
       "Descuento",
       "Flash"
     ],
-    "nota_revisar": "09-10-2026: la descripción anterior prometía «20 pirámides de seda» y «miel de Ulmo Patagonia 500 g». Ninguna de las dos existía en el catálogo: no hay lata de pirámides y no había miel. Ahora apunta a productos reales. Confirmar que el pack se arma así."
+    "nota_revisar": "09-10-2026: la descripción anterior prometía «20 pirámides de seda» y «miel de Ulmo Patagonia 500 g». Ninguna de las dos existía en el catálogo: no hay lata de pirámides y no había miel. Ahora apunta a productos reales. Confirmar que el pack se arma así.",
+    "images": [
+      "assets/images/packs/pack-901.jpg"
+    ]
   },
   {
     "id": 902,
@@ -5580,11 +5583,11 @@ const operationalCatalog = [
     "handle": "pack-campeon-colo-colo",
     "source": "Café de Colo-Colo",
     "vendor": "cafedecolocolo.cl",
-    "category": "cafe",
-    "category_label": "Ofertas Flash & Packs",
+    "category": "packs",
+    "category_label": "Packs & Ofertas Flash",
     "price": 17990,
     "compare_at_price": 21800,
-    "image": "https://cdn.shopify.com/s/files/1/0951/1580/4965/files/CAFEENBOLSAGRANDE_MOLIDO.png?v=1754445052",
+    "image": "assets/images/packs/pack-902.jpg",
     "description": "Edición oficial conmemorativa para los hinchas del Cacique. Incluye 1 bolsa de Café Centenario Colo-Colo 250g (100% Arábica de altura con tueste medio balanceado), 1 Prensa Francesa de vidrio borosilicato resistente a choques térmicos (600ml) y un Sticker Oficial del Club. Ideal para extraer un café con cuerpo sedoso, sin acidez punzante y aroma envolvente.",
     "short_description": "Café Centenario Colo-Colo 250g + Prensa Francesa 600ml + Sticker Oficial.",
     "variants": [
@@ -5610,6 +5613,9 @@ const operationalCatalog = [
       "Café Centenario",
       "Oferta",
       "Flash"
+    ],
+    "images": [
+      "assets/images/packs/pack-902.jpg"
     ]
   },
   {
@@ -5618,11 +5624,11 @@ const operationalCatalog = [
     "handle": "duo-tostaduria-la-finca",
     "source": "La Finca - Café Artesanal",
     "vendor": "lafinca.io",
-    "category": "cafe",
-    "category_label": "Ofertas Flash & Packs",
+    "category": "packs",
+    "category_label": "Packs & Ofertas Flash",
     "price": 22990,
     "compare_at_price": 27980,
-    "image": "https://cdn.shopify.com/s/files/1/0589/8023/7371/files/7_f9dcc72f-2cb4-4159-a642-9947e3250171.jpg?v=1770996522",
+    "image": "assets/images/packs/pack-903.jpg",
     "description": "El pack perfecto para comparar los dos grandes perfiles de Colombia tostados en pequeños lotes en Santiago. Incluye 1 bolsa de Café Valle del Cauca 250g (Tueste Medio Full City con notas florales, panela y chocolate) + 1 bolsa de Café Quindío 250g (Tueste Intenso Francés con cuerpo pronunciado, notas a nuez y cacao oscuro). Total 500g de café recién tostado.",
     "short_description": "Café Valle del Cauca 250g (Medio) + Café Quindío 250g (Intenso) recién tostados.",
     "variants": [
@@ -5656,6 +5662,9 @@ const operationalCatalog = [
       "Pack",
       "Oferta",
       "Flash"
+    ],
+    "images": [
+      "assets/images/packs/pack-903.jpg"
     ]
   },
   {
