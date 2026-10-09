@@ -1,62 +1,64 @@
 <!DOCTYPE html>
-<html lang="es" class="theme-noir">
+<html lang="es" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Brand Kit Oficial — 5 Variantes de Logo para Té o Café (teocafe.cl)</title>
-  <meta name="description" content="Galería de variantes de logo oficial, archivos vectoriales SVG y PNG de alta resolución para Instagram (@teocafe.cl).">
-  
+  <title>Brand Kit Oficial — 10 Variantes de Logotipo para Té o Café (teocafe.cl)</title>
+  <meta name="description" content="Manual de identidad visual y variantes de logotipo en alta definición para teocafe.cl. 10 conceptos exclusivos de lujo.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☕</text></svg>">
+
+  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
 
   <script>
     tailwind.config = {
+      darkMode: 'class',
       theme: {
         extend: {
           colors: {
             brand: {
               gold: '#F59E0B',
               'gold-light': '#FDE68A',
-              'gold-dark': '#D97706',
-              noir: '#0E0A07',
-              'noir-deep': '#050403',
-              card: '#16100B',
-              border: 'rgba(217, 119, 6, 0.25)'
+              'gold-dark': '#B45309',
+              dark: '#080605',
+              card: '#120E0B',
+              border: '#2A1F18',
             }
           },
           fontFamily: {
             headline: ['Cinzel', 'serif'],
+            editorial: ['"Playfair Display"', 'serif'],
             sans: ['Montserrat', 'sans-serif'],
-            serif: ['Playfair Display', 'serif']
           }
         }
       }
     }
   </script>
-
-  <style>
-    body {
-      background-color: #080605;
-      color: #F3F4F6;
-      font-family: 'Montserrat', sans-serif;
-    }
-  </style>
 </head>
-<body class="min-h-screen flex flex-col">
+<body class="bg-[#050403] text-zinc-100 font-sans min-h-screen flex flex-col selection:bg-amber-500 selection:text-black">
 
   <!-- Header -->
-  <header class="border-b border-amber-900/40 bg-[#0E0A07]/90 backdrop-blur-md sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
-      <a href="index.html" class="flex items-center gap-3 group">
-        <img src="assets/branding/variant-1-sello-imperial.png" alt="Té o Café Logo" class="w-10 h-10 rounded-full border border-amber-500/50 shadow">
-        <div>
-          <span class="font-headline font-bold text-lg text-white group-hover:text-amber-400 transition">Té o Café</span>
-          <span class="text-[10px] text-amber-500 block font-mono font-bold">teocafe.cl • Selección de Logotipos</span>
+  <header class="sticky top-0 z-50 bg-[#080605]/90 backdrop-blur-md border-b border-amber-900/40 px-4 sm:px-6 py-4">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-full border border-amber-500/60 bg-amber-950/40 flex items-center justify-center text-amber-400 font-headline font-bold text-lg shadow-inner">
+          TC
         </div>
-      </a>
+        <div>
+          <span class="font-headline tracking-widest text-lg font-bold text-white block leading-tight">
+            TÉ O CAFÉ
+          </span>
+          <span class="text-[10px] tracking-widest text-amber-400 uppercase font-medium">
+            Brand Kit Oficial • 10 Variantes
+          </span>
+        </div>
+      </div>
       <div class="flex items-center gap-3">
         <a href="index.html" class="text-xs text-zinc-400 hover:text-white transition flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-white/5 border border-white/10 hover:border-amber-500/40">
           <i data-lucide="arrow-left" class="w-4 h-4 text-amber-400"></i> Volver a la Tienda
@@ -68,13 +70,13 @@
   <!-- Hero Section -->
   <section class="py-12 sm:py-16 px-4 sm:px-6 max-w-7xl mx-auto w-full text-center">
     <span class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/40 text-xs font-bold uppercase tracking-widest mb-4">
-      👑 COLECCIÓN DE IDENTIDAD VISUAL • TEOCAFE.CL
+      👑 COLECCIÓN COMPLETA DE IDENTIDAD VISUAL • TEOCAFE.CL
     </span>
     <h1 class="font-headline text-3xl sm:text-5xl font-bold text-white mb-4">
-      Variantes de Logotipo para <span class="text-amber-400">Té o Café</span>
+      10 Variantes de Logotipo para <span class="text-amber-400">Té o Café</span>
     </h1>
     <p class="max-w-3xl mx-auto text-sm sm:text-base text-zinc-300 font-light leading-relaxed mb-8">
-      Hemos creado <strong>5 propuestas conceptuales de lujo</strong> en alta definición (PNG 1080x1080 px y vectores SVG escalables). Revisa cada una, compáralas y elige la que mejor proyecte la personalidad de la tostaduría para levantar el Instagram y las piezas de ValerIA.
+      Diseñadas en alta resolución (1080x1080 px y vectores SVG escalables) bajo el concepto <strong>Noir &amp; Gold Luxury</strong>. Explora la nueva <strong>Colección Moderna &amp; Minimalista</strong> (Opciones 6 a 10) y la <strong>Colección Heritage &amp; Tradicional</strong> (Opciones 1 a 5) para definir la imagen oficial de Instagram con ValerIA.
     </p>
     
     <div class="inline-flex flex-wrap items-center justify-center gap-3 text-xs font-semibold text-amber-300 bg-amber-950/40 border border-amber-800/60 px-5 py-2.5 rounded-2xl">
@@ -84,34 +86,174 @@
     </div>
   </section>
 
-  <!-- SECCIÓN 1: LAS 5 VARIANTES PRINCIPALES -->
-  <main class="max-w-7xl mx-auto px-4 sm:px-6 pb-20 w-full space-y-16">
+  <!-- SECCIÓN: NUEVA COLECCIÓN MODERNA & MINIMALISTA (6 A 10) -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 pb-20 w-full space-y-20">
 
     <div>
-      <div class="flex items-center gap-3 mb-8 pb-3 border-b border-amber-900/40">
-        <div class="w-8 h-8 rounded-lg bg-amber-500/20 flex items-center justify-center text-amber-400">
-          <i data-lucide="layers" class="w-4 h-4"></i>
+      <div class="flex items-center gap-3 mb-8 pb-3 border-b border-amber-500/40">
+        <div class="w-9 h-9 rounded-xl bg-amber-500/20 border border-amber-500/40 flex items-center justify-center text-amber-400 shadow">
+          <i data-lucide="sparkles" class="w-5 h-5"></i>
         </div>
         <div>
-          <h2 class="font-headline text-2xl font-bold text-white">5 Conceptos de Logotipo</h2>
-          <p class="text-xs text-amber-400/80">Haz clic en "Descargar PNG" en tu favorito para usarlo como foto de perfil de Instagram.</p>
+          <div class="flex items-center gap-2">
+            <h2 class="font-headline text-2xl font-bold text-white">Nueva Colección: Vanguardia &amp; Minimalismo</h2>
+            <span class="px-2.5 py-0.5 rounded-full bg-amber-500 text-black text-[10px] font-black uppercase">¡Nuevas!</span>
+          </div>
+          <p class="text-xs text-amber-400/80">Estilos limpios, contemporáneos, de revista editorial, geometría pura y arte zen.</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- VARIANTE 6 -->
+        <div class="bg-brand-card rounded-2xl border-2 border-amber-500/60 p-6 flex flex-col justify-between shadow-2xl relative overflow-hidden group">
+          <div class="absolute -top-1 -right-1 bg-gradient-to-r from-amber-500 to-amber-400 text-black text-[10px] font-black uppercase tracking-wider px-3.5 py-1.5 rounded-bl-xl shadow-lg">
+            🔥 Top Recomendada
+          </div>
+          <div>
+            <div class="flex items-center gap-2 text-amber-400 text-xs font-bold uppercase tracking-wider mb-2">
+              <span>Opción 6</span> • <span>Dualidad Icónica</span>
+            </div>
+            <h3 class="font-headline font-bold text-xl text-white mb-2">The Golden "O"</h3>
+            <p class="text-xs text-zinc-400 leading-relaxed mb-4">
+              Juega con el dilema del nombre: ¿Té o Café? La letra <strong>"O"</strong> se convierte en un aro dorado donde un hemisferio es la hoja de té y el otro es el grano de café en perfecta proporción.
+            </p>
+            <div class="aspect-square rounded-xl overflow-hidden bg-[#0A0705] border border-amber-900/50 p-4 flex items-center justify-center group-hover:border-amber-500/60 transition">
+              <img src="assets/branding/variant-6-golden-o.png" alt="Variante 6 Golden O" class="w-full h-full object-contain rounded-full shadow-2xl transition duration-500 group-hover:scale-105">
+            </div>
+          </div>
+          <div class="pt-5 border-t border-brand-border/60 flex items-center gap-2 mt-5">
+            <a href="assets/branding/variant-6-golden-o.png" download="teocafe-logo-v6-golden-o.png" class="flex-1 bg-amber-500 hover:bg-amber-400 text-black py-2.5 px-4 rounded-xl text-xs font-bold text-center transition flex items-center justify-center gap-1.5 shadow">
+              <i data-lucide="download" class="w-4 h-4"></i> Descargar PNG
+            </a>
+            <a href="assets/branding/variant-6-golden-o.svg" download="teocafe-logo-v6-golden-o.svg" class="py-2.5 px-3 rounded-xl border border-white/20 bg-white/5 hover:bg-white/10 text-white text-xs font-bold transition flex items-center justify-center gap-1">
+              SVG
+            </a>
+          </div>
+        </div>
+
+        <!-- VARIANTE 7 -->
+        <div class="bg-brand-card rounded-2xl border border-brand-border p-6 flex flex-col justify-between shadow-xl group hover:border-amber-500/40 transition">
+          <div>
+            <div class="flex items-center gap-2 text-amber-400 text-xs font-bold uppercase tracking-wider mb-2">
+              <span>Opción 7</span> • <span>Haute Couture / Vogue</span>
+            </div>
+            <h3 class="font-headline font-bold text-xl text-white mb-2">Editorial Didot (Quiet Luxury)</h3>
+            <p class="text-xs text-zinc-400 leading-relaxed mb-4">
+              Elegancia pura estilo perfume parisino o boutique de alta costura. Tipografía <em>Playfair</em> de contraste afilado, marco hairline dorado y una micro-rama botánica cruzando una gota de café.
+            </p>
+            <div class="aspect-square rounded-xl overflow-hidden bg-[#0A0705] border border-amber-900/50 p-4 flex items-center justify-center group-hover:border-amber-500/60 transition">
+              <img src="assets/branding/variant-7-editorial-didot.png" alt="Variante 7 Editorial Didot" class="w-full h-full object-contain rounded-full shadow-2xl transition duration-500 group-hover:scale-105">
+            </div>
+          </div>
+          <div class="pt-5 border-t border-brand-border/60 flex items-center gap-2 mt-5">
+            <a href="assets/branding/variant-7-editorial-didot.png" download="teocafe-logo-v7-editorial-didot.png" class="flex-1 bg-amber-500 hover:bg-amber-400 text-black py-2.5 px-4 rounded-xl text-xs font-bold text-center transition flex items-center justify-center gap-1.5 shadow">
+              <i data-lucide="download" class="w-4 h-4"></i> Descargar PNG
+            </a>
+            <a href="assets/branding/variant-7-editorial-didot.svg" download="teocafe-logo-v7-editorial-didot.svg" class="py-2.5 px-3 rounded-xl border border-white/20 bg-white/5 hover:bg-white/10 text-white text-xs font-bold transition flex items-center justify-center gap-1">
+              SVG
+            </a>
+          </div>
+        </div>
+
+        <!-- VARIANTE 8 -->
+        <div class="bg-brand-card rounded-2xl border border-brand-border p-6 flex flex-col justify-between shadow-xl group hover:border-amber-500/40 transition">
+          <div>
+            <div class="flex items-center gap-2 text-amber-400 text-xs font-bold uppercase tracking-wider mb-2">
+              <span>Opción 8</span> • <span>Estilo % Arabica / Kioto</span>
+            </div>
+            <h3 class="font-headline font-bold text-xl text-white mb-2">Minimalismo Geométrico</h3>
+            <p class="text-xs text-zinc-400 leading-relaxed mb-4">
+              Inspirado en la vanguardia arquitectónica de Tokio y cafeterías contemporáneas. Fusión de líneas monolíticas doradas formando la T y la C con una hoja áurea y grano elíptico.
+            </p>
+            <div class="aspect-square rounded-xl overflow-hidden bg-[#0A0705] border border-amber-900/50 p-4 flex items-center justify-center group-hover:border-amber-500/60 transition">
+              <img src="assets/branding/variant-8-minimal-geometric.png" alt="Variante 8 Minimal Geometric" class="w-full h-full object-contain rounded-full shadow-2xl transition duration-500 group-hover:scale-105">
+            </div>
+          </div>
+          <div class="pt-5 border-t border-brand-border/60 flex items-center gap-2 mt-5">
+            <a href="assets/branding/variant-8-minimal-geometric.png" download="teocafe-logo-v8-minimal-geometric.png" class="flex-1 bg-amber-500 hover:bg-amber-400 text-black py-2.5 px-4 rounded-xl text-xs font-bold text-center transition flex items-center justify-center gap-1.5 shadow">
+              <i data-lucide="download" class="w-4 h-4"></i> Descargar PNG
+            </a>
+            <a href="assets/branding/variant-8-minimal-geometric.svg" download="teocafe-logo-v8-minimal-geometric.svg" class="py-2.5 px-3 rounded-xl border border-white/20 bg-white/5 hover:bg-white/10 text-white text-xs font-bold transition flex items-center justify-center gap-1">
+              SVG
+            </a>
+          </div>
+        </div>
+
+        <!-- VARIANTE 9 -->
+        <div class="bg-brand-card rounded-2xl border border-brand-border p-6 flex flex-col justify-between shadow-xl group hover:border-amber-500/40 transition">
+          <div>
+            <div class="flex items-center gap-2 text-amber-400 text-xs font-bold uppercase tracking-wider mb-2">
+              <span>Opción 9</span> • <span>Third Wave Roastery</span>
+            </div>
+            <h3 class="font-headline font-bold text-xl text-white mb-2">Nordic Specialty (Octágono)</h3>
+            <p class="text-xs text-zinc-400 leading-relaxed mb-4">
+              Estilo tostaduría nórdica (Nomad, The Barn). Escudo octogonal facetado con vista cenital de taza de cata e ilustración lineal continua de infusión de té y café.
+            </p>
+            <div class="aspect-square rounded-xl overflow-hidden bg-[#0A0705] border border-amber-900/50 p-4 flex items-center justify-center group-hover:border-amber-500/60 transition">
+              <img src="assets/branding/variant-9-nordic-craft.png" alt="Variante 9 Nordic Craft" class="w-full h-full object-contain rounded-full shadow-2xl transition duration-500 group-hover:scale-105">
+            </div>
+          </div>
+          <div class="pt-5 border-t border-brand-border/60 flex items-center gap-2 mt-5">
+            <a href="assets/branding/variant-9-nordic-craft.png" download="teocafe-logo-v9-nordic-craft.png" class="flex-1 bg-amber-500 hover:bg-amber-400 text-black py-2.5 px-4 rounded-xl text-xs font-bold text-center transition flex items-center justify-center gap-1.5 shadow">
+              <i data-lucide="download" class="w-4 h-4"></i> Descargar PNG
+            </a>
+            <a href="assets/branding/variant-9-nordic-craft.svg" download="teocafe-logo-v9-nordic-craft.svg" class="py-2.5 px-3 rounded-xl border border-white/20 bg-white/5 hover:bg-white/10 text-white text-xs font-bold transition flex items-center justify-center gap-1">
+              SVG
+            </a>
+          </div>
+        </div>
+
+        <!-- VARIANTE 10 -->
+        <div class="bg-brand-card rounded-2xl border border-brand-border p-6 flex flex-col justify-between shadow-xl group hover:border-amber-500/40 transition">
+          <div>
+            <div class="flex items-center gap-2 text-amber-400 text-xs font-bold uppercase tracking-wider mb-2">
+              <span>Opción 10</span> • <span>Ritual Zen &amp; Pincelada</span>
+            </div>
+            <h3 class="font-headline font-bold text-xl text-white mb-2">Zen Ensō de Autor</h3>
+            <p class="text-xs text-zinc-400 leading-relaxed mb-4">
+              Trazo circular japonés Ensō abierto en pan de oro, simbolizando la armonía y el ritual pausado de disfrutar una taza de té o café. En el centro, las siluetas flotantes puras.
+            </p>
+            <div class="aspect-square rounded-xl overflow-hidden bg-[#0A0705] border border-amber-900/50 p-4 flex items-center justify-center group-hover:border-amber-500/60 transition">
+              <img src="assets/branding/variant-10-zen-artisan.png" alt="Variante 10 Zen Artisan" class="w-full h-full object-contain rounded-full shadow-2xl transition duration-500 group-hover:scale-105">
+            </div>
+          </div>
+          <div class="pt-5 border-t border-brand-border/60 flex items-center gap-2 mt-5">
+            <a href="assets/branding/variant-10-zen-artisan.png" download="teocafe-logo-v10-zen-artisan.png" class="flex-1 bg-amber-500 hover:bg-amber-400 text-black py-2.5 px-4 rounded-xl text-xs font-bold text-center transition flex items-center justify-center gap-1.5 shadow">
+              <i data-lucide="download" class="w-4 h-4"></i> Descargar PNG
+            </a>
+            <a href="assets/branding/variant-10-zen-artisan.svg" download="teocafe-logo-v10-zen-artisan.svg" class="py-2.5 px-3 rounded-xl border border-white/20 bg-white/5 hover:bg-white/10 text-white text-xs font-bold transition flex items-center justify-center gap-1">
+              SVG
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- SECCIÓN: COLECCIÓN CLÁSICA & HERITAGE (1 A 5) -->
+    <div>
+      <div class="flex items-center gap-3 mb-8 pb-3 border-b border-amber-900/40">
+        <div class="w-9 h-9 rounded-xl bg-amber-500/10 border border-amber-900/40 flex items-center justify-center text-amber-400">
+          <i data-lucide="shield" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <h2 class="font-headline text-2xl font-bold text-white">Colección Heritage: Tradición &amp; Heráldica</h2>
+          <p class="text-xs text-amber-400/80">Sellos de cera, monogramas clásicos y blasones tradicionales de tostaduría europea.</p>
         </div>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
         <!-- VARIANTE 1 -->
-        <div class="bg-brand-card rounded-2xl border-2 border-amber-500/40 p-6 flex flex-col justify-between shadow-2xl relative overflow-hidden group">
-          <div class="absolute -top-1 -right-1 bg-amber-500 text-black text-[10px] font-black uppercase tracking-wider px-3 py-1 rounded-bl-xl shadow">
-            ⭐ Recomendada
-          </div>
+        <div class="bg-brand-card rounded-2xl border border-brand-border p-6 flex flex-col justify-between shadow-xl group hover:border-amber-500/40 transition">
           <div>
             <div class="flex items-center gap-2 text-amber-400 text-xs font-bold uppercase tracking-wider mb-2">
               <span>Opción 1</span> • <span>Sello Imperial</span>
             </div>
             <h3 class="font-headline font-bold text-xl text-white mb-2">El Sello de Autor</h3>
             <p class="text-xs text-zinc-400 leading-relaxed mb-4">
-              Medalla circular tradicional de tostaduría europea. Fusiona de forma simétrica la <strong>hoja de té noble</strong> a la izquierda y el <strong>grano arábica</strong> a la derecha, con estrellas de origen y doble orla concéntrica.
+              Medalla circular tradicional de tostaduría europea. Fusiona de forma simétrica la hoja de té noble y el grano arábica con estrellas y doble orla concéntrica.
             </p>
             <div class="aspect-square rounded-xl overflow-hidden bg-[#0A0705] border border-amber-900/50 p-4 flex items-center justify-center group-hover:border-amber-500/60 transition">
               <img src="assets/branding/variant-1-sello-imperial.png" alt="Variante 1 Sello Imperial" class="w-full h-full object-contain rounded-full shadow-2xl transition duration-500 group-hover:scale-105">
@@ -131,11 +273,11 @@
         <div class="bg-brand-card rounded-2xl border border-brand-border p-6 flex flex-col justify-between shadow-xl group hover:border-amber-500/40 transition">
           <div>
             <div class="flex items-center gap-2 text-amber-400 text-xs font-bold uppercase tracking-wider mb-2">
-              <span>Opción 2</span> • <span>Minimal Vanguardista</span>
+              <span>Opción 2</span> • <span>Monograma</span>
             </div>
             <h3 class="font-headline font-bold text-xl text-white mb-2">Monograma TC de Lujo</h3>
             <p class="text-xs text-zinc-400 leading-relaxed mb-4">
-              Inspirado en casas de moda y cafés de alta gama (estilo Cartier / Bacha Coffee). Las iniciales <strong>T y C</strong> se entrelazan armónicamente, coronadas por un brote noble de té y un grano dorado central.
+              Iniciales T y C entrelazadas con serifas clásicas y anillo exterior de estrellas.
             </p>
             <div class="aspect-square rounded-xl overflow-hidden bg-[#0A0705] border border-amber-900/50 p-4 flex items-center justify-center group-hover:border-amber-500/60 transition">
               <img src="assets/branding/variant-2-monograma-tc.png" alt="Variante 2 Monograma TC" class="w-full h-full object-contain rounded-full shadow-2xl transition duration-500 group-hover:scale-105">
@@ -155,11 +297,11 @@
         <div class="bg-brand-card rounded-2xl border border-brand-border p-6 flex flex-col justify-between shadow-xl group hover:border-amber-500/40 transition">
           <div>
             <div class="flex items-center gap-2 text-amber-400 text-xs font-bold uppercase tracking-wider mb-2">
-              <span>Opción 3</span> • <span>Orgánico &amp; Botánico</span>
+              <span>Opción 3</span> • <span>Botánico</span>
             </div>
             <h3 class="font-headline font-bold text-xl text-white mb-2">Alquimia Botánica</h3>
             <p class="text-xs text-zinc-400 leading-relaxed mb-4">
-              Dualidad en vórtice (Yin-Yang botánico): una <strong>hoja de té con nervaduras grabadas</strong> y la <strong>curvatura de un grano de café</strong> fluyen en equilibrio circular perfecto. Tipografía suave con gracias de autor.
+              Equilibrio fluido entre una rama de hojas de té de Ceilán grabadas y la curvatura del grano tostado.
             </p>
             <div class="aspect-square rounded-xl overflow-hidden bg-[#0A0705] border border-amber-900/50 p-4 flex items-center justify-center group-hover:border-amber-500/60 transition">
               <img src="assets/branding/variant-3-alquimia-botanica.png" alt="Variante 3 Alquimia Botánica" class="w-full h-full object-contain rounded-full shadow-2xl transition duration-500 group-hover:scale-105">
@@ -179,14 +321,14 @@
         <div class="bg-brand-card rounded-2xl border border-brand-border p-6 flex flex-col justify-between shadow-xl group hover:border-amber-500/40 transition">
           <div>
             <div class="flex items-center gap-2 text-amber-400 text-xs font-bold uppercase tracking-wider mb-2">
-              <span>Opción 4</span> • <span>Barismo &amp; Cata</span>
+              <span>Opción 4</span> • <span>Artesanal</span>
             </div>
             <h3 class="font-headline font-bold text-xl text-white mb-2">Taza de Cata &amp; Hoja Naciente</h3>
             <p class="text-xs text-zinc-400 leading-relaxed mb-4">
-              Silueta de taza de degustación sobre plato concéntrico. De la infusión asciende un <strong>haz de vapor aromático dorado</strong> que culmina en una hoja fresca de Ceilán, flanqueada por un grano flotante y una gota de café crema.
+              Silueta de taza de porcelana con vapor ascendente que se transforma en hoja de té y gota dorada.
             </p>
             <div class="aspect-square rounded-xl overflow-hidden bg-[#0A0705] border border-amber-900/50 p-4 flex items-center justify-center group-hover:border-amber-500/60 transition">
-              <img src="assets/branding/variant-4-taza-artesanal.png" alt="Variante 4 Taza de Cata" class="w-full h-full object-contain rounded-full shadow-2xl transition duration-500 group-hover:scale-105">
+              <img src="assets/branding/variant-4-taza-artesanal.png" alt="Variante 4 Taza Artesanal" class="w-full h-full object-contain rounded-full shadow-2xl transition duration-500 group-hover:scale-105">
             </div>
           </div>
           <div class="pt-5 border-t border-brand-border/60 flex items-center gap-2 mt-5">
@@ -203,11 +345,11 @@
         <div class="bg-brand-card rounded-2xl border border-brand-border p-6 flex flex-col justify-between shadow-xl group hover:border-amber-500/40 transition">
           <div>
             <div class="flex items-center gap-2 text-amber-400 text-xs font-bold uppercase tracking-wider mb-2">
-              <span>Opción 5</span> • <span>Heritage Roastery</span>
+              <span>Opción 5</span> • <span>Heráldico</span>
             </div>
             <h3 class="font-headline font-bold text-xl text-white mb-2">Blasón Tostaduría 2026</h3>
             <p class="text-xs text-zinc-400 leading-relaxed mb-4">
-              Escudo de tostaduría europea centenaria con 4 cuadrantes (hoja de té, grano arábica, año de fundación 2026), corona superior de brotes nobles y cinta heráldica con la dirección <strong>TEOCAFE.CL</strong>.
+              Escudo cuartelado con hoja botánica, grano de café, año de fundación y estrella polar.
             </p>
             <div class="aspect-square rounded-xl overflow-hidden bg-[#0A0705] border border-amber-900/50 p-4 flex items-center justify-center group-hover:border-amber-500/60 transition">
               <img src="assets/branding/variant-5-escudo-tostaduria.png" alt="Variante 5 Escudo Tostaduría" class="w-full h-full object-contain rounded-full shadow-2xl transition duration-500 group-hover:scale-105">
@@ -219,109 +361,6 @@
             </a>
             <a href="assets/branding/variant-5-escudo-tostaduria.svg" download="teocafe-logo-v5-escudo-tostaduria.svg" class="py-2.5 px-3 rounded-xl border border-white/20 bg-white/5 hover:bg-white/10 text-white text-xs font-bold transition flex items-center justify-center gap-1">
               SVG
-            </a>
-          </div>
-        </div>
-
-        <!-- RESUMEN / GUÍA DE ELECCIÓN -->
-        <div class="bg-gradient-to-br from-[#1c130c] to-[#0d0906] rounded-2xl border border-amber-600/40 p-6 flex flex-col justify-between shadow-2xl">
-          <div>
-            <div class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center mb-3">
-              <i data-lucide="compass" class="w-5 h-5"></i>
-            </div>
-            <h3 class="font-headline font-bold text-lg text-white mb-2">¿Cómo elegir el mejor logo?</h3>
-            <ul class="space-y-3 text-xs text-zinc-300 leading-relaxed">
-              <li class="flex items-start gap-2">
-                <span class="text-amber-400 font-bold">•</span>
-                <span><strong>Para Instagram / Avatar:</strong> La <em>Opción 1 (Sello Imperial)</em> es la más equilibrada visualmente y legible en tamaño pequeño en la app.</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-amber-400 font-bold">•</span>
-                <span><strong>Para packaging de lujo:</strong> La <em>Opción 2 (Monograma TC)</em> da un aire sofisticado a bolsas de café y latas metálicas.</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <span class="text-amber-400 font-bold">•</span>
-                <span><strong>Para comunicación artesanal:</strong> La <em>Opción 3 (Alquimia Botánica)</em> y <em>Opción 4 (Taza de Cata)</em> transmiten calidez sensorial.</span>
-              </li>
-            </ul>
-          </div>
-          <div class="pt-5 border-t border-amber-800/40 mt-4">
-            <span class="text-[11px] text-amber-300 font-medium block">
-              💡 Cualquiera de estas 5 variantes se puede cambiar en cualquier momento o activar en el sitio web con una sola línea.
-            </span>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- SECCIÓN 2: MARCAS DE AGUA & LOGO HORIZONTAL -->
-    <div>
-      <div class="flex items-center gap-3 mb-8 pb-3 border-b border-amber-900/40">
-        <div class="w-8 h-8 rounded-lg bg-amber-500/20 flex items-center justify-center text-amber-400">
-          <i data-lucide="sparkles" class="w-4 h-4"></i>
-        </div>
-        <div>
-          <h2 class="font-headline text-2xl font-bold text-white">Marcas de Agua &amp; Formatos Horizontales</h2>
-          <p class="text-xs text-amber-400/80">Archivos con fondo 100% transparente listos para usar en Canva, Photoshop o sobreimprimir en fotos de ValerIA.</p>
-        </div>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-
-        <!-- LOGO TRANSPARENTE ORO -->
-        <div class="bg-brand-card rounded-2xl border border-brand-border p-6 flex flex-col justify-between shadow-xl">
-          <div>
-            <span class="text-[10px] font-bold uppercase tracking-wider text-amber-400 bg-amber-500/10 px-2.5 py-1 rounded-full border border-amber-500/20 inline-block mb-3">
-              Oro Transparente
-            </span>
-            <h3 class="font-headline font-bold text-base text-white mb-1">Watermark Oro</h3>
-            <p class="text-xs text-zinc-400 mb-4">Para estampar en la esquina de fotos y videos de Instagram.</p>
-            <div class="aspect-video rounded-xl overflow-hidden bg-[#1a1510] border border-dashed border-amber-800/60 p-4 flex items-center justify-center">
-              <img src="assets/branding/teocafe-logo-transparent-gold.png" alt="Logo Transparente Oro" class="h-full object-contain">
-            </div>
-          </div>
-          <div class="pt-4 border-t border-brand-border/60 flex items-center gap-2 mt-4">
-            <a href="assets/branding/teocafe-logo-transparent-gold.png" download="teocafe-logo-transparent-gold.png" class="flex-1 bg-amber-500 hover:bg-amber-400 text-black py-2 px-3 rounded-xl text-xs font-bold text-center transition flex items-center justify-center gap-1">
-              <i data-lucide="download" class="w-3.5 h-3.5"></i> PNG Transparente
-            </a>
-          </div>
-        </div>
-
-        <!-- LOGO TRANSPARENTE BLANCO -->
-        <div class="bg-brand-card rounded-2xl border border-brand-border p-6 flex flex-col justify-between shadow-xl">
-          <div>
-            <span class="text-[10px] font-bold uppercase tracking-wider text-zinc-300 bg-white/10 px-2.5 py-1 rounded-full border border-white/20 inline-block mb-3">
-              Blanco Transparente
-            </span>
-            <h3 class="font-headline font-bold text-base text-white mb-1">Watermark Blanco</h3>
-            <p class="text-xs text-zinc-400 mb-4">Para fondos fotográficos oscuros de tueste y granos.</p>
-            <div class="aspect-video rounded-xl overflow-hidden bg-[#110e0b] border border-dashed border-zinc-700/60 p-4 flex items-center justify-center">
-              <img src="assets/branding/teocafe-logo-transparent-white.png" alt="Logo Transparente Blanco" class="h-full object-contain">
-            </div>
-          </div>
-          <div class="pt-4 border-t border-brand-border/60 flex items-center gap-2 mt-4">
-            <a href="assets/branding/teocafe-logo-transparent-white.png" download="teocafe-logo-transparent-white.png" class="flex-1 bg-white hover:bg-zinc-200 text-black py-2 px-3 rounded-xl text-xs font-bold text-center transition flex items-center justify-center gap-1">
-              <i data-lucide="download" class="w-3.5 h-3.5"></i> PNG Transparente
-            </a>
-          </div>
-        </div>
-
-        <!-- LOGO HORIZONTAL -->
-        <div class="bg-brand-card rounded-2xl border border-brand-border p-6 flex flex-col justify-between shadow-xl">
-          <div>
-            <span class="text-[10px] font-bold uppercase tracking-wider text-amber-400 bg-amber-500/10 px-2.5 py-1 rounded-full border border-amber-500/20 inline-block mb-3">
-              1200 x 400 px
-            </span>
-            <h3 class="font-headline font-bold text-base text-white mb-1">Isologotipo Horizontal</h3>
-            <p class="text-xs text-zinc-400 mb-4">Ideal para banners de cabecera, firmas de correo y membretes.</p>
-            <div class="aspect-video rounded-xl overflow-hidden bg-black/60 border border-amber-900/40 p-2 flex items-center justify-center">
-              <img src="assets/branding/teocafe-logo-horizontal.png" alt="Logo Horizontal" class="w-full h-auto object-contain">
-            </div>
-          </div>
-          <div class="pt-4 border-t border-brand-border/60 flex items-center gap-2 mt-4">
-            <a href="assets/branding/teocafe-logo-horizontal.png" download="teocafe-logo-horizontal.png" class="flex-1 bg-amber-500 hover:bg-amber-400 text-black py-2 px-3 rounded-xl text-xs font-bold text-center transition flex items-center justify-center gap-1">
-              <i data-lucide="download" class="w-3.5 h-3.5"></i> Descargar PNG
             </a>
           </div>
         </div>

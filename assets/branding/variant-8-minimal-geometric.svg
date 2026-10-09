@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1080" height="1080" viewBox="0 0 1080 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&amp;display=swap');
+      .v8-title { font-family: 'Montserrat', sans-serif; font-weight: 800; letter-spacing: 18px; font-size: 58px; fill: url(#goldGrad8); }
+      .v8-sub { font-family: 'Montserrat', sans-serif; font-weight: 500; letter-spacing: 8px; font-size: 16px; fill: #FDE68A; }
+      .v8-dot { font-family: 'Montserrat', sans-serif; font-weight: 700; letter-spacing: 4px; font-size: 14px; fill: #D97706; }
+    </style>
+    <linearGradient id="bgGrad8" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#120E0A" /><stop offset="60%" stop-color="#090705" /><stop offset="100%" stop-color="#020201" />
+    </linearGradient>
+    <linearGradient id="goldGrad8" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFBEB" /><stop offset="25%" stop-color="#FDE68A" /><stop offset="60%" stop-color="#F59E0B" /><stop offset="100%" stop-color="#B45309" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1080" height="1080" fill="url(#bgGrad8)" />
+
+  <!-- Geometría Arquitectónica Central -->
+  <g transform="translate(540, 410)">
+    <!-- Cuadrante de fondo muy sutil -->
+    <circle cx="0" cy="0" r="230" stroke="url(#goldGrad8)" stroke-width="1" stroke-opacity="0.2" />
+    <line x1="-240" y1="0" x2="240" y2="0" stroke="url(#goldGrad8)" stroke-width="0.8" stroke-opacity="0.15" />
+    <line x1="0" y1="-240" x2="0" y2="240" stroke="url(#goldGrad8)" stroke-width="0.8" stroke-opacity="0.15" />
+
+    <!-- Símbolo Monolítico: La barra 'T' y el arco 'C' fusionados -->
+    <!-- Barra T -->
+    <rect x="-140" y="-140" width="160" height="22" rx="11" fill="url(#goldGrad8)" />
+    <rect x="-71" y="-140" width="22" height="230" rx="11" fill="url(#goldGrad8)" />
+    
+    <!-- Arco 'C' envolvente -->
+    <path d="M 70,-110 C 145,-75 165,15 140,85 C 115,145 40,165 -30,140" stroke="url(#goldGrad8)" stroke-width="22" stroke-linecap="round" fill="none" />
+
+    <!-- Hoja geométrica pura (ratio áureo) -->
+    <path d="M -130,-120 C -130,-185 -70,-200 -70,-200 C -70,-200 -70,-135 -130,-120 Z" fill="url(#goldGrad8)" />
+
+    <!-- Grano de café esférico con corte oblicuo -->
+    <g transform="translate(110, 110) rotate(-45)">
+      <ellipse cx="0" cy="0" rx="36" ry="50" fill="url(#goldGrad8)" />
+      <path d="M 0,-44 Q 10,0 0,44" stroke="#090705" stroke-width="7" stroke-linecap="round" fill="none" />
+    </g>
+  </g>
+
+  <!-- Tipografía Minimalista Contemporánea -->
+  <text x="540" y="745" text-anchor="middle" class="v8-title">TÉ O CAFÉ</text>
+  
+  <g transform="translate(540, 785)">
+    <circle cx="-60" cy="0" r="2.5" fill="#D97706" />
+    <circle cx="0" cy="0" r="3.5" fill="url(#goldGrad8)" />
+    <circle cx="60" cy="0" r="2.5" fill="#D97706" />
+  </g>
+
+  <text x="540" y="840" text-anchor="middle" class="v8-sub">TOSTADURÍA &amp; BLENDS DE AUTOR</text>
+  <text x="540" y="890" text-anchor="middle" class="v8-dot">WWW.TEOCAFE.CL</text>
+</svg>

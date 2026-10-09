@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1080" height="1080" viewBox="0 0 1080 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&amp;family=Montserrat:wght@400;500;600&amp;display=swap');
+      .v10-title { font-family: 'Cinzel', serif; font-weight: 700; letter-spacing: 14px; font-size: 56px; fill: url(#goldGrad10); }
+      .v10-sub { font-family: 'Montserrat', sans-serif; font-weight: 500; letter-spacing: 8px; font-size: 17px; fill: #FDE68A; }
+      .v10-domain { font-family: 'Montserrat', sans-serif; font-weight: 600; letter-spacing: 5px; font-size: 15px; fill: #D97706; }
+    </style>
+    <radialGradient id="bgGrad10" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#18120D" /><stop offset="60%" stop-color="#0A0806" /><stop offset="100%" stop-color="#030202" />
+    </radialGradient>
+    <linearGradient id="goldGrad10" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFBEB" /><stop offset="30%" stop-color="#FCD34D" /><stop offset="60%" stop-color="#F59E0B" /><stop offset="100%" stop-color="#B45309" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1080" height="1080" fill="url(#bgGrad10)" />
+
+  <!-- Trazo Ensō Orgánico Dorado -->
+  <g transform="translate(540, 430)">
+    <!-- Círculo Ensō abierto con pincelada cónica viva -->
+    <path d="M 140,-160 C 220,-80 230,80 160,180 C 90,260 -70,260 -160,180 C -250,90 -240,-90 -150,-170 C -70,-240 50,-240 100,-210" stroke="url(#goldGrad10)" stroke-width="12" stroke-linecap="round" fill="none" opacity="0.9" />
+    <path d="M 120,-175 C 200,-100 210,60 145,160 C 80,240 -60,240 -145,160" stroke="url(#goldGrad10)" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.4" />
+
+    <!-- Centro del Ensō: Dos siluetas puras flotando en armonía zen -->
+    <!-- Hoja de Té verde/oro ascendente -->
+    <path d="M -45,30 C -85,-10 -65,-95 -20,-130 C -15,-60 -25,-10 -45,30 Z" fill="url(#goldGrad10)" />
+    <!-- Grano de café tostado en balance -->
+    <g transform="translate(35, 10) rotate(25)">
+      <ellipse cx="0" cy="0" rx="38" ry="54" fill="url(#goldGrad10)" />
+      <path d="M 0,-48 C 12,-20 8,20 0,48" stroke="#0A0806" stroke-width="5.5" stroke-linecap="round" fill="none" />
+    </g>
+
+    <!-- Gotita de esencia dorada en la cima -->
+    <circle cx="8" cy="-155" r="4" fill="url(#goldGrad10)" />
+  </g>
+
+  <!-- Tipografía Zen & Lujo -->
+  <text x="540" y="775" text-anchor="middle" class="v10-title">TÉ O CAFÉ</text>
+  
+  <g transform="translate(540, 810)">
+    <line x1="-140" y1="0" x2="-25" y2="0" stroke="url(#goldGrad10)" stroke-width="1.5" stroke-opacity="0.5" />
+    <circle cx="0" cy="0" r="3" fill="url(#goldGrad10)" />
+    <line x1="25" y1="0" x2="140" y2="0" stroke="url(#goldGrad10)" stroke-width="1.5" stroke-opacity="0.5" />
+  </g>
+
+  <text x="540" y="860" text-anchor="middle" class="v10-sub">EL RITUAL DEL BUEN VIVIR</text>
+  <text x="540" y="905" text-anchor="middle" class="v10-domain">TEOCAFE.CL</text>
+</svg>

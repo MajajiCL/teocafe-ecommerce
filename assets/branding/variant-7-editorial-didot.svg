@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1080" height="1080" viewBox="0 0 1080 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&amp;family=Montserrat:wght@300;400;500;600&amp;display=swap');
+      .v7-title { font-family: 'Playfair Display', serif; font-weight: 600; letter-spacing: 12px; font-size: 78px; fill: url(#goldGrad7); }
+      .v7-amp { font-family: 'Playfair Display', serif; font-style: italic; font-weight: 500; font-size: 52px; fill: #FDE68A; }
+      .v7-sub { font-family: 'Montserrat', sans-serif; font-weight: 500; letter-spacing: 11px; font-size: 15px; fill: #D97706; }
+      .v7-foot { font-family: 'Montserrat', sans-serif; font-weight: 400; letter-spacing: 7px; font-size: 14px; fill: #FDE68A; opacity: 0.85; }
+    </style>
+    <radialGradient id="bgGrad7" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#15100C" /><stop offset="65%" stop-color="#080605" /><stop offset="100%" stop-color="#030202" />
+    </radialGradient>
+    <linearGradient id="goldGrad7" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFBEB" /><stop offset="30%" stop-color="#FCD34D" /><stop offset="65%" stop-color="#F59E0B" /><stop offset="100%" stop-color="#B45309" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1080" height="1080" fill="url(#bgGrad7)" />
+
+  <!-- Marco Editorial Fino de Alta Costura -->
+  <rect x="120" y="120" width="840" height="840" stroke="url(#goldGrad7)" stroke-width="1.2" stroke-opacity="0.35" fill="none" />
+  <rect x="134" y="134" width="812" height="812" stroke="url(#goldGrad7)" stroke-width="0.8" stroke-opacity="0.15" fill="none" />
+  
+  <!-- Esquinas ornamentales mínimas -->
+  <g stroke="url(#goldGrad7)" stroke-width="1.8" stroke-opacity="0.7">
+    <path d="M 110,140 L 110,110 L 140,110" fill="none" />
+    <path d="M 970,140 L 970,110 L 940,110" fill="none" />
+    <path d="M 110,940 L 110,970 L 140,970" fill="none" />
+    <path d="M 970,940 L 970,970 L 940,970" fill="none" />
+  </g>
+
+  <!-- Isotipo: Fina rama de té cruzando una gota de café dorada -->
+  <g transform="translate(540, 340)">
+    <!-- Gota estilizada -->
+    <path d="M 0,-90 C -40,-35 -50,-5 -50,25 C -50,65 -25,90 0,90 C 25,90 50,65 50,25 C 50,-5 40,-35 0,-90 Z" stroke="url(#goldGrad7)" stroke-width="2" fill="none" stroke-opacity="0.4" />
+    <!-- Rama botánica en línea única fina -->
+    <path d="M -70,45 C -30,20 30,-20 70,-45" stroke="url(#goldGrad7)" stroke-width="2.5" stroke-linecap="round" fill="none" />
+    <!-- Brotes de té -->
+    <path d="M 10,-6 C 25,-25 45,-30 45,-30 C 45,-30 40,-10 25,5" fill="url(#goldGrad7)" />
+    <path d="M -15,10 C -30,30 -50,35 -50,35 C -50,35 -45,15 -30,0" fill="url(#goldGrad7)" />
+    <path d="M 50,-32 C 65,-45 80,-45 80,-45 C 80,-45 75,-30 62,-20" fill="url(#goldGrad7)" />
+    <!-- Grano sutil central -->
+    <ellipse cx="0" cy="20" rx="14" ry="20" fill="url(#goldGrad7)" />
+    <path d="M 0,5 Q 4,20 0,35" stroke="#080605" stroke-width="2.2" stroke-linecap="round" fill="none" />
+  </g>
+
+  <!-- Tipografía Editorial Principal -->
+  <text x="540" y="565" text-anchor="middle" class="v7-title">TÉ <tspan class="v7-amp">o</tspan> CAFÉ</text>
+
+  <!-- Línea de filo de navaja con estrella dorada -->
+  <g transform="translate(540, 620)">
+    <line x1="-220" y1="0" x2="-40" y2="0" stroke="url(#goldGrad7)" stroke-width="1.2" stroke-opacity="0.5" />
+    <text x="0" y="5" text-anchor="middle" font-family="'Cinzel', serif" font-size="16" fill="url(#goldGrad7)">✦</text>
+    <line x1="40" y1="0" x2="220" y2="0" stroke="url(#goldGrad7)" stroke-width="1.2" stroke-opacity="0.5" />
+  </g>
+
+  <text x="540" y="685" text-anchor="middle" class="v7-sub">MAISON DE CAFÉ &amp; TÉ DE ORIGEN</text>
+  <text x="540" y="740" text-anchor="middle" class="v7-foot">SANTIAGO · CHILE · EST. 2026</text>
+  
+  <text x="540" y="820" text-anchor="middle" font-family="'Montserrat', sans-serif" font-weight="600" letter-spacing="6px" font-size="16px" fill="#D97706">TEOCAFE.CL</text>
+</svg>

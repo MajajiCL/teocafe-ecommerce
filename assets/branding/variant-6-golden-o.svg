@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1080" height="1080" viewBox="0 0 1080 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&amp;family=Montserrat:wght@300;400;500;600;700&amp;display=swap');
+      .v6-title { font-family: 'Cinzel', serif; font-weight: 700; letter-spacing: 16px; font-size: 56px; fill: url(#goldGradText6); }
+      .v6-sub { font-family: 'Montserrat', sans-serif; font-weight: 500; letter-spacing: 9px; font-size: 17px; fill: #FDE68A; }
+      .v6-domain { font-family: 'Montserrat', sans-serif; font-weight: 600; letter-spacing: 5px; font-size: 15px; fill: #D97706; }
+    </style>
+    <radialGradient id="bgGrad6" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#1B140F" /><stop offset="60%" stop-color="#0B0806" /><stop offset="100%" stop-color="#040302" />
+    </radialGradient>
+    <linearGradient id="goldGrad6" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFBEB" /><stop offset="25%" stop-color="#FCD34D" /><stop offset="55%" stop-color="#F59E0B" /><stop offset="85%" stop-color="#D97706" /><stop offset="100%" stop-color="#92400E" />
+    </linearGradient>
+    <linearGradient id="goldGradText6" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFBEB" /><stop offset="35%" stop-color="#FDE68A" /><stop offset="70%" stop-color="#F59E0B" /><stop offset="100%" stop-color="#B45309" />
+    </linearGradient>
+    <radialGradient id="glow6" cx="50%" cy="43%" r="45%">
+      <stop offset="0%" stop-color="#F59E0B" stop-opacity="0.25" /><stop offset="60%" stop-color="#D97706" stop-opacity="0.05" /><stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <rect width="1080" height="1080" fill="url(#bgGrad6)" />
+  <circle cx="540" cy="440" r="320" fill="url(#glow6)" />
+
+  <!-- Delicado aro fino exterior -->
+  <circle cx="540" cy="440" r="280" stroke="url(#goldGrad6)" stroke-width="1.5" stroke-opacity="0.3" stroke-dasharray="6 6" />
+
+  <!-- Isotipo Central: La "O" Dorada de Dualidad Té & Café -->
+  <g id="dual-o" transform="translate(540, 440)">
+    <!-- Aro exterior principal de la "O" -->
+    <circle cx="0" cy="0" r="220" stroke="url(#goldGrad6)" stroke-width="7" />
+    <circle cx="0" cy="0" r="202" stroke="url(#goldGrad6)" stroke-width="1.5" stroke-opacity="0.5" />
+    
+    <!-- Lado Izquierdo: Hoja Botánica de Té estilizada -->
+    <path d="M 0,-180 C -120,-140 -160,-40 -160,20 C -160,110 -90,170 0,180 C -60,130 -80,50 -70,-20 C -60,-80 -25,-140 0,-180 Z" fill="url(#goldGrad6)" fill-opacity="0.9" />
+    <!-- Nervaduras de la hoja de té -->
+    <path d="M 0,-160 Q -70, -20 0, 160" stroke="#0B0806" stroke-width="3.5" stroke-linecap="round" fill="none" />
+    <path d="M -25,-90 Q -65,-75 -105,-80" stroke="#0B0806" stroke-width="2.5" stroke-linecap="round" fill="none" />
+    <path d="M -38,-20 Q -85,-10 -125,-18" stroke="#0B0806" stroke-width="2.5" stroke-linecap="round" fill="none" />
+    <path d="M -28,50 Q -75,65 -110,55" stroke="#0B0806" stroke-width="2.5" stroke-linecap="round" fill="none" />
+
+    <!-- Lado Derecho: Grano de Café Arábica de Precisión -->
+    <path d="M 0,-180 C 110,-150 175,-70 175,25 C 175,120 100,175 0,180 C 40,140 70,80 70,10 C 70,-60 35,-130 0,-180 Z" fill="url(#goldGrad6)" />
+    <!-- Fisura sinuosa del grano de café -->
+    <path d="M 0,-170 C 45,-100 50,-40 30,10 C 10,60 35,120 0,170" stroke="#0B0806" stroke-width="4.5" stroke-linecap="round" fill="none" />
+
+    <!-- Puntos cardinales sutiles -->
+    <circle cx="0" cy="-245" r="3" fill="url(#goldGrad6)" />
+    <circle cx="0" cy="245" r="3" fill="url(#goldGrad6)" />
+    <circle cx="-245" cy="0" r="3" fill="url(#goldGrad6)" />
+    <circle cx="245" cy="0" r="3" fill="url(#goldGrad6)" />
+  </g>
+
+  <!-- Tipografía de Lujo -->
+  <text x="540" y="780" text-anchor="middle" class="v6-title">TÉ O CAFÉ</text>
+  
+  <g transform="translate(540, 816)">
+    <line x1="-160" y1="0" x2="-35" y2="0" stroke="url(#goldGrad6)" stroke-width="1.5" stroke-opacity="0.6" />
+    <polygon points="0,-4 4,0 0,4 -4,0" fill="url(#goldGrad6)" />
+    <line x1="35" y1="0" x2="160" y2="0" stroke="url(#goldGrad6)" stroke-width="1.5" stroke-opacity="0.6" />
+  </g>
+
+  <text x="540" y="865" text-anchor="middle" class="v6-sub">ESPECIALIDAD &amp; ORIGEN</text>
+  <text x="540" y="910" text-anchor="middle" class="v6-domain">TEOCAFE.CL</text>
+</svg>

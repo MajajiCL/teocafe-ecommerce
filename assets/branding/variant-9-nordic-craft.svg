@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1080" height="1080" viewBox="0 0 1080 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800&amp;family=Montserrat:wght@400;500;600;700&amp;display=swap');
+      .v9-title { font-family: 'Montserrat', sans-serif; font-weight: 800; letter-spacing: 12px; font-size: 52px; fill: url(#goldGrad9); }
+      .v9-sub { font-family: 'Cinzel', serif; font-weight: 700; letter-spacing: 8px; font-size: 18px; fill: #FDE68A; }
+      .v9-meta { font-family: 'Montserrat', sans-serif; font-weight: 600; letter-spacing: 4px; font-size: 14px; fill: #D97706; }
+    </style>
+    <radialGradient id="bgGrad9" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#1A130E" /><stop offset="60%" stop-color="#0A0806" /><stop offset="100%" stop-color="#030202" />
+    </radialGradient>
+    <linearGradient id="goldGrad9" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFBEB" /><stop offset="30%" stop-color="#FCD34D" /><stop offset="65%" stop-color="#F59E0B" /><stop offset="100%" stop-color="#B45309" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1080" height="1080" fill="url(#bgGrad9)" />
+
+  <!-- Escudo Octogonal Biselado Minimalista (Etiqueta de Especialidad Nórdica) -->
+  <polygon points="540,140 760,230 850,450 760,670 540,760 320,670 230,450 320,230" stroke="url(#goldGrad9)" stroke-width="2.5" stroke-opacity="0.7" fill="none" />
+  <polygon points="540,160 745,245 830,450 745,655 540,740 335,655 250,450 335,245" stroke="url(#goldGrad9)" stroke-width="1" stroke-opacity="0.25" fill="none" />
+
+  <!-- Gráfico de Línea Continua de Especialidad -->
+  <g transform="translate(540, 450)">
+    <!-- Taza de cata vista desde arriba -->
+    <circle cx="0" cy="0" r="160" stroke="url(#goldGrad9)" stroke-width="3" fill="none" />
+    <circle cx="0" cy="0" r="145" stroke="url(#goldGrad9)" stroke-width="1.2" stroke-dasharray="4 4" stroke-opacity="0.5" fill="none" />
+    
+    <!-- Asa de la taza estilizada -->
+    <path d="M 160,-35 C 195,-35 210,-15 210,0 C 210,15 195,35 160,35" stroke="url(#goldGrad9)" stroke-width="3" fill="none" />
+
+    <!-- División botánica dentro de la taza: Hoja a la izquierda, Grano a la derecha -->
+    <path d="M 0,-130 C -80,-90 -105,-20 -105,30 C -105,85 -60,125 0,130" stroke="url(#goldGrad9)" stroke-width="2.5" fill="none" />
+    <path d="M -15,-60 L -65,-75" stroke="url(#goldGrad9)" stroke-width="2" stroke-linecap="round" />
+    <path d="M -25,0 L -85,-5" stroke="url(#goldGrad9)" stroke-width="2" stroke-linecap="round" />
+    <path d="M -15,60 L -65,55" stroke="url(#goldGrad9)" stroke-width="2" stroke-linecap="round" />
+
+    <!-- Grano dentro del hemisferio derecho -->
+    <path d="M 0,-130 C 80,-90 105,-20 105,30 C 105,85 60,125 0,130" stroke="url(#goldGrad9)" stroke-width="2.5" fill="none" />
+    <path d="M 0,-115 C 35,-60 40,0 20,40 C 5,75 25,105 0,115" stroke="url(#goldGrad9)" stroke-width="3" stroke-linecap="round" fill="none" />
+  </g>
+
+  <!-- Año 20 y 26 a los costados -->
+  <text x="180" y="460" text-anchor="middle" font-family="'Cinzel', serif" font-size="28" font-weight="700" fill="url(#goldGrad9)">20</text>
+  <text x="900" y="460" text-anchor="middle" font-family="'Cinzel', serif" font-size="28" font-weight="700" fill="url(#goldGrad9)">26</text>
+
+  <!-- Tipografía Nórdica -->
+  <text x="540" y="825" text-anchor="middle" class="v9-title">TÉ O CAFÉ</text>
+  <text x="540" y="875" text-anchor="middle" class="v9-sub">ROASTERY &amp; TEA ATELIER</text>
+  <text x="540" y="920" text-anchor="middle" class="v9-meta">SANTIAGO · TEOCAFE.CL</text>
+</svg>
