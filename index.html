@@ -525,8 +525,37 @@
           </div>
         </div>
 
-        <!-- SLIDE 4: LA FINCA TOSTADURÍA -->
+        <!-- SLIDE 4: MIEL DE CAMPO · APIARIO LOS HUALLES -->
         <div class="hero-slide absolute inset-0 transition-opacity duration-700 opacity-0 pointer-events-none flex items-center" data-slide="3">
+          <div class="absolute inset-0 z-0">
+            <img src="assets/images/banner-mieldecampo.jpg" alt="Miel de Campo Chile · Apiario Los Hualles" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-transparent"></div>
+          </div>
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full py-12">
+            <div class="max-w-2xl space-y-4 text-white">
+              <span class="bg-yellow-500 text-black text-[10px] font-extrabold uppercase tracking-widest px-3 py-1 rounded-full inline-block">
+                🍯 NUEVO • APIARIO LOS HUALLES, REGIÓN DEL MAULE
+              </span>
+              <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold font-headline leading-tight">
+                Esta miel tiene dirección
+              </h2>
+              <p class="text-sm sm:text-base text-zinc-200 leading-relaxed font-light">
+                Precordillera de Linares. Está escrito en la etiqueta de cada frasco, con nombre y región, porque la miel sale de ahí y de ningún otro lado. Miel multifloral, crema de miel, panal natural y propóleo del mismo apiario.
+              </p>
+              <div class="flex flex-wrap items-center gap-3 pt-3">
+                <button onclick="setSourceFilter('Miel de Campo'); location.href='#catalogo';" class="bg-yellow-500 hover:bg-yellow-400 text-black px-6 py-3.5 rounded-xl font-bold text-xs shadow-xl flex items-center gap-2 transition">
+                  <i data-lucide="hexagon" class="w-4 h-4"></i> Ver la línea completa
+                </button>
+                <a href="#catalogo" class="px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white font-bold text-xs transition">
+                  Desde $4.000 el kilo
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SLIDE 5: LA FINCA TOSTADURÍA -->
+        <div class="hero-slide absolute inset-0 transition-opacity duration-700 opacity-0 pointer-events-none flex items-center" data-slide="4">
           <div class="absolute inset-0 z-0">
             <img src="assets/images/banner-lafinca.jpg" alt="Café La Finca Tostaduría" class="w-full h-full object-cover">
             <div class="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-transparent"></div>
@@ -568,6 +597,7 @@
           <button onclick="goToSlide(1)" class="carousel-dot w-3 h-3 rounded-full bg-white/40 transition" data-dot="1"></button>
           <button onclick="goToSlide(2)" class="carousel-dot w-3 h-3 rounded-full bg-white/40 transition" data-dot="2"></button>
           <button onclick="goToSlide(3)" class="carousel-dot w-3 h-3 rounded-full bg-white/40 transition" data-dot="3"></button>
+            <button onclick="goToSlide(3)" class="carousel-dot w-3 h-3 rounded-full bg-white/40 transition" data-dot="3"></button>
         </div>
 
       </div>
@@ -764,6 +794,7 @@
           <button onclick="setSourceFilter('La Finca')" class="source-pill px-3.5 py-1.5 rounded-lg font-medium text-brand-text hover:bg-black/5 transition" data-source="La Finca">La Finca</button>
           <button onclick="setSourceFilter('Té Basilur Chile')" class="source-pill px-3.5 py-1.5 rounded-lg font-medium text-brand-text hover:bg-black/5 transition" data-source="Té Basilur Chile">Té Basilur</button>
           <button onclick="setSourceFilter('Café de Colo-Colo')" class="source-pill px-3.5 py-1.5 rounded-lg font-medium text-brand-text hover:bg-black/5 transition" data-source="Café de Colo-Colo">Café Colo-Colo</button>
+          <button onclick="setSourceFilter('Miel de Campo')" class="source-pill px-3.5 py-1.5 rounded-lg font-medium text-brand-text hover:bg-black/5 transition" data-source="Miel de Campo">Miel de Campo</button>
         </div>
       </div>
 
@@ -1018,6 +1049,7 @@
             <li><a href="javascript:goToCatalogView(); setCategoryFilter('te');" class="hover:text-white transition">Té Basilur Pirámides</a></li>
             <li><a href="javascript:goToCatalogView(); setCategoryFilter('soluble');" class="hover:text-white transition">Café Liofilizado Soluble</a></li>
             <li><a href="javascript:goToCatalogView(); setCategoryFilter('capsulas');" class="hover:text-white transition">Cápsulas Compatibles</a></li>
+            <li><a href="javascript:goToCatalogView(); setCategoryFilter('miel');" class="hover:text-white transition">Miel & Colmena Los Hualles</a></li>
             <li><a href="javascript:goToCatalogView(); setCategoryFilter('accesorios');" class="hover:text-white transition">Prensas Francesas & Teteras</a></li>
           </ul>
         </div>
@@ -1325,6 +1357,7 @@
         'te_bolsitas': 'Té en Bolsitas & Sobres',
         'capsulas': 'Cápsulas Compatibles Nespresso®',
         'soluble': 'Café Soluble Liofilizado',
+        'miel': 'Miel & Colmena',
         'accesorios': 'Accesorios & Preparación'
       };
       document.getElementById('pdp-crumb-category').textContent = (prod.id >= 900) ? 'Ofertas Flash & Packs' : (categoryLabels[prod.category] || prod.category.toUpperCase());
