@@ -5537,8 +5537,8 @@
     "price": 23990,
     "compare_at_price": 29970,
     "image": "https://cdn.shopify.com/s/files/1/0589/8023/7371/files/3_9eb431c7-a168-4a4c-9603-0870d5b5ae15.jpg?v=1770996495",
-    "description": "El pack degustación definitivo para sumergirse en la experiencia de alta gama. Incluye 1 Café Valle del Cauca 250g (Tueste medio artesanal 100% Arábica), 1 Lata de Té Basilur con 20 Pirámides de seda Ceylán aromatizadas, y 1 frasco de Miel de Ulmo Patagonia 500g de recolección silvestre. Despacho prioritario en 24-48 hrs en Santiago y a todo Chile.",
-    "short_description": "Café Valle del Cauca 250g + Lata Té Basilur 20 Pirámides + Miel de Ulmo 500g.",
+    "description": "El pack degustación para entrar a la casa por los tres lados: café, té y miel. Incluye 1 Café Valle del Cauca 250g (tueste medio artesanal, 100% arábica), 1 Lata de Té Basilur Ceylon Present en hoja 100g, y 1 Miel Multifloral del apiario Los Hualles, de la precordillera de Linares. Tres productores distintos, un solo despacho.",
+    "short_description": "Café Valle del Cauca 250g + Lata Basilur Ceylon en hoja 100g + Miel Multifloral Los Hualles.",
     "variants": [
       {
         "id": 9011,
@@ -5571,7 +5571,8 @@
       "Miel",
       "Descuento",
       "Flash"
-    ]
+    ],
+    "nota_revisar": "09-10-2026: la descripción anterior prometía «20 pirámides de seda» y «miel de Ulmo Patagonia 500 g». Ninguna de las dos existía en el catálogo: no hay lata de pirámides y no había miel. Ahora apunta a productos reales. Confirmar que el pack se arma así."
   },
   {
     "id": 902,
@@ -5656,5 +5657,167 @@
       "Oferta",
       "Flash"
     ]
+  },
+  {
+    "id": 301,
+    "title": "Miel Multifloral Los Hualles | Precordillera de Linares",
+    "handle": "miel-multifloral-los-hualles-vidrio",
+    "source": "Miel de Campo Chile - Apiario Los Hualles",
+    "vendor": "Miel de Campo Chile",
+    "category": "miel",
+    "category_label": "Miel & Colmena",
+    "price": 5000,
+    "variants": [
+      {
+        "id": 3011,
+        "title": "Frasco de vidrio · 1/2 kilo aprox.",
+        "price": 5000,
+        "available": true
+      }
+    ],
+    "images": [
+      "assets/images/productos/mieldecampo/miel-frasco-vidrio.jpg"
+    ],
+    "image": "assets/images/productos/mieldecampo/miel-frasco-vidrio.jpg",
+    "description": "Miel multifloral cosechada en la precordillera de Linares, Región del Maule, y envasada por el mismo apiario que la produce: el Los Hualles. No se compra a granel ni se mezcla con miel de otros productores.\n\nMultifloral quiere decir que las abejas liban de lo que haya florecido ese año, así que el color y el sabor cambian de una temporada a otra. Esa variación es la señal de que no está estandarizada.\n\nFrasco de vidrio, medio kilo aproximado según la etiqueta.",
+    "short_description": "Miel multifloral del Apiario Los Hualles, en la Precordillera de Linares, Región del Maule.",
+    "tags": [
+      "Miel",
+      "Multifloral",
+      "Maule",
+      "Los Hualles",
+      "Apicultor"
+    ],
+    "origen": "Precordillera de Linares, Región del Maule",
+    "apiario": "Los Hualles"
+  },
+  {
+    "id": 302,
+    "title": "Crema de Miel Multifloral | Los Hualles",
+    "handle": "crema-de-miel-los-hualles",
+    "source": "Miel de Campo Chile - Apiario Los Hualles",
+    "vendor": "Miel de Campo Chile",
+    "category": "miel",
+    "category_label": "Miel & Colmena",
+    "price": 6000,
+    "variants": [
+      {
+        "id": 3021,
+        "title": "Frasco · 1 kg",
+        "price": 6000,
+        "available": true
+      }
+    ],
+    "images": [
+      "assets/images/productos/mieldecampo/crema-de-miel.jpg"
+    ],
+    "image": "assets/images/productos/mieldecampo/crema-de-miel.jpg",
+    "description": "La misma miel multifloral del apiario Los Hualles, batida hasta que cristaliza fino y queda con textura de crema. No lleva nada añadido: es miel y nada más.\n\nSe unta sin gotear, que es la razón por la que mucha gente la prefiere para el pan y para el desayuno de los niños.\n\nDel mismo origen: Precordillera de Linares, Región del Maule.",
+    "short_description": "La misma miel multifloral, batida hasta quedar untable.",
+    "tags": [
+      "Miel",
+      "Crema de miel",
+      "Multifloral",
+      "Los Hualles"
+    ],
+    "origen": "Precordillera de Linares, Región del Maule",
+    "apiario": "Los Hualles"
+  },
+  {
+    "id": 303,
+    "title": "Panal Natural en Frasco | Los Hualles",
+    "handle": "panal-natural-los-hualles",
+    "source": "Miel de Campo Chile - Apiario Los Hualles",
+    "vendor": "Miel de Campo Chile",
+    "category": "miel",
+    "category_label": "Miel & Colmena",
+    "price": 20000,
+    "variants": [
+      {
+        "id": 3031,
+        "title": "Frasco · 1 kg",
+        "price": 20000,
+        "available": true
+      }
+    ],
+    "images": [
+      "assets/images/productos/mieldecampo/panal-natural.jpg"
+    ],
+    "image": "assets/images/productos/mieldecampo/panal-natural.jpg",
+    "description": "Un trozo de panal entero dentro del frasco, con su propia miel alrededor. La cera se come: se corta un pedazo y va directo al pan o a la tabla de quesos.\n\nEs el formato más difícil de conseguir, y por eso el más caro del catálogo: no se puede envasar a máquina. Sale del marco de la colmena al frasco, a mano, y cada uno queda distinto.\n\nApiario Los Hualles, Precordillera de Linares, Región del Maule.",
+    "short_description": "Panal entero con su propia miel, tal como lo construyeron las abejas.",
+    "tags": [
+      "Panal",
+      "Miel",
+      "Cera",
+      "Los Hualles",
+      "Edición limitada"
+    ],
+    "origen": "Precordillera de Linares, Región del Maule",
+    "apiario": "Los Hualles"
+  },
+  {
+    "id": 304,
+    "title": "Propóleo Artesanal Multifloral | Los Hualles",
+    "handle": "propoleo-artesanal-los-hualles",
+    "source": "Miel de Campo Chile - Apiario Los Hualles",
+    "vendor": "Miel de Campo Chile",
+    "category": "miel",
+    "category_label": "Miel & Colmena",
+    "price": 5000,
+    "variants": [
+      {
+        "id": 3041,
+        "title": "Gotario",
+        "price": 5000,
+        "available": true
+      }
+    ],
+    "images": [
+      "assets/images/productos/mieldecampo/propoleo.jpg"
+    ],
+    "image": "assets/images/productos/mieldecampo/propoleo.jpg",
+    "description": "Propóleo recogido en el apiario Los Hualles y envasado en gotario.\n\nEl propóleo es la resina con la que las abejas sellan las grietas de la colmena: lo juntan de las yemas de los árboles y lo mezclan con cera. De ahí el color oscuro y el olor fuerte.\n\nMultifloral, del mismo origen que la miel: Precordillera de Linares, Región del Maule.",
+    "short_description": "Propóleo del mismo apiario, en gotario.",
+    "tags": [
+      "Propóleo",
+      "Multifloral",
+      "Los Hualles",
+      "Colmena"
+    ],
+    "origen": "Precordillera de Linares, Región del Maule",
+    "apiario": "Los Hualles"
+  },
+  {
+    "id": 305,
+    "title": "Miel Multifloral | Pote 1 kg",
+    "handle": "miel-multifloral-pote",
+    "source": "Miel de Campo Chile - Apiario Los Hualles",
+    "vendor": "Miel de Campo Chile",
+    "category": "miel",
+    "category_label": "Miel & Colmena",
+    "price": 4000,
+    "variants": [
+      {
+        "id": 3051,
+        "title": "Pote · 1 kg",
+        "price": 4000,
+        "available": true
+      }
+    ],
+    "images": [
+      "assets/images/productos/mieldecampo/miel-pote.jpg"
+    ],
+    "image": "assets/images/productos/mieldecampo/miel-pote.jpg",
+    "description": "Miel multifloral en pote de un kilo. Es el formato para la casa donde la miel se acaba, no para la que la guarda de adorno.\n\nMismo origen y mismo apiario que el resto de la línea. Cambia el envase, que es de plástico de boca ancha y entra la cuchara entera.\n\nApiario Los Hualles, Precordillera de Linares, Región del Maule.",
+    "short_description": "Formato grande, para la casa que gasta miel de verdad.",
+    "tags": [
+      "Miel",
+      "Multifloral",
+      "Formato grande",
+      "Los Hualles"
+    ],
+    "origen": "Precordillera de Linares, Región del Maule",
+    "apiario": "Los Hualles"
   }
 ]
