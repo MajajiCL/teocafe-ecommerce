@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1080" height="1080" viewBox="0 0 1080 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&amp;family=Montserrat:wght@500;600;700&amp;display=swap');
+      .v3-title { font-family: 'Playfair Display', serif; font-weight: 800; letter-spacing: 10px; font-size: 64px; fill: url(#goldGradText3); }
+      .v3-sub { font-family: 'Montserrat', sans-serif; font-weight: 700; letter-spacing: 6px; font-size: 20px; fill: #FDE68A; }
+      .v3-tag { font-family: 'Montserrat', sans-serif; font-weight: 600; letter-spacing: 4px; font-size: 14px; fill: #D97706; }
+    </style>
+    <radialGradient id="bgGrad3" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#1A130C" /><stop offset="60%" stop-color="#0E0906" /><stop offset="100%" stop-color="#040302" />
+    </radialGradient>
+    <linearGradient id="goldGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFBEB" /><stop offset="30%" stop-color="#F59E0B" /><stop offset="70%" stop-color="#D97706" /><stop offset="100%" stop-color="#78350F" />
+    </linearGradient>
+    <linearGradient id="goldGradText3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" /><stop offset="35%" stop-color="#FDE68A" /><stop offset="75%" stop-color="#F59E0B" /><stop offset="100%" stop-color="#B45309" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1080" height="1080" fill="url(#bgGrad3)" />
+
+  <circle cx="540" cy="500" r="440" stroke="url(#goldGrad3)" stroke-width="2" stroke-opacity="0.3" stroke-dasharray="4 6" />
+  <circle cx="540" cy="500" r="425" stroke="url(#goldGrad3)" stroke-width="3" stroke-opacity="0.85" />
+
+  <g transform="translate(540, 420)">
+    <circle cx="0" cy="0" r="195" fill="#120B06" stroke="url(#goldGrad3)" stroke-width="3" />
+
+    <!-- HOJA NOBLE ELEGANTE A LA IZQUIERDA -->
+    <path d="M 0 -160 C -85 -140 -140 -80 -140 0 C -140 80 -80 140 0 160 C -40 90 -40 20 0 -160 Z" fill="url(#goldGrad3)" />
+    <!-- Nervaduras de la hoja -->
+    <path d="M 0 -140 C -50 -70 -50 40 0 140" stroke="#0E0906" stroke-width="5" stroke-linecap="round" fill="none" />
+    <line x1="-35" y1="-50" x2="-80" y2="-65" stroke="#0E0906" stroke-width="3.5" stroke-linecap="round" />
+    <line x1="-42" y1="0" x2="-95" y2="-5" stroke="#0E0906" stroke-width="3.5" stroke-linecap="round" />
+    <line x1="-30" y1="50" x2="-75" y2="55" stroke="#0E0906" stroke-width="3.5" stroke-linecap="round" />
+
+    <!-- GRANO DE CAFÉ ARÁBICA A LA DERECHA -->
+    <g transform="translate(45, 0)">
+      <path d="M 0 -130 C 75 -130 115 -75 115 0 C 115 75 75 130 0 130 C 30 70 30 -70 0 -130 Z" fill="url(#goldGrad3)" />
+      <!-- Fisura en S del grano -->
+      <path d="M 15 -100 C 40 -30 40 30 15 100" stroke="#0E0906" stroke-width="6" stroke-linecap="round" fill="none" />
+      <circle cx="55" cy="-20" r="6" fill="#FFFBEB" opacity="0.8" />
+    </g>
+
+    <!-- Rayos solares de los cuatro puntos cardinales -->
+    <circle cx="0" cy="-195" r="5" fill="#F59E0B" />
+    <circle cx="0" cy="195" r="5" fill="#F59E0B" />
+    <circle cx="-195" cy="0" r="5" fill="#F59E0B" />
+    <circle cx="195" cy="0" r="5" fill="#F59E0B" />
+  </g>
+
+  <text x="540" y="730" text-anchor="middle" class="v3-title">Té o Café</text>
+  <g transform="translate(540, 765)">
+    <line x1="-150" y1="0" x2="-25" y2="0" stroke="url(#goldGrad3)" stroke-width="1.8" stroke-opacity="0.7" />
+    <circle cx="0" cy="0" r="3" fill="#F59E0B" />
+    <line x1="25" y1="0" x2="150" y2="0" stroke="url(#goldGrad3)" stroke-width="1.8" stroke-opacity="0.7" />
+  </g>
+  <text x="540" y="810" text-anchor="middle" class="v3-sub">TEOCAFE.CL</text>
+  <text x="540" y="850" text-anchor="middle" class="v3-tag">ALQUIMIA DEL GRANO &amp; LA HOJA • CHILE</text>
+</svg>

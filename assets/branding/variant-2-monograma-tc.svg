@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1080" height="1080" viewBox="0 0 1080 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&amp;family=Cinzel:wght@700;800;900&amp;display=swap');
+      .v2-title { font-family: 'Cinzel', serif; font-weight: 800; letter-spacing: 16px; font-size: 60px; fill: url(#goldGradText2); }
+      .v2-sub { font-family: 'Montserrat', sans-serif; font-weight: 700; letter-spacing: 7px; font-size: 20px; fill: #FDE68A; }
+      .v2-desc { font-family: 'Montserrat', sans-serif; font-weight: 600; letter-spacing: 5px; font-size: 14px; fill: #D97706; }
+      .mono-t { font-family: 'Cinzel', serif; font-weight: 900; font-size: 220px; fill: url(#goldGrad2); }
+      .mono-c { font-family: 'Cinzel', serif; font-weight: 900; font-size: 240px; fill: url(#goldGrad2); }
+    </style>
+    <radialGradient id="bgGrad2" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#14100E" /><stop offset="60%" stop-color="#0A0807" /><stop offset="100%" stop-color="#040303" />
+    </radialGradient>
+    <linearGradient id="goldGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFBEB" /><stop offset="25%" stop-color="#FBBF24" /><stop offset="70%" stop-color="#D97706" /><stop offset="100%" stop-color="#92400E" />
+    </linearGradient>
+    <linearGradient id="goldGradText2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" /><stop offset="40%" stop-color="#FBBF24" /><stop offset="100%" stop-color="#D97706" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1080" height="1080" fill="url(#bgGrad2)" />
+
+  <!-- Marco Circular con Bisel Estelar -->
+  <circle cx="540" cy="500" r="440" stroke="url(#goldGrad2)" stroke-width="2" stroke-opacity="0.3" stroke-dasharray="10 8" />
+  <circle cx="540" cy="500" r="425" stroke="url(#goldGrad2)" stroke-width="3.5" stroke-opacity="0.85" />
+  <polygon points="540,90 850,225 960,500 850,775 540,910 230,775 120,500 230,225" stroke="url(#goldGrad2)" stroke-width="1.5" stroke-opacity="0.4" />
+
+  <!-- MONOGRAMA CENTRAL TC ESCULPIDO -->
+  <g transform="translate(540, 420)">
+    <circle cx="0" cy="0" r="190" fill="#120D0A" stroke="url(#goldGrad2)" stroke-width="2" />
+    
+    <!-- Corona de Hoja de té sobre la T -->
+    <path d="M -40 -120 Q 0 -160 40 -120 Q 15 -135 0 -135 Q -15 -135 -40 -120 Z" fill="url(#goldGrad2)" />
+    <line x1="0" y1="-155" x2="0" y2="-125" stroke="#0E0A07" stroke-width="2.5" />
+
+    <!-- Letra T romana mayúscula -->
+    <text x="-35" y="65" text-anchor="middle" class="mono-t">T</text>
+    
+    <!-- Letra C entrelazada -->
+    <text x="40" y="90" text-anchor="middle" class="mono-c" opacity="0.92">C</text>
+
+    <!-- Grano de café dorado en el corazón del lazo -->
+    <g transform="translate(15, 20) scale(0.38) rotate(20)">
+      <path d="M 0 -60 C 45 -60 70 -25 70 20 C 70 65 45 100 0 100 C 18 55 18 -10 0 -60 Z" fill="#FFFBEB" />
+      <path d="M 12 -40 C 26 0 26 50 12 80" stroke="#0A0807" stroke-width="6" stroke-linecap="round" />
+    </g>
+  </g>
+
+  <text x="540" y="730" text-anchor="middle" class="v2-title">TÉ O CAFÉ</text>
+  <g transform="translate(540, 765)">
+    <line x1="-140" y1="0" x2="-20" y2="0" stroke="url(#goldGrad2)" stroke-width="1.5" stroke-opacity="0.8" />
+    <polygon points="0,-4 4,0 0,4 -4,0" fill="#F59E0B" />
+    <line x1="20" y1="0" x2="140" y2="0" stroke="url(#goldGrad2)" stroke-width="1.5" stroke-opacity="0.8" />
+  </g>
+  <text x="540" y="810" text-anchor="middle" class="v2-sub">TEOCAFE.CL</text>
+  <text x="540" y="850" text-anchor="middle" class="v2-desc">MONOGRAMA DE AUTOR • SANTIAGO</text>
+</svg>

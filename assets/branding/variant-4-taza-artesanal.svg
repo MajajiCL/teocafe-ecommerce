@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1080" height="1080" viewBox="0 0 1080 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800;900&amp;family=Montserrat:wght@500;600;700&amp;display=swap');
+      .v4-title { font-family: 'Cinzel', serif; font-weight: 800; letter-spacing: 14px; font-size: 60px; fill: url(#goldGradText4); }
+      .v4-sub { font-family: 'Montserrat', sans-serif; font-weight: 700; letter-spacing: 6px; font-size: 20px; fill: #FDE68A; }
+      .v4-desc { font-family: 'Montserrat', sans-serif; font-weight: 600; letter-spacing: 4px; font-size: 14px; fill: #D97706; }
+    </style>
+    <radialGradient id="bgGrad4" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#1B140E" /><stop offset="60%" stop-color="#0E0A07" /><stop offset="100%" stop-color="#040303" />
+    </radialGradient>
+    <linearGradient id="goldGrad4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFBEB" /><stop offset="25%" stop-color="#F59E0B" /><stop offset="70%" stop-color="#D97706" /><stop offset="100%" stop-color="#92400E" />
+    </linearGradient>
+    <linearGradient id="goldGradText4" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" /><stop offset="35%" stop-color="#FBBF24" /><stop offset="100%" stop-color="#B45309" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1080" height="1080" fill="url(#bgGrad4)" />
+
+  <circle cx="540" cy="500" r="445" stroke="url(#goldGrad4)" stroke-width="2" stroke-opacity="0.3" stroke-dasharray="8 6" />
+  <circle cx="540" cy="500" r="430" stroke="url(#goldGrad4)" stroke-width="3" stroke-opacity="0.85" />
+
+  <g transform="translate(540, 420)">
+    <!-- Plato base elíptico -->
+    <ellipse cx="0" cy="140" rx="165" ry="18" stroke="url(#goldGrad4)" stroke-width="4.5" fill="none" />
+    <line x1="-125" y1="140" x2="125" y2="140" stroke="url(#goldGrad4)" stroke-width="2.5" stroke-opacity="0.5" />
+
+    <!-- Taza de porcelana de degustación -->
+    <path d="M -100 15 L -85 125 C -85 135 85 135 85 125 L 100 15 Z" fill="url(#goldGrad4)" />
+    <ellipse cx="0" cy="20" rx="100" ry="20" fill="#120D08" stroke="url(#goldGrad4)" stroke-width="4" />
+
+    <!-- Asa de la taza -->
+    <path d="M 95 35 C 150 35 150 100 90 105" stroke="url(#goldGrad4)" stroke-width="8" stroke-linecap="round" fill="none" />
+
+    <!-- Vapor aromático que asciende y corona en Hoja noble -->
+    <path d="M 0 -5 C 20 -50 -20 -95 0 -145 L 0 -175" stroke="url(#goldGrad4)" stroke-width="5" stroke-linecap="round" fill="none" />
+    
+    <!-- Hoja de Té grande en la cúspide -->
+    <path d="M 0 -175 C -50 -205 -40 -260 0 -285 C 40 -260 50 -205 0 -175 Z" fill="url(#goldGrad4)" />
+    <path d="M 0 -275 L 0 -190" stroke="#120D08" stroke-width="3.5" stroke-linecap="round" />
+
+    <!-- Grano de café en el vapor izquierdo -->
+    <g transform="translate(-50, -75) scale(0.45) rotate(-25)">
+      <path d="M 0 -50 C 45 -50 70 -20 70 20 C 70 65 45 100 0 100 C 18 55 18 -10 0 -50 Z" fill="url(#goldGrad4)" />
+      <path d="M 12 -35 C 26 0 26 50 12 80" stroke="#120D08" stroke-width="6" stroke-linecap="round" />
+    </g>
+
+    <!-- Gota de espresso crema que desciende derecha -->
+    <path d="M 50 -100 C 50 -100 68 -70 68 -55 C 68 -42 58 -32 50 -32 C 42 -32 32 -42 32 -55 C 32 -70 50 -100 50 -100 Z" fill="#FDE68A" />
+  </g>
+
+  <text x="540" y="730" text-anchor="middle" class="v4-title">TÉ O CAFÉ</text>
+  <g transform="translate(540, 765)">
+    <line x1="-150" y1="0" x2="-25" y2="0" stroke="url(#goldGrad4)" stroke-width="2" stroke-opacity="0.7" />
+    <circle cx="0" cy="0" r="3.5" fill="#F59E0B" />
+    <line x1="25" y1="0" x2="150" y2="0" stroke="url(#goldGrad4)" stroke-width="2" stroke-opacity="0.7" />
+  </g>
+  <text x="540" y="810" text-anchor="middle" class="v4-sub">TEOCAFE.CL</text>
+  <text x="540" y="850" text-anchor="middle" class="v4-desc">CULTURA DE CATA &amp; ESPECIALIDAD • SANTIAGO</text>
+</svg>
