@@ -1208,7 +1208,7 @@ const operationalCatalog = [
       }
     ],
     "images": [],
-    "image": "",
+    "image": "https://cdn.shopify.com/s/files/1/0375/8617/4088/files/70275-00-Christmas_House-1_T.webp?v=1786571043",
     "description": "Basilur House Navidad es un té negro de Ceilán con aciano blanco y rojo, realzado con un irresistible sabor a mazapán que lo hace especialmente dulce y reconfortante en la temporada de fiestas. Como todo té negro, conserva de forma natural los antioxidantes propios de la hoja de Ceilán, sin azúcar añadida. Su presentación en forma de casita navideña lo convierte en un regalo tan decorativo como delicioso, ideal para sorprender en Navidad o para decorar la mesa de fin de año. En 20 pirámides individuales , que conservan mejor el aroma de las hojas enteras, es perfecto para acompañar la mesa navideña o para regalar. Basilur , la magia navideña en forma de casa.",
     "short_description": "Basilur House Navidad es un té negro de Ceilán con aciano blanco y rojo, realzado con un irresistible sabor a mazapán que lo hace especialmente dulce y reconfortante en la temporada de fiestas. Como todo té negro, conserva de forma natural los antioxidantes propios de la hoja de Ceilán, sin azúca...",
     "tags": [
@@ -5536,7 +5536,7 @@ const operationalCatalog = [
     "category_label": "Ofertas Flash & Packs",
     "price": 23990,
     "compare_at_price": 29970,
-    "image": "assets/images/hero.jpg",
+    "image": "https://cdn.shopify.com/s/files/1/0589/8023/7371/files/3_9eb431c7-a168-4a4c-9603-0870d5b5ae15.jpg?v=1770996495",
     "description": "El pack degustación definitivo para sumergirse en la experiencia de alta gama. Incluye 1 Café Valle del Cauca 250g (Tueste medio artesanal 100% Arábica), 1 Lata de Té Basilur con 20 Pirámides de seda Ceylán aromatizadas, y 1 frasco de Miel de Ulmo Patagonia 500g de recolección silvestre. Despacho prioritario en 24-48 hrs en Santiago y a todo Chile.",
     "short_description": "Café Valle del Cauca 250g + Lata Té Basilur 20 Pirámides + Miel de Ulmo 500g.",
     "variants": [
@@ -5583,7 +5583,7 @@ const operationalCatalog = [
     "category_label": "Ofertas Flash & Packs",
     "price": 17990,
     "compare_at_price": 21800,
-    "image": "assets/images/banner-colocolo.jpg",
+    "image": "https://cdn.shopify.com/s/files/1/0951/1580/4965/files/CAFEENBOLSAGRANDE_MOLIDO.png?v=1754445052",
     "description": "Edición oficial conmemorativa para los hinchas del Cacique. Incluye 1 bolsa de Café Centenario Colo-Colo 250g (100% Arábica de altura con tueste medio balanceado), 1 Prensa Francesa de vidrio borosilicato resistente a choques térmicos (600ml) y un Sticker Oficial del Club. Ideal para extraer un café con cuerpo sedoso, sin acidez punzante y aroma envolvente.",
     "short_description": "Café Centenario Colo-Colo 250g + Prensa Francesa 600ml + Sticker Oficial.",
     "variants": [
@@ -5621,7 +5621,7 @@ const operationalCatalog = [
     "category_label": "Ofertas Flash & Packs",
     "price": 22990,
     "compare_at_price": 27980,
-    "image": "assets/images/banner-lafinca.jpg",
+    "image": "https://cdn.shopify.com/s/files/1/0589/8023/7371/files/7_f9dcc72f-2cb4-4159-a642-9947e3250171.jpg?v=1770996522",
     "description": "El pack perfecto para comparar los dos grandes perfiles de Colombia tostados en pequeños lotes en Santiago. Incluye 1 bolsa de Café Valle del Cauca 250g (Tueste Medio Full City con notas florales, panela y chocolate) + 1 bolsa de Café Quindío 250g (Tueste Intenso Francés con cuerpo pronunciado, notas a nuez y cacao oscuro). Total 500g de café recién tostado.",
     "short_description": "Café Valle del Cauca 250g (Medio) + Café Quindío 250g (Intenso) recién tostados.",
     "variants": [
