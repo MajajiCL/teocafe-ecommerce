@@ -537,18 +537,18 @@
                 🍯 NUEVO • APIARIO LOS HUALLES, REGIÓN DEL MAULE
               </span>
               <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold font-headline leading-tight">
-                Esta miel tiene dirección
+                Un kilo de miel por $4.000
               </h2>
               <p class="text-sm sm:text-base text-zinc-200 leading-relaxed font-light">
-                Precordillera de Linares. Está escrito en la etiqueta de cada frasco, con nombre y región, porque la miel sale de ahí y de ningún otro lado. Miel multifloral, crema de miel, panal natural y propóleo del mismo apiario.
+                Del apiario Los Hualles, en la precordillera de Linares. Multifloral, crema de miel, panal natural y propóleo — todo del mismo lugar, y el lugar viene impreso en la etiqueta de cada frasco.
               </p>
               <div class="flex flex-wrap items-center gap-3 pt-3">
-                <button onclick="setSourceFilter('Miel de Campo'); location.href='#catalogo';" class="bg-yellow-500 hover:bg-yellow-400 text-black px-6 py-3.5 rounded-xl font-bold text-xs shadow-xl flex items-center gap-2 transition">
-                  <i data-lucide="hexagon" class="w-4 h-4"></i> Ver la línea completa
+                <button onclick="setCategoryFilter('miel'); setSourceFilter('Miel de Campo'); goToCatalogView(); location.hash='catalogo';" class="bg-yellow-500 hover:bg-yellow-400 text-black px-6 py-3.5 rounded-xl font-bold text-xs shadow-xl flex items-center gap-2 transition">
+                  <i data-lucide="shopping-bag" class="w-4 h-4"></i> Comprar miel · desde $4.000
                 </button>
-                <a href="#catalogo" class="px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white font-bold text-xs transition">
-                  Desde $4.000 el kilo
-                </a>
+                <button onclick="openProductDetail(303);" class="px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white font-bold text-xs transition flex items-center gap-2">
+                  <i data-lucide="hexagon" class="w-4 h-4"></i> Ver el panal entero
+                </button>
               </div>
             </div>
           </div>
@@ -803,6 +803,9 @@
         <button onclick="setCategoryFilter('all')" class="cat-pill active-cat px-4 py-2 rounded-full font-bold bg-brand-primary text-white shadow-sm transition flex items-center gap-1.5" data-cat="all">
           Todos <span class="bg-white/20 px-1.5 py-0.5 rounded-full text-[10px] font-mono">146</span>
         </button>
+        <button onclick="setCategoryFilter('miel')" class="cat-pill px-4 py-2 rounded-full font-medium bg-brand-card border border-brand-border text-brand-text hover:border-brand-primary transition flex items-center gap-1.5" data-cat="miel">
+          🍯 Miel &amp; Colmena <span class="bg-black/5 px-1.5 py-0.5 rounded-full text-[10px] font-mono font-bold">5</span>
+        </button>
         <button onclick="setCategoryFilter('cafe')" class="cat-pill px-4 py-2 rounded-full font-medium bg-brand-card border border-brand-border text-brand-text hover:border-brand-primary transition flex items-center gap-1.5" data-cat="cafe">
           ☕ Café de Grano & Molido <span class="bg-black/5 px-1.5 py-0.5 rounded-full text-[10px] font-mono font-bold">15</span>
         </button>
@@ -820,9 +823,6 @@
         </button>
         <button onclick="setCategoryFilter('soluble')" class="cat-pill px-4 py-2 rounded-full font-medium bg-brand-card border border-brand-border text-brand-text hover:border-brand-primary transition flex items-center gap-1.5" data-cat="soluble">
           ⚡ Soluble & Liofilizado <span class="bg-black/5 px-1.5 py-0.5 rounded-full text-[10px] font-mono font-bold">6</span>
-        </button>
-        <button onclick="setCategoryFilter('miel')" class="cat-pill px-4 py-2 rounded-full font-medium bg-brand-card border border-brand-border text-brand-text hover:border-brand-primary transition flex items-center gap-1.5" data-cat="miel">
-          🍯 Miel &amp; Colmena <span class="bg-black/5 px-1.5 py-0.5 rounded-full text-[10px] font-mono font-bold">5</span>
         </button>
         <button onclick="setCategoryFilter('accesorios')" class="cat-pill px-4 py-2 rounded-full font-medium bg-brand-card border border-brand-border text-brand-text hover:border-brand-primary transition flex items-center gap-1.5" data-cat="accesorios">
           ✨ Teteras, Prensas & Accesorios <span class="bg-black/5 px-1.5 py-0.5 rounded-full text-[10px] font-mono font-bold">12</span>
@@ -1018,6 +1018,50 @@
 
   </div>
 
+
+  <!-- ========================================== -->
+  <!-- PREGUNTAS FRECUENTES -->
+  <!-- ========================================== -->
+  <section id="faq" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-brand-border">
+        <div class="mb-8">
+          <span class="text-[11px] font-black uppercase tracking-widest text-brand-primary">Antes de comprar</span>
+          <h2 class="text-3xl sm:text-4xl font-bold font-headline text-brand-text mt-2">Preguntas frecuentes</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-7">
+
+          <div>
+            <h3 class="font-bold text-brand-text text-sm mb-1.5">¿Cuánto cuesta el despacho?</h3>
+            <p class="text-sm text-brand-muted leading-relaxed">En la Región Metropolitana, $2.990, y gratis sobre $30.000. A regiones va por Starken o Chilexpress, $4.990. Los pedidos hechos antes de las 14:00 salen el mismo día.</p>
+          </div>
+
+          <div>
+            <h3 class="font-bold text-brand-text text-sm mb-1.5">¿Con qué puedo pagar?</h3>
+            <p class="text-sm text-brand-muted leading-relaxed">La tienda está en marcha blanca: el checkout todavía no cobra en línea. Mientras tanto, el pedido se cierra por WhatsApp y se paga por transferencia. Webpay Plus y Mercado Pago quedan habilitados en cuanto esté la cuenta.</p>
+          </div>
+
+          <div>
+            <h3 class="font-bold text-brand-text text-sm mb-1.5">Se me puso dura la miel, ¿está mala?</h3>
+            <p class="text-sm text-brand-muted leading-relaxed">No. Cristalizar es lo normal: la miel es azúcar con muy poca agua y con el tiempo vuelve a formar cristales. Para devolverla a líquida, baño María con agua tibia, nunca el microondas. La que nunca se endurece suele haber pasado por calor o por un filtrado fuerte.</p>
+          </div>
+
+          <div>
+            <h3 class="font-bold text-brand-text text-sm mb-1.5">¿De dónde viene la miel?</h3>
+            <p class="text-sm text-brand-muted leading-relaxed">Del apiario Los Hualles, en la precordillera de Linares, Región del Maule. Viene impreso en la etiqueta de cada frasco, con nombre y región. Es multifloral, así que el color y el sabor cambian según lo que florezca cada temporada.</p>
+          </div>
+
+          <div>
+            <h3 class="font-bold text-brand-text text-sm mb-1.5">¿El café viene en grano o molido?</h3>
+            <p class="text-sm text-brand-muted leading-relaxed">Las dos cosas. Cada café tiene su selector: grano entero, molido para filtrado o prensa, y molido para espresso o moka. Si vas a usar prensa francesa, elige molido grueso.</p>
+          </div>
+
+          <div>
+            <h3 class="font-bold text-brand-text text-sm mb-1.5">¿Cómo los contacto?</h3>
+            <p class="text-sm text-brand-muted leading-relaxed">Por ahora, por WhatsApp. Para la línea de miel, el apiario atiende directo en <span class="font-semibold text-brand-text">+56 9 9827 6784</span>. El canal de soporte general de la tienda está en configuración.</p>
+          </div>
+
+        </div>
+      </section>
+
   <!-- ========================================== -->
   <!-- FOOTER                                     -->
   <!-- ========================================== -->
@@ -1036,9 +1080,6 @@
             E-commerce de café de especialidad y té de origen en Chile. Conectando tostadurías de autor y plantaciones nobles con entrega en 24-48 horas.
           </p>
           <div class="flex items-center gap-3 pt-2">
-            <a href="#" class="w-8 h-8 rounded-full bg-amber-900/50 flex items-center justify-center hover:bg-amber-600 transition text-white"><i data-lucide="instagram" class="w-4 h-4"></i></a>
-            <a href="#" class="w-8 h-8 rounded-full bg-amber-900/50 flex items-center justify-center hover:bg-amber-600 transition text-white"><i data-lucide="facebook" class="w-4 h-4"></i></a>
-            <a href="#" class="w-8 h-8 rounded-full bg-amber-900/50 flex items-center justify-center hover:bg-amber-600 transition text-white"><i data-lucide="mail" class="w-4 h-4"></i></a>
           </div>
         </div>
 
@@ -1057,11 +1098,11 @@
         <div>
           <h4 class="text-xs font-bold uppercase tracking-wider text-amber-400 mb-4">Despacho & Soporte</h4>
           <ul class="space-y-2 text-xs">
-            <li><a href="#" class="hover:text-white transition">RM: 24-48 hrs ($2.990)</a></li>
-            <li><a href="#" class="hover:text-white transition">Envío Gratis RM sobre $30.000</a></li>
-            <li><a href="#" class="hover:text-white transition">Regiones (Starken / Chilexpress)</a></li>
-            <li><a href="#" class="hover:text-white transition">Preguntas Frecuentes</a></li>
-            <li><a href="#" class="hover:text-white transition">Contacto & Soporte</a></li>
+            <li><span class="text-amber-100/60">RM: 24–48 hrs · $2.990</span></li>
+            <li><span class="text-amber-100/60">Envío gratis en RM sobre $30.000</span></li>
+            <li><span class="text-amber-100/60">Regiones: Starken / Chilexpress · $4.990</span></li>
+            <li><a href="#faq" class="hover:text-white transition">Preguntas Frecuentes</a></li>
+            <li><a href="#faq" class="hover:text-white transition">Contacto & Soporte</a></li>
           </ul>
         </div>
 
