@@ -203,58 +203,81 @@
   <!-- ========================================== -->
   <!-- HEADER PRINCIPAL                           -->
   <!-- ========================================== -->
-  <header class="bg-brand-card border-b border-brand-border sticky top-0 z-20 shadow-sm transition-colors backdrop-blur-md">
+  <header class="bg-brand-card border-b border-brand-border sticky top-0 z-30 shadow-md transition-colors backdrop-blur-md">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-20">
+      <div class="flex items-center justify-between h-18 sm:h-20 gap-4">
         
         <!-- Logo de Marca Vectorial de Autor -->
-        <a href="javascript:goToCatalogView()" class="flex items-center gap-3.5 group">
-          <div id="brand-logo-svg-wrap" class="w-12 h-12 text-amber-500 transition-transform duration-300 group-hover:scale-105 flex-shrink-0">
+        <a href="javascript:goToCatalogView()" class="flex items-center gap-3 group flex-shrink-0">
+          <div id="brand-logo-svg-wrap" class="w-10 h-10 sm:w-12 sm:h-12 text-amber-500 transition-transform duration-300 group-hover:scale-105 flex-shrink-0">
             <!-- El SVG vectorial se inyecta dinámicamente con JS -->
           </div>
           <div class="flex flex-col">
             <div class="flex items-center gap-2">
-              <span id="brand-logo-text" class="text-2xl sm:text-3xl font-bold font-headline tracking-tight text-brand-text leading-none transition-colors">
+              <span id="brand-logo-text" class="text-xl sm:text-2xl lg:text-3xl font-bold font-headline tracking-tight text-brand-text leading-none transition-colors whitespace-nowrap">
                 Té o Café
               </span>
-              <span class="text-[10px] bg-amber-500/10 text-amber-700 dark:text-amber-400 border border-amber-500/30 px-1.5 py-0.5 rounded font-mono font-bold">
+              <span class="text-[9px] sm:text-[10px] bg-amber-500/10 text-amber-700 dark:text-amber-400 border border-amber-500/30 px-1.5 py-0.5 rounded font-mono font-bold whitespace-nowrap">
                 teocafe.cl
               </span>
             </div>
-            <span id="brand-logo-tagline" class="text-[10px] tracking-widest uppercase text-brand-muted font-bold mt-1 block">
+            <span id="brand-logo-tagline" class="hidden sm:block text-[9px] sm:text-[10px] tracking-widest uppercase text-brand-muted font-bold mt-1 whitespace-nowrap">
               Café de Especialidad, Té Basilur &amp; Miel Pura • Chile
             </span>
           </div>
         </a>
 
-        <!-- Buscador Central -->
-        <div class="hidden lg:flex items-center flex-1 max-w-md mx-8">
+        <!-- Buscador Central (Desktop y Tablet) -->
+        <div class="hidden md:flex items-center flex-1 max-w-md mx-2 lg:mx-6">
           <div class="relative w-full">
             <i data-lucide="search" class="w-4 h-4 text-brand-muted absolute left-3.5 top-3"></i>
             <input type="text" id="search-input" onkeyup="handleSearch(this.value)" placeholder="Buscar café en grano, té Basilur, miel, prensas..." class="w-full bg-brand-bg border border-brand-border rounded-full pl-10 pr-4 py-2.5 text-xs text-brand-text outline-none focus:border-amber-500 transition shadow-inner">
           </div>
         </div>
 
-        <!-- Enlaces & Acciones -->
-        <div class="flex items-center gap-4">
-          <nav class="hidden xl:flex items-center gap-5 text-xs font-bold text-brand-text">
-            <a href="javascript:goToCatalogView(); setMainCollection('all');" class="hover:text-amber-600 transition">Catálogo (146)</a>
-            <a href="javascript:goToCatalogView(); setMainCollection('cafe');" class="hover:text-amber-600 transition">☕ Café Grano</a>
-            <a href="javascript:goToCatalogView(); setMainCollection('te_basilur');" class="hover:text-amber-600 transition">🍃 Té Basilur</a>
-            <a href="javascript:goToCatalogView(); setMainCollection('colocolo');" class="hover:text-amber-600 transition">🏆 Colo-Colo</a>
-            <a href="javascript:goToCatalogView(); setMainCollection('miel');" class="hover:text-amber-600 transition">🍯 Miel de Campo</a>
-            <a href="javascript:goToCatalogView(); setMainCollection('packs');" class="text-amber-600 hover:text-amber-500 transition flex items-center gap-1 font-extrabold">🎁 Packs -20%</a>
-            <a href="javascript:setViewMode('app');" class="hover:text-amber-600 transition flex items-center gap-1 text-zinc-500"><i data-lucide="smartphone" class="w-3.5 h-3.5"></i> App</a>
-          </nav>
+        <!-- Enlaces Rápidos & Canasta -->
+        <div class="flex items-center gap-2 sm:gap-3 flex-shrink-0">
+          <!-- Botón App Móvil -->
+          <button onclick="setViewMode(currentViewMode === 'app' ? 'web' : 'app')" class="hidden sm:flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-bold text-brand-muted hover:text-amber-500 hover:bg-amber-500/10 border border-transparent hover:border-amber-500/20 transition whitespace-nowrap">
+            <i data-lucide="smartphone" class="w-4 h-4 text-amber-500"></i>
+            <span>App Móvil</span>
+          </button>
 
           <!-- Botón Canasta -->
-          <button onclick="toggleCart()" class="btn-brand-primary relative flex items-center gap-2.5 px-4 sm:px-5 py-2.5 rounded-full font-bold text-xs shadow-md">
+          <button onclick="toggleCart()" class="btn-brand-primary relative flex items-center gap-2 px-3.5 sm:px-5 py-2.5 rounded-full font-bold text-xs shadow-md whitespace-nowrap">
             <i data-lucide="shopping-bag" class="w-4 h-4 text-amber-300"></i>
             <span class="hidden sm:inline">Canasta</span>
             <span id="cart-badge" class="bg-amber-400 text-black text-[11px] w-5 h-5 rounded-full flex items-center justify-center font-extrabold shadow">0</span>
           </button>
         </div>
 
+      </div>
+    </div>
+
+    <!-- ⚡ BARRA DE CATEGORÍAS EN UNA SOLA LÍNEA (RESPONSIVA CON SCROLL HORIZONTAL SUAVE) -->
+    <div class="border-t border-brand-border/60 bg-brand-card/95 backdrop-blur-md px-3 sm:px-6">
+      <div class="max-w-7xl mx-auto flex items-center gap-1.5 sm:gap-2 overflow-x-auto scrollbar-none py-2 text-xs font-bold whitespace-nowrap select-none">
+        <button onclick="navigateToCollection('all')" class="whitespace-nowrap flex-shrink-0 px-3 py-1.5 rounded-lg text-brand-text hover:text-amber-400 hover:bg-amber-500/10 border border-transparent hover:border-amber-500/30 transition flex items-center gap-1.5">
+          <span>⭐ Catálogo (146)</span>
+        </button>
+        <button onclick="navigateToCollection('cafe')" class="whitespace-nowrap flex-shrink-0 px-3 py-1.5 rounded-lg text-brand-text hover:text-amber-400 hover:bg-amber-500/10 border border-transparent hover:border-amber-500/30 transition flex items-center gap-1.5">
+          <span>☕ Café Grano</span>
+        </button>
+        <button onclick="navigateToCollection('te_basilur')" class="whitespace-nowrap flex-shrink-0 px-3 py-1.5 rounded-lg text-brand-text hover:text-amber-400 hover:bg-amber-500/10 border border-transparent hover:border-amber-500/30 transition flex items-center gap-1.5">
+          <span>🍃 Té Basilur</span>
+        </button>
+        <button onclick="navigateToCollection('colocolo')" class="whitespace-nowrap flex-shrink-0 px-3 py-1.5 rounded-lg text-brand-text hover:text-amber-400 hover:bg-amber-500/10 border border-transparent hover:border-amber-500/30 transition flex items-center gap-1.5">
+          <span>🏆 Colo-Colo</span>
+        </button>
+        <button onclick="navigateToCollection('miel')" class="whitespace-nowrap flex-shrink-0 px-3 py-1.5 rounded-lg text-brand-text hover:text-amber-400 hover:bg-amber-500/10 border border-transparent hover:border-amber-500/30 transition flex items-center gap-1.5">
+          <span>🍯 Miel de Campo</span>
+        </button>
+        <button onclick="navigateToCollection('packs')" class="whitespace-nowrap flex-shrink-0 px-3 py-1.5 rounded-lg text-amber-400 hover:text-amber-300 bg-amber-500/10 hover:bg-amber-500/20 border border-amber-500/40 transition flex items-center gap-1.5 font-extrabold shadow-sm">
+          <span>🎁 Packs -20%</span>
+        </button>
+        <button onclick="navigateToCollection('accesorios')" class="whitespace-nowrap flex-shrink-0 px-3 py-1.5 rounded-lg text-brand-text hover:text-amber-400 hover:bg-amber-500/10 border border-transparent hover:border-amber-500/30 transition flex items-center gap-1.5">
+          <span>✨ Cafeteras &amp; Accesorios</span>
+        </button>
       </div>
     </div>
   </header>
@@ -415,9 +438,9 @@
               </div>
 
               <div class="flex flex-wrap items-center gap-3 pt-3">
-                <a href="#catalogo" onclick="setMainCollection('all')" class="bg-amber-500 hover:bg-amber-400 text-black px-6 py-3.5 rounded-xl font-bold text-xs shadow-xl flex items-center gap-2 transition transform hover:-translate-y-0.5">
+                <button onclick="navigateToCollection('all')" class="bg-amber-500 hover:bg-amber-400 text-black px-6 py-3.5 rounded-xl font-bold text-xs shadow-xl flex items-center gap-2 transition transform hover:-translate-y-0.5">
                   <i data-lucide="sparkles" class="w-4 h-4"></i> Explorar Catálogo (146)
-                </a>
+                </button>
                 <button onclick="openProductDetail(901)" class="px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-white font-bold text-xs transition flex items-center gap-2 transform hover:-translate-y-0.5">
                   <i data-lucide="package" class="w-4 h-4"></i> Ver Pack Bienvenida (19% OFF)
                 </button>
@@ -451,7 +474,7 @@
               </div>
 
               <div class="flex flex-wrap items-center gap-3 pt-3">
-                <button onclick="setMainCollection('colocolo'); location.href='#catalogo';" class="bg-amber-400 hover:bg-amber-300 text-black px-6 py-3.5 rounded-xl font-extrabold text-xs shadow-xl flex items-center gap-2 transition transform hover:-translate-y-0.5">
+                <button onclick="navigateToCollection('colocolo')" class="bg-amber-400 hover:bg-amber-300 text-black px-6 py-3.5 rounded-xl font-extrabold text-xs shadow-xl flex items-center gap-2 transition transform hover:-translate-y-0.5">
                   <i data-lucide="trophy" class="w-4 h-4"></i> Comprar Café de Colo-Colo
                 </button>
                 <button onclick="openProductDetail(902)" class="px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-white font-bold text-xs transition flex items-center gap-2 transform hover:-translate-y-0.5">
@@ -487,10 +510,10 @@
               </div>
 
               <div class="flex flex-wrap items-center gap-3 pt-3">
-                <button onclick="setMainCollection('te_basilur'); location.href='#catalogo';" class="bg-emerald-500 hover:bg-emerald-400 text-white px-6 py-3.5 rounded-xl font-bold text-xs shadow-xl flex items-center gap-2 transition transform hover:-translate-y-0.5">
+                <button onclick="navigateToCollection('te_basilur')" class="bg-emerald-500 hover:bg-emerald-400 text-white px-6 py-3.5 rounded-xl font-bold text-xs shadow-xl flex items-center gap-2 transition transform hover:-translate-y-0.5">
                   <i data-lucide="leaf" class="w-4 h-4"></i> Ver las 103 Variedades Basilur
                 </button>
-                <button onclick="setMainCollection('accesorios'); location.href='#catalogo';" class="px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-white font-bold text-xs transition flex items-center gap-2 transform hover:-translate-y-0.5">
+                <button onclick="navigateToCollection('accesorios')" class="px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-white font-bold text-xs transition flex items-center gap-2 transform hover:-translate-y-0.5">
                   <i data-lucide="coffee" class="w-4 h-4"></i> Teteras &amp; Infusores
                 </button>
               </div>
@@ -523,7 +546,7 @@
               </div>
 
               <div class="flex flex-wrap items-center gap-3 pt-3">
-                <button onclick="setMainCollection('miel'); location.href='#catalogo';" class="bg-yellow-500 hover:bg-yellow-400 text-black px-6 py-3.5 rounded-xl font-bold text-xs shadow-xl flex items-center gap-2 transition transform hover:-translate-y-0.5">
+                <button onclick="navigateToCollection('miel')" class="bg-yellow-500 hover:bg-yellow-400 text-black px-6 py-3.5 rounded-xl font-bold text-xs shadow-xl flex items-center gap-2 transition transform hover:-translate-y-0.5">
                   <i data-lucide="shopping-bag" class="w-4 h-4"></i> Comprar Miel de Campo
                 </button>
                 <button onclick="openProductDetail(303)" class="px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-white font-bold text-xs transition flex items-center gap-2 transform hover:-translate-y-0.5">
@@ -559,7 +582,7 @@
               </div>
 
               <div class="flex flex-wrap items-center gap-3 pt-3">
-                <button onclick="setMainCollection('cafe'); location.href='#catalogo';" class="bg-orange-500 hover:bg-orange-400 text-white px-6 py-3.5 rounded-xl font-bold text-xs shadow-xl flex items-center gap-2 transition transform hover:-translate-y-0.5">
+                <button onclick="navigateToCollection('cafe')" class="bg-orange-500 hover:bg-orange-400 text-white px-6 py-3.5 rounded-xl font-bold text-xs shadow-xl flex items-center gap-2 transition transform hover:-translate-y-0.5">
                   <i data-lucide="coffee" class="w-4 h-4"></i> Ver Café en Grano (26)
                 </button>
                 <button onclick="openProductDetail(903)" class="px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-white font-bold text-xs transition flex items-center gap-2 transform hover:-translate-y-0.5">
@@ -800,44 +823,44 @@
 
       <!-- PESTAÑAS MAESTRAS DE COLECCIÓN (Las 7 Colecciones Principales) -->
       <div class="flex items-center gap-2 overflow-x-auto pb-3 mb-3 scrollbar-none text-xs select-none">
-        <button onclick="setMainCollection('all')" class="col-tab active-tab px-4 py-2.5 rounded-xl font-bold bg-amber-500 text-black shadow-md transition flex items-center gap-2 flex-shrink-0" data-col="all">
+        <button onclick="setMainCollection('all')" class="col-tab active-tab px-4 py-2.5 rounded-xl font-bold bg-amber-500 text-black shadow-md transition inline-flex items-center gap-2 flex-shrink-0 whitespace-nowrap" data-col="all">
           <span>⭐ Todos</span>
           <span class="tab-badge bg-black/20 text-black text-[10px] px-2 py-0.5 rounded-full font-mono font-bold">146</span>
         </button>
 
-        <button onclick="setMainCollection('cafe')" class="col-tab px-4 py-2.5 rounded-xl font-medium bg-brand-card border border-brand-border text-brand-text hover:border-amber-500/50 transition flex items-center gap-2 flex-shrink-0" data-col="cafe">
+        <button onclick="setMainCollection('cafe')" class="col-tab px-4 py-2.5 rounded-xl font-medium bg-brand-card border border-brand-border text-brand-text hover:border-amber-500/50 transition inline-flex items-center gap-2 flex-shrink-0 whitespace-nowrap" data-col="cafe">
           <span>☕ Café de Especialidad</span>
           <span class="tab-badge bg-black/5 text-brand-muted text-[10px] px-2 py-0.5 rounded-full font-mono font-bold">26</span>
         </button>
 
-        <button onclick="setMainCollection('te_basilur')" class="col-tab px-4 py-2.5 rounded-xl font-medium bg-brand-card border border-brand-border text-brand-text hover:border-amber-500/50 transition flex items-center gap-2 flex-shrink-0" data-col="te_basilur">
+        <button onclick="setMainCollection('te_basilur')" class="col-tab px-4 py-2.5 rounded-xl font-medium bg-brand-card border border-brand-border text-brand-text hover:border-amber-500/50 transition inline-flex items-center gap-2 flex-shrink-0 whitespace-nowrap" data-col="te_basilur">
           <span>🍃 Té Basilur Ceilán</span>
           <span class="tab-badge bg-black/5 text-brand-muted text-[10px] px-2 py-0.5 rounded-full font-mono font-bold">103</span>
         </button>
 
-        <button onclick="setMainCollection('colocolo')" class="col-tab px-4 py-2.5 rounded-xl font-medium bg-brand-card border border-brand-border text-brand-text hover:border-amber-500/50 transition flex items-center gap-2 flex-shrink-0" data-col="colocolo">
+        <button onclick="setMainCollection('colocolo')" class="col-tab px-4 py-2.5 rounded-xl font-medium bg-brand-card border border-brand-border text-brand-text hover:border-amber-500/50 transition inline-flex items-center gap-2 flex-shrink-0 whitespace-nowrap" data-col="colocolo">
           <span>🏆 Café Colo-Colo</span>
           <span class="tab-badge bg-black/5 text-brand-muted text-[10px] px-2 py-0.5 rounded-full font-mono font-bold">14</span>
         </button>
 
-        <button onclick="setMainCollection('miel')" class="col-tab px-4 py-2.5 rounded-xl font-medium bg-brand-card border border-brand-border text-brand-text hover:border-amber-500/50 transition flex items-center gap-2 flex-shrink-0" data-col="miel">
+        <button onclick="setMainCollection('miel')" class="col-tab px-4 py-2.5 rounded-xl font-medium bg-brand-card border border-brand-border text-brand-text hover:border-amber-500/50 transition inline-flex items-center gap-2 flex-shrink-0 whitespace-nowrap" data-col="miel">
           <span>🍯 Miel Los Hualles</span>
           <span class="tab-badge bg-black/5 text-brand-muted text-[10px] px-2 py-0.5 rounded-full font-mono font-bold">5</span>
         </button>
 
-        <button onclick="setMainCollection('packs')" class="col-tab px-4 py-2.5 rounded-xl font-medium bg-brand-card border border-brand-border text-brand-text hover:border-amber-500/50 transition flex items-center gap-2 flex-shrink-0" data-col="packs">
+        <button onclick="setMainCollection('packs')" class="col-tab px-4 py-2.5 rounded-xl font-medium bg-brand-card border border-brand-border text-brand-text hover:border-amber-500/50 transition inline-flex items-center gap-2 flex-shrink-0 whitespace-nowrap" data-col="packs">
           <span>🎁 Packs &amp; Descuentos</span>
           <span class="tab-badge bg-black/5 text-brand-muted text-[10px] px-2 py-0.5 rounded-full font-mono font-bold">3</span>
         </button>
 
-        <button onclick="setMainCollection('accesorios')" class="col-tab px-4 py-2.5 rounded-xl font-medium bg-brand-card border border-brand-border text-brand-text hover:border-amber-500/50 transition flex items-center gap-2 flex-shrink-0" data-col="accesorios">
+        <button onclick="setMainCollection('accesorios')" class="col-tab px-4 py-2.5 rounded-xl font-medium bg-brand-card border border-brand-border text-brand-text hover:border-amber-500/50 transition inline-flex items-center gap-2 flex-shrink-0 whitespace-nowrap" data-col="accesorios">
           <span>✨ Cafeteras &amp; Accesorios</span>
           <span class="tab-badge bg-black/5 text-brand-muted text-[10px] px-2 py-0.5 rounded-full font-mono font-bold">12</span>
         </button>
       </div>
 
       <!-- SUB-FILTROS CONTEXTUALES (Aparecen según la colección seleccionada) -->
-      <div id="subfilters-container" class="flex flex-wrap items-center gap-2 mb-6 pb-3 border-b border-brand-border text-xs">
+      <div id="subfilters-container" class="flex items-center gap-2 overflow-x-auto scrollbar-none pb-3 mb-6 border-b border-brand-border text-xs">
         <!-- Inyectado dinámicamente según colección activa -->
       </div>
 
@@ -1115,13 +1138,12 @@
         <div>
           <h4 class="text-xs font-bold uppercase tracking-wider text-amber-400 mb-4">Líneas en Venta</h4>
           <ul class="space-y-2 text-xs">
-            <li><a href="javascript:goToCatalogView(); setCategoryFilter('packs');" class="hover:text-white transition">🎁 Packs & Ofertas Flash</a></li>
-            <li><a href="javascript:goToCatalogView(); setCategoryFilter('cafe');" class="hover:text-white transition">Café La Finca Grano</a></li>
-            <li><a href="javascript:goToCatalogView(); setCategoryFilter('te');" class="hover:text-white transition">Té Basilur Pirámides</a></li>
-            <li><a href="javascript:goToCatalogView(); setCategoryFilter('soluble');" class="hover:text-white transition">Café Liofilizado Soluble</a></li>
-            <li><a href="javascript:goToCatalogView(); setCategoryFilter('capsulas');" class="hover:text-white transition">Cápsulas Compatibles</a></li>
-            <li><a href="javascript:goToCatalogView(); setCategoryFilter('miel');" class="hover:text-white transition">Miel & Colmena Los Hualles</a></li>
-            <li><a href="javascript:goToCatalogView(); setCategoryFilter('accesorios');" class="hover:text-white transition">Prensas Francesas & Teteras</a></li>
+            <li><a href="javascript:navigateToCollection('packs');" class="hover:text-white transition">🎁 Packs &amp; Ofertas Flash</a></li>
+            <li><a href="javascript:navigateToCollection('cafe');" class="hover:text-white transition">☕ Café La Finca Grano</a></li>
+            <li><a href="javascript:navigateToCollection('te_basilur');" class="hover:text-white transition">🍃 Té Basilur Ceilán</a></li>
+            <li><a href="javascript:navigateToCollection('colocolo');" class="hover:text-white transition">🏆 Café Colo-Colo</a></li>
+            <li><a href="javascript:navigateToCollection('miel');" class="hover:text-white transition">🍯 Miel Los Hualles</a></li>
+            <li><a href="javascript:navigateToCollection('accesorios');" class="hover:text-white transition">✨ Prensas &amp; Teteras</a></li>
           </ul>
         </div>
 
@@ -1298,9 +1320,38 @@
   </div>
 
   <!-- ========================================== -->
+  <!-- 🔘 BOTONES FLOTANTES: WHATSAPP & BACK TO TOP -->
+  <!-- ========================================== -->
+  <div class="fixed bottom-5 sm:bottom-6 right-5 sm:right-6 z-40 flex flex-col items-end gap-3 select-none pointer-events-none">
+    
+    <!-- Botón Back To Top -->
+    <button id="back-to-top-btn" onclick="scrollToTop()" aria-label="Volver arriba" class="pointer-events-auto opacity-0 translate-y-4 transition-all duration-300 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-zinc-900/95 hover:bg-amber-500 text-amber-400 hover:text-black border border-amber-500/40 shadow-2xl flex items-center justify-center backdrop-blur-md group hover:scale-110 active:scale-95" title="Volver al inicio">
+      <i data-lucide="arrow-up" class="w-5 h-5 transition-transform group-hover:-translate-y-0.5"></i>
+    </button>
+
+    <!-- Botón WhatsApp Oficial (Sin número por ahora) -->
+    <div class="pointer-events-auto relative group">
+      <!-- Tooltip desktop -->
+      <div class="absolute right-full mr-3 top-1/2 -translate-y-1/2 hidden sm:flex items-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
+        <span class="bg-zinc-900/95 text-white text-[11px] font-bold px-3 py-1.5 rounded-xl shadow-2xl border border-white/10 whitespace-nowrap backdrop-blur-md">
+          💬 ¿Dudas con tu pedido? ¡Escríbenos!
+        </span>
+      </div>
+      
+      <button onclick="handleWhatsappClick()" aria-label="WhatsApp Oficial Té o Café" class="w-[52px] h-[52px] sm:w-[56px] sm:h-[56px] rounded-full bg-[#25D366] hover:bg-[#20ba59] text-white shadow-2xl flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95 relative focus:outline-none" title="Atención WhatsApp">
+        <span class="absolute inset-0 rounded-full bg-[#25D366] opacity-40 animate-ping pointer-events-none"></span>
+        <svg class="w-7 h-7 sm:w-8 sm:h-8 fill-current relative z-10" viewBox="0 0 24 24">
+          <path d="M12.031 2C6.496 2 2 6.496 2 12.031c0 1.769.46 3.497 1.332 5.021L2 22l5.097-1.335a9.96 9.96 0 0 0 4.934 1.366h.004c5.535 0 10.031-4.496 10.031-10.031 0-2.68-1.043-5.199-2.937-7.093A9.97 9.97 0 0 0 12.031 2zm0 18.384h-.003a8.29 8.29 0 0 1-4.225-1.157l-.303-.18-3.141.824.838-3.061-.197-.314a8.27 8.27 0 0 1-1.267-4.465c0-4.576 3.723-8.299 8.303-8.299 2.217 0 4.301.863 5.869 2.431a8.25 8.25 0 0 1 2.43 5.87c0 4.577-3.723 8.301-8.301 8.301zm4.551-6.216c-.249-.125-1.477-.729-1.706-.812-.229-.083-.396-.125-.562.125-.167.249-.646.812-.792.979-.146.167-.292.188-.542.062-.25-.125-1.055-.389-2.01-1.24a7.48 7.48 0 0 1-1.39-1.724c-.146-.249-.016-.384.108-.508.112-.112.25-.292.375-.438.125-.146.167-.249.25-.417.083-.167.042-.312-.021-.437-.062-.125-.562-1.354-.771-1.854-.203-.487-.41-.421-.562-.429-.146-.008-.312-.01-.479-.01-.167 0-.438.062-.667.312-.229.249-.875.854-.875 2.083 0 1.229.896 2.417 1.021 2.583.125.167 1.763 2.692 4.271 3.775.597.258 1.063.412 1.427.527.6.19 1.146.163 1.577.099.48-.072 1.477-.604 1.685-1.188.208-.583.208-1.083.146-1.188-.063-.104-.229-.167-.479-.292z"/>
+        </svg>
+      </button>
+    </div>
+
+  </div>
+
+  <!-- ========================================== -->
   <!-- TOAST FEEDBACK                             -->
   <!-- ========================================== -->
-  <div id="toast" class="fixed bottom-6 right-6 z-[130] bg-[#160E08] text-white text-xs px-4 py-3 rounded-xl shadow-2xl border border-amber-800/80 transform translate-y-20 opacity-0 transition-all duration-300 flex items-center gap-2">
+  <div id="toast" class="fixed bottom-6 left-6 z-[130] bg-[#160E08] text-white text-xs px-4 py-3 rounded-xl shadow-2xl border border-amber-800/80 transform translate-y-20 opacity-0 transition-all duration-300 flex items-center gap-2">
     <i data-lucide="check-circle" class="w-4 h-4 text-amber-400"></i>
     <span id="toast-message">Producto añadido</span>
   </div>
@@ -1934,7 +1985,7 @@
       container.innerHTML = config.map(sub => {
         const isActive = currentSubFilter === sub.id;
         return `
-          <button onclick="setSubFilter('${sub.id}')" class="sub-pill px-3.5 py-1.5 rounded-lg text-xs font-semibold transition ${isActive ? 'bg-amber-500 text-black shadow-sm font-bold' : 'bg-brand-card border border-brand-border text-brand-text hover:border-amber-500/60'}">
+          <button onclick="setSubFilter('${sub.id}')" class="sub-pill px-3.5 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap flex-shrink-0 ${isActive ? 'bg-amber-500 text-black shadow-sm font-bold' : 'bg-brand-card border border-brand-border text-brand-text hover:border-amber-500/60'}">
             ${sub.label}
           </button>
         `;
@@ -1947,16 +1998,62 @@
       document.querySelectorAll('.col-tab').forEach(tab => {
         const badge = tab.querySelector('.tab-badge');
         if (tab.dataset.col === col) {
-          tab.className = "col-tab active-tab px-4 py-2.5 rounded-xl font-bold bg-amber-500 text-black shadow-md transition flex items-center gap-2 flex-shrink-0";
+          tab.className = "col-tab active-tab px-4 py-2.5 rounded-xl font-bold bg-amber-500 text-black shadow-md transition inline-flex items-center gap-2 flex-shrink-0 whitespace-nowrap";
           if (badge) badge.className = "tab-badge bg-black/20 text-black text-[10px] px-2 py-0.5 rounded-full font-mono font-bold";
         } else {
-          tab.className = "col-tab px-4 py-2.5 rounded-xl font-medium bg-brand-card border border-brand-border text-brand-text hover:border-amber-500/50 transition flex items-center gap-2 flex-shrink-0";
+          tab.className = "col-tab px-4 py-2.5 rounded-xl font-medium bg-brand-card border border-brand-border text-brand-text hover:border-amber-500/50 transition inline-flex items-center gap-2 flex-shrink-0 whitespace-nowrap";
           if (badge) badge.className = "tab-badge bg-black/5 text-brand-muted text-[10px] px-2 py-0.5 rounded-full font-mono font-bold";
         }
       });
       renderSubFilters();
       renderCatalog(true);
     }
+
+    function navigateToCollection(col, scroll = true) {
+      if (currentPdpProduct || currentViewMode === 'app') {
+        currentPdpProduct = null;
+        document.getElementById('view-pdp').classList.add('hidden');
+        document.getElementById('view-home').classList.remove('hidden');
+        document.getElementById('view-mobile-app').classList.add('hidden');
+        currentViewMode = 'web';
+        window.location.hash = '';
+      }
+
+      setMainCollection(col);
+
+      if (scroll) {
+        const catSection = document.getElementById('catalogo');
+        if (catSection) {
+          const headerOffset = 115;
+          const elementPosition = catSection.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }
+      }
+    }
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function handleWhatsappClick() {
+      showToast('💬 Canal de atención WhatsApp Té o Café en preparación. ¡Muy pronto disponible!');
+    }
+
+    window.addEventListener('scroll', () => {
+      const btn = document.getElementById('back-to-top-btn');
+      if (!btn) return;
+      if (window.scrollY > 350) {
+        btn.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-4');
+        btn.classList.add('opacity-100', 'pointer-events-auto', 'translate-y-0');
+      } else {
+        btn.classList.add('opacity-0', 'pointer-events-none', 'translate-y-4');
+        btn.classList.remove('opacity-100', 'pointer-events-auto', 'translate-y-0');
+      }
+    });
 
     function setSubFilter(subId) {
       currentSubFilter = subId;
@@ -2016,20 +2113,20 @@
 
     // Alias retrocompatibles
     function setCategoryFilter(cat) {
-      if (cat === 'cafe') setMainCollection('cafe');
-      else if (cat === 'miel') setMainCollection('miel');
-      else if (cat === 'packs') setMainCollection('packs');
-      else if (cat.startsWith('te')) setMainCollection('te_basilur');
-      else if (cat === 'accesorios') setMainCollection('accesorios');
-      else setMainCollection('all');
+      if (cat === 'cafe') navigateToCollection('cafe');
+      else if (cat === 'miel') navigateToCollection('miel');
+      else if (cat === 'packs') navigateToCollection('packs');
+      else if (cat.startsWith('te')) navigateToCollection('te_basilur');
+      else if (cat === 'accesorios') navigateToCollection('accesorios');
+      else navigateToCollection('all');
     }
 
     function setSourceFilter(src) {
-      if (src.includes('Colo')) setMainCollection('colocolo');
-      else if (src.includes('Basilur')) setMainCollection('te_basilur');
-      else if (src.includes('Finca')) { setMainCollection('cafe'); setSubFilter('lafinca'); }
-      else if (src.includes('Miel')) setMainCollection('miel');
-      else setMainCollection('all');
+      if (src.includes('Colo')) navigateToCollection('colocolo');
+      else if (src.includes('Basilur')) navigateToCollection('te_basilur');
+      else if (src.includes('Finca')) { navigateToCollection('cafe'); setSubFilter('lafinca'); }
+      else if (src.includes('Miel')) navigateToCollection('miel');
+      else navigateToCollection('all');
     }
 
     function loadMoreProducts() {
@@ -2068,16 +2165,17 @@
     }
 
     function goToCategoryFromPdp() {
-      goToCatalogView();
-      if (currentPdpProduct) {
-        if (currentPdpProduct.category === 'miel') setMainCollection('miel');
-        else if (currentPdpProduct.category === 'packs') setMainCollection('packs');
-        else if (currentPdpProduct.source.includes('Colo')) setMainCollection('colocolo');
-        else if (currentPdpProduct.source.includes('Basilur')) setMainCollection('te_basilur');
-        else if (currentPdpProduct.category === 'cafe') setMainCollection('cafe');
-        else if (currentPdpProduct.category === 'accesorios') setMainCollection('accesorios');
-        else setMainCollection('all');
+      if (!currentPdpProduct) {
+        navigateToCollection('all');
+        return;
       }
+      if (currentPdpProduct.category === 'miel') navigateToCollection('miel');
+      else if (currentPdpProduct.category === 'packs') navigateToCollection('packs');
+      else if (currentPdpProduct.source.includes('Colo')) navigateToCollection('colocolo');
+      else if (currentPdpProduct.source.includes('Basilur')) navigateToCollection('te_basilur');
+      else if (currentPdpProduct.category === 'cafe') navigateToCollection('cafe');
+      else if (currentPdpProduct.category === 'accesorios') navigateToCollection('accesorios');
+      else navigateToCollection('all');
     }
 
     // CRONÓMETRO DE BARISTA (APP MÓVIL)
