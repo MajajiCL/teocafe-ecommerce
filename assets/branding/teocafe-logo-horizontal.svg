@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="400" viewBox="0 0 1200 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800;900&amp;family=Montserrat:wght@500;600;700;800&amp;display=swap');
+      .h-title {
+        font-family: 'Cinzel', 'Times New Roman', serif;
+        font-weight: 800;
+        letter-spacing: 12px;
+        font-size: 76px;
+        fill: url(#goldGradTextH);
+      }
+      .h-badge {
+        font-family: 'Montserrat', monospace;
+        font-weight: 700;
+        font-size: 16px;
+        letter-spacing: 3px;
+        fill: #F59E0B;
+      }
+      .h-tagline {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        letter-spacing: 5px;
+        font-size: 19px;
+        fill: #E5E7EB;
+      }
+      .h-sub {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+        letter-spacing: 3px;
+        font-size: 15px;
+        fill: #A1A1AA;
+      }
+    </style>
+    
+    <radialGradient id="hBgGrad" cx="30%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#19120C" />
+      <stop offset="60%" stop-color="#0D0907" />
+      <stop offset="100%" stop-color="#050403" />
+    </radialGradient>
+
+    <linearGradient id="goldGradH" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDE68A" />
+      <stop offset="30%" stop-color="#F59E0B" />
+      <stop offset="70%" stop-color="#D97706" />
+      <stop offset="100%" stop-color="#92400E" />
+    </linearGradient>
+
+    <linearGradient id="goldGradTextH" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFBEB" />
+      <stop offset="30%" stop-color="#FBBF24" />
+      <stop offset="70%" stop-color="#F59E0B" />
+      <stop offset="100%" stop-color="#B45309" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="400" fill="url(#hBgGrad)" />
+
+  <g transform="translate(190, 200) scale(3.2) translate(-50, -50)">
+    <circle cx="50" cy="50" r="46" stroke="url(#goldGradH)" stroke-width="1.8" stroke-dasharray="3 2" opacity="0.4" />
+    <circle cx="50" cy="50" r="42" stroke="url(#goldGradH)" stroke-width="2.2" />
+
+    <path d="M50 24C40 32 36 44 40 56C42 60 46 64 50 66C50 56 46 44 48 36C49 32 50 26 50 24Z" fill="url(#goldGradH)" />
+    <path d="M42 46C46 44 49 40 50 36" stroke="#0E0A07" stroke-width="1.6" stroke-linecap="round" />
+
+    <path d="M50 34C58 34 66 42 66 52C66 62 58 70 50 70C54 62 54 42 50 34Z" fill="url(#goldGradH)" />
+    <path d="M52 38C58 44 58 60 52 66" stroke="#0E0A07" stroke-width="1.8" stroke-linecap="round" />
+
+    <path d="M47 18C47 18 45 20 47 22C49 24 51 22 51 22" stroke="url(#goldGradH)" stroke-width="1.8" stroke-linecap="round" opacity="0.85" />
+    <path d="M53 15C53 15 55 17 53 19C51 21 53 23 53 23" stroke="url(#goldGradH)" stroke-width="1.8" stroke-linecap="round" opacity="0.85" />
+
+    <circle cx="24" cy="50" r="2" fill="url(#goldGradH)" />
+    <circle cx="76" cy="50" r="2" fill="url(#goldGradH)" />
+    <path d="M43 80L50 76L57 80" stroke="url(#goldGradH)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" opacity="0.9" />
+  </g>
+
+  <g transform="translate(390, 140)">
+    <rect x="0" y="0" width="135" height="26" rx="6" fill="#F59E0B" fill-opacity="0.15" stroke="#F59E0B" stroke-opacity="0.4" />
+    <text x="67" y="18" text-anchor="middle" class="h-badge">TEOCAFE.CL</text>
+
+    <text x="0" y="95" class="h-title">TÉ O CAFÉ</text>
+
+    <text x="5" y="145" class="h-tagline">CAFÉ DE ESPECIALIDAD &amp; TÉ DE CEILÁN</text>
+    <text x="5" y="178" class="h-sub">TOSTADURÍA DE AUTOR • SANTIAGO, CHILE</text>
+  </g>
+</svg>

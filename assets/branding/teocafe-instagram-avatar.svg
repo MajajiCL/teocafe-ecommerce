@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1080" height="1080" viewBox="0 0 1080 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800;900&amp;family=Montserrat:wght@400;500;600;700;800&amp;display=swap');
+      .brand-title {
+        font-family: 'Cinzel', 'Times New Roman', serif;
+        font-weight: 800;
+        letter-spacing: 14px;
+        fill: url(#goldGradText);
+      }
+      .brand-sub {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        letter-spacing: 6px;
+        font-size: 21px;
+        fill: #FDE68A;
+      }
+      .brand-origin {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        letter-spacing: 4px;
+        font-size: 15px;
+        fill: #D97706;
+      }
+    </style>
+    
+    <radialGradient id="bgGrad" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#1E150F" />
+      <stop offset="55%" stop-color="#0E0A07" />
+      <stop offset="100%" stop-color="#050403" />
+    </radialGradient>
+
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDE68A" />
+      <stop offset="25%" stop-color="#F59E0B" />
+      <stop offset="60%" stop-color="#D97706" />
+      <stop offset="100%" stop-color="#92400E" />
+    </linearGradient>
+
+    <linearGradient id="goldGradText" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFBEB" />
+      <stop offset="30%" stop-color="#FBBF24" />
+      <stop offset="70%" stop-color="#F59E0B" />
+      <stop offset="100%" stop-color="#B45309" />
+    </linearGradient>
+
+    <radialGradient id="goldGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#F59E0B" stop-opacity="0.22" />
+      <stop offset="60%" stop-color="#D97706" stop-opacity="0.06" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <rect width="1080" height="1080" fill="url(#bgGrad)" />
+  <circle cx="540" cy="500" r="380" fill="url(#goldGlow)" />
+
+  <circle cx="540" cy="500" r="450" stroke="url(#goldGrad)" stroke-width="2" stroke-opacity="0.3" stroke-dasharray="10 8" />
+  <circle cx="540" cy="500" r="435" stroke="url(#goldGrad)" stroke-width="3.5" stroke-opacity="0.85" />
+  <circle cx="540" cy="500" r="418" stroke="url(#goldGrad)" stroke-width="1.5" stroke-opacity="0.4" />
+
+  <circle cx="540" cy="65" r="4.5" fill="#F59E0B" />
+  <circle cx="540" cy="935" r="4.5" fill="#F59E0B" />
+  <circle cx="105" cy="500" r="4.5" fill="#F59E0B" />
+  <circle cx="975" cy="500" r="4.5" fill="#F59E0B" />
+
+  <g transform="translate(540, 435) scale(5.3) translate(-50, -50)">
+    <circle cx="50" cy="50" r="46" stroke="url(#goldGrad)" stroke-width="1.8" stroke-dasharray="3 2" opacity="0.5" />
+    <circle cx="50" cy="50" r="42" stroke="url(#goldGrad)" stroke-width="2.2" />
+
+    <path d="M50 24C40 32 36 44 40 56C42 60 46 64 50 66C50 56 46 44 48 36C49 32 50 26 50 24Z" fill="url(#goldGrad)" />
+    <path d="M42 46C46 44 49 40 50 36" stroke="#0E0A07" stroke-width="1.6" stroke-linecap="round" />
+
+    <path d="M50 34C58 34 66 42 66 52C66 62 58 70 50 70C54 62 54 42 50 34Z" fill="url(#goldGrad)" />
+    <path d="M52 38C58 44 58 60 52 66" stroke="#0E0A07" stroke-width="1.8" stroke-linecap="round" />
+
+    <path d="M47 18C47 18 45 20 47 22C49 24 51 22 51 22" stroke="url(#goldGrad)" stroke-width="1.8" stroke-linecap="round" opacity="0.85" />
+    <path d="M53 15C53 15 55 17 53 19C51 21 53 23 53 23" stroke="url(#goldGrad)" stroke-width="1.8" stroke-linecap="round" opacity="0.85" />
+
+    <circle cx="24" cy="50" r="2" fill="url(#goldGrad)" />
+    <circle cx="76" cy="50" r="2" fill="url(#goldGrad)" />
+    <path d="M43 80L50 76L57 80" stroke="url(#goldGrad)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" opacity="0.9" />
+  </g>
+
+  <text x="540" y="730" text-anchor="middle" class="brand-title" font-size="62">TÉ O CAFÉ</text>
+  
+  <g transform="translate(540, 765)">
+    <line x1="-150" y1="0" x2="-25" y2="0" stroke="url(#goldGrad)" stroke-width="2" stroke-opacity="0.7" />
+    <circle cx="0" cy="3.5" r="3.5" fill="#F59E0B" />
+    <line x1="25" y1="0" x2="150" y2="0" stroke="url(#goldGrad)" stroke-width="2" stroke-opacity="0.7" />
+  </g>
+
+  <text x="540" y="810" text-anchor="middle" class="brand-sub">TEOCAFE.CL</text>
+  <text x="540" y="850" text-anchor="middle" class="brand-origin">ESPECIALIDAD • SANTIAGO • CHILE</text>
+</svg>

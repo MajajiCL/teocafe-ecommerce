@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1080" height="1080" viewBox="0 0 1080 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800;900&amp;family=Montserrat:wght@400;500;600;700;800&amp;display=swap');
+      .p-tag {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 800;
+        font-size: 15px;
+        letter-spacing: 6px;
+        fill: #F59E0B;
+      }
+      .p-title {
+        font-family: 'Cinzel', 'Times New Roman', serif;
+        font-weight: 800;
+        letter-spacing: 6px;
+        font-size: 54px;
+        fill: #FFFFFF;
+      }
+      .p-title-gold {
+        font-family: 'Cinzel', 'Times New Roman', serif;
+        font-weight: 800;
+        letter-spacing: 6px;
+        font-size: 54px;
+        fill: url(#pGoldText);
+      }
+      .p-item {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+        font-size: 23px;
+        fill: #E4E4E7;
+      }
+      .p-pill {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 800;
+        font-size: 17px;
+        letter-spacing: 3px;
+        fill: #000000;
+      }
+      .p-url {
+        font-family: 'Montserrat', monospace;
+        font-weight: 800;
+        font-size: 26px;
+        letter-spacing: 5px;
+        fill: #FBBF24;
+      }
+    </style>
+    
+    <radialGradient id="pBg" cx="50%" cy="30%" r="85%">
+      <stop offset="0%" stop-color="#241810" />
+      <stop offset="45%" stop-color="#120D09" />
+      <stop offset="100%" stop-color="#050403" />
+    </radialGradient>
+
+    <linearGradient id="pGoldText" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFBEB" />
+      <stop offset="40%" stop-color="#FBBF24" />
+      <stop offset="100%" stop-color="#D97706" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1080" height="1080" fill="url(#pBg)" />
+
+  <!-- Marco de orla fina dorada -->
+  <rect x="36" y="36" width="1008" height="1008" stroke="#D97706" stroke-width="1.5" stroke-opacity="0.3" rx="16" />
+  <rect x="48" y="48" width="984" height="984" stroke="#D97706" stroke-width="1" stroke-dasharray="8 6" stroke-opacity="0.2" rx="12" />
+
+  <!-- Logo centrado superior -->
+  <g transform="translate(540, 210) scale(2.6) translate(-50, -50)">
+    <circle cx="50" cy="50" r="46" stroke="#F59E0B" stroke-width="1.8" stroke-dasharray="3 2" opacity="0.4" />
+    <circle cx="50" cy="50" r="42" stroke="#F59E0B" stroke-width="2.2" />
+
+    <path d="M50 24C40 32 36 44 40 56C42 60 46 64 50 66C50 56 46 44 48 36C49 32 50 26 50 24Z" fill="#F59E0B" />
+    <path d="M42 46C46 44 49 40 50 36" stroke="#120D09" stroke-width="1.6" stroke-linecap="round" />
+
+    <path d="M50 34C58 34 66 42 66 52C66 62 58 70 50 70C54 62 54 42 50 34Z" fill="#F59E0B" />
+    <path d="M52 38C58 44 58 60 52 66" stroke="#120D09" stroke-width="1.8" stroke-linecap="round" />
+
+    <path d="M47 18C47 18 45 20 47 22C49 24 51 22 51 22" stroke="#F59E0B" stroke-width="1.8" stroke-linecap="round" opacity="0.85" />
+    <path d="M53 15C53 15 55 17 53 19C51 21 53 23 53 23" stroke="#F59E0B" stroke-width="1.8" stroke-linecap="round" opacity="0.85" />
+
+    <circle cx="24" cy="50" r="2" fill="#F59E0B" />
+    <circle cx="76" cy="50" r="2" fill="#F59E0B" />
+    <path d="M43 80L50 76L57 80" stroke="#F59E0B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" opacity="0.9" />
+  </g>
+
+  <!-- Tagline -->
+  <text x="540" y="380" text-anchor="middle" class="p-tag">• BIENVENIDOS A LA TOSTADURÍA •</text>
+
+  <!-- Título Oficial -->
+  <text x="540" y="455" text-anchor="middle" class="p-title">DONDE EL GRANO Y LA HOJA</text>
+  <text x="540" y="525" text-anchor="middle" class="p-title-gold">SE ENCUENTRAN</text>
+
+  <!-- Puntos destacados con viñetas doradas elegantes -->
+  <g transform="translate(240, 600)">
+    <circle cx="-15" cy="-7" r="4" fill="#F59E0B" />
+    <text x="10" y="0" class="p-item">Café de Especialidad con Tueste Semanal</text>
+    
+    <circle cx="-15" cy="45" r="4" fill="#F59E0B" />
+    <text x="10" y="52" class="p-item">103 Variedades de Té Basilur de Ceilán</text>
+    
+    <circle cx="-15" cy="97" r="4" fill="#F59E0B" />
+    <text x="10" y="104" class="p-item">Café Oficial Colo-Colo Centenario</text>
+    
+    <circle cx="-15" cy="149" r="4" fill="#F59E0B" />
+    <text x="10" y="156" class="p-item">Despacho a todo Chile en 24-48 hrs</text>
+  </g>
+
+  <!-- Botón CTA -->
+  <g transform="translate(540, 885)">
+    <rect x="-240" y="-32" width="480" height="64" rx="32" fill="#F59E0B" />
+    <text x="0" y="8" text-anchor="middle" class="p-pill">VISITA NUESTRA TIENDA ONLINE</text>
+  </g>
+
+  <text x="540" y="980" text-anchor="middle" class="p-url">TEOCAFE.CL</text>
+</svg>

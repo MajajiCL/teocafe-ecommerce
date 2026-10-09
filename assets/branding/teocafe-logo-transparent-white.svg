@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1080" height="1080" viewBox="0 0 1080 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800;900&amp;family=Montserrat:wght@600;700&amp;display=swap');
+      .brand-title-w {
+        font-family: 'Cinzel', 'Times New Roman', serif;
+        font-weight: 800;
+        letter-spacing: 14px;
+        fill: #FFFFFF;
+      }
+      .brand-sub-w {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        letter-spacing: 6px;
+        font-size: 21px;
+        fill: rgba(255, 255, 255, 0.95);
+      }
+      .brand-origin-w {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        letter-spacing: 4px;
+        font-size: 15px;
+        fill: rgba(255, 255, 255, 0.7);
+      }
+    </style>
+  </defs>
+
+  <circle cx="540" cy="500" r="450" stroke="#FFFFFF" stroke-width="2" stroke-opacity="0.3" stroke-dasharray="10 8" />
+  <circle cx="540" cy="500" r="435" stroke="#FFFFFF" stroke-width="3.5" stroke-opacity="0.9" />
+  <circle cx="540" cy="500" r="418" stroke="#FFFFFF" stroke-width="1.5" stroke-opacity="0.3" />
+
+  <g transform="translate(540, 435) scale(5.3) translate(-50, -50)">
+    <circle cx="50" cy="50" r="46" stroke="#FFFFFF" stroke-width="1.8" stroke-dasharray="3 2" opacity="0.4" />
+    <circle cx="50" cy="50" r="42" stroke="#FFFFFF" stroke-width="2.2" />
+
+    <path d="M50 24C40 32 36 44 40 56C42 60 46 64 50 66C50 56 46 44 48 36C49 32 50 26 50 24Z" fill="#FFFFFF" />
+    <path d="M42 46C46 44 49 40 50 36" stroke="#000000" stroke-width="1.6" stroke-linecap="round" />
+
+    <path d="M50 34C58 34 66 42 66 52C66 62 58 70 50 70C54 62 54 42 50 34Z" fill="#FFFFFF" />
+    <path d="M52 38C58 44 58 60 52 66" stroke="#000000" stroke-width="1.8" stroke-linecap="round" />
+
+    <path d="M47 18C47 18 45 20 47 22C49 24 51 22 51 22" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" opacity="0.85" />
+    <path d="M53 15C53 15 55 17 53 19C51 21 53 23 53 23" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" opacity="0.85" />
+
+    <circle cx="24" cy="50" r="2" fill="#FFFFFF" />
+    <circle cx="76" cy="50" r="2" fill="#FFFFFF" />
+    <path d="M43 80L50 76L57 80" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" opacity="0.9" />
+  </g>
+
+  <text x="540" y="730" text-anchor="middle" class="brand-title-w" font-size="62">TÉ O CAFÉ</text>
+  
+  <g transform="translate(540, 765)">
+    <line x1="-150" y1="0" x2="-25" y2="0" stroke="#FFFFFF" stroke-width="2" stroke-opacity="0.6" />
+    <circle cx="0" cy="3.5" r="3.5" fill="#FFFFFF" />
+    <line x1="25" y1="0" x2="150" y2="0" stroke="#FFFFFF" stroke-width="2" stroke-opacity="0.6" />
+  </g>
+
+  <text x="540" y="810" text-anchor="middle" class="brand-sub-w">TEOCAFE.CL</text>
+  <text x="540" y="850" text-anchor="middle" class="brand-origin-w">ESPECIALIDAD • SANTIAGO • CHILE</text>
+</svg>
