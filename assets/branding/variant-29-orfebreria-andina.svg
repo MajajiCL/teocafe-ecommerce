@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1080" height="1080" viewBox="0 0 1080 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&amp;family=Montserrat:wght@500;600&amp;display=swap');
+      .v29-title { font-family: 'Cinzel', serif; font-weight: 700; letter-spacing: 18px; font-size: 60px; fill: url(#goldGrad29); }
+      .v29-sub   { font-family: 'Montserrat', sans-serif; font-weight: 600; letter-spacing: 7.2px; font-size: 16px; fill: #FDE68A; }
+      .v29-micro { font-family: 'Montserrat', sans-serif; font-weight: 500; letter-spacing: 9px; font-size: 13px; fill: #D97706; }
+    </style>
+
+    <radialGradient id="bgGrad29" cx="50%" cy="40%" r="72%">
+      <stop offset="0%" stop-color="#120E0A" />
+      <stop offset="55%" stop-color="#080605" />
+      <stop offset="100%" stop-color="#020101" />
+    </radialGradient>
+
+    <linearGradient id="goldGrad29" x1="12%" y1="0%" x2="88%" y2="100%">
+      <stop offset="0%" stop-color="#FFFBEB" />
+      <stop offset="26%" stop-color="#FDE68A" />
+      <stop offset="52%" stop-color="#F59E0B" />
+      <stop offset="78%" stop-color="#D97706" />
+      <stop offset="100%" stop-color="#B45309" />
+    </linearGradient>
+
+    <radialGradient id="tumbaga29" cx="38%" cy="24%" r="82%">
+      <stop offset="0%" stop-color="#FCD34D" />
+      <stop offset="42%" stop-color="#D97706" />
+      <stop offset="100%" stop-color="#120E0A" />
+    </radialGradient>
+
+    <linearGradient id="beanGrad29" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FDE68A" />
+      <stop offset="62%" stop-color="#F59E0B" />
+      <stop offset="100%" stop-color="#B45309" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1080" height="1080" fill="url(#bgGrad29)" />
+
+  <!-- ISOTIPO — placa de orfebre.
+       Todo el dibujo cabe en un radio de 266 desde (540,418); como ese centro
+       está a 122 px del centro del recorte, 122 + 266 = 388, por debajo de 440. -->
+  <g transform="translate(540 418)">
+
+    <!-- Aro martillado -->
+    <circle cx="0" cy="0" r="266" fill="none" stroke="url(#goldGrad29)" stroke-width="2.2" opacity="0.5" />
+    <circle cx="0" cy="0" r="257" fill="none" stroke="#B45309" stroke-width="1" opacity="0.45" />
+    <!-- Punteado de repujado: puntos de verdad (guión nulo + tapa redonda) -->
+    <circle cx="0" cy="0" r="250" fill="none" stroke="#FDE68A" stroke-width="5"
+            stroke-linecap="round" stroke-dasharray="0.5 27" opacity="0.5" />
+
+    <!-- Lámina batida: octógono de esquinas escalonadas -->
+    <path d="M -96 -212 H 96 V -180 H 136 V -148 H 172 V -116 H 200 V 116 H 172 V 148 H 136 V 180 H 96 V 212 H -96 V 180 H -136 V 148 H -172 V 116 H -200 V -116 H -172 V -148 H -136 V -180 H -96 Z"
+          fill="url(#tumbaga29)" opacity="0.14" />
+    <path d="M -96 -212 H 96 V -180 H 136 V -148 H 172 V -116 H 200 V 116 H 172 V 148 H 136 V 180 H 96 V 212 H -96 V 180 H -136 V 148 H -172 V 116 H -200 V -116 H -172 V -148 H -136 V -180 H -96 Z"
+          fill="none" stroke="url(#goldGrad29)" stroke-width="3.8" stroke-linejoin="miter" />
+    <path d="M -84 -199 H 84 V -167 H 124 V -135 H 160 V -103 H 187 V 103 H 160 V 135 H 124 V 167 H 84 V 199 H -84 V 167 H -124 V 135 H -160 V 103 H -187 V -103 H -160 V -135 H -124 V -167 H -84 Z"
+          fill="none" stroke="#FDE68A" stroke-width="1.5" stroke-linejoin="miter" opacity="0.5" />
+
+    <!-- Remaches en el centro de cada peldaño -->
+    <g fill="#FDE68A" opacity="0.85">
+      <circle cx="116" cy="-180" r="3.6" /><circle cx="154" cy="-148" r="3.6" /><circle cx="186" cy="-116" r="3.6" />
+      <circle cx="-116" cy="-180" r="3.6" /><circle cx="-154" cy="-148" r="3.6" /><circle cx="-186" cy="-116" r="3.6" />
+      <circle cx="116" cy="180" r="3.6" /><circle cx="154" cy="148" r="3.6" /><circle cx="186" cy="116" r="3.6" />
+      <circle cx="-116" cy="180" r="3.6" /><circle cx="-154" cy="148" r="3.6" /><circle cx="-186" cy="116" r="3.6" />
+    </g>
+    <circle cx="0" cy="-212" r="4.6" fill="#FCD34D" />
+    <circle cx="0" cy="212" r="4.6" fill="#FCD34D" />
+
+    <!-- Granulado: columnas en los flancos y diagonales en los ángulos bajos -->
+    <g fill="#F59E0B" opacity="0.75">
+      <circle cx="176" cy="-40" r="3.2" /><circle cx="176" cy="-6" r="3.6" /><circle cx="176" cy="28" r="3.2" />
+      <circle cx="-176" cy="-40" r="3.2" /><circle cx="-176" cy="-6" r="3.6" /><circle cx="-176" cy="28" r="3.2" />
+      <circle cx="104" cy="94" r="3" /><circle cx="126" cy="116" r="3" /><circle cx="148" cy="138" r="3" />
+      <circle cx="-104" cy="94" r="3" /><circle cx="-126" cy="116" r="3" /><circle cx="-148" cy="138" r="3" />
+    </g>
+
+    <!-- Corona de tres gránulos en la meseta alta -->
+    <g fill="url(#goldGrad29)">
+      <circle cx="-18" cy="-186" r="4.2" /><circle cx="0" cy="-193" r="5" /><circle cx="18" cy="-186" r="4.2" />
+    </g>
+
+    <!-- Hojas de té en filigrana, con voluta de hilo en el tallo -->
+    <g stroke="url(#goldGrad29)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <g transform="translate(-130 -46) rotate(-26)">
+        <path d="M 0 -56 C 33 -31 37 15 0 57 C -37 15 -33 -31 0 -56 Z" stroke-width="3.2" />
+        <path d="M 0 -44 V -28 H 11 V -10 H -11 V 8 H 11 V 26 H 0 V 44" stroke-width="2.4" stroke-linejoin="miter" stroke-linecap="butt" />
+        <path d="M 0 57 C 0 70 -11 77 -18 72 C -24 67 -21 57 -13 58 C -6 59 -4 66 -9 69" stroke-width="2.6" />
+      </g>
+      <g transform="translate(130 -46) rotate(26)">
+        <path d="M 0 -56 C 33 -31 37 15 0 57 C -37 15 -33 -31 0 -56 Z" stroke-width="3.2" />
+        <path d="M 0 -44 V -28 H -11 V -10 H 11 V 8 H -11 V 26 H 0 V 44" stroke-width="2.4" stroke-linejoin="miter" stroke-linecap="butt" />
+        <path d="M 0 57 C 0 70 11 77 18 72 C 24 67 21 57 13 58 C 6 59 4 66 9 69" stroke-width="2.6" />
+      </g>
+    </g>
+
+    <!-- La semilla de café, batida en lámina; el corte es una greca escalonada -->
+    <g transform="translate(0 -38)">
+      <path d="M 0 -118 C 42 -112 64 -70 64 -20 C 64 30 42 66 0 72 C -42 66 -64 30 -64 -20 C -64 -70 -42 -112 0 -118 Z"
+            fill="url(#beanGrad29)" opacity="0.16" />
+      <path d="M 0 -118 C 42 -112 64 -70 64 -20 C 64 30 42 66 0 72 C -42 66 -64 30 -64 -20 C -64 -70 -42 -112 0 -118 Z"
+            fill="none" stroke="url(#goldGrad29)" stroke-width="4.6" />
+      <path d="M 0 -104 C 34 -98 51 -62 51 -20 C 51 22 34 52 0 58 C -34 52 -51 22 -51 -20 C -51 -62 -34 -98 0 -104 Z"
+            fill="none" stroke="#FDE68A" stroke-width="1.5" opacity="0.5" />
+      <path d="M 0 -100 V -82 H 10 V -62 H -10 V -42 H 10 V -22 H -10 V -2 H 10 V 18 H -10 V 38 H 0 V 56"
+            fill="none" stroke="url(#goldGrad29)" stroke-width="4.4" stroke-linejoin="miter" stroke-linecap="square" />
+      <g fill="#FCD34D" opacity="0.8">
+        <circle cx="-34" cy="-72" r="3.2" /><circle cx="34" cy="-72" r="3.2" />
+        <circle cx="-38" cy="-20" r="3.4" /><circle cx="38" cy="-20" r="3.4" />
+        <circle cx="-32" cy="30" r="3" /><circle cx="32" cy="30" r="3" />
+      </g>
+    </g>
+
+    <!-- Pedestal escalonado y colgantes de lámina -->
+    <path d="M -72 66 H 72 V 90 H 50 V 114 H 28 V 138 H -28 V 114 H -50 V 90 H -72 Z"
+          fill="url(#tumbaga29)" opacity="0.22" />
+    <path d="M -72 66 H 72 V 90 H 50 V 114 H 28 V 138 H -28 V 114 H -50 V 90 H -72 Z"
+          fill="none" stroke="url(#goldGrad29)" stroke-width="3.2" stroke-linejoin="miter" />
+    <g fill="#FCD34D" opacity="0.85">
+      <circle cx="-58" cy="78" r="3.2" /><circle cx="0" cy="78" r="3.6" /><circle cx="58" cy="78" r="3.2" />
+    </g>
+    <g stroke="#D97706" stroke-width="2">
+      <line x1="-28" y1="138" x2="-28" y2="151" />
+      <line x1="0" y1="138" x2="0" y2="160" />
+      <line x1="28" y1="138" x2="28" y2="151" />
+    </g>
+    <g fill="url(#goldGrad29)">
+      <circle cx="-28" cy="157" r="5.2" /><circle cx="0" cy="167" r="5.8" /><circle cx="28" cy="157" r="5.2" />
+    </g>
+  </g>
+
+  <!-- Nombre -->
+  <text x="549" y="772" text-anchor="middle" class="v29-title">TÉ O CAFÉ</text>
+
+  <!-- Greca divisoria -->
+  <g opacity="0.8" stroke="url(#goldGrad29)" fill="none" stroke-width="2" stroke-linejoin="miter">
+    <path d="M 540 806 V 796 H 564 V 806 H 588 V 796 H 612 V 806 H 636" />
+    <path d="M 540 806 V 796 H 516 V 806 H 492 V 796 H 468 V 806 H 444" />
+  </g>
+  <circle cx="430" cy="806" r="3" fill="#D97706" />
+  <circle cx="650" cy="806" r="3" fill="#D97706" />
+
+  <text x="544" y="844" text-anchor="middle" class="v29-sub">CAFÉ DE ORIGEN · TÉ DE CEILÁN</text>
+  <text x="544" y="884" text-anchor="middle" class="v29-micro">TEOCAFE.CL</text>
+</svg>

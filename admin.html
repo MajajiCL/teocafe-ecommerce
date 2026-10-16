@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Panel de Administración — Té o Café Chile (teocafe.cl)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #0B0806;
+      color: #F5EBE1;
+    }
+    .font-headline {
+      font-family: 'Playfair Display', serif;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+  <!-- LOGIN OVERLAY -->
+  <div id="login-screen" class="fixed inset-0 z-50 bg-[#0B0806] flex items-center justify-center p-4">
+    <div class="w-full max-w-md bg-[#16100C] border border-amber-500/30 rounded-2xl p-8 shadow-2xl space-y-5">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-amber-500/20 border border-amber-500/40 flex items-center justify-center text-amber-400">
+          <i data-lucide="shield-lock" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <span class="text-[10px] uppercase tracking-widest text-amber-400 font-bold">teocafe.cl · Backoffice</span>
+          <h1 class="font-headline text-xl font-bold text-white">Panel de Administración</h1>
+        </div>
+      </div>
+      <p class="text-xs text-amber-100/70">Ingresa tu clave maestra de administración para gestionar pedidos, despachos y catálogo en vivo.</p>
+      <form onsubmit="handleAdminLogin(event)" class="space-y-4">
+        <div>
+          <label class="block text-xs font-semibold text-amber-200 mb-1">Token de Administrador</label>
+          <input id="admin-token-input" type="password" required placeholder="••••••••••••" class="w-full bg-[#0B0806] border border-amber-500/30 rounded-xl px-3.5 py-2.5 text-sm text-white outline-none focus:border-amber-400">
+        </div>
+        <div id="login-error" class="hidden text-xs text-red-400 bg-red-950/50 border border-red-800/50 rounded-lg p-2.5"></div>
+        <button type="submit" class="w-full py-3 rounded-xl bg-amber-500 hover:bg-amber-400 text-black font-bold text-xs transition shadow-lg">
+          Entrar al Panel
+        </button>
+      </form>
+      <div class="text-center pt-2">
+        <a href="/" class="text-xs text-amber-400/80 hover:text-amber-300">← Volver a la tienda teocafe.cl</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="border-b border-amber-900/40 bg-[#120D09] sticky top-0 z-30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <span class="px-2.5 py-1 rounded-lg bg-amber-500 text-black font-bold text-xs">ADMIN</span>
+        <h1 class="font-headline font-bold text-lg text-white">Té o Café · Gestión Comercial</h1>
+      </div>
+      <div class="flex items-center gap-3">
+        <button onclick="switchTab('orders')" id="tab-btn-orders" class="px-3.5 py-1.5 rounded-xl text-xs font-bold bg-amber-500 text-black transition">
+          Pedidos
+        </button>
+        <button onclick="switchTab('products')" id="tab-btn-products" class="px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-[#1C140E] text-amber-200 hover:text-white border border-amber-800/40 transition">
+          Catálogo &amp; Stock (146)
+        </button>
+        <a href="/" target="_blank" class="px-3 py-1.5 rounded-xl text-xs font-semibold bg-[#1C140E] text-amber-300 border border-amber-800/40 hover:border-amber-500 flex items-center gap-1.5">
+          <i data-lucide="external-link" class="w-3.5 h-3.5"></i> Tienda
+        </a>
+        <button onclick="logoutAdmin()" class="text-xs text-red-400 hover:text-red-300 px-2 py-1">Salir</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="max-w-7xl mx-auto w-full px-4 sm:px-6 py-8 flex-1 space-y-6">
+
+    <!-- KPI CARDS -->
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+      <div class="bg-[#16100C] border border-amber-900/40 rounded-2xl p-4">
+        <span class="text-[11px] text-amber-200/60 uppercase font-semibold">Total Órdenes</span>
+        <p id="kpi-total-orders" class="text-2xl font-bold text-white mt-1">0</p>
+      </div>
+      <div class="bg-[#16100C] border border-amber-900/40 rounded-2xl p-4">
+        <span class="text-[11px] text-amber-200/60 uppercase font-semibold">Pendientes de Despacho</span>
+        <p id="kpi-pending-orders" class="text-2xl font-bold text-amber-400 mt-1">0</p>
+      </div>
+      <div class="bg-[#16100C] border border-amber-900/40 rounded-2xl p-4">
+        <span class="text-[11px] text-amber-200/60 uppercase font-semibold">Ventas Pagadas</span>
+        <p id="kpi-paid-revenue" class="text-2xl font-bold text-emerald-400 mt-1">$0</p>
+      </div>
+      <div class="bg-[#16100C] border border-amber-900/40 rounded-2xl p-4">
+        <span class="text-[11px] text-amber-200/60 uppercase font-semibold">Volumen Bruto</span>
+        <p id="kpi-gross-revenue" class="text-2xl font-bold text-amber-300 mt-1">$0</p>
+      </div>
+    </div>
+
+    <!-- TAB: ORDERS -->
+    <section id="tab-orders" class="space-y-4">
+      <div class="flex flex-wrap items-center justify-between gap-3">
+        <h2 class="font-headline text-xl font-bold text-white">Órdenes Recibidas</h2>
+        <div class="flex items-center gap-2">
+          <select id="filter-order-status" onchange="loadOrders()" class="bg-[#16100C] border border-amber-800/50 rounded-xl px-3 py-1.5 text-xs text-white outline-none">
+            <option value="">Todos los estados</option>
+            <option value="recibido">Recibido</option>
+            <option value="en_preparacion">En preparación</option>
+            <option value="enviado">Enviado</option>
+            <option value="entregado">Entregado</option>
+            <option value="cancelado">Cancelado</option>
+          </select>
+          <button onclick="loadDashboard()" class="px-3 py-1.5 rounded-xl bg-amber-500/20 border border-amber-500/40 text-amber-300 text-xs font-semibold hover:bg-amber-500/30 flex items-center gap-1.5">
+            <i data-lucide="refresh-cw" class="w-3.5 h-3.5"></i> Actualizar
+          </button>
+        </div>
+      </div>
+
+      <div id="orders-list" class="space-y-3"></div>
+    </section>
+
+    <!-- TAB: PRODUCTS -->
+    <section id="tab-products" class="hidden space-y-4">
+      <div class="flex flex-wrap items-center justify-between gap-3">
+        <h2 class="font-headline text-xl font-bold text-white">Catálogo en Base de Datos SQLite</h2>
+        <input id="prod-search" oninput="renderAdminProducts()" type="text" placeholder="Buscar producto por nombre o proveedor..." class="w-full sm:w-80 bg-[#16100C] border border-amber-800/50 rounded-xl px-3.5 py-2 text-xs text-white outline-none focus:border-amber-400">
+      </div>
+      <div class="overflow-x-auto bg-[#16100C] border border-amber-900/40 rounded-2xl">
+        <table class="w-full text-left text-xs">
+          <thead class="border-b border-amber-900/40 text-amber-400 uppercase text-[10px]">
+            <tr>
+              <th class="p-3">ID</th>
+              <th class="p-3">Producto</th>
+              <th class="p-3">Proveedor</th>
+              <th class="p-3">Precio Base (CLP)</th>
+              <th class="p-3">Stock</th>
+              <th class="p-3">Acción</th>
+            </tr>
+          </thead>
+          <tbody id="admin-products-tbody" class="divide-y divide-amber-950/40"></tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    let adminToken = localStorage.getItem('teocafe_admin_token') || '';
+    let cachedProducts = [];
+
+    function formatCLP(n) {
+      return '$' + Number(n || 0).toLocaleString('es-CL');
+    }
+
+    async function apiFetch(path, options = {}) {
+      const headers = {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + adminToken,
+        ...(options.headers || {})
+      };
+      const res = await fetch(path, { ...options, headers });
+      const data = await res.json();
+      if (res.status === 401) {
+        logoutAdmin();
+        throw new Error('Sesión no autorizada');
+      }
+      return data;
+    }
+
+    async function handleAdminLogin(e) {
+      e.preventDefault();
+      const input = document.getElementById('admin-token-input').value.trim();
+      const errBox = document.getElementById('login-error');
+      errBox.classList.add('hidden');
+      adminToken = input;
+      try {
+        const res = await apiFetch('/api/admin/stats');
+        if (res.ok) {
+          localStorage.setItem('teocafe_admin_token', adminToken);
+          document.getElementById('login-screen').classList.add('hidden');
+          loadDashboard();
+        } else {
+          errBox.textContent = res.error || 'Token inválido';
+          errBox.classList.remove('hidden');
+        }
+      } catch (err) {
+        errBox.textContent = 'Token inválido o sin acceso al servidor.';
+        errBox.classList.remove('hidden');
+      }
+    }
+
+    function logoutAdmin() {
+      localStorage.removeItem('teocafe_admin_token');
+      adminToken = '';
+      document.getElementById('login-screen').classList.remove('hidden');
+    }
+
+    function switchTab(tab) {
+      const oSec = document.getElementById('tab-orders');
+      const pSec = document.getElementById('tab-products');
+      const oBtn = document.getElementById('tab-btn-orders');
+      const pBtn = document.getElementById('tab-btn-products');
+
+      if (tab === 'orders') {
+        oSec.classList.remove('hidden');
+        pSec.classList.add('hidden');
+        oBtn.className = 'px-3.5 py-1.5 rounded-xl text-xs font-bold bg-amber-500 text-black transition';
+        pBtn.className = 'px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-[#1C140E] text-amber-200 hover:text-white border border-amber-800/40 transition';
+      } else {
+        oSec.classList.add('hidden');
+        pSec.classList.remove('hidden');
+        pBtn.className = 'px-3.5 py-1.5 rounded-xl text-xs font-bold bg-amber-500 text-black transition';
+        oBtn.className = 'px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-[#1C140E] text-amber-200 hover:text-white border border-amber-800/40 transition';
+        if (cachedProducts.length === 0) loadAdminProducts();
+      }
+    }
+
+    async function loadDashboard() {
+      try {
+        const statsRes = await apiFetch('/api/admin/stats');
+        if (statsRes.ok) {
+          document.getElementById('kpi-total-orders').textContent = statsRes.stats.total_orders || 0;
+          document.getElementById('kpi-pending-orders').textContent = statsRes.stats.pending_orders || 0;
+          document.getElementById('kpi-paid-revenue').textContent = formatCLP(statsRes.stats.paid_revenue || 0);
+          document.getElementById('kpi-gross-revenue').textContent = formatCLP(statsRes.stats.gross_revenue || 0);
+        }
+        await loadOrders();
+      } catch (e) {
+        console.error(e);
+      }
+    }
+
+    async function loadOrders() {
+      const status = document.getElementById('filter-order-status').value;
+      const url = status ? `/api/admin/orders?status=${encodeURIComponent(status)}` : '/api/admin/orders';
+      const data = await apiFetch(url);
+      const container = document.getElementById('orders-list');
+      if (!data.orders || data.orders.length === 0) {
+        container.innerHTML = `<div class="bg-[#16100C] border border-amber-900/40 rounded-2xl p-8 text-center text-xs text-amber-200/60">No hay órdenes registradas en este filtro.</div>`;
+        return;
+      }
+
+      container.innerHTML = data.orders.map(o => `
+        <div class="bg-[#16100C] border border-amber-900/40 rounded-2xl p-5 space-y-4">
+          <div class="flex flex-wrap items-center justify-between gap-2 border-b border-amber-950/60 pb-3">
+            <div>
+              <span class="text-xs font-mono font-bold text-amber-400">${o.order_code}</span>
+              <span class="text-xs text-amber-200/50 ml-2">${o.created_at} UTC</span>
+              <h3 class="font-bold text-sm text-white mt-0.5">${o.customer_name} · <a href="https://wa.me/${o.customer_phone.replace(/[^0-9]/g, '')}" target="_blank" class="text-emerald-400 hover:underline">${o.customer_phone}</a> · <span class="text-amber-200/80">${o.customer_email}</span></h3>
+              <p class="text-xs text-amber-200/70">📍 ${o.shipping_address} (${o.shipping_zone.toUpperCase()})</p>
+            </div>
+            <div class="text-right">
+              <span class="text-xs text-amber-200/60 block">Total (${o.payment_method.toUpperCase()})</span>
+              <span class="text-lg font-bold text-amber-400">${formatCLP(o.total)}</span>
+            </div>
+          </div>
+
+          <div class="space-y-1 text-xs">
+            ${(o.items || []).map(it => `
+              <div class="flex justify-between text-amber-100/90">
+                <span>• <strong>${it.qty}x</strong> ${it.title} <span class="text-amber-400/70">(${it.variantTitle})</span></span>
+                <span class="font-semibold">${formatCLP(it.price * it.qty)}</span>
+              </div>
+            `).join('')}
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-4 gap-2.5 pt-2 border-t border-amber-950/60 text-xs">
+            <div>
+              <label class="block text-[10px] text-amber-200/60 mb-1">Estado Pago</label>
+              <select id="pay-${o.order_code}" class="w-full bg-[#0B0806] border border-amber-800/50 rounded-lg p-1.5 text-white">
+                <option value="pendiente" ${o.payment_status === 'pendiente' ? 'selected' : ''}>Pendiente</option>
+                <option value="pagado" ${o.payment_status === 'pagado' ? 'selected' : ''}>Pagado ✅</option>
+                <option value="reembolsado" ${o.payment_status === 'reembolsado' ? 'selected' : ''}>Reembolsado</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-[10px] text-amber-200/60 mb-1">Estado Pedido</label>
+              <select id="ord-${o.order_code}" class="w-full bg-[#0B0806] border border-amber-800/50 rounded-lg p-1.5 text-white">
+                <option value="recibido" ${o.order_status === 'recibido' ? 'selected' : ''}>Recibido</option>
+                <option value="en_preparacion" ${o.order_status === 'en_preparacion' ? 'selected' : ''}>En Preparación</option>
+                <option value="enviado" ${o.order_status === 'enviado' ? 'selected' : ''}>Enviado 🚚</option>
+                <option value="entregado" ${o.order_status === 'entregado' ? 'selected' : ''}>Entregado 🎉</option>
+                <option value="cancelado" ${o.order_status === 'cancelado' ? 'selected' : ''}>Cancelado</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-[10px] text-amber-200/60 mb-1">Código Seguimiento (Starken/Chilexpress)</label>
+              <input id="trk-${o.order_code}" type="text" value="${o.tracking_code || ''}" placeholder="Ej. 94812031" class="w-full bg-[#0B0806] border border-amber-800/50 rounded-lg p-1.5 text-white">
+            </div>
+            <div class="flex items-end">
+              <button onclick="saveOrder('${o.order_code}')" class="w-full py-1.5 px-3 rounded-lg bg-amber-500 hover:bg-amber-400 text-black font-bold transition">
+                Guardar Cambios
+              </button>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    async function saveOrder(code) {
+      const paymentStatus = document.getElementById(`pay-${code}`).value;
+      const orderStatus = document.getElementById(`ord-${code}`).value;
+      const trackingCode = document.getElementById(`trk-${code}`).value;
+      const res = await apiFetch(`/api/admin/orders/${code}`, {
+        method: 'PATCH',
+        body: JSON.stringify({ paymentStatus, orderStatus, trackingCode })
+      });
+      if (res.ok) {
+        loadDashboard();
+      }
+    }
+
+    async function loadAdminProducts() {
+      const res = await fetch('/api/products');
+      const data = await res.json();
+      if (data.ok) {
+        cachedProducts = data.products;
+        renderAdminProducts();
+      }
+    }
+
+    function renderAdminProducts() {
+      const q = (document.getElementById('prod-search').value || '').toLowerCase();
+      const filtered = cachedProducts.filter(p =>
+        p.title.toLowerCase().includes(q) ||
+        (p.source && p.source.toLowerCase().includes(q)) ||
+        String(p.id).includes(q)
+      );
+      const tbody = document.getElementById('admin-products-tbody');
+      tbody.innerHTML = filtered.map(p => `
+        <tr class="hover:bg-amber-950/20">
+          <td class="p-3 font-mono text-amber-400">#${p.id}</td>
+          <td class="p-3 font-semibold text-white">${p.title}</td>
+          <td class="p-3 text-amber-200/70">${p.source || ''}</td>
+          <td class="p-3">
+            <input id="p-price-${p.id}" type="number" value="${p.price}" class="w-28 bg-[#0B0806] border border-amber-800/50 rounded-lg px-2 py-1 text-white">
+          </td>
+          <td class="p-3">
+            <input id="p-stock-${p.id}" type="number" value="${p.stock}" class="w-20 bg-[#0B0806] border border-amber-800/50 rounded-lg px-2 py-1 text-white">
+          </td>
+          <td class="p-3">
+            <button onclick="saveProduct(${p.id})" class="px-3 py-1 rounded-lg bg-amber-500/20 border border-amber-500/40 text-amber-300 hover:bg-amber-500 hover:text-black font-bold transition">
+              Guardar
+            </button>
+          </td>
+        </tr>
+      `).join('');
+    }
+
+    async function saveProduct(id) {
+      const price = Number(document.getElementById(`p-price-${id}`).value);
+      const stock = Number(document.getElementById(`p-stock-${id}`).value);
+      const res = await apiFetch(`/api/admin/products/${id}`, {
+        method: 'PATCH',
+        body: JSON.stringify({ price, stock })
+      });
+      if (res.ok) {
+        const idx = cachedProducts.findIndex(x => x.id === id);
+        if (idx >= 0) {
+          cachedProducts[idx].price = price;
+          cachedProducts[idx].stock = stock;
+        }
+        alert(`Producto #${id} actualizado (${formatCLP(price)} · Stock: ${stock})`);
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', async () => {
+      lucide.createIcons();
+      if (adminToken) {
+        try {
+          const res = await apiFetch('/api/admin/stats');
+          if (res.ok) {
+            document.getElementById('login-screen').classList.add('hidden');
+            loadDashboard();
+          }
+        } catch (e) {}
+      }
+    });
+  </script>
+</body>
+</html>

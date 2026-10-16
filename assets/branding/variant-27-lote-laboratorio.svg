@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1080" height="1080" viewBox="0 0 1080 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;display=swap');
+      .v27-band   { font-family: 'Montserrat', sans-serif; font-weight: 600; letter-spacing: 5px;   font-size: 16px; fill: #050403; }
+      .v27-band-n { font-family: 'Montserrat', sans-serif; font-weight: 700; letter-spacing: 2px;   font-size: 16px; fill: #050403; }
+      .v27-label  { font-family: 'Montserrat', sans-serif; font-weight: 500; letter-spacing: 2.5px; font-size: 9px;  fill: #D97706; }
+      .v27-value  { font-family: 'Montserrat', sans-serif; font-weight: 500; letter-spacing: 1.5px; font-size: 14px; fill: #FFFBEB; }
+      .v27-fig    { font-family: 'Montserrat', sans-serif; font-weight: 500; letter-spacing: 3px;   font-size: 10px; fill: #D97706; }
+      .v27-dim    { font-family: 'Montserrat', sans-serif; font-weight: 400; letter-spacing: 1px;   font-size: 9px;  fill: #D97706; }
+      .v27-micro  { font-family: 'Montserrat', sans-serif; font-weight: 400; letter-spacing: 2px;   font-size: 9px;  fill: #D97706; }
+      .v27-title  { font-family: 'Montserrat', sans-serif; font-weight: 500; letter-spacing: 14px;  font-size: 52px; fill: url(#goldGrad27); }
+      .v27-sub    { font-family: 'Montserrat', sans-serif; font-weight: 500; letter-spacing: 6px;   font-size: 12px; fill: #F59E0B; }
+    </style>
+    <radialGradient id="bgGrad27" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#120E0A" /><stop offset="60%" stop-color="#080605" /><stop offset="100%" stop-color="#020101" />
+    </radialGradient>
+    <linearGradient id="goldGrad27" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFBEB" /><stop offset="35%" stop-color="#FDE68A" /><stop offset="70%" stop-color="#F59E0B" /><stop offset="100%" stop-color="#B45309" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1080" height="1080" fill="url(#bgGrad27)" />
+
+  <!-- ====== MARCO DE LA FICHA + MARCAS DE REGISTRO ====== -->
+  <g stroke="#F59E0B" stroke-width="2">
+    <rect x="220" y="265" width="640" height="550" fill="none" />
+  </g>
+  <g stroke="#D97706" stroke-width="1.2">
+    <line x1="210" y1="265" x2="220" y2="265" />
+    <line x1="220" y1="255" x2="220" y2="265" />
+    <line x1="210" y1="815" x2="220" y2="815" />
+    <line x1="220" y1="825" x2="220" y2="815" />
+    <line x1="870" y1="265" x2="860" y2="265" />
+    <line x1="860" y1="255" x2="860" y2="265" />
+    <line x1="870" y1="815" x2="860" y2="815" />
+    <line x1="860" y1="825" x2="860" y2="815" />
+  </g>
+
+  <!-- ====== BANDA DE CABECERA (bloque macizo) ====== -->
+  <rect x="220" y="265" width="640" height="63" fill="#F59E0B" />
+  <rect x="236" y="289" width="14" height="14" fill="#050403" />
+  <text x="262" y="302" class="v27-band">FICHA TÉCNICA DE TUESTE</text>
+  <text x="844" y="302" text-anchor="end" class="v27-band-n">N° 027</text>
+
+  <!-- ====== REJILLA MODULAR DEL PANEL DE ESPECÍMENES ====== -->
+  <g stroke="#B45309" stroke-width="0.6" opacity="0.32">
+    <line x1="260" y1="328" x2="260" y2="580" />
+    <line x1="300" y1="328" x2="300" y2="580" />
+    <line x1="340" y1="328" x2="340" y2="580" />
+    <line x1="380" y1="328" x2="380" y2="580" />
+    <line x1="420" y1="328" x2="420" y2="580" />
+    <line x1="460" y1="328" x2="460" y2="580" />
+    <line x1="500" y1="328" x2="500" y2="580" />
+    <line x1="540" y1="328" x2="540" y2="580" />
+    <line x1="580" y1="328" x2="580" y2="580" />
+    <line x1="220" y1="368" x2="620" y2="368" />
+    <line x1="220" y1="408" x2="620" y2="408" />
+    <line x1="220" y1="448" x2="620" y2="448" />
+    <line x1="220" y1="488" x2="620" y2="488" />
+    <line x1="220" y1="528" x2="620" y2="528" />
+    <line x1="220" y1="568" x2="620" y2="568" />
+  </g>
+
+  <!-- ====== DIVISORIAS DURAS ====== -->
+  <line x1="620" y1="328" x2="620" y2="580" stroke="#F59E0B" stroke-width="1.4" opacity="0.8" />
+  <line x1="420" y1="328" x2="420" y2="580" stroke="#B45309" stroke-width="1" stroke-dasharray="6 6" opacity="0.7" />
+  <line x1="220" y1="580" x2="860" y2="580" stroke="#F59E0B" stroke-width="1.4" opacity="0.8" />
+  <line x1="220" y1="660" x2="860" y2="660" stroke="#F59E0B" stroke-width="1.4" opacity="0.8" />
+
+  <!-- ====== FIG. 01 — GRANO (contorno de taller) ====== -->
+  <g>
+    <path d="M 320,366 C 358,374 386,404 388,440 C 390,482 362,514 320,522 C 278,514 250,482 252,440 C 254,404 282,374 320,366 Z"
+          stroke="url(#goldGrad27)" stroke-width="2.6" fill="none" stroke-linejoin="round" />
+    <path d="M 320,370 C 302,398 338,424 320,448 C 302,472 338,496 320,518"
+          stroke="url(#goldGrad27)" stroke-width="2.2" fill="none" stroke-linecap="round" />
+    <rect x="252" y="366" width="136" height="156" fill="none" stroke="#B45309" stroke-width="0.9" stroke-dasharray="3 4" opacity="0.6" />
+    <g stroke="#FDE68A" stroke-width="1" opacity="0.9">
+      <line x1="313" y1="444" x2="327" y2="444" /><line x1="320" y1="437" x2="320" y2="451" />
+    </g>
+    <!-- cota vertical -->
+    <g stroke="#D97706" stroke-width="0.9">
+      <line x1="236" y1="368" x2="236" y2="520" />
+      <line x1="231" y1="368" x2="241" y2="368" /><line x1="231" y1="520" x2="241" y2="520" />
+    </g>
+    <text x="228" y="444" text-anchor="middle" class="v27-dim" transform="rotate(-90 228 444)">15,2</text>
+    <text x="320" y="562" text-anchor="middle" class="v27-fig">FIG. 01 · GRANO</text>
+  </g>
+
+  <!-- ====== FIG. 02 — HOJA DE CEILÁN ====== -->
+  <g>
+    <path d="M 520,366 C 552,398 574,440 568,474 C 564,502 544,518 520,524 C 496,518 476,502 472,474 C 466,440 488,398 520,366 Z"
+          stroke="url(#goldGrad27)" stroke-width="2.6" fill="none" stroke-linejoin="round" />
+    <path d="M 520,370 C 523,410 518,470 520,521" stroke="url(#goldGrad27)" stroke-width="2" fill="none" stroke-linecap="round" />
+    <g stroke="#FDE68A" stroke-width="1.1" fill="none" opacity="0.85">
+      <path d="M 520,398 C 536,404 548,416 556,430" /><path d="M 520,398 C 504,404 492,416 484,430" />
+      <path d="M 520,430 C 538,436 552,448 560,464" /><path d="M 520,430 C 502,436 488,448 480,464" />
+      <path d="M 520,462 C 535,468 545,479 551,492" /><path d="M 520,462 C 505,468 495,479 489,492" />
+      <path d="M 520,492 C 530,497 536,504 540,512" /><path d="M 520,492 C 510,497 504,504 500,512" />
+    </g>
+    <rect x="466" y="366" width="108" height="158" fill="none" stroke="#B45309" stroke-width="0.9" stroke-dasharray="3 4" opacity="0.6" />
+    <g stroke="#D97706" stroke-width="0.9">
+      <line x1="436" y1="366" x2="436" y2="524" />
+      <line x1="431" y1="366" x2="441" y2="366" /><line x1="431" y1="524" x2="441" y2="524" />
+    </g>
+    <text x="428" y="445" text-anchor="middle" class="v27-dim" transform="rotate(-90 428 445)">15,8</text>
+    <text x="520" y="562" text-anchor="middle" class="v27-fig">FIG. 02 · HOJA</text>
+  </g>
+
+  <!-- ====== COLUMNA DE DATOS ====== -->
+  <g>
+    <text x="636" y="354" class="v27-label">LOTE</text>
+    <text x="844" y="354" text-anchor="end" class="v27-value">TC-27-CL</text>
+    <line x1="630" y1="370" x2="850" y2="370" stroke="#B45309" stroke-width="0.8" stroke-dasharray="2 4" opacity="0.55" />
+    <text x="636" y="396" class="v27-label">LAT</text>
+    <text x="844" y="396" text-anchor="end" class="v27-value">33.45 S</text>
+    <line x1="630" y1="412" x2="850" y2="412" stroke="#B45309" stroke-width="0.8" stroke-dasharray="2 4" opacity="0.55" />
+    <text x="636" y="438" class="v27-label">LON</text>
+    <text x="844" y="438" text-anchor="end" class="v27-value">70.67 W</text>
+    <line x1="630" y1="454" x2="850" y2="454" stroke="#B45309" stroke-width="0.8" stroke-dasharray="2 4" opacity="0.55" />
+    <text x="636" y="480" class="v27-label">ALTITUD</text>
+    <text x="844" y="480" text-anchor="end" class="v27-value">1.450 m</text>
+    <line x1="630" y1="496" x2="850" y2="496" stroke="#B45309" stroke-width="0.8" stroke-dasharray="2 4" opacity="0.55" />
+    <text x="636" y="522" class="v27-label">TUESTE</text>
+    <text x="844" y="522" text-anchor="end" class="v27-value">11:40</text>
+    <line x1="630" y1="538" x2="850" y2="538" stroke="#B45309" stroke-width="0.8" stroke-dasharray="2 4" opacity="0.55" />
+    <text x="636" y="564" class="v27-label">MOLIENDA</text>
+    <text x="844" y="564" text-anchor="end" class="v27-value">6,5</text>
+  </g>
+
+  <!-- ====== TIRA: CURVA DE TUESTE ====== -->
+  <text x="248" y="598" class="v27-micro">CURVA DE TUESTE</text>
+  <line x1="240" y1="644" x2="840" y2="644" stroke="#B45309" stroke-width="1" />
+  <g stroke="#B45309" stroke-width="1">
+    <line x1="248" y1="644" x2="248" y2="649" />
+    <line x1="346" y1="644" x2="346" y2="649" />
+    <line x1="444" y1="644" x2="444" y2="649" />
+    <line x1="542" y1="644" x2="542" y2="649" />
+    <line x1="640" y1="644" x2="640" y2="649" />
+    <line x1="738" y1="644" x2="738" y2="649" />
+    <line x1="836" y1="644" x2="836" y2="649" />
+  </g>
+  <path d="M 248,642 C 300,638 338,618 390,604 C 448,590 518,586 600,588 C 680,590 760,592 836,593"
+        stroke="url(#goldGrad27)" stroke-width="3" fill="none" stroke-linecap="round" />
+  <line x1="390" y1="606" x2="390" y2="644" stroke="#D97706" stroke-width="0.9" stroke-dasharray="3 3" />
+  <rect x="386" y="600" width="8" height="8" fill="#FDE68A" />
+  <text x="402" y="622" class="v27-dim">1er CRACK</text>
+  <text x="836" y="618" text-anchor="end" class="v27-dim">205 °C</text>
+  <text x="248" y="656" class="v27-dim">00:00</text>
+  <text x="836" y="656" text-anchor="end" class="v27-dim">11:40</text>
+
+  <!-- ====== CÓDIGO DE LOTE EN BARRAS ====== -->
+  <g>
+    <rect x="248" y="668" width="3" height="16" fill="#FDE68A" opacity="0.55" />
+    <rect x="255" y="668" width="6" height="16" fill="#FDE68A" opacity="1" />
+    <rect x="265" y="668" width="2" height="16" fill="#FDE68A" opacity="1" />
+    <rect x="271" y="668" width="9" height="16" fill="#FDE68A" opacity="0.55" />
+    <rect x="284" y="668" width="4" height="16" fill="#FDE68A" opacity="1" />
+    <rect x="292" y="668" width="2" height="16" fill="#FDE68A" opacity="1" />
+    <rect x="298" y="668" width="7" height="16" fill="#FDE68A" opacity="0.55" />
+    <rect x="309" y="668" width="3" height="16" fill="#FDE68A" opacity="1" />
+    <rect x="316" y="668" width="5" height="16" fill="#FDE68A" opacity="1" />
+    <rect x="325" y="668" width="2" height="16" fill="#FDE68A" opacity="0.55" />
+    <rect x="331" y="668" width="8" height="16" fill="#FDE68A" opacity="1" />
+    <rect x="343" y="668" width="3" height="16" fill="#FDE68A" opacity="1" />
+    <rect x="350" y="668" width="3" height="16" fill="#FDE68A" opacity="0.55" />
+    <rect x="357" y="668" width="6" height="16" fill="#FDE68A" opacity="1" />
+    <rect x="367" y="668" width="2" height="16" fill="#FDE68A" opacity="1" />
+    <rect x="373" y="668" width="9" height="16" fill="#FDE68A" opacity="0.55" />
+    <rect x="386" y="668" width="4" height="16" fill="#FDE68A" opacity="1" />
+    <rect x="394" y="668" width="2" height="16" fill="#FDE68A" opacity="1" />
+    <rect x="400" y="668" width="7" height="16" fill="#FDE68A" opacity="0.55" />
+    <rect x="411" y="668" width="3" height="16" fill="#FDE68A" opacity="1" />
+    <rect x="418" y="668" width="5" height="16" fill="#FDE68A" opacity="1" />
+    <rect x="427" y="668" width="2" height="16" fill="#FDE68A" opacity="0.55" />
+    <rect x="433" y="668" width="8" height="16" fill="#FDE68A" opacity="1" />
+    <rect x="445" y="668" width="3" height="16" fill="#FDE68A" opacity="1" />
+    <rect x="452" y="668" width="3" height="16" fill="#FDE68A" opacity="0.55" />
+    <rect x="459" y="668" width="6" height="16" fill="#FDE68A" opacity="1" />
+    <rect x="469" y="668" width="2" height="16" fill="#FDE68A" opacity="1" />
+    <rect x="475" y="668" width="9" height="16" fill="#FDE68A" opacity="0.55" />
+    <rect x="488" y="668" width="4" height="16" fill="#FDE68A" opacity="1" />
+    <rect x="496" y="668" width="2" height="16" fill="#FDE68A" opacity="1" />
+    <rect x="502" y="668" width="7" height="16" fill="#FDE68A" opacity="0.55" />
+    <rect x="513" y="668" width="3" height="16" fill="#FDE68A" opacity="1" />
+    <rect x="520" y="668" width="5" height="16" fill="#FDE68A" opacity="1" />
+    <rect x="529" y="668" width="2" height="16" fill="#FDE68A" opacity="0.55" />
+    <rect x="535" y="668" width="8" height="16" fill="#FDE68A" opacity="1" />
+    <rect x="547" y="668" width="3" height="16" fill="#FDE68A" opacity="1" />
+    <rect x="554" y="668" width="3" height="16" fill="#FDE68A" opacity="0.55" />
+    <rect x="561" y="668" width="6" height="16" fill="#FDE68A" opacity="1" />
+    <rect x="571" y="668" width="2" height="16" fill="#FDE68A" opacity="1" />
+    <rect x="577" y="668" width="9" height="16" fill="#FDE68A" opacity="0.55" />
+    <rect x="590" y="668" width="4" height="16" fill="#FDE68A" opacity="1" />
+    <rect x="598" y="668" width="2" height="16" fill="#FDE68A" opacity="1" />
+    <rect x="604" y="668" width="7" height="16" fill="#FDE68A" opacity="0.55" />
+    <rect x="615" y="668" width="3" height="16" fill="#FDE68A" opacity="1" />
+    <rect x="622" y="668" width="5" height="16" fill="#FDE68A" opacity="1" />
+    <rect x="631" y="668" width="2" height="16" fill="#FDE68A" opacity="0.55" />
+    <rect x="637" y="668" width="8" height="16" fill="#FDE68A" opacity="1" />
+    <rect x="649" y="668" width="3" height="16" fill="#FDE68A" opacity="1" />
+    <rect x="656" y="668" width="3" height="16" fill="#FDE68A" opacity="0.55" />
+    <rect x="663" y="668" width="6" height="16" fill="#FDE68A" opacity="1" />
+    <rect x="673" y="668" width="2" height="16" fill="#FDE68A" opacity="1" />
+    <rect x="679" y="668" width="9" height="16" fill="#FDE68A" opacity="0.55" />
+    <rect x="692" y="668" width="4" height="16" fill="#FDE68A" opacity="1" />
+    <rect x="700" y="668" width="2" height="16" fill="#FDE68A" opacity="1" />
+    <rect x="706" y="668" width="7" height="16" fill="#FDE68A" opacity="0.55" />
+    <rect x="717" y="668" width="3" height="16" fill="#FDE68A" opacity="1" />
+    <rect x="724" y="668" width="5" height="16" fill="#FDE68A" opacity="1" />
+    <rect x="733" y="668" width="2" height="16" fill="#FDE68A" opacity="0.55" />
+    <rect x="739" y="668" width="8" height="16" fill="#FDE68A" opacity="1" />
+    <rect x="751" y="668" width="3" height="16" fill="#FDE68A" opacity="1" />
+    <rect x="758" y="668" width="3" height="16" fill="#FDE68A" opacity="0.55" />
+    <rect x="765" y="668" width="6" height="16" fill="#FDE68A" opacity="1" />
+    <rect x="775" y="668" width="2" height="16" fill="#FDE68A" opacity="1" />
+    <rect x="781" y="668" width="9" height="16" fill="#FDE68A" opacity="0.55" />
+    <rect x="794" y="668" width="4" height="16" fill="#FDE68A" opacity="1" />
+    <rect x="802" y="668" width="2" height="16" fill="#FDE68A" opacity="1" />
+    <rect x="808" y="668" width="7" height="16" fill="#FDE68A" opacity="0.55" />
+    <rect x="819" y="668" width="3" height="16" fill="#FDE68A" opacity="1" />
+    <rect x="826" y="668" width="5" height="16" fill="#FDE68A" opacity="1" />
+  </g>
+
+  <!-- ====== BLOQUE DE TÍTULO ====== -->
+  <text x="547" y="752" text-anchor="middle" class="v27-title">TÉ O CAFÉ</text>
+  <text x="543" y="793" text-anchor="middle" class="v27-sub">CAFÉ DE ORIGEN · TÉ DE CEILÁN</text>
+</svg>

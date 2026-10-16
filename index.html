@@ -1252,7 +1252,7 @@
   </div>
 
   <!-- ========================================== -->
-  <!-- MODAL: CHECKOUT SIMULADO CHILENO           -->
+  <!-- MODAL: CHECKOUT REAL CONECTADO A VPS2      -->
   <!-- ========================================== -->
   <div id="checkout-modal" class="fixed inset-0 z-[120] overflow-y-auto hidden">
     <div class="min-h-screen px-4 text-center flex items-center justify-center">
@@ -1262,33 +1262,38 @@
         <div class="flex justify-between items-center pb-3 border-b border-brand-border">
           <div class="flex items-center gap-2">
             <i data-lucide="shield-check" class="w-6 h-6 text-emerald-600"></i>
-            <h3 class="font-headline font-bold text-xl text-brand-text">Finalizar Compra</h3>
+            <h3 id="checkout-modal-title" class="font-headline font-bold text-xl text-brand-text">Finalizar Compra</h3>
           </div>
           <button onclick="closeCheckoutModal()" class="text-brand-muted hover:text-brand-text">
             <i data-lucide="x" class="w-5 h-5"></i>
           </button>
         </div>
 
-        <form onsubmit="handleCheckoutSubmit(event)" class="space-y-3.5 pt-4 text-xs">
+        <form id="checkout-form" onsubmit="handleCheckoutSubmit(event)" class="space-y-3.5 pt-4 text-xs">
           <div>
             <label class="block font-semibold text-brand-text mb-1">Nombre Completo</label>
-            <input type="text" required placeholder="Mateo Ávila" class="w-full bg-brand-bg border border-brand-border rounded-lg p-2 text-brand-text outline-none focus:border-brand-primary">
+            <input id="checkout-name" type="text" required placeholder="Nombre y Apellido" class="w-full bg-brand-bg border border-brand-border rounded-lg p-2 text-brand-text outline-none focus:border-brand-primary">
           </div>
 
-          <div class="grid grid-cols-2 gap-2">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
             <div>
               <label class="block font-semibold text-brand-text mb-1">Email</label>
-              <input type="email" required placeholder="tu@correo.cl" class="w-full bg-brand-bg border border-brand-border rounded-lg p-2 text-brand-text outline-none focus:border-brand-primary">
+              <input id="checkout-email" type="email" required placeholder="tu@correo.cl" class="w-full bg-brand-bg border border-brand-border rounded-lg p-2 text-brand-text outline-none focus:border-brand-primary">
             </div>
             <div>
               <label class="block font-semibold text-brand-text mb-1">Teléfono / WhatsApp</label>
-              <input type="tel" required placeholder="+56 9 8765 4321" class="w-full bg-brand-bg border border-brand-border rounded-lg p-2 text-brand-text outline-none focus:border-brand-primary">
+              <input id="checkout-phone" type="tel" required placeholder="+56 9 8765 4321" class="w-full bg-brand-bg border border-brand-border rounded-lg p-2 text-brand-text outline-none focus:border-brand-primary">
             </div>
           </div>
 
           <div>
             <label class="block font-semibold text-brand-text mb-1">Dirección de Despacho (Calle, Número, Comuna)</label>
-            <input type="text" required placeholder="Av. Providencia 1234, Providencia, Santiago" class="w-full bg-brand-bg border border-brand-border rounded-lg p-2 text-brand-text outline-none focus:border-brand-primary">
+            <input id="checkout-address" type="text" required placeholder="Av. Providencia 1234, Depto 402, Providencia" class="w-full bg-brand-bg border border-brand-border rounded-lg p-2 text-brand-text outline-none focus:border-brand-primary">
+          </div>
+
+          <div>
+            <label class="block font-semibold text-brand-text mb-1">Notas de Entrega o Molienda (Opcional)</label>
+            <input id="checkout-notes" type="text" placeholder="Ej: Dejar en conserjería / Molienda para V60" class="w-full bg-brand-bg border border-brand-border rounded-lg p-2 text-brand-text outline-none focus:border-brand-primary">
           </div>
 
           <div>
@@ -1314,15 +1319,43 @@
             </div>
           </div>
 
+          <div id="checkout-error-box" class="hidden p-2.5 rounded-xl bg-red-950/60 border border-red-800/60 text-red-300 text-xs"></div>
+
           <div class="bg-brand-bg p-3 rounded-xl border border-brand-border flex justify-between items-center text-sm font-bold">
             <span>Total Final:</span>
             <span id="checkout-modal-total" class="text-brand-primary text-base">$0</span>
           </div>
 
-          <button type="submit" class="btn-brand-primary w-full py-3 rounded-xl font-bold text-xs shadow-lg">
-            Confirmar y Pagar Orden
+          <button id="checkout-submit-btn" type="submit" class="btn-brand-primary w-full py-3 rounded-xl font-bold text-xs shadow-lg flex items-center justify-center gap-2">
+            <span>Confirmar y Registrar Orden</span>
           </button>
         </form>
+
+        <!-- PANTALLA DE ORDEN CONFIRMADA -->
+        <div id="checkout-success-view" class="hidden pt-4 space-y-4 text-xs">
+          <div class="p-4 rounded-2xl bg-emerald-950/40 border border-emerald-600/40 space-y-1.5">
+            <span class="text-[10px] uppercase tracking-widest text-emerald-400 font-bold">Orden Registrada en Sistema</span>
+            <h4 class="font-headline font-bold text-lg text-brand-text">Código: <span id="success-order-code" class="text-amber-500 font-mono">TC-0000</span></h4>
+            <p class="text-brand-muted text-[11px]">Enviamos el comprobante con el detalle a tu correo electrónico.</p>
+          </div>
+
+          <div id="success-order-summary" class="p-3.5 rounded-xl bg-brand-bg border border-brand-border space-y-1.5"></div>
+
+          <div class="p-3.5 rounded-xl bg-brand-bg border border-amber-500/30 space-y-1 text-[11px]">
+            <p class="font-bold text-amber-500">📌 Datos para Transferencia / Confirmación Rápida:</p>
+            <p class="text-brand-text"><strong>Titular:</strong> AVOLAV SpA — Té o Café Chile · <strong>RUT:</strong> 78.459.905-1</p>
+            <p class="text-brand-muted">Indica tu código <strong id="success-glosa-code" class="text-brand-text"></strong> en el asunto o confirma directo por WhatsApp:</p>
+          </div>
+
+          <div class="flex flex-col sm:flex-row gap-2.5 pt-1">
+            <a id="success-whatsapp-btn" href="#" target="_blank" rel="noopener" class="flex-1 py-3 px-4 rounded-xl bg-[#25D366] hover:bg-[#1fb855] text-black font-bold text-center transition shadow-lg flex items-center justify-center gap-2">
+              <span>Confirmar Pedido por WhatsApp</span>
+            </a>
+            <button type="button" onclick="closeCheckoutModal()" class="py-3 px-4 rounded-xl bg-brand-bg border border-brand-border text-brand-text font-semibold hover:border-amber-500 transition">
+              Cerrar
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -2264,7 +2297,25 @@
       showToast(`¡${prodIdOrTitle} añadido a la canasta!`);
     }
 
-    // CARRITO
+    // CARRITO CON PERSISTENCIA EN LOCALSTORAGE
+    const CART_STORAGE_KEY = 'teocafe_cart_v1';
+
+    function loadCartFromStorage() {
+      try {
+        const raw = localStorage.getItem(CART_STORAGE_KEY);
+        if (raw) {
+          const parsed = JSON.parse(raw);
+          if (Array.isArray(parsed)) cart = parsed;
+        }
+      } catch (e) {}
+    }
+
+    function saveCartToStorage() {
+      try {
+        localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(cart));
+      } catch (e) {}
+    }
+
     function addToCart(item) {
       const cartKey = `${item.id}-${item.variantTitle}`;
       const existing = cart.find(i => i.cartKey === cartKey);
@@ -2273,6 +2324,7 @@
       } else {
         cart.push({ ...item, cartKey, qty: 1 });
       }
+      saveCartToStorage();
       updateCartUI();
       showToast(`¡${item.title} agregado a tu canasta!`);
     }
@@ -2284,11 +2336,13 @@
       if (item.qty <= 0) {
         cart = cart.filter(i => i.cartKey !== cartKey);
       }
+      saveCartToStorage();
       updateCartUI();
     }
 
     function removeCartItem(cartKey) {
       cart = cart.filter(i => i.cartKey !== cartKey);
+      saveCartToStorage();
       updateCartUI();
     }
 
@@ -2381,6 +2435,10 @@
         return;
       }
       toggleCart();
+      document.getElementById('checkout-modal-title').textContent = 'Finalizar Compra';
+      document.getElementById('checkout-form').classList.remove('hidden');
+      document.getElementById('checkout-success-view').classList.add('hidden');
+      document.getElementById('checkout-error-box').classList.add('hidden');
       document.getElementById('checkout-modal').classList.remove('hidden');
     }
 
@@ -2388,12 +2446,120 @@
       document.getElementById('checkout-modal').classList.add('hidden');
     }
 
-    function handleCheckoutSubmit(e) {
+    async function handleCheckoutSubmit(e) {
       e.preventDefault();
-      alert(`🎉 ¡Orden de prueba procesada con éxito!\n\nMarca de la tienda: ${currentBrand}\nTotal: ${document.getElementById('cart-total').textContent}\nDespacho preparado para Santiago / Regiones.\n\nEn producción esto enlaza con Webpay Plus o Mercado Pago.`);
-      cart = [];
-      updateCartUI();
-      closeCheckoutModal();
+      if (cart.length === 0) return;
+
+      const btn = document.getElementById('checkout-submit-btn');
+      const errBox = document.getElementById('checkout-error-box');
+      errBox.classList.add('hidden');
+
+      const customerName = document.getElementById('checkout-name').value.trim();
+      const customerEmail = document.getElementById('checkout-email').value.trim();
+      const customerPhone = document.getElementById('checkout-phone').value.trim();
+      const shippingAddress = document.getElementById('checkout-address').value.trim();
+      const notes = document.getElementById('checkout-notes').value.trim();
+      const shippingZone = document.getElementById('shipping-zone').value;
+      const paymentRadio = document.querySelector('input[name="payment_method"]:checked');
+      const paymentMethod = paymentRadio ? paymentRadio.value : 'transfer';
+
+      const originalBtnHtml = btn.innerHTML;
+      btn.disabled = true;
+      btn.innerHTML = `<span>Procesando orden...</span>`;
+
+      try {
+        const res = await fetch('/api/orders', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            brandName: currentBrand,
+            customerName,
+            customerEmail,
+            customerPhone,
+            shippingAddress,
+            shippingZone,
+            paymentMethod,
+            notes,
+            items: cart
+          })
+        });
+
+        const data = await res.json();
+        if (!res.ok || !data.ok) {
+          throw new Error(data.error || 'No se pudo registrar la orden. Verifica tus datos.');
+        }
+
+        // Vaciar carrito y persistir
+        cart = [];
+        saveCartToStorage();
+        updateCartUI();
+
+        // Mostrar confirmación real con código de orden
+        document.getElementById('checkout-modal-title').textContent = '¡Pedido Registrado!';
+        document.getElementById('checkout-form').classList.add('hidden');
+        document.getElementById('checkout-success-view').classList.remove('hidden');
+        document.getElementById('success-order-code').textContent = data.orderCode;
+        document.getElementById('success-glosa-code').textContent = data.orderCode;
+
+        const ord = data.order;
+        document.getElementById('success-order-summary').innerHTML = `
+          <div class="flex justify-between text-brand-muted"><span>Cliente:</span><strong class="text-brand-text">${ord.customerName}</strong></div>
+          <div class="flex justify-between text-brand-muted"><span>Despacho:</span><strong class="text-brand-text">${ord.shippingAddress}</strong></div>
+          <div class="flex justify-between text-brand-muted"><span>Total Orden:</span><strong class="text-amber-500 text-sm">${formatCLP(ord.total)}</strong></div>
+        `;
+
+        const waBtn = document.getElementById('success-whatsapp-btn');
+        if (waBtn && data.whatsappUrl) {
+          waBtn.href = data.whatsappUrl;
+        }
+
+        showToast(`🎉 Orden ${data.orderCode} registrada con éxito`);
+      } catch (err) {
+        errBox.textContent = err.message || 'Error de conexión con el servidor.';
+        errBox.classList.remove('hidden');
+      } finally {
+        btn.disabled = false;
+        btn.innerHTML = originalBtnHtml;
+      }
+    }
+
+    async function syncProductsFromBackend() {
+      try {
+        const res = await fetch('/api/products');
+        if (!res.ok) return;
+        const data = await res.json();
+        if (data && data.ok && Array.isArray(data.products) && data.products.length > 0) {
+          allProducts = data.products;
+          renderCatalog(false);
+        }
+      } catch (e) {
+        // Fallback silencioso a products.js local si está offline
+      }
+    }
+
+    async function checkOrderTrackingParam() {
+      try {
+        const params = new URLSearchParams(window.location.search);
+        const code = params.get('orden');
+        if (!code) return;
+        const res = await fetch(`/api/orders/${encodeURIComponent(code)}`);
+        const data = await res.json();
+        if (res.ok && data.ok && data.order) {
+          const ord = data.order;
+          document.getElementById('checkout-modal-title').textContent = `Seguimiento Orden ${ord.orderCode}`;
+          document.getElementById('checkout-form').classList.add('hidden');
+          document.getElementById('checkout-success-view').classList.remove('hidden');
+          document.getElementById('success-order-code').textContent = ord.orderCode;
+          document.getElementById('success-glosa-code').textContent = ord.orderCode;
+          document.getElementById('success-order-summary').innerHTML = `
+            <div class="flex justify-between text-brand-muted"><span>Estado Pedido:</span><strong class="text-emerald-400 uppercase">${ord.orderStatus}</strong></div>
+            <div class="flex justify-between text-brand-muted"><span>Estado Pago:</span><strong class="text-amber-400 uppercase">${ord.paymentStatus}</strong></div>
+            ${ord.trackingCode ? `<div class="flex justify-between text-brand-muted"><span>Seguimiento Despacho:</span><strong class="text-brand-text">${ord.trackingCode}</strong></div>` : ''}
+            <div class="flex justify-between text-brand-muted"><span>Total:</span><strong class="text-amber-500 text-sm">${formatCLP(ord.total)}</strong></div>
+          `;
+          document.getElementById('checkout-modal').classList.remove('hidden');
+        }
+      } catch (e) {}
     }
 
     function showToast(msg) {
@@ -2420,10 +2586,13 @@
 
     // INICIALIZACIÓN
     document.addEventListener('DOMContentLoaded', () => {
+      loadCartFromStorage();
       switchBrand('te-o-cafe', true);
       setMainCollection('all');
       updateCartUI();
       startCarousel();
+      syncProductsFromBackend();
+      checkOrderTrackingParam();
 
       // Soporte táctil Swipe para móviles en el banner hero
       const carouselEl = document.getElementById('carousel-container');

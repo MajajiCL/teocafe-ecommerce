@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1080" height="1080" viewBox="0 0 1080 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&amp;family=Montserrat:wght@500;600&amp;display=swap');
+      .v25-title { font-family: 'Cinzel', serif; font-weight: 700; letter-spacing: 21px; font-size: 60px; fill: url(#goldGrad25); }
+      .v25-sub { font-family: 'Montserrat', sans-serif; font-weight: 600; letter-spacing: 8px; font-size: 16px; fill: #FDE68A; }
+      .v25-foot { font-family: 'Montserrat', sans-serif; font-weight: 500; letter-spacing: 5px; font-size: 13px; fill: #D97706; }
+      .v25-frame { fill: none; stroke: url(#goldGrad25); stroke-linejoin: miter; }
+      .v25-ray { stroke: #F59E0B; stroke-linecap: butt; }
+    </style>
+
+    <radialGradient id="bgGrad25" cx="50%" cy="44%" r="68%">
+      <stop offset="0%" stop-color="#120E0A" />
+      <stop offset="58%" stop-color="#080605" />
+      <stop offset="100%" stop-color="#020101" />
+    </radialGradient>
+
+    <linearGradient id="goldGrad25" x1="12%" y1="0%" x2="88%" y2="100%">
+      <stop offset="0%" stop-color="#FFFBEB" />
+      <stop offset="26%" stop-color="#FDE68A" />
+      <stop offset="52%" stop-color="#FCD34D" />
+      <stop offset="74%" stop-color="#F59E0B" />
+      <stop offset="100%" stop-color="#B45309" />
+    </linearGradient>
+
+    <linearGradient id="goldSoft25" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FDE68A" />
+      <stop offset="60%" stop-color="#D97706" />
+      <stop offset="100%" stop-color="#B45309" />
+    </linearGradient>
+
+    <radialGradient id="glow25" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#F59E0B" stop-opacity="0.18" />
+      <stop offset="62%" stop-color="#B45309" stop-opacity="0.05" />
+      <stop offset="100%" stop-color="#050403" stop-opacity="0" />
+    </radialGradient>
+
+    <clipPath id="archClip25">
+      <path d="M 240 630 L 240 460 L 282 460 L 282 360 L 332 360 L 332 280 L 390 280 L 390 220 L 460 220 L 460 180 L 620 180 L 620 220 L 690 220 L 690 280 L 748 280 L 748 360 L 798 360 L 798 460 L 840 460 L 840 630 Z" />
+    </clipPath>
+  </defs>
+
+  <rect width="1080" height="1080" fill="url(#bgGrad25)" />
+  <circle cx="540" cy="480" r="330" fill="url(#glow25)" />
+
+  <!-- ============ RAYOS DE SOL DÉCO, recortados por el arco ============ -->
+  <g clip-path="url(#archClip25)">
+    <g fill="#F59E0B" opacity="0.09">
+      <path d="M 540 585 L 31 477 L 65 374 Z" />
+      <path d="M 540 585 L 119 279 L 192 199 Z" />
+      <path d="M 540 585 L 280 135 L 379 90 Z" />
+      <path d="M 540 585 L 486 68 L 594 68 Z" />
+      <path d="M 540 585 L 701 90 L 800 135 Z" />
+      <path d="M 540 585 L 888 199 L 961 279 Z" />
+      <path d="M 540 585 L 1015 374 L 1049 477 Z" />
+    </g>
+    <g class="v25-ray" opacity="0.3">
+      <path d="M 540 585 L 31 477" stroke-width="1.4" />
+      <path d="M 540 585 L 65 374" stroke-width="2.2" />
+      <path d="M 540 585 L 119 279" stroke-width="1.4" />
+      <path d="M 540 585 L 192 199" stroke-width="2.2" />
+      <path d="M 540 585 L 280 135" stroke-width="1.4" />
+      <path d="M 540 585 L 379 90" stroke-width="2.2" />
+      <path d="M 540 585 L 486 68" stroke-width="1.4" />
+      <path d="M 540 585 L 594 68" stroke-width="1.4" />
+      <path d="M 540 585 L 701 90" stroke-width="2.2" />
+      <path d="M 540 585 L 800 135" stroke-width="1.4" />
+      <path d="M 540 585 L 888 199" stroke-width="2.2" />
+      <path d="M 540 585 L 961 279" stroke-width="1.4" />
+      <path d="M 540 585 L 1015 374" stroke-width="2.2" />
+      <path d="M 540 585 L 1049 477" stroke-width="1.4" />
+    </g>
+  </g>
+
+  <!-- ============ ARCO ESCALONADO (ZIGGURAT) ============ -->
+  <path class="v25-frame" stroke-width="4"
+        d="M 240 630 L 240 460 L 282 460 L 282 360 L 332 360 L 332 280 L 390 280 L 390 220 L 460 220 L 460 180 L 620 180 L 620 220 L 690 220 L 690 280 L 748 280 L 748 360 L 798 360 L 798 460 L 840 460 L 840 630 Z" />
+  <path class="v25-frame" stroke-width="1.6" stroke-opacity="0.55"
+        d="M 262 630 L 262 482 L 304 482 L 304 382 L 354 382 L 354 302 L 412 302 L 412 242 L 482 242 L 482 202 L 598 202 L 598 242 L 668 242 L 668 302 L 726 302 L 726 382 L 776 382 L 776 482 L 818 482 L 818 630" />
+
+  <!-- Remate / aguja Art Déco sobre el vértice -->
+  <path d="M 528 183 L 552 183" stroke="url(#goldGrad25)" stroke-width="6" stroke-linecap="butt" />
+  <path d="M 540 144 L 560 164 L 540 184 L 520 164 Z" fill="url(#goldGrad25)" />
+  <path class="v25-frame" stroke-width="2.4" d="M 466 180 L 466 166 L 492 166 L 492 180" />
+  <path class="v25-frame" stroke-width="2.4" d="M 614 180 L 614 166 L 588 166 L 588 180" />
+  <path class="v25-frame" stroke-width="2" stroke-opacity="0.75" d="M 400 220 L 400 208 L 424 208 L 424 220" />
+  <path class="v25-frame" stroke-width="2" stroke-opacity="0.75" d="M 680 220 L 680 208 L 656 208 L 656 220" />
+
+  <!-- Clave del arco (keystone) con la marca de origen -->
+  <path d="M 500 202 L 580 202 L 572 246 L 540 262 L 508 246 Z" fill="#050403" stroke="url(#goldGrad25)" stroke-width="2.4" />
+  <path d="M 540 214 L 553 238 L 527 238 Z" fill="url(#goldGrad25)" />
+  <path d="M 519 246 L 561 246" stroke="url(#goldGrad25)" stroke-width="1.6" stroke-opacity="0.7" />
+
+  <!-- ============ PILASTRAS DE CHEVRONES ============ -->
+  <g class="v25-frame" stroke-width="2.6" stroke-linecap="round">
+    <path d="M 294 600 L 320 574 L 346 600" />
+    <path d="M 294 566 L 320 540 L 346 566" stroke-opacity="0.78" />
+    <path d="M 294 532 L 320 506 L 346 532" stroke-opacity="0.56" />
+    <path d="M 734 600 L 760 574 L 786 600" />
+    <path d="M 734 566 L 760 540 L 786 566" stroke-opacity="0.78" />
+    <path d="M 734 532 L 760 506 L 786 532" stroke-opacity="0.56" />
+  </g>
+
+  <!-- ============ HOJA DE TÉ FACETADA (izquierda) ============ -->
+  <g transform="translate(462 308) rotate(-35)">
+    <path d="M 0 -46 C 23 -22 23 14 0 40 C -23 14 -23 -22 0 -46 Z" fill="url(#goldGrad25)" />
+    <path d="M 0 -38 L 0 32" stroke="#050403" stroke-width="2.6" stroke-linecap="round" />
+    <g stroke="#050403" stroke-width="1.6" stroke-linecap="round" opacity="0.85">
+      <path d="M 0 -22 L 13 -9" />
+      <path d="M 0 -4 L 14 9" />
+      <path d="M 0 -22 L -13 -9" />
+      <path d="M 0 -4 L -14 9" />
+    </g>
+  </g>
+
+  <!-- ============ GRANO DE CAFÉ FACETADO (derecha) ============ -->
+  <g transform="translate(618 308) rotate(28)">
+    <path d="M 0 -38 C 22 -31 28 -9 26 11 C 24 30 12 38 0 38 C -12 38 -24 30 -26 11 C -28 -9 -22 -31 0 -38 Z" fill="url(#goldGrad25)" />
+    <path d="M 0 -30 C 10 -14 -10 10 0 28" fill="none" stroke="#050403" stroke-width="4.2" stroke-linecap="round" />
+    <g fill="none" stroke="#050403" stroke-width="1.5" stroke-linecap="round" opacity="0.8">
+      <path d="M -14 -19 C -7 -7 -7 7 -14 19" />
+      <path d="M 14 -19 C 7 -7 7 7 14 19" />
+    </g>
+  </g>
+
+  <!-- ============ EJE CENTRAL: PENACHO, ROMBO Y VOLUTAS ============ -->
+  <path d="M 540 310 L 558 330 L 540 350 L 522 330 Z" fill="url(#goldGrad25)" />
+  <path d="M 540 352 L 547 400 L 545 424 L 535 424 L 533 400 Z" fill="url(#goldSoft25)" />
+  <g fill="none" stroke="url(#goldGrad25)" stroke-width="3.2" stroke-linecap="round">
+    <path d="M 535 401 C 513 383 497 363 483 341" />
+    <path d="M 545 401 C 567 383 583 363 597 342" />
+  </g>
+
+  <!-- ============ TAZA DÉCO FACETADA SOBRE PLINTO ESCALONADO ============ -->
+  <path d="M 420 424 L 660 424 L 660 437 L 420 437 Z" fill="url(#goldGrad25)" />
+  <path d="M 434 437 L 646 437 C 644 493 626 531 588 547 L 492 547 C 454 531 436 493 434 437 Z" fill="url(#goldGrad25)" />
+  <g stroke="#050403" stroke-width="3" stroke-linecap="butt">
+    <path d="M 462 441 L 506 543" />
+    <path d="M 500 441 L 524 545" />
+    <path d="M 540 441 L 540 547" />
+    <path d="M 580 441 L 556 545" />
+    <path d="M 618 441 L 574 543" />
+  </g>
+
+  <path d="M 390 548 C 400 572 680 572 690 548" fill="none" stroke="url(#goldGrad25)" stroke-width="3.6" stroke-linecap="round" />
+  <path d="M 416 576 L 664 576 L 664 594 L 416 594 Z" fill="url(#goldSoft25)" />
+  <path d="M 374 594 L 706 594 L 706 616 L 374 616 Z" fill="#050403" stroke="url(#goldGrad25)" stroke-width="2.4" />
+  <path d="M 300 636 L 780 636 L 780 642 L 300 642 Z" fill="url(#goldGrad25)" />
+
+  <!-- ============ TIPOGRAFÍA ============ -->
+  <text x="540" y="742" text-anchor="middle" class="v25-title">TÉ O CAFÉ</text>
+
+  <g transform="translate(540 790)" fill="none" stroke="url(#goldGrad25)" stroke-linecap="butt">
+    <path d="M -206 0 L -66 0" stroke-width="1.8" stroke-opacity="0.85" />
+    <path d="M 66 0 L 206 0" stroke-width="1.8" stroke-opacity="0.85" />
+    <path d="M -66 0 L -66 -9 L -42 -9 L -42 -19 L -17 -19 L -17 -28 L 17 -28 L 17 -19 L 42 -19 L 42 -9 L 66 -9 L 66 0" stroke-width="2.2" stroke-linejoin="miter" />
+    <path d="M -222 -7 L -215 0 L -222 7 L -229 0 Z" fill="url(#goldGrad25)" stroke="none" />
+    <path d="M 222 -7 L 229 0 L 222 7 L 215 0 Z" fill="url(#goldGrad25)" stroke="none" />
+  </g>
+
+  <text x="540" y="826" text-anchor="middle" class="v25-sub">CAFÉ DE ORIGEN · TÉ DE CEILÁN</text>
+  <text x="540" y="872" text-anchor="middle" class="v25-foot">MÉTODOS DE INFUSIÓN · TEOCAFE.CL</text>
+</svg>
